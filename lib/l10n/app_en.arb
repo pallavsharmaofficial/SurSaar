@@ -1,0 +1,18 @@
+{
+  "appTitle": "SurSaar",
+  "findSongsHeadline": "Find songs that match your chord",
+  "selectChordLabel": "Select a chord",
+  "recommendedSongsLabel": "Recommended songs",
+  "noSongsFound": "No songs match this chord and capo. Try another chord.",
+  "difficultyLabel": "Difficulty",
+  "strummingPatternLabel": "Strumming",
+  "openTutorialButton": "Open tutorial",
+  "capoLabel": "Capo: {fret}",
+  "@capoLabel": {
+    "placeholders": {
+      "fret": {
+        "type": "int"
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "appTitle": "सुरसार",
+  "findSongsHeadline": "अपनी कॉर्ड के अनुसार गाने खोजें",
+  "selectChordLabel": "कॉर्ड चुनें",
+  "recommendedSongsLabel": "सुझाए गए गाने",
+  "noSongsFound": "इस कॉर्ड और कैपो पर कोई गाना नहीं मिला।",
+  "difficultyLabel": "स्तर",
+  "strummingPatternLabel": "स्ट्रमिंग",
+  "openTutorialButton": "ट्यूटोरियल खोलें",
+  "capoLabel": "कैपो: {fret}",
+  "@capoLabel": {
+    "placeholders": {
+      "fret": {
+        "type": "int"
+      }
+    }
+  }
+}
