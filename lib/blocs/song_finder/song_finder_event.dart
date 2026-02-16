@@ -28,3 +28,16 @@ class SongFinderCapoUpdated extends SongFinderEvent {
   @override
   List<Object?> get props => <Object?>[capoFret];
 }
+
+class SongFinderFavoriteToggled extends SongFinderEvent {
+  const SongFinderFavoriteToggled({
+    required this.songId,
+    required this.isFavorite,
+  });
+
+  final String songId;
+  final bool isFavorite;
+
+  @override
+  List<Object?> get props => <Object?>[songId, isFavorite];
+}

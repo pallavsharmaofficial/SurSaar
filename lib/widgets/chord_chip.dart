@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../core/theme/app_colors.dart';
 
 class ChordChip extends StatelessWidget {
   const ChordChip({
@@ -15,8 +16,17 @@ class ChordChip extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FilterChip(
-      label: Text(chord),
+      label: Text(
+        chord,
+        style: TextStyle(
+          color: isSelected ? AppColors.surfaceLight : AppColors.textOnDark,
+          fontWeight: FontWeight.w600,
+        ),
+      ),
       selected: isSelected,
+      selectedColor: AppColors.primary,
+      backgroundColor: AppColors.surfaceLight,
+      showCheckmark: false,
       onSelected: (_) => onSelected(),
     );
   }

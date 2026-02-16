@@ -1,0 +1,167 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2026-02-16",
+  "lessons": [
+    {
+      "id": "lesson_1",
+      "title": "Guitar Basics: Open Chords",
+      "description": "Learn fundamental open chord shapes on guitar",
+      "difficulty": "beginner",
+      "duration": 45,
+      "topicsCount": 5,
+      "isCompleted": false,
+      "progress": 0.0,
+      "thumbnailUrl": "https://via.placeholder.com/300x200?text=Guitar+Basics",
+      "steps": [
+        {
+          "title": "Understanding Chord Anatomy",
+          "description": "Learn what makes up a chord and how fingers are placed on the fretboard",
+          "durationMinutes": 10
+        },
+        {
+          "title": "E Major Chord",
+          "description": "Master the first open chord - E Major",
+          "durationMinutes": 15
+        },
+        {
+          "title": "A Major Chord",
+          "description": "Learn the A Major chord shape",
+          "durationMinutes": 10
+        },
+        {
+          "title": "D Major Chord",
+          "description": "Complete the basic open chord triad",
+          "durationMinutes": 10
+        }
+      ]
+    },
+    {
+      "id": "lesson_2",
+      "title": "Rhythm & Strumming Patterns",
+      "description": "Master essential strumming patterns for songs",
+      "difficulty": "beginner",
+      "duration": 50,
+      "topicsCount": 6,
+      "isCompleted": false,
+      "progress": 0.0,
+      "thumbnailUrl": "https://via.placeholder.com/300x200?text=Rhythm+Patterns",
+      "steps": [
+        {
+          "title": "Basic Down Strokes",
+          "description": "Start with simple downward strumming",
+          "durationMinutes": 10
+        },
+        {
+          "title": "Down-Up Rhythm",
+          "description": "Add upstrokes to create a continuous pattern",
+          "durationMinutes": 15
+        },
+        {
+          "title": "Boom-Chick Pattern",
+          "description": "Learn the popular boom-chick strumming pattern",
+          "durationMinutes": 15
+        },
+        {
+          "title": "Synchronizing with Tempo",
+          "description": "Practice patterns at different tempos",
+          "durationMinutes": 10
+        }
+      ]
+    },
+    {
+      "id": "lesson_3",
+      "title": "Finger Exercises & Dexterity",
+      "description": "Build finger strength and coordination",
+      "difficulty": "intermediate",
+      "duration": 60,
+      "topicsCount": 4,
+      "isCompleted": false,
+      "progress": 0.0,
+      "thumbnailUrl": "https://via.placeholder.com/300x200?text=Finger+Exercises",
+      "steps": [
+        {
+          "title": "Spider Exercise",
+          "description": "Classic finger-walking exercise",
+          "durationMinutes": 15
+        },
+        {
+          "title": "Chromatic Runs",
+          "description": "Build speed and accuracy with chromatic patterns",
+          "durationMinutes": 20
+        },
+        {
+          "title": "Finger Independence",
+          "description": "Develop independent finger control",
+          "durationMinutes": 15
+        },
+        {
+          "title": "Flexibility Stretches",
+          "description": "Improve hand flexibility and range",
+          "durationMinutes": 10
+        }
+      ]
+    }
+  ],
+  "songs": [
+    {
+      "id": "song_1",
+      "title": "Wonderwall",
+      "artist": "Oasis",
+      "difficulty": "beginner",
+      "strummingPattern": "down-down-up-up-down-up",
+      "originalChords": ["Em7", "Dsus2", "A7sus4", "Dm7"],
+      "tutorialUrl": "https://example.com/wonderwall-tutorial",
+      "bpm": 87,
+      "duration": 258,
+      "thumbnailUrl": "https://via.placeholder.com/300x300?text=Wonderwall",
+      "lyrics": "Today is gonna be the day...",
+      "isFavorite": false,
+      "practiceCount": 0
+    },
+    {
+      "id": "song_2",
+      "title": "Creep",
+      "artist": "Radiohead",
+      "difficulty": "beginner",
+      "strummingPattern": "down-up-down-up-down-up",
+      "originalChords": ["G", "B", "Cm", "Cm"],
+      "tutorialUrl": "https://example.com/creep-tutorial",
+      "bpm": 92,
+      "duration": 238,
+      "thumbnailUrl": "https://via.placeholder.com/300x300?text=Creep",
+      "lyrics": "When you were here before...",
+      "isFavorite": false,
+      "practiceCount": 0
+    },
+    {
+      "id": "song_3",
+      "title": "Hallelujah",
+      "artist": "Leonard Cohen",
+      "difficulty": "intermediate",
+      "strummingPattern": "fingerpicking pattern",
+      "originalChords": ["C", "Am", "C", "F", "G", "C", "G"],
+      "tutorialUrl": "https://example.com/hallelujah-tutorial",
+      "bpm": 67,
+      "duration": 244,
+      "thumbnailUrl": "https://via.placeholder.com/300x300?text=Hallelujah",
+      "lyrics": "Now I've heard there was a secret chord...",
+      "isFavorite": false,
+      "practiceCount": 0
+    },
+    {
+      "id": "song_4",
+      "title": "Stairway to Heaven",
+      "artist": "Led Zeppelin",
+      "difficulty": "advanced",
+      "strummingPattern": "complex fingerpicking and strumming",
+      "originalChords": ["Am", "G", "Dsus2", "A7sus4", "Dm", "G", "Dm"],
+      "tutorialUrl": "https://example.com/stairway-tutorial",
+      "bpm": 82,
+      "duration": 482,
+      "thumbnailUrl": "https://via.placeholder.com/300x300?text=Stairway+to+Heaven",
+      "lyrics": "There's a lady who's sure all that glitters is gold...",
+      "isFavorite": false,
+      "practiceCount": 0
+    }
+  ]
+}

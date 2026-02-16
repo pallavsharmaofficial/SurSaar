@@ -9,8 +9,14 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:sursaar/core/app.dart';
 
 void main() {
-  testWidgets('App builds smoke test', (WidgetTester tester) async {
+  testWidgets('App builds and shows navigation', (WidgetTester tester) async {
     await tester.pumpWidget(const App());
-    expect(find.text('SurSaar'), findsOneWidget);
+    await tester.pumpAndSettle();
+    
+    // Verify bottom navigation is present
+    expect(find.text('Home'), findsOneWidget);
+    expect(find.text('Lessons'), findsOneWidget);
+    expect(find.text('Progress'), findsOneWidget);
+    expect(find.text('Profile'), findsOneWidget);
   });
 }

@@ -1,0 +1,10 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M10 20V10H20" stroke="#FF6B6B" stroke-width="3" stroke-linecap="round"/>
+  <path d="M44 10H54V20" stroke="#FF6B6B" stroke-width="3" stroke-linecap="round"/>
+  <path d="M54 44V54H44" stroke="#FF6B6B" stroke-width="3" stroke-linecap="round"/>
+  <path d="M20 54H10V44" stroke="#FF6B6B" stroke-width="3" stroke-linecap="round"/>
+  <line x1="12" y1="32" x2="52" y2="32" stroke="#2D31FA" stroke-width="2">
+    <animate attributeName="y1" values="15;49;15" dur="3s" repeatCount="indefinite" />
+    <animate attributeName="y2" values="15;49;15" dur="3s" repeatCount="indefinite" />
+  </line>
+</svg>

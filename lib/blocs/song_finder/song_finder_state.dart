@@ -3,7 +3,9 @@ import '../../models/song.dart';
 
 enum SongFinderStatus {
   initial,
+  loading,
   ready,
+  error,
 }
 
 class SongFinderState extends Equatable {
@@ -13,6 +15,7 @@ class SongFinderState extends Equatable {
     required this.capoFret,
     required this.allSongs,
     required this.filteredSongs,
+    this.errorMessage,
   });
 
   factory SongFinderState.initial() => const SongFinderState(
@@ -28,6 +31,7 @@ class SongFinderState extends Equatable {
   final int capoFret;
   final List<Song> allSongs;
   final List<Song> filteredSongs;
+  final String? errorMessage;
 
   SongFinderState copyWith({
     SongFinderStatus? status,
@@ -35,6 +39,7 @@ class SongFinderState extends Equatable {
     int? capoFret,
     List<Song>? allSongs,
     List<Song>? filteredSongs,
+    String? errorMessage,
   }) {
     return SongFinderState(
       status: status ?? this.status,
@@ -42,6 +47,7 @@ class SongFinderState extends Equatable {
       capoFret: capoFret ?? this.capoFret,
       allSongs: allSongs ?? this.allSongs,
       filteredSongs: filteredSongs ?? this.filteredSongs,
+      errorMessage: errorMessage ?? this.errorMessage,
     );
   }
 
@@ -52,5 +58,6 @@ class SongFinderState extends Equatable {
         capoFret,
         allSongs,
         filteredSongs,
+        errorMessage,
       ];
 }
