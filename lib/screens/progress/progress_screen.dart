@@ -111,37 +111,42 @@ class _ProgressView extends StatelessWidget {
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: <Widget>[
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: <Widget>[
-                                    Text(
-                                      l10n.currentLevel,
-                                      style: theme.textTheme.bodyMedium
-                                          ?.copyWith(
-                                            color: AppColors.surfaceLight,
-                                          ),
-                                    ),
-                                    const SizedBox(height: 4),
-                                    Text(
-                                      '${l10n.level} ${progress.level} · ${progress.xp} ${l10n.xpLabel}',
-                                      style: theme.textTheme.headlineSmall
-                                          ?.copyWith(
-                                            fontWeight: FontWeight.bold,
-                                            color: AppColors.surfaceLight,
-                                          ),
-                                    ),
-                                    const SizedBox(height: 8),
-                                    SizedBox(
-                                      width: 180,
-                                      child: LinearProgressIndicator(
-                                        value: (progress.xp % 100) / 100,
-                                        minHeight: 6,
-                                        color: AppColors.successGold,
-                                        backgroundColor: Colors.white24,
-                                        borderRadius: BorderRadius.circular(3),
+                                Expanded(
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: <Widget>[
+                                      Text(
+                                        l10n.currentLevel,
+                                        style: theme.textTheme.bodyMedium
+                                            ?.copyWith(
+                                              color: AppColors.surfaceLight,
+                                            ),
                                       ),
-                                    ),
-                                  ],
+                                      const SizedBox(height: 4),
+                                      Text(
+                                        '${l10n.level} ${progress.level} · ${progress.xp} ${l10n.xpLabel}',
+                                        style: theme.textTheme.headlineSmall
+                                            ?.copyWith(
+                                              fontWeight: FontWeight.bold,
+                                              color: AppColors.surfaceLight,
+                                            ),
+                                      ),
+                                      const SizedBox(height: 8),
+                                      SizedBox(
+                                        width: 180,
+                                        child: LinearProgressIndicator(
+                                          value: (progress.xp % 100) / 100,
+                                          minHeight: 6,
+                                          color: AppColors.successGold,
+                                          backgroundColor: Colors.white24,
+                                          borderRadius: BorderRadius.circular(
+                                            3,
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
                                 ),
                                 const Icon(
                                   Icons.emoji_events,

@@ -14,6 +14,7 @@ import '../../widgets/difficulty_badge.dart';
 import '../../widgets/section_header.dart';
 import '../../widgets/teacher/chord_diagram.dart';
 import '../../widgets/teacher/strumming_timeline.dart';
+import '../../widgets/app_back_button.dart';
 
 class SongDetailScreen extends StatefulWidget {
   const SongDetailScreen({super.key, required this.songId, this.initialSong});
@@ -72,7 +73,7 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
     final song = _song;
     if (song == null) {
       return Scaffold(
-        appBar: AppBar(),
+        appBar: AppBar(leading: const AppBackButton()),
         body: Center(
           child: _loading
               ? const CircularProgressIndicator()
@@ -90,6 +91,7 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
       body: CustomScrollView(
         slivers: <Widget>[
           SliverAppBar.large(
+            leading: const AppBackButton(),
             title: Text(song.title),
             actions: <Widget>[
               IconButton(
