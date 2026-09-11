@@ -62,6 +62,30 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
     );
   }
 
+  Future<void> _confirmRemove(Song song) async {
+    final l10n = AppLocalizations.of(context)!;
+    final confirmed = await showDialog<bool>(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: Text(l10n.removeSong),
+        content: Text(l10n.removeSongConfirm),
+        actions: <Widget>[
+          TextButton(
+            onPressed: () => Navigator.of(context).pop(false),
+            child: Text(l10n.cancel),
+          ),
+          FilledButton(
+            onPressed: () => Navigator.of(context).pop(true),
+            child: Text(l10n.remove),
+          ),
+        ],
+      ),
+    );
+    if (confirmed != true || !mounted) return;
+    await context.read<SongRepository>().deleteUserSong(song.id);
+    if (mounted) popOrGoHome(context);
+  }
+
   Future<void> _launch(String url) async {
     if (url.isEmpty) return;
     await launchUrl(Uri.parse(url), mode: LaunchMode.externalApplication);
@@ -101,6 +125,12 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
                 ),
                 onPressed: _toggleFavorite,
               ),
+              if (song.addedByUser)
+                IconButton(
+                  tooltip: l10n.removeSong,
+                  icon: const Icon(Icons.delete_outline_rounded),
+                  onPressed: () => _confirmRemove(song),
+                ),
             ],
           ),
           SliverToBoxAdapter(
@@ -130,6 +160,11 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
                     crossAxisAlignment: WrapCrossAlignment.center,
                     children: <Widget>[
                       DifficultyBadge(difficulty: song.difficulty),
+                      if (song.addedByUser)
+                        _Pill(
+                          icon: Icons.person_rounded,
+                          text: l10n.addedByYou,
+                        ),
                       if (song.key != null)
                         _Pill(
                           icon: Icons.music_note,

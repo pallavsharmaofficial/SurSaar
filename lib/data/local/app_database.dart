@@ -18,6 +18,18 @@ class AppDatabase {
   static const String _profileKey = 'profile';
   static const String _settingsKey = 'settings';
   static const String _courseProgressKey = 'course_progress';
+  static const String _userSongsKey = 'user_songs';
+
+  // --------------------------------------------------------------- my songs
+
+  /// Songs the learner added from a pasted chord sheet.
+  Future<List<Map<String, dynamic>>> getUserSongs() async {
+    final list = await _store.getJsonList(_userSongsKey) ?? <dynamic>[];
+    return list.whereType<Map<String, dynamic>>().toList();
+  }
+
+  Future<void> saveUserSongs(List<Map<String, dynamic>> songs) =>
+      _store.setJsonList(_userSongsKey, songs);
 
   // ---------------------------------------------------------------- favorites
 

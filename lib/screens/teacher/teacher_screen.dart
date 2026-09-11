@@ -17,6 +17,7 @@ import '../../repositories/song_repository.dart';
 import '../../teacher/engine/practice_plan.dart';
 import '../../teacher/engine/teacher_engine.dart';
 import '../../widgets/app_back_button.dart';
+import 'practice_settings_sheet.dart';
 import 'session_summary.dart';
 import 'teacher_panel.dart';
 import 'teacher_stage.dart';
@@ -217,6 +218,14 @@ class _TeacherViewState extends State<_TeacherView> {
             ],
           ),
           actions: <Widget>[
+            IconButton(
+              tooltip: l10n.displaySettings,
+              icon: const Icon(Icons.tune_rounded),
+              onPressed: () => PracticeSettingsSheet.show(
+                context,
+                context.read<TeacherBloc>(),
+              ),
+            ),
             IconButton(
               tooltip: l10n.aiTeacherHowItWorks,
               icon: const Icon(Icons.info_outline),

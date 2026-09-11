@@ -9,7 +9,9 @@ import '../../blocs/teacher/teacher_event.dart';
 import '../../blocs/teacher/teacher_state.dart';
 import '../../core/theme/app_colors.dart';
 import '../../models/chord_voicing.dart';
+import '../../models/user_settings.dart';
 import '../../teacher/analysis/chord_shape_coach.dart';
+import '../../teacher/analysis/guitar_pose.dart';
 import '../../teacher/engine/teacher_engine.dart';
 import '../../teacher/models/hand_frame.dart';
 import '../../teacher/services/vision_service.dart';
@@ -19,6 +21,7 @@ import '../../widgets/teacher/coach_banner.dart';
 import '../../widgets/teacher/effects.dart';
 import '../../widgets/teacher/glass_card.dart';
 import '../../widgets/teacher/hand_overlay_painter.dart';
+import '../../widgets/teacher/sound_field.dart';
 
 const Color _green = Color(0xFF22C55E);
 
@@ -33,6 +36,7 @@ class TeacherStage extends StatelessWidget {
         fit: StackFit.expand,
         children: <Widget>[
           _CameraLayer(),
+          _SoundLayer(),
           _HandOverlay(),
           _CenterLayer(),
           Positioned(left: 12, top: 12, child: _ChordCard()),
@@ -98,28 +102,95 @@ class _HandOverlay extends StatelessWidget {
     return BlocSelector<
       TeacherBloc,
       TeacherState,
-      (HandFrame, ShapeFeedback, bool, bool)
+      (HandFrame, ShapeFeedback, GuitarPose, bool, UserSettings)
     >(
       selector: (s) => (
         s.snapshot?.hands ?? HandFrame.empty,
         s.snapshot?.shape ?? ShapeFeedback.none,
+        s.snapshot?.pose ?? GuitarPose.none,
         s.cameraRunning &&
             s.handTrackingSupported &&
             s.settings.showHandOverlay,
-        s.settings.leftHanded,
+        s.settings,
       ),
       builder: (context, data) {
-        if (!data.$3) return const SizedBox.shrink();
+        final settings = data.$5;
+        final anyLayer =
+            settings.showHandSkeleton ||
+            settings.showFingerGuides ||
+            settings.showNeckGuide;
+        if (!data.$4 || !anyLayer) return const SizedBox.shrink();
         return IgnorePointer(
           child: RepaintBoundary(
             child: CustomPaint(
               painter: HandOverlayPainter(
                 frame: data.$1,
                 shape: data.$2,
-                leftHanded: data.$4,
+                pose: data.$3,
+                leftHanded: settings.leftHanded,
+                showSkeleton: settings.showHandSkeleton,
+                showGuides: settings.showFingerGuides,
+                showNeck: settings.showNeckGuide,
               ),
             ),
           ),
+        );
+      },
+    );
+  }
+}
+
+typedef _SoundData = ({
+  bool active,
+  Offset anchor,
+  double angle,
+  int imageWidth,
+  int imageHeight,
+  bool mirrored,
+  double intensity,
+  int strumId,
+  String? chord,
+});
+
+/// Music rising out of the guitar while it is being played.
+class _SoundLayer extends StatelessWidget {
+  const _SoundLayer();
+
+  @override
+  Widget build(BuildContext context) {
+    return BlocSelector<TeacherBloc, TeacherState, _SoundData>(
+      selector: (s) {
+        final snap = s.snapshot;
+        final pose = snap?.pose ?? GuitarPose.none;
+        final detection = snap?.detection;
+        return (
+          active:
+              s.settings.showSoundField &&
+              s.micRunning &&
+              (s.isRunning || s.isPaused),
+          anchor: pose.bodyAnchor,
+          angle: pose.hasNeck ? pose.angle : 0,
+          imageWidth: snap?.hands.imageWidth ?? 0,
+          imageHeight: snap?.hands.imageHeight ?? 0,
+          mirrored: snap?.hands.mirrored ?? true,
+          intensity: ((snap?.inputLevel ?? 0) * 10).round() / 10,
+          strumId: snap?.strumId ?? 0,
+          chord: detection == null || detection.isSilent
+              ? snap?.currentChord
+              : detection.chord,
+        );
+      },
+      builder: (context, d) {
+        if (!d.active) return const SizedBox.shrink();
+        return SoundFieldOverlay(
+          anchor: d.anchor,
+          imageWidth: d.imageWidth,
+          imageHeight: d.imageHeight,
+          mirrored: d.mirrored,
+          intensity: d.intensity,
+          strumId: d.strumId,
+          chord: d.chord,
+          angle: d.angle,
         );
       },
     );
@@ -522,6 +593,7 @@ typedef _StatusData = ({
   double chordAccuracy,
   double timingAccuracy,
   int strums,
+  String? poseHint,
 });
 
 class _StatusColumn extends StatelessWidget {
@@ -534,7 +606,7 @@ class _StatusColumn extends StatelessWidget {
         final snap = s.snapshot;
         final detection = snap?.detection;
         return (
-          hidden: s.showSetup,
+          hidden: s.showSetup || !s.settings.showStatusChips,
           tracking: s.trackingStatus,
           handTracking: s.handTrackingSupported,
           camera: s.cameraRunning,
@@ -554,6 +626,7 @@ class _StatusColumn extends StatelessWidget {
           chordAccuracy: ((snap?.chordAccuracy ?? 0) * 100).round() / 100,
           timingAccuracy: ((snap?.timingAccuracy ?? 1) * 100).round() / 100,
           strums: snap?.strums ?? 0,
+          poseHint: s.cameraRunning ? snap?.pose.hint : null,
         );
       },
       builder: (context, d) {
@@ -607,6 +680,20 @@ class _StatusColumn extends StatelessWidget {
                   ],
                 ),
               ).animate().fadeIn(),
+            if (d.poseHint != null)
+              Padding(
+                padding: const EdgeInsets.only(top: 6),
+                child: GlassCard(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 10,
+                    vertical: 6,
+                  ),
+                  child: ConstrainedBox(
+                    constraints: const BoxConstraints(maxWidth: 200),
+                    child: Text(d.poseHint!, style: label),
+                  ),
+                ),
+              ),
             if (d.mic)
               Padding(
                 padding: const EdgeInsets.only(top: 6),
@@ -783,11 +870,11 @@ class _CoachArea extends StatelessWidget {
       (CoachMessage?, bool, int, int, bool)
     >(
       selector: (s) => (
-        s.snapshot?.message,
+        s.settings.showCoachMessages ? s.snapshot?.message : null,
         s.showSetup,
         s.snapshot?.beatInBar ?? 0,
         s.plan?.beatsPerBar ?? 4,
-        s.phase == TeacherPhase.running,
+        s.phase == TeacherPhase.running && s.settings.showBeatDots,
       ),
       builder: (context, d) {
         if (d.$2) return const SizedBox.shrink();

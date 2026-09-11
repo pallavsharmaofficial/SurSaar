@@ -11,6 +11,7 @@ void main() {
     '/progress',
     '/profile',
     '/search?q=G',
+    '/import?q=Tere%20Paas%20Main',
     '/tuner',
     '/onboarding',
     '/song/kabira',

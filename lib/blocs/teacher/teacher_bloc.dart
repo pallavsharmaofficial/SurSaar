@@ -52,6 +52,7 @@ class TeacherBloc extends Bloc<TeacherEvent, TeacherState> {
     on<TeacherCameraToggled>(_onCameraToggled);
     on<TeacherMicToggled>(_onMicToggled);
     on<TeacherMetronomeToggled>(_onMetronomeToggled);
+    on<TeacherSettingsChanged>(_onSettingsChanged);
     on<TeacherSessionSaveRequested>(_onSaveRequested);
     on<TeacherTrackingStatusChanged>(
       (event, emit) => emit(state.copyWith(trackingStatus: event.status)),
@@ -336,6 +337,17 @@ class TeacherBloc extends Bloc<TeacherEvent, TeacherState> {
     if (message.atMs == _lastSpokenAt) return;
     _lastSpokenAt = message.atMs;
     _sound.speak(message.spokenText);
+  }
+
+  Future<void> _onSettingsChanged(
+    TeacherSettingsChanged event,
+    Emitter<TeacherState> emit,
+  ) async {
+    _engine?.setSettings(
+      event.settings.copyWith(metronomeEnabled: state.metronomeEnabled),
+    );
+    emit(state.copyWith(settings: event.settings));
+    await _settingsRepository.saveSettings(event.settings);
   }
 
   Future<void> _onSaveRequested(

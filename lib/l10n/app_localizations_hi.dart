@@ -561,4 +561,104 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get tapChordHint => 'कॉर्ड देखने और सुनने के लिए उस पर टैप करें';
+
+  @override
+  String get addSong => 'गाना जोड़ें';
+
+  @override
+  String get addSongSubtitle =>
+      'इंटरनेट पर मिली कॉर्ड शीट यहाँ पेस्ट करें। कॉर्ड, सेक्शन और की अपने आप पढ़ लिए जाएँगे।';
+
+  @override
+  String get pasteSheet => 'कॉर्ड शीट पेस्ट करें';
+
+  @override
+  String get pasteSheetHint => 'कॉर्ड और बोल यहाँ पेस्ट करें';
+
+  @override
+  String get findChordsOnline => 'इंटरनेट पर कॉर्ड खोजें';
+
+  @override
+  String get searchOnlineHint =>
+      'यहाँ नहीं मिला? वेब पर कॉर्ड खोजें, शीट कॉपी करें और यहाँ पेस्ट करें।';
+
+  @override
+  String get songTitleLabel => 'गाने का नाम';
+
+  @override
+  String get artistLabel => 'कलाकार (वैकल्पिक)';
+
+  @override
+  String get chordsFound => 'मिले कॉर्ड';
+
+  @override
+  String get noChordsFound =>
+      'अभी कोई कॉर्ड नहीं। ऐसी शीट पेस्ट करें जिसमें G, Em या C जैसे कॉर्ड हों।';
+
+  @override
+  String get saveToMySongs => 'मेरे गानों में जोड़ें';
+
+  @override
+  String get songAdded => 'आपके गानों में जुड़ गया';
+
+  @override
+  String get mySongs => 'मेरे गाने';
+
+  @override
+  String get addedByYou => 'आपने जोड़ा';
+
+  @override
+  String get removeSong => 'गाना हटाएँ';
+
+  @override
+  String get removeSongConfirm =>
+      'इस डिवाइस से यह गाना हटाएँ? आपकी प्रगति बनी रहेगी।';
+
+  @override
+  String get remove => 'हटाएँ';
+
+  @override
+  String get cancel => 'रद्द करें';
+
+  @override
+  String get refreshSongs => 'नए गाने देखें';
+
+  @override
+  String get songsUpdated => 'गानों की सूची अपडेट हो गई';
+
+  @override
+  String get keepLyrics => 'बोल इस डिवाइस पर रखें';
+
+  @override
+  String get sectionsFound => 'सेक्शन';
+
+  @override
+  String get displaySettings => 'क्या दिखाएँ';
+
+  @override
+  String get showHandSkeleton => 'हाथ की ट्रैकिंग लाइनें';
+
+  @override
+  String get showFingerGuides => 'उंगली गाइड';
+
+  @override
+  String get showNeckGuide => 'गिटार नेक गाइड';
+
+  @override
+  String get showSoundField => 'गिटार से निकलता संगीत';
+
+  @override
+  String get showCoachMessages => 'कोच के संदेश';
+
+  @override
+  String get showBeatDots => 'बीट डॉट्स';
+
+  @override
+  String get showStatusChips => 'स्टेटस चिप्स';
+
+  @override
+  String get cameraView => 'कैमरा व्यू';
+
+  @override
+  String get mirrorPreview => 'प्रीव्यू मिरर करें';
 }

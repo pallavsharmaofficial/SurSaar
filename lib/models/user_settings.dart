@@ -13,6 +13,13 @@ class UserSettings extends Equatable {
     this.coachingMode = CoachingMode.learn,
     this.voiceEnabled = true,
     this.onboardingSeen = false,
+    this.showHandSkeleton = true,
+    this.showFingerGuides = true,
+    this.showNeckGuide = true,
+    this.showSoundField = true,
+    this.showCoachMessages = true,
+    this.showBeatDots = true,
+    this.showStatusChips = true,
   });
 
   factory UserSettings.fromMap(Map<String, dynamic> map) => UserSettings(
@@ -39,6 +46,15 @@ class UserSettings extends Equatable {
   final bool voiceEnabled;
   final bool onboardingSeen;
 
+  // Which live elements are drawn over the camera.
+  final bool showHandSkeleton;
+  final bool showFingerGuides;
+  final bool showNeckGuide;
+  final bool showSoundField;
+  final bool showCoachMessages;
+  final bool showBeatDots;
+  final bool showStatusChips;
+
   Map<String, dynamic> toMap() => <String, dynamic>{
     'left_handed': leftHanded,
     'mirror_camera': mirrorCamera,
@@ -59,6 +75,13 @@ class UserSettings extends Equatable {
     CoachingMode? coachingMode,
     bool? voiceEnabled,
     bool? onboardingSeen,
+    bool? showHandSkeleton,
+    bool? showFingerGuides,
+    bool? showNeckGuide,
+    bool? showSoundField,
+    bool? showCoachMessages,
+    bool? showBeatDots,
+    bool? showStatusChips,
   }) {
     return UserSettings(
       leftHanded: leftHanded ?? this.leftHanded,
@@ -69,6 +92,13 @@ class UserSettings extends Equatable {
       coachingMode: coachingMode ?? this.coachingMode,
       voiceEnabled: voiceEnabled ?? this.voiceEnabled,
       onboardingSeen: onboardingSeen ?? this.onboardingSeen,
+      showHandSkeleton: showHandSkeleton ?? this.showHandSkeleton,
+      showFingerGuides: showFingerGuides ?? this.showFingerGuides,
+      showNeckGuide: showNeckGuide ?? this.showNeckGuide,
+      showSoundField: showSoundField ?? this.showSoundField,
+      showCoachMessages: showCoachMessages ?? this.showCoachMessages,
+      showBeatDots: showBeatDots ?? this.showBeatDots,
+      showStatusChips: showStatusChips ?? this.showStatusChips,
     );
   }
 

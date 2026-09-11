@@ -562,4 +562,104 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get tapChordHint => 'Tap a chord to see and hear it';
+
+  @override
+  String get addSong => 'Add a song';
+
+  @override
+  String get addSongSubtitle =>
+      'Paste a chord sheet you found online. The chords, sections and key are read for you.';
+
+  @override
+  String get pasteSheet => 'Paste a chord sheet';
+
+  @override
+  String get pasteSheetHint => 'Paste the chords and lyrics here';
+
+  @override
+  String get findChordsOnline => 'Find chords online';
+
+  @override
+  String get searchOnlineHint =>
+      'Can\'t find it here? Search the web for the chords, copy the sheet and paste it in.';
+
+  @override
+  String get songTitleLabel => 'Song title';
+
+  @override
+  String get artistLabel => 'Artist (optional)';
+
+  @override
+  String get chordsFound => 'Chords found';
+
+  @override
+  String get noChordsFound =>
+      'No chords yet. Paste a sheet that has chord names like G, Em or C.';
+
+  @override
+  String get saveToMySongs => 'Add to my songs';
+
+  @override
+  String get songAdded => 'Added to your songs';
+
+  @override
+  String get mySongs => 'My songs';
+
+  @override
+  String get addedByYou => 'Added by you';
+
+  @override
+  String get removeSong => 'Remove song';
+
+  @override
+  String get removeSongConfirm =>
+      'Remove this song from this device? Your progress stays.';
+
+  @override
+  String get remove => 'Remove';
+
+  @override
+  String get cancel => 'Cancel';
+
+  @override
+  String get refreshSongs => 'Check for new songs';
+
+  @override
+  String get songsUpdated => 'Song list updated';
+
+  @override
+  String get keepLyrics => 'Keep the lyrics on this device';
+
+  @override
+  String get sectionsFound => 'Sections';
+
+  @override
+  String get displaySettings => 'What to show';
+
+  @override
+  String get showHandSkeleton => 'Hand tracking lines';
+
+  @override
+  String get showFingerGuides => 'Finger guides';
+
+  @override
+  String get showNeckGuide => 'Guitar neck guide';
+
+  @override
+  String get showSoundField => 'Music from the guitar';
+
+  @override
+  String get showCoachMessages => 'Coach messages';
+
+  @override
+  String get showBeatDots => 'Beat dots';
+
+  @override
+  String get showStatusChips => 'Status chips';
+
+  @override
+  String get cameraView => 'Camera view';
+
+  @override
+  String get mirrorPreview => 'Mirror the preview';
 }

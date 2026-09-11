@@ -12,6 +12,7 @@ import '../../screens/onboarding/onboarding_screen.dart';
 import '../../screens/profile/profile_screen.dart';
 import '../../screens/progress/progress_screen.dart';
 import '../../screens/shell/app_shell_screen.dart';
+import '../../screens/songs/import_song_screen.dart';
 import '../../screens/songs/song_detail_screen.dart';
 import '../../screens/songs/song_search_screen.dart';
 import '../../screens/teacher/teacher_screen.dart';
@@ -72,6 +73,14 @@ class AppRouter {
         pageBuilder: (context, state) => _page(
           state,
           SongSearchScreen(initialQuery: state.uri.queryParameters['q'] ?? ''),
+        ),
+      ),
+      GoRoute(
+        path: '/import',
+        name: 'importSong',
+        pageBuilder: (context, state) => _page(
+          state,
+          ImportSongScreen(initialQuery: state.uri.queryParameters['q'] ?? ''),
         ),
       ),
       GoRoute(

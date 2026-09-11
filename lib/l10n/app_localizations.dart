@@ -1153,6 +1153,198 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Tap a chord to see and hear it'**
   String get tapChordHint;
+
+  /// No description provided for @addSong.
+  ///
+  /// In en, this message translates to:
+  /// **'Add a song'**
+  String get addSong;
+
+  /// No description provided for @addSongSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Paste a chord sheet you found online. The chords, sections and key are read for you.'**
+  String get addSongSubtitle;
+
+  /// No description provided for @pasteSheet.
+  ///
+  /// In en, this message translates to:
+  /// **'Paste a chord sheet'**
+  String get pasteSheet;
+
+  /// No description provided for @pasteSheetHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Paste the chords and lyrics here'**
+  String get pasteSheetHint;
+
+  /// No description provided for @findChordsOnline.
+  ///
+  /// In en, this message translates to:
+  /// **'Find chords online'**
+  String get findChordsOnline;
+
+  /// No description provided for @searchOnlineHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Can\'t find it here? Search the web for the chords, copy the sheet and paste it in.'**
+  String get searchOnlineHint;
+
+  /// No description provided for @songTitleLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Song title'**
+  String get songTitleLabel;
+
+  /// No description provided for @artistLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Artist (optional)'**
+  String get artistLabel;
+
+  /// No description provided for @chordsFound.
+  ///
+  /// In en, this message translates to:
+  /// **'Chords found'**
+  String get chordsFound;
+
+  /// No description provided for @noChordsFound.
+  ///
+  /// In en, this message translates to:
+  /// **'No chords yet. Paste a sheet that has chord names like G, Em or C.'**
+  String get noChordsFound;
+
+  /// No description provided for @saveToMySongs.
+  ///
+  /// In en, this message translates to:
+  /// **'Add to my songs'**
+  String get saveToMySongs;
+
+  /// No description provided for @songAdded.
+  ///
+  /// In en, this message translates to:
+  /// **'Added to your songs'**
+  String get songAdded;
+
+  /// No description provided for @mySongs.
+  ///
+  /// In en, this message translates to:
+  /// **'My songs'**
+  String get mySongs;
+
+  /// No description provided for @addedByYou.
+  ///
+  /// In en, this message translates to:
+  /// **'Added by you'**
+  String get addedByYou;
+
+  /// No description provided for @removeSong.
+  ///
+  /// In en, this message translates to:
+  /// **'Remove song'**
+  String get removeSong;
+
+  /// No description provided for @removeSongConfirm.
+  ///
+  /// In en, this message translates to:
+  /// **'Remove this song from this device? Your progress stays.'**
+  String get removeSongConfirm;
+
+  /// No description provided for @remove.
+  ///
+  /// In en, this message translates to:
+  /// **'Remove'**
+  String get remove;
+
+  /// No description provided for @cancel.
+  ///
+  /// In en, this message translates to:
+  /// **'Cancel'**
+  String get cancel;
+
+  /// No description provided for @refreshSongs.
+  ///
+  /// In en, this message translates to:
+  /// **'Check for new songs'**
+  String get refreshSongs;
+
+  /// No description provided for @songsUpdated.
+  ///
+  /// In en, this message translates to:
+  /// **'Song list updated'**
+  String get songsUpdated;
+
+  /// No description provided for @keepLyrics.
+  ///
+  /// In en, this message translates to:
+  /// **'Keep the lyrics on this device'**
+  String get keepLyrics;
+
+  /// No description provided for @sectionsFound.
+  ///
+  /// In en, this message translates to:
+  /// **'Sections'**
+  String get sectionsFound;
+
+  /// No description provided for @displaySettings.
+  ///
+  /// In en, this message translates to:
+  /// **'What to show'**
+  String get displaySettings;
+
+  /// No description provided for @showHandSkeleton.
+  ///
+  /// In en, this message translates to:
+  /// **'Hand tracking lines'**
+  String get showHandSkeleton;
+
+  /// No description provided for @showFingerGuides.
+  ///
+  /// In en, this message translates to:
+  /// **'Finger guides'**
+  String get showFingerGuides;
+
+  /// No description provided for @showNeckGuide.
+  ///
+  /// In en, this message translates to:
+  /// **'Guitar neck guide'**
+  String get showNeckGuide;
+
+  /// No description provided for @showSoundField.
+  ///
+  /// In en, this message translates to:
+  /// **'Music from the guitar'**
+  String get showSoundField;
+
+  /// No description provided for @showCoachMessages.
+  ///
+  /// In en, this message translates to:
+  /// **'Coach messages'**
+  String get showCoachMessages;
+
+  /// No description provided for @showBeatDots.
+  ///
+  /// In en, this message translates to:
+  /// **'Beat dots'**
+  String get showBeatDots;
+
+  /// No description provided for @showStatusChips.
+  ///
+  /// In en, this message translates to:
+  /// **'Status chips'**
+  String get showStatusChips;
+
+  /// No description provided for @cameraView.
+  ///
+  /// In en, this message translates to:
+  /// **'Camera view'**
+  String get cameraView;
+
+  /// No description provided for @mirrorPreview.
+  ///
+  /// In en, this message translates to:
+  /// **'Mirror the preview'**
+  String get mirrorPreview;
 }
 
 class _AppLocalizationsDelegate

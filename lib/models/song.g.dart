@@ -63,6 +63,7 @@ Song _$SongFromJson(Map<String, dynamic> json) => Song(
   instrument: json['instrument'] as String? ?? 'guitar',
   tabs: json['tabs'] as String?,
   notes: json['notes'] as String?,
+  addedByUser: json['addedByUser'] as bool? ?? false,
 );
 
 Map<String, dynamic> _$SongToJson(Song instance) => <String, dynamic>{
@@ -90,6 +91,7 @@ Map<String, dynamic> _$SongToJson(Song instance) => <String, dynamic>{
   'instrument': instance.instrument,
   'tabs': instance.tabs,
   'notes': instance.notes,
+  'addedByUser': instance.addedByUser,
 };
 
 const _$SongDifficultyEnumMap = {

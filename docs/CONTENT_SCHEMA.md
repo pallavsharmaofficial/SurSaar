@@ -41,7 +41,8 @@
   "tutorialUrl": "https://…",
   "sourceUrl": "https://…",             // attribution for imported sheets
   "notes": "Community-sourced progression…",
-  "tabs": null                          // optional ASCII tab block
+  "tabs": null,                         // optional ASCII tab block
+  "addedByUser": false                  // true only for songs imported on a device
 }
 ```
 
@@ -53,6 +54,20 @@
   `capo`, exactly as chord sheets list them; `key` is the sounding key
   (shape key + capo). Choosing a different capo in the app re-transposes the
   shapes by `capo - newCapo`.
+
+## Songs the learner adds
+
+The app can import a chord sheet that a learner pastes in ("Add a song").
+`ChordSheetParser` reads chords above lyrics, ChordPro (`[G]lyric`) and sheets
+copied from a web page where the line breaks were lost, so chords are stuck to
+the lyric (`…Paas mereEm F Dm GTere Paas main`). It also picks up a capo, key,
+strumming and BPM when the sheet mentions them.
+
+Imported songs are stored on the device only, under `user_songs` in local
+storage, with `addedByUser: true`. They appear alongside the catalogue in
+search, the chord finder and the teacher, and they can keep their lyrics
+because they never leave the device. Songs published in this repository stay
+chords-only.
 
 ## Strumming notation
 

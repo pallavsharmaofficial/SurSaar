@@ -4,6 +4,21 @@
 turns them into a lesson." That is `tools/ingest` plus
 `.github/workflows/ingest-song.yml`.
 
+## In the app
+
+Three ways a learner gets a song that is missing:
+
+1. **Find chords online** – opens a web search for "<song> guitar chords".
+   Copy the sheet you like.
+2. **Paste a chord sheet** – "Add a song" parses what you paste, previews the
+   chords and sections it found, and saves the song to your device. Lyrics
+   stay local; the shared catalogue never stores them.
+3. **Request this song** – files a GitHub issue that the ingestion workflow
+   below picks up, so the song reaches everyone.
+
+"Check for new songs" in search re-fetches the published catalogue, so songs
+added by the workflow appear without reinstalling.
+
 ## Flow
 
 ```

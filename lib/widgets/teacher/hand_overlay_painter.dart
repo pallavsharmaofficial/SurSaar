@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../teacher/analysis/chord_shape_coach.dart';
+import '../../teacher/analysis/guitar_pose.dart';
 import 'finger_colors.dart';
 import '../../teacher/models/hand_frame.dart';
 
@@ -10,17 +11,29 @@ class HandOverlayPainter extends CustomPainter {
     required this.frame,
     required this.shape,
     required this.leftHanded,
+    this.pose = GuitarPose.none,
+    this.showSkeleton = true,
+    this.showGuides = true,
+    this.showNeck = true,
     this.frettingColor = const Color(0xFF7CF29A),
     this.strummingColor = const Color(0xFF7CC4FF),
     this.guideColor = const Color(0xFFFACC15),
+    this.neckColor = const Color(0xFFFFFFFF),
   });
 
   final HandFrame frame;
   final ShapeFeedback shape;
   final bool leftHanded;
+
+  /// Where the guitar is, so the neck can be outlined.
+  final GuitarPose pose;
+  final bool showSkeleton;
+  final bool showGuides;
+  final bool showNeck;
   final Color frettingColor;
   final Color strummingColor;
   final Color guideColor;
+  final Color neckColor;
 
   @override
   void paint(Canvas canvas, Size size) {
@@ -39,25 +52,55 @@ class HandOverlayPainter extends CustomPainter {
       return Offset(dx + x * drawW, dy + l.y * drawH);
     }
 
+    if (showNeck && pose.hasNeck) {
+      final start = map(HandLandmark(pose.neckStart.dx, pose.neckStart.dy));
+      final end = map(HandLandmark(pose.neckEnd.dx, pose.neckEnd.dy));
+      final strength = 0.25 + pose.confidence * 0.45;
+      canvas.drawLine(
+        start,
+        end,
+        Paint()
+          ..color = neckColor.withValues(alpha: strength * 0.5)
+          ..strokeWidth = 18
+          ..strokeCap = StrokeCap.round,
+      );
+      canvas.drawLine(
+        start,
+        end,
+        Paint()
+          ..color = neckColor.withValues(alpha: strength)
+          ..strokeWidth = 3
+          ..strokeCap = StrokeCap.round,
+      );
+      canvas.drawCircle(
+        end,
+        7,
+        Paint()..color = neckColor.withValues(alpha: strength),
+      );
+    }
+
     final fretting = leftHanded ? Handedness.right : Handedness.left;
-    for (final hand in frame.hands) {
-      final isFretting =
-          hand.handedness == fretting ||
-          (hand.handedness == Handedness.unknown && frame.hands.length == 1);
-      final color = isFretting ? frettingColor : strummingColor;
-      final bone = Paint()
-        ..color = color.withValues(alpha: 0.75)
-        ..strokeWidth = 3
-        ..strokeCap = StrokeCap.round;
-      for (final (a, b) in HandLandmarkIndex.connections) {
-        canvas.drawLine(map(hand[a]), map(hand[b]), bone);
-      }
-      final joint = Paint()..color = color;
-      for (final l in hand.landmarks) {
-        canvas.drawCircle(map(l), 3.5, joint);
+    if (showSkeleton) {
+      for (final hand in frame.hands) {
+        final isFretting =
+            hand.handedness == fretting ||
+            (hand.handedness == Handedness.unknown && frame.hands.length == 1);
+        final color = isFretting ? frettingColor : strummingColor;
+        final bone = Paint()
+          ..color = color.withValues(alpha: 0.75)
+          ..strokeWidth = 3
+          ..strokeCap = StrokeCap.round;
+        for (final (a, b) in HandLandmarkIndex.connections) {
+          canvas.drawLine(map(hand[a]), map(hand[b]), bone);
+        }
+        final joint = Paint()..color = color;
+        for (final l in hand.landmarks) {
+          canvas.drawCircle(map(l), 3.5, joint);
+        }
       }
     }
 
+    if (!showGuides) return;
     // finger guides on the fretting hand
     for (final guide in shape.guides) {
       final at = map(guide.landmark);
@@ -135,5 +178,11 @@ class HandOverlayPainter extends CustomPainter {
 
   @override
   bool shouldRepaint(covariant HandOverlayPainter old) =>
-      old.frame != frame || old.shape != shape || old.leftHanded != leftHanded;
+      old.frame != frame ||
+      old.shape != shape ||
+      old.leftHanded != leftHanded ||
+      old.pose != pose ||
+      old.showSkeleton != showSkeleton ||
+      old.showGuides != showGuides ||
+      old.showNeck != showNeck;
 }
