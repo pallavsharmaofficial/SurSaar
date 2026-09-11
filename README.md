@@ -1,220 +1,89 @@
-🎵 🎶 SurSaar – AI-Powered Real-Time Music School 🎸🎹🥁
-
-SurSaar is a Flutter-powered mobile app that begins as a Bollywood guitar song finder but has a much bigger mission:
-👉 To become a real-time AI Music School that listens, watches, and teaches you instruments interactively, starting with guitar.
-
-Whether you’re a beginner learning your first chords or an intermediate musician trying to polish your skills, SurSaar will evolve into your personal music coach — guiding, correcting, and motivating you in real time.
-
-
----
-
-🎯 Main Goal
-
-The ultimate vision of SurSaar is to create a comprehensive AI-driven platform for learning musical instruments, where:
-
-📡 AI listens to your playing (via microphone/audio ML).
-
-👀 AI watches your technique (via camera/computer vision).
-
-🧠 AI analyzes your skill level and identifies mistakes.
-
-🎵 AI teaches you step-by-step with practice routines, feedback, and encouragement.
-
-📊 AI tracks your progress over time like a personal music mentor.
-
-
-Currently, SurSaar supports guitar-focused features, but the platform is designed to expand into a multi-instrument, real-time music school.
-
-
----
-
-✅ Current Features (Guitar Focused)
-
-🎶 Chord + Capo Song Finder – Suggests Bollywood songs based on chosen root chord and capo fret.
-
-🔁 Capo Adjustment Logic – Dynamically transposes chord progressions.
-
-📋 Song Metadata – Artist, difficulty, strumming pattern, and chord progression.
-
-🎸 Curated for Beginners & Intermediates – Handpicked Bollywood songs with simple progressions.
-
-🎥 Tutorial Links – YouTube guides to speed up learning.
-
-🌈 Interactive UI – Smooth animations, chip-based chord selection, and responsive layouts.
-
-🛠️ Built with Flutter + BLoC – Clean architecture, easy scalability.
-
-
-
----
-
-🧠 AI-Powered Future Enhancements
-
-🎸 Guitar-Specific AI Learning
-
-🎧 Audio Analysis – Detects if you played the correct chord and strumming pattern.
-
-🎥 Computer Vision – Analyzes finger placement, hand position, and transitions between chords.
-
-⚡ Real-Time Feedback – Corrects you instantly (“Your 3rd finger is too flat on the 5th fret”).
-
-🏆 Gamified Learning – Scores your accuracy, suggests drills, and motivates you with rewards.
-
-
-🎹 Expansion to Other Instruments
-
-🎹 Piano/Keyboard: Detect notes played, correct finger placement, teach scales & songs.
-
-🥁 Drums: Rhythm detection, beat timing correction, practice patterns.
-
-🎤 Vocals: Pitch accuracy detection, vocal exercises, harmonization guidance.
-
-
-🎓 Music School Mode
-
-Structured courses & curriculums (Beginner → Advanced).
-
-AI-led daily practice routines with progress tracking.
-
-Personalized lesson recommendations based on weak points.
-
-
-🤝 Social & Community Features
-
-Upload recordings → Get AI + peer feedback.
-
-Join practice challenges with friends.
-
-Global leaderboard for practice streaks.
-
-
-
----
-
-🚀 Tech Stack
-
-Frontend → Flutter (cross-platform UI)
-
-State Management → BLoC Pattern
-
-Backend (Future) → Firebase / Supabase for user data & progress tracking
-
-AI/ML:
-
-🎧 Audio Analysis → TensorFlow Lite, On-Device ML for chord recognition
-
-🎥 Computer Vision → MediaPipe / OpenCV for hand tracking & instrument posture
-
-🧠 Recommendation Engine → Suggests songs, drills, and lessons based on performance
-
-
-
-
----
-
-📂 Folder Structure
-
-lib/
-├── blocs/             # BLoC state management
-├── models/            # Data models (Song, Lesson, Progress, etc.)
-├── repositories/      # Data logic (song filtering, AI inputs)
-├── screens/           # UI screens (Home, Song, Practice, Feedback, Profile)
-├── widgets/           # Reusable UI components (ChordChips, SongList, ProgressCard)
-└── main.dart          # Entry point
-
-
----
-
-⚙️ Installation & Setup
-
-1. Clone Repository
-
-git clone https://github.com/vickysharma/sursaar.git
-cd sursaar
-
-2. Install Dependencies
-
+<p align="center">
+  <img src="assets/icons/app_logo.svg" width="72" alt="">
+</p>
+
+<h1 align="center">SurSaar — an AI guitar teacher that watches, listens and corrects you</h1>
+
+<p align="center">
+  <a href="https://pallavsharmaofficial.github.io/SurSaar/"><b>Website</b></a> ·
+  <a href="https://pallavsharmaofficial.github.io/SurSaar/app/"><b>Open the web app</b></a> ·
+  <a href="ARCHITECTURE.md">Architecture</a> ·
+  <a href="ROADMAP.md">Roadmap</a> ·
+  <a href="docs/DEPLOYMENT.md">Deploy</a>
+</p>
+
+SurSaar is a Flutter app (web, Android, iOS) whose goal is the fastest,
+most independent way to learn an instrument — guitar first. Point your camera
+at your hands, let the microphone hear your guitar, and the teacher shows you
+which finger goes where, tells you whether the chord you played is right,
+checks your strumming against the beat and calls the next chord before it
+comes. Everything runs on your device; nothing is uploaded.
+
+## What it does today
+
+- **AI teacher (web):** MediaPipe hand tracking paints each fingertip with its
+  string and fret for the target chord and flags posture (straight fingers,
+  flat barre). A chroma-based recogniser hears the chord you play and says
+  *"that sounds like Em — target is G"*. An onset detector scores every strum
+  as hit / early / late / missed against the strumming grid. Count-in
+  metronome, live score rings, session summary, streaks and achievements.
+- **AI teacher (mobile):** same engine with the microphone; camera preview and
+  chord diagrams instead of finger tracking (hand tracking on mobile is on the
+  roadmap).
+- **Courses or ad hoc:** guided paths (Guitar Foundations, Bollywood Rhythm,
+  Technique Builder) with progress, lesson drills for chords / strumming /
+  technique, or a two-tap *Quick practice* with any chords, pattern and tempo.
+- **Songs:** search by title, artist, chord or tag; chord diagrams for every
+  chord (49 stored shapes + derived barres) with a capo slider; strumming grid;
+  song structure with chord changes; one tap into the teacher.
+- **Song requests → automatic ingestion:** *Request this song* opens a GitHub
+  issue; a workflow searches allow-listed chord sites, extracts chords, key,
+  capo, strumming and structure, commits them to the catalogue and replies on
+  the issue. Lyrics are never stored.
+- **Web + mobile from one codebase**, English and Hindi, offline-capable.
+
+## Run it
+
+```bash
 flutter pub get
+dart run build_runner build --delete-conflicting-outputs
+flutter gen-l10n
 
-3. Run App
+flutter run -d chrome      # web – camera, hand tracking, mic (localhost is a secure context)
+flutter run                # Android / iOS
+flutter analyze && flutter test
+```
 
-flutter run
+The site is published by GitHub Actions from `main`; see
+[docs/DEPLOYMENT.md](docs/DEPLOYMENT.md) for the one-time Pages setup.
 
+## How it is built
 
----
+| Part | Where | Notes |
+|---|---|---|
+| App | `lib/` | Flutter + BLoC + go_router, Material 3. Persistence is a JSON document store over `shared_preferences` so the same code runs on web and mobile. |
+| Teacher engine | `lib/teacher/` | Pure-Dart FFT → chroma → chord templates, spectral-flux onsets, timing scorer, hand-shape coach, plan/engine/coaching. Unit-tested with synthesised chords. |
+| Browser runtime | `web/teacher/sursaar_teacher.js` | getUserMedia, MediaPipe Hand Landmarker (wasm), AudioWorklet capture, metronome click — bound with `dart:js_interop`. |
+| Content | `content/sursaar_content.json`, `assets/data/` | Schema v2 (songs with key/capo/sections, lessons with teacher targets, courses, chord voicings). Old content-engine JSON still parses. |
+| Ingestion | `tools/ingest/` | Node CLI + `ingest-song.yml`. Opt-in source allow-list, robots.txt honoured, no lyrics. |
+| Site | `site/` | Static landing page served at the Pages root; the app lives at `/app/`. |
 
-🎸 Example Usage
+More: [ARCHITECTURE.md](ARCHITECTURE.md) · [docs/TEACHER_ENGINE.md](docs/TEACHER_ENGINE.md) ·
+[docs/CONTENT_SCHEMA.md](docs/CONTENT_SCHEMA.md) · [docs/INGESTION.md](docs/INGESTION.md) ·
+[PROJECT_STRUCTURE.md](PROJECT_STRUCTURE.md)
 
-Current (Song Finder):
+## Contributing
 
-1. Select G Major chord.
+1. Fork, branch, `flutter analyze && flutter test`, open a PR (CI builds the web app).
+2. To add a song by hand: `node tools/ingest/cli.mjs parse sheet.txt --title "…" --artist "…" > song.json && node tools/ingest/cli.mjs import song.json`.
+3. Only add chord-sheet sources whose terms allow it (`tools/ingest/sources.json`).
 
+## Privacy
 
-2. Set Capo on 3rd fret.
+Camera and microphone are processed locally; sessions and progress are stored
+on the device. No accounts, no analytics. See
+[site/privacy.html](site/privacy.html).
 
+## Licence
 
-3. App recommends playable songs like:
-
-O Sanam – Lucky Ali
-
-Yaaron – KK
-
-Channa Mereya – Arijit Singh
-
-
-
-
-Future (AI Teacher):
-
-Play O Sanam on your guitar.
-
-App listens + watches your hand.
-
-AI feedback:
-
-> “Chord G is correct, but strumming is too fast. Try slowing down by 10 BPM.”
-
-
-
-Next lesson → introduces a new strumming pattern.
-
-
-
----
-
-🧑‍💻 Contributing
-
-We welcome contributions!
-
-1. Fork the repository
-
-
-2. Create a feature branch
-
-
-3. Commit your changes
-
-
-4. Submit a Pull Request 🚀
-
-
-
-
----
-
-📜 License
-
-Licensed under the MIT License – free to use, modify, and distribute.
-
-
----
-
-💡 Vision Statement
-
-🎵 SurSaar is not just a guitar app.
-
-Today, it’s a Bollywood song finder for guitarists.
-Tomorrow, it will be your real-time music teacher — listening, watching, guiding, and teaching you like a personal mentor.
-
-🎶 The dream → To build a global AI-powered Music School in your pocket where anyone, anywhere, can learn guitar, piano, drums, or singing — interactively, affordably, and with fun.
-
+MIT.

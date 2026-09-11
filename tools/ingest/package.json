@@ -1,0 +1,13 @@
+{
+  "name": "sursaar-ingest",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Finds chord sheets for a song, extracts chords / key / capo / strumming / structure and merges them into the SurSaar content bundle.",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "ingest": "node cli.mjs ingest",
+    "validate": "node cli.mjs validate ../../content/sursaar_content.json"
+  }
+}

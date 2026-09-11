@@ -1,0 +1,9 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="26" y="15" width="12" height="22" rx="6" fill="#2D31FA"/>
+  <path d="M18 28C18 35.732 24.268 42 32 42C39.732 42 46 35.732 46 28" stroke="#F8FAFC" stroke-width="3" stroke-linecap="round"/>
+  <line x1="32" y1="42" x2="32" y2="50" stroke="#F8FAFC" stroke-width="3"/>
+  <path d="M10 32C10 20 20 10 32 10" stroke="#FF6B6B" stroke-width="2" stroke-linecap="round">
+    <animate attributeName="stroke-dashoffset" from="20" to="0" dur="1.5s" repeatCount="indefinite" />
+  </path>
+  <path d="M54 32C54 44 44 54 32 54" stroke="#FACC15" stroke-width="2" stroke-linecap="round"/>
+</svg>

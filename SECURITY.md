@@ -1,21 +1,11 @@
-# Security Policy
+# Security policy
 
-## Supported Versions
+SurSaar runs entirely on the user's device: camera and microphone streams are
+processed in the browser / app and never transmitted; progress is stored
+locally. The only network calls are fetching the public content JSON and, on
+the web, the MediaPipe runtime and model from jsDelivr / Google storage.
 
-Use this section to tell people about which versions of your project are
-currently being supported with security updates.
-
-| Version | Supported          |
-| ------- | ------------------ |
-| 5.1.x   | :white_check_mark: |
-| 5.0.x   | :x:                |
-| 4.0.x   | :white_check_mark: |
-| < 4.0   | :x:                |
-
-## Reporting a Vulnerability
-
-Use this section to tell people how to report a vulnerability.
-
-Tell them where to go, how often they can expect to get an update on a
-reported vulnerability, what to expect if the vulnerability is accepted or
-declined, etc.
+If you find a vulnerability (for example in the ingestion workflow, which
+fetches third-party pages in GitHub Actions), please open a private security
+advisory on GitHub for `pallavsharmaofficial/SurSaar` rather than a public
+issue. We aim to respond within a week.

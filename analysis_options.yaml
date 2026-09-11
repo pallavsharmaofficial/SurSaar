@@ -1,0 +1,18 @@
+analyzer:
+  exclude:
+    - build/**
+    - android/**
+    - ios/**
+    - web/**
+    - windows/**
+    - macos/**
+    - linux/**
+    - "**/*.g.dart"
+    - lib/l10n/app_localizations*.dart
+include: package:flutter_lints/flutter.yaml
+
+linter:
+  rules:
+    avoid_print: true
+    prefer_single_quotes: true
+    require_trailing_commas: true

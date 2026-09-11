@@ -1,0 +1,1604 @@
+{
+  "version": "2.0.0",
+  "schemaVersion": 2,
+  "lastUpdated": "2026-09-11",
+  "lessons": [
+    {
+      "id": "open_chord_foundation",
+      "title": "The Open Chord Foundation",
+      "category": "Fundamentals",
+      "description": "Learn to play the G major and C major open chords without buzzing strings.",
+      "difficulty": "beginner",
+      "kind": "chord",
+      "targetChords": [
+        "G",
+        "C"
+      ],
+      "targetStrumming": "D D D D",
+      "targetBpm": 60,
+      "steps": [
+        {
+          "title": "Understanding chord anatomy",
+          "description": "What makes up a chord and how fingers sit behind the fret.",
+          "durationMinutes": 5
+        },
+        {
+          "title": "G major",
+          "description": "Middle finger 3rd fret low E, index 2nd fret A, ring 3rd fret high e.",
+          "durationMinutes": 8
+        },
+        {
+          "title": "C major",
+          "description": "Ring 3rd fret A, middle 2nd fret D, index 1st fret B. Skip the low E.",
+          "durationMinutes": 8
+        },
+        {
+          "title": "Clean check",
+          "description": "Pluck each string one at a time and fix any buzz.",
+          "durationMinutes": 4
+        }
+      ],
+      "instrument": "guitar",
+      "topicsCount": 4,
+      "duration": 25,
+      "isCompleted": false,
+      "progress": 0.0
+    },
+    {
+      "id": "basic_chords",
+      "title": "Basic Guitar Chords",
+      "category": "Fundamentals",
+      "description": "Learn the fundamental open chords: C, G, D, Em, Am.",
+      "difficulty": "beginner",
+      "kind": "chord",
+      "targetChords": [
+        "C",
+        "G",
+        "D",
+        "Em",
+        "Am"
+      ],
+      "targetStrumming": "D D D D",
+      "targetBpm": 70,
+      "steps": [
+        {
+          "title": "Chord shapes",
+          "description": "Learn finger placement for C, G, D, Em, Am.",
+          "durationMinutes": 6
+        },
+        {
+          "title": "Clean fretting",
+          "description": "Avoid muted strings with correct pressure.",
+          "durationMinutes": 5
+        },
+        {
+          "title": "Strum practice",
+          "description": "Downstrums at 70 BPM with a metronome.",
+          "durationMinutes": 6
+        },
+        {
+          "title": "Chord changes",
+          "description": "Switch between C → G → D smoothly.",
+          "durationMinutes": 6
+        },
+        {
+          "title": "Mini challenge",
+          "description": "Play a 2-minute progression without stopping.",
+          "durationMinutes": 2
+        }
+      ],
+      "instrument": "guitar",
+      "topicsCount": 5,
+      "duration": 25,
+      "isCompleted": false,
+      "progress": 0.0
+    },
+    {
+      "id": "strumming_patterns",
+      "title": "Strumming Patterns",
+      "category": "Rhythm",
+      "description": "Master the essential strumming patterns behind most popular songs.",
+      "difficulty": "beginner",
+      "kind": "strumming",
+      "targetChords": [
+        "G",
+        "D"
+      ],
+      "targetStrumming": "D DU UDU",
+      "targetBpm": 80,
+      "steps": [
+        {
+          "title": "Down/up basics",
+          "description": "Alternate down and up strokes at 80 BPM.",
+          "durationMinutes": 6
+        },
+        {
+          "title": "Pattern 1",
+          "description": "D D U U D U for 4 minutes.",
+          "durationMinutes": 6
+        },
+        {
+          "title": "Pattern 2",
+          "description": "D DU UDU with the accent on beat 2.",
+          "durationMinutes": 6
+        },
+        {
+          "title": "Muted strums",
+          "description": "Add muted strokes for rhythm control.",
+          "durationMinutes": 6
+        },
+        {
+          "title": "Tempo build",
+          "description": "Increase speed from 70 to 90 BPM.",
+          "durationMinutes": 6
+        }
+      ],
+      "instrument": "guitar",
+      "topicsCount": 5,
+      "duration": 30,
+      "isCompleted": false,
+      "progress": 0.0
+    },
+    {
+      "id": "chord_transitions",
+      "title": "Smooth Chord Transitions",
+      "category": "Technique",
+      "description": "Improve your chord switching speed and accuracy.",
+      "difficulty": "intermediate",
+      "kind": "chord",
+      "targetChords": [
+        "G",
+        "C",
+        "D",
+        "Em"
+      ],
+      "targetStrumming": "D DU UDU",
+      "targetBpm": 80,
+      "steps": [
+        {
+          "title": "Anchor fingers",
+          "description": "Keep the ring finger planted between G and C.",
+          "durationMinutes": 8
+        },
+        {
+          "title": "Two-chord drill",
+          "description": "Switch G ↔ Em for 2 minutes.",
+          "durationMinutes": 6
+        },
+        {
+          "title": "Three-chord drill",
+          "description": "Cycle C → G → D at 80 BPM.",
+          "durationMinutes": 8
+        },
+        {
+          "title": "Clean transitions",
+          "description": "Lift fingers just enough to remove buzzing.",
+          "durationMinutes": 7
+        },
+        {
+          "title": "Challenge",
+          "description": "Play the 4 chords for 4 minutes at 90 BPM.",
+          "durationMinutes": 6
+        }
+      ],
+      "instrument": "guitar",
+      "topicsCount": 5,
+      "duration": 35,
+      "isCompleted": false,
+      "progress": 0.0
+    },
+    {
+      "id": "bollywood_8beat",
+      "title": "Bollywood Strumming: The 8-Beat Flow",
+      "category": "Rhythm",
+      "description": "Master the muted-slap strumming used in songs like Kabira and Ilahi.",
+      "difficulty": "intermediate",
+      "kind": "strumming",
+      "targetChords": [
+        "D",
+        "G",
+        "A",
+        "Bm"
+      ],
+      "targetStrumming": "D X DU X DU",
+      "targetBpm": 85,
+      "steps": [
+        {
+          "title": "Downstroke with the thumb",
+          "description": "Relaxed wrist, strike all six strings.",
+          "durationMinutes": 5
+        },
+        {
+          "title": "Palm mute (X)",
+          "description": "Land the side of the palm on the strings for a percussive slap.",
+          "durationMinutes": 8
+        },
+        {
+          "title": "Quick up-down",
+          "description": "Light up-down on the higher strings.",
+          "durationMinutes": 8
+        },
+        {
+          "title": "Full loop",
+          "description": "Loop D X DU X DU at 85 BPM over D G A Bm.",
+          "durationMinutes": 9
+        }
+      ],
+      "instrument": "guitar",
+      "topicsCount": 4,
+      "duration": 30,
+      "isCompleted": false,
+      "progress": 0.0
+    },
+    {
+      "id": "barre_chords",
+      "title": "Barre Chords Mastery",
+      "category": "Technique",
+      "description": "Learn and practise barre chord techniques.",
+      "difficulty": "intermediate",
+      "kind": "chord",
+      "targetChords": [
+        "F",
+        "Bm",
+        "B"
+      ],
+      "targetStrumming": "D D D D",
+      "targetBpm": 60,
+      "steps": [
+        {
+          "title": "Barre mechanics",
+          "description": "Index finger pressure and thumb position behind the neck.",
+          "durationMinutes": 8
+        },
+        {
+          "title": "E-shape barre",
+          "description": "Form the F barre chord cleanly.",
+          "durationMinutes": 8
+        },
+        {
+          "title": "A-shape barre",
+          "description": "Form the B and Bm barre chords.",
+          "durationMinutes": 8
+        },
+        {
+          "title": "Strength builder",
+          "description": "Hold the barre for 20 seconds, rest, repeat.",
+          "durationMinutes": 8
+        },
+        {
+          "title": "Progression practice",
+          "description": "Switch between barre and open chords.",
+          "durationMinutes": 8
+        }
+      ],
+      "instrument": "guitar",
+      "topicsCount": 5,
+      "duration": 40,
+      "isCompleted": false,
+      "progress": 0.0
+    },
+    {
+      "id": "fingerstyle_basics",
+      "title": "Fingerstyle Basics",
+      "category": "Technique",
+      "description": "Introduction to fingerpicking patterns.",
+      "difficulty": "intermediate",
+      "kind": "exercise",
+      "targetChords": [
+        "C",
+        "G",
+        "Am"
+      ],
+      "targetStrumming": "D - D - D - D -",
+      "targetBpm": 70,
+      "steps": [
+        {
+          "title": "Thumb independence",
+          "description": "Play bass notes with the thumb only.",
+          "durationMinutes": 8
+        },
+        {
+          "title": "Pattern 1",
+          "description": "Thumb–index–middle–ring sequence.",
+          "durationMinutes": 8
+        },
+        {
+          "title": "Pattern 2",
+          "description": "Alternating bass with melody notes.",
+          "durationMinutes": 8
+        },
+        {
+          "title": "Arpeggio flow",
+          "description": "Play across 4 strings evenly.",
+          "durationMinutes": 8
+        },
+        {
+          "title": "Mini etude",
+          "description": "Play a 2-chord fingerstyle pattern.",
+          "durationMinutes": 8
+        }
+      ],
+      "instrument": "guitar",
+      "topicsCount": 5,
+      "duration": 40,
+      "isCompleted": false,
+      "progress": 0.0
+    },
+    {
+      "id": "spider_walk",
+      "title": "Spider Walk – Speed Drill",
+      "category": "Dexterity",
+      "description": "Play 1-2-3-4 on every string starting from the low E.",
+      "difficulty": "intermediate",
+      "kind": "exercise",
+      "targetBpm": 60,
+      "steps": [
+        {
+          "title": "Spider walk",
+          "description": "One finger per fret, 1-2-3-4, ascending then descending across all strings.",
+          "durationMinutes": 10
+        }
+      ],
+      "instrument": "guitar",
+      "topicsCount": 1,
+      "duration": 10,
+      "isCompleted": false,
+      "progress": 0.0
+    },
+    {
+      "id": "scales_exercises",
+      "title": "Scales and Exercises",
+      "category": "Dexterity",
+      "description": "Practise scales to improve finger dexterity.",
+      "difficulty": "advanced",
+      "kind": "exercise",
+      "targetBpm": 80,
+      "steps": [
+        {
+          "title": "Major scale shape",
+          "description": "Play the C major scale across 1 octave.",
+          "durationMinutes": 10
+        },
+        {
+          "title": "Minor scale shape",
+          "description": "Play the A minor scale across 1 octave.",
+          "durationMinutes": 10
+        },
+        {
+          "title": "Alternate picking",
+          "description": "Down-up picking for scale runs.",
+          "durationMinutes": 10
+        },
+        {
+          "title": "Speed ladder",
+          "description": "Increase BPM from 80 to 120.",
+          "durationMinutes": 10
+        },
+        {
+          "title": "Accuracy test",
+          "description": "Play 2 minutes without mistakes.",
+          "durationMinutes": 10
+        }
+      ],
+      "instrument": "guitar",
+      "topicsCount": 5,
+      "duration": 50,
+      "isCompleted": false,
+      "progress": 0.0
+    },
+    {
+      "id": "capo_quiz",
+      "title": "Capo Transposition Quiz",
+      "category": "Theory",
+      "description": "If the base key is G and the capo is on the 2nd fret, what is the new key?",
+      "difficulty": "beginner",
+      "kind": "theory",
+      "steps": [
+        {
+          "title": "Capo maths",
+          "description": "Each fret raises the pitch by one semitone. G + 2 = A.",
+          "durationMinutes": 5
+        }
+      ],
+      "instrument": "guitar",
+      "topicsCount": 1,
+      "duration": 5,
+      "isCompleted": false,
+      "progress": 0.0
+    }
+  ],
+  "songs": [
+    {
+      "id": "o_sanam",
+      "title": "O Sanam",
+      "artist": "Lucky Ali",
+      "album": "Sunoh",
+      "difficulty": "beginner",
+      "key": "A#",
+      "capo": 3,
+      "bpm": 92,
+      "duration": 248,
+      "strummingPattern": "D DU UDU",
+      "originalChords": [
+        "G",
+        "Em",
+        "C",
+        "D"
+      ],
+      "tutorialUrl": "https://www.youtube.com/watch?v=uiL9Q2PKi1A",
+      "tags": [
+        "90s",
+        "indie pop",
+        "classic",
+        "bollywood"
+      ],
+      "language": "hi",
+      "sections": [
+        {
+          "name": "Intro",
+          "repeat": 1,
+          "lines": [
+            {
+              "lyric": "",
+              "chords": [
+                {
+                  "chord": "G",
+                  "position": 0
+                },
+                {
+                  "chord": "Em",
+                  "position": 0
+                },
+                {
+                  "chord": "C",
+                  "position": 0
+                },
+                {
+                  "chord": "D",
+                  "position": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Verse",
+          "repeat": 2,
+          "lines": [
+            {
+              "lyric": "",
+              "chords": [
+                {
+                  "chord": "G",
+                  "position": 0
+                },
+                {
+                  "chord": "Em",
+                  "position": 0
+                },
+                {
+                  "chord": "C",
+                  "position": 0
+                },
+                {
+                  "chord": "D",
+                  "position": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Chorus",
+          "repeat": 1,
+          "lines": [
+            {
+              "lyric": "",
+              "chords": [
+                {
+                  "chord": "C",
+                  "position": 0
+                },
+                {
+                  "chord": "D",
+                  "position": 0
+                },
+                {
+                  "chord": "G",
+                  "position": 0
+                },
+                {
+                  "chord": "Em",
+                  "position": 0
+                },
+                {
+                  "chord": "C",
+                  "position": 0
+                },
+                {
+                  "chord": "D",
+                  "position": 0
+                },
+                {
+                  "chord": "G",
+                  "position": 0
+                },
+                {
+                  "chord": "G",
+                  "position": 0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "notes": "Community-sourced progression. Verify against the tutorial and adjust the capo to your voice."
+    },
+    {
+      "id": "yaaron",
+      "title": "Yaaron",
+      "artist": "KK",
+      "album": "Pal",
+      "difficulty": "beginner",
+      "key": "G",
+      "capo": 0,
+      "bpm": 88,
+      "duration": 301,
+      "strummingPattern": "D D U U D U",
+      "originalChords": [
+        "G",
+        "Em",
+        "C",
+        "D"
+      ],
+      "tutorialUrl": "https://www.youtube.com/watch?v=j2Oa8G9vLZY",
+      "tags": [
+        "friendship",
+        "anthem",
+        "bollywood"
+      ],
+      "language": "hi",
+      "sections": [
+        {
+          "name": "Intro",
+          "repeat": 1,
+          "lines": [
+            {
+              "lyric": "",
+              "chords": [
+                {
+                  "chord": "G",
+                  "position": 0
+                },
+                {
+                  "chord": "Em",
+                  "position": 0
+                },
+                {
+                  "chord": "C",
+                  "position": 0
+                },
+                {
+                  "chord": "D",
+                  "position": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Verse",
+          "repeat": 2,
+          "lines": [
+            {
+              "lyric": "",
+              "chords": [
+                {
+                  "chord": "G",
+                  "position": 0
+                },
+                {
+                  "chord": "Em",
+                  "position": 0
+                },
+                {
+                  "chord": "C",
+                  "position": 0
+                },
+                {
+                  "chord": "D",
+                  "position": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Chorus",
+          "repeat": 1,
+          "lines": [
+            {
+              "lyric": "",
+              "chords": [
+                {
+                  "chord": "C",
+                  "position": 0
+                },
+                {
+                  "chord": "D",
+                  "position": 0
+                },
+                {
+                  "chord": "G",
+                  "position": 0
+                },
+                {
+                  "chord": "Em",
+                  "position": 0
+                },
+                {
+                  "chord": "C",
+                  "position": 0
+                },
+                {
+                  "chord": "D",
+                  "position": 0
+                },
+                {
+                  "chord": "G",
+                  "position": 0
+                },
+                {
+                  "chord": "G",
+                  "position": 0
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "channa_mereya",
+      "title": "Channa Mereya",
+      "artist": "Arijit Singh",
+      "album": "Ae Dil Hai Mushkil",
+      "difficulty": "intermediate",
+      "key": "D",
+      "capo": 2,
+      "bpm": 75,
+      "duration": 294,
+      "strummingPattern": "D DU UDU",
+      "originalChords": [
+        "C",
+        "Am",
+        "F",
+        "G"
+      ],
+      "tutorialUrl": "https://www.youtube.com/watch?v=QF9mJf8siXc",
+      "tags": [
+        "soulful",
+        "modern",
+        "bollywood"
+      ],
+      "language": "hi",
+      "sections": [
+        {
+          "name": "Verse",
+          "repeat": 2,
+          "lines": [
+            {
+              "lyric": "",
+              "chords": [
+                {
+                  "chord": "C",
+                  "position": 0
+                },
+                {
+                  "chord": "Am",
+                  "position": 0
+                },
+                {
+                  "chord": "F",
+                  "position": 0
+                },
+                {
+                  "chord": "G",
+                  "position": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Chorus",
+          "repeat": 1,
+          "lines": [
+            {
+              "lyric": "",
+              "chords": [
+                {
+                  "chord": "F",
+                  "position": 0
+                },
+                {
+                  "chord": "G",
+                  "position": 0
+                },
+                {
+                  "chord": "C",
+                  "position": 0
+                },
+                {
+                  "chord": "Am",
+                  "position": 0
+                },
+                {
+                  "chord": "F",
+                  "position": 0
+                },
+                {
+                  "chord": "G",
+                  "position": 0
+                },
+                {
+                  "chord": "C",
+                  "position": 0
+                },
+                {
+                  "chord": "C",
+                  "position": 0
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tum_hi_ho",
+      "title": "Tum Hi Ho",
+      "artist": "Arijit Singh",
+      "album": "Aashiqui 2",
+      "difficulty": "intermediate",
+      "key": "Fm",
+      "capo": 1,
+      "bpm": 78,
+      "duration": 262,
+      "strummingPattern": "D D U U D U",
+      "originalChords": [
+        "Em",
+        "C",
+        "D",
+        "G"
+      ],
+      "tutorialUrl": "https://www.youtube.com/watch?v=0RszmOFN2U4",
+      "tags": [
+        "romantic",
+        "bollywood"
+      ],
+      "language": "hi",
+      "sections": [
+        {
+          "name": "Intro",
+          "repeat": 1,
+          "lines": [
+            {
+              "lyric": "",
+              "chords": [
+                {
+                  "chord": "Em",
+                  "position": 0
+                },
+                {
+                  "chord": "C",
+                  "position": 0
+                },
+                {
+                  "chord": "D",
+                  "position": 0
+                },
+                {
+                  "chord": "G",
+                  "position": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Verse",
+          "repeat": 2,
+          "lines": [
+            {
+              "lyric": "",
+              "chords": [
+                {
+                  "chord": "Em",
+                  "position": 0
+                },
+                {
+                  "chord": "C",
+                  "position": 0
+                },
+                {
+                  "chord": "D",
+                  "position": 0
+                },
+                {
+                  "chord": "G",
+                  "position": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Chorus",
+          "repeat": 1,
+          "lines": [
+            {
+              "lyric": "",
+              "chords": [
+                {
+                  "chord": "C",
+                  "position": 0
+                },
+                {
+                  "chord": "D",
+                  "position": 0
+                },
+                {
+                  "chord": "Em",
+                  "position": 0
+                },
+                {
+                  "chord": "Em",
+                  "position": 0
+                },
+                {
+                  "chord": "C",
+                  "position": 0
+                },
+                {
+                  "chord": "D",
+                  "position": 0
+                },
+                {
+                  "chord": "G",
+                  "position": 0
+                },
+                {
+                  "chord": "G",
+                  "position": 0
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tere_sang_yaara",
+      "title": "Tere Sang Yaara",
+      "artist": "Atif Aslam",
+      "album": "Rustom",
+      "difficulty": "beginner",
+      "key": "C",
+      "capo": 0,
+      "bpm": 82,
+      "duration": 285,
+      "strummingPattern": "D DU UDU",
+      "originalChords": [
+        "C",
+        "G",
+        "Am",
+        "F"
+      ],
+      "tutorialUrl": "https://www.youtube.com/results?search_query=Tere+Sang+Yaara+guitar+chords+tutorial",
+      "tags": [
+        "romantic",
+        "bollywood"
+      ],
+      "language": "hi",
+      "sections": [
+        {
+          "name": "Verse",
+          "repeat": 2,
+          "lines": [
+            {
+              "lyric": "",
+              "chords": [
+                {
+                  "chord": "C",
+                  "position": 0
+                },
+                {
+                  "chord": "G",
+                  "position": 0
+                },
+                {
+                  "chord": "Am",
+                  "position": 0
+                },
+                {
+                  "chord": "F",
+                  "position": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Chorus",
+          "repeat": 1,
+          "lines": [
+            {
+              "lyric": "",
+              "chords": [
+                {
+                  "chord": "F",
+                  "position": 0
+                },
+                {
+                  "chord": "G",
+                  "position": 0
+                },
+                {
+                  "chord": "C",
+                  "position": 0
+                },
+                {
+                  "chord": "Am",
+                  "position": 0
+                },
+                {
+                  "chord": "F",
+                  "position": 0
+                },
+                {
+                  "chord": "G",
+                  "position": 0
+                },
+                {
+                  "chord": "C",
+                  "position": 0
+                },
+                {
+                  "chord": "C",
+                  "position": 0
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pal",
+      "title": "Pal",
+      "artist": "KK",
+      "album": "Pal",
+      "difficulty": "beginner",
+      "key": "G",
+      "capo": 0,
+      "bpm": 90,
+      "duration": 315,
+      "strummingPattern": "D D U U D U",
+      "originalChords": [
+        "G",
+        "D",
+        "Em",
+        "C"
+      ],
+      "tutorialUrl": "https://www.youtube.com/results?search_query=Pal+KK+guitar+chords+tutorial",
+      "tags": [
+        "nostalgia",
+        "bollywood"
+      ],
+      "language": "hi",
+      "sections": [
+        {
+          "name": "Verse",
+          "repeat": 2,
+          "lines": [
+            {
+              "lyric": "",
+              "chords": [
+                {
+                  "chord": "G",
+                  "position": 0
+                },
+                {
+                  "chord": "D",
+                  "position": 0
+                },
+                {
+                  "chord": "Em",
+                  "position": 0
+                },
+                {
+                  "chord": "C",
+                  "position": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Chorus",
+          "repeat": 1,
+          "lines": [
+            {
+              "lyric": "",
+              "chords": [
+                {
+                  "chord": "C",
+                  "position": 0
+                },
+                {
+                  "chord": "D",
+                  "position": 0
+                },
+                {
+                  "chord": "G",
+                  "position": 0
+                },
+                {
+                  "chord": "Em",
+                  "position": 0
+                },
+                {
+                  "chord": "C",
+                  "position": 0
+                },
+                {
+                  "chord": "D",
+                  "position": 0
+                },
+                {
+                  "chord": "G",
+                  "position": 0
+                },
+                {
+                  "chord": "G",
+                  "position": 0
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tera_ban_jaunga",
+      "title": "Tera Ban Jaunga",
+      "artist": "Akhil Sachdeva",
+      "album": "Kabir Singh",
+      "difficulty": "intermediate",
+      "key": "Em",
+      "capo": 0,
+      "bpm": 80,
+      "duration": 275,
+      "strummingPattern": "D DU UDU",
+      "originalChords": [
+        "Em",
+        "G",
+        "D",
+        "C"
+      ],
+      "tutorialUrl": "https://www.youtube.com/results?search_query=Tera+Ban+Jaunga+guitar+chords+tutorial",
+      "tags": [
+        "romantic",
+        "bollywood"
+      ],
+      "language": "hi",
+      "sections": [
+        {
+          "name": "Verse",
+          "repeat": 2,
+          "lines": [
+            {
+              "lyric": "",
+              "chords": [
+                {
+                  "chord": "Em",
+                  "position": 0
+                },
+                {
+                  "chord": "G",
+                  "position": 0
+                },
+                {
+                  "chord": "D",
+                  "position": 0
+                },
+                {
+                  "chord": "C",
+                  "position": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Chorus",
+          "repeat": 1,
+          "lines": [
+            {
+              "lyric": "",
+              "chords": [
+                {
+                  "chord": "C",
+                  "position": 0
+                },
+                {
+                  "chord": "D",
+                  "position": 0
+                },
+                {
+                  "chord": "Em",
+                  "position": 0
+                },
+                {
+                  "chord": "Em",
+                  "position": 0
+                },
+                {
+                  "chord": "C",
+                  "position": 0
+                },
+                {
+                  "chord": "D",
+                  "position": 0
+                },
+                {
+                  "chord": "G",
+                  "position": 0
+                },
+                {
+                  "chord": "G",
+                  "position": 0
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "raabta",
+      "title": "Raabta",
+      "artist": "Arijit Singh",
+      "album": "Agent Vinod",
+      "difficulty": "advanced",
+      "key": "Am",
+      "capo": 0,
+      "bpm": 95,
+      "duration": 242,
+      "strummingPattern": "D DUDUDU",
+      "originalChords": [
+        "Am",
+        "F",
+        "C",
+        "G",
+        "Em"
+      ],
+      "tutorialUrl": "https://www.youtube.com/results?search_query=Raabta+guitar+chords+tutorial",
+      "tags": [
+        "romantic",
+        "bollywood"
+      ],
+      "language": "hi",
+      "sections": [
+        {
+          "name": "Verse",
+          "repeat": 2,
+          "lines": [
+            {
+              "lyric": "",
+              "chords": [
+                {
+                  "chord": "Am",
+                  "position": 0
+                },
+                {
+                  "chord": "F",
+                  "position": 0
+                },
+                {
+                  "chord": "C",
+                  "position": 0
+                },
+                {
+                  "chord": "G",
+                  "position": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Chorus",
+          "repeat": 1,
+          "lines": [
+            {
+              "lyric": "",
+              "chords": [
+                {
+                  "chord": "F",
+                  "position": 0
+                },
+                {
+                  "chord": "G",
+                  "position": 0
+                },
+                {
+                  "chord": "Am",
+                  "position": 0
+                },
+                {
+                  "chord": "Em",
+                  "position": 0
+                },
+                {
+                  "chord": "F",
+                  "position": 0
+                },
+                {
+                  "chord": "G",
+                  "position": 0
+                },
+                {
+                  "chord": "Am",
+                  "position": 0
+                },
+                {
+                  "chord": "Am",
+                  "position": 0
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kabira",
+      "title": "Kabira",
+      "artist": "Tochi Raina, Rekha Bhardwaj",
+      "album": "Yeh Jawaani Hai Deewani",
+      "difficulty": "beginner",
+      "key": "D",
+      "capo": 0,
+      "bpm": 84,
+      "duration": 223,
+      "strummingPattern": "D DU D DU",
+      "originalChords": [
+        "D",
+        "G",
+        "A",
+        "Bm"
+      ],
+      "tutorialUrl": "https://www.youtube.com/results?search_query=Kabira+guitar+chords+tutorial",
+      "tags": [
+        "folk-pop",
+        "wedding",
+        "bollywood"
+      ],
+      "language": "hi",
+      "sections": [
+        {
+          "name": "Verse",
+          "repeat": 2,
+          "lines": [
+            {
+              "lyric": "",
+              "chords": [
+                {
+                  "chord": "D",
+                  "position": 0
+                },
+                {
+                  "chord": "G",
+                  "position": 0
+                },
+                {
+                  "chord": "A",
+                  "position": 0
+                },
+                {
+                  "chord": "G",
+                  "position": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Chorus",
+          "repeat": 1,
+          "lines": [
+            {
+              "lyric": "",
+              "chords": [
+                {
+                  "chord": "Bm",
+                  "position": 0
+                },
+                {
+                  "chord": "G",
+                  "position": 0
+                },
+                {
+                  "chord": "D",
+                  "position": 0
+                },
+                {
+                  "chord": "A",
+                  "position": 0
+                },
+                {
+                  "chord": "Bm",
+                  "position": 0
+                },
+                {
+                  "chord": "G",
+                  "position": 0
+                },
+                {
+                  "chord": "D",
+                  "position": 0
+                },
+                {
+                  "chord": "D",
+                  "position": 0
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gulabi_aankhen",
+      "title": "Gulabi Aankhen",
+      "artist": "Mohammed Rafi",
+      "album": "The Train",
+      "difficulty": "intermediate",
+      "key": "Am",
+      "capo": 0,
+      "bpm": 110,
+      "duration": 210,
+      "strummingPattern": "D DU UDU",
+      "originalChords": [
+        "Am",
+        "G",
+        "F",
+        "E"
+      ],
+      "tutorialUrl": "https://www.youtube.com/results?search_query=Gulabi+Aankhen+guitar+chords+tutorial",
+      "tags": [
+        "retro",
+        "upbeat",
+        "bollywood"
+      ],
+      "language": "hi",
+      "sections": [
+        {
+          "name": "Verse",
+          "repeat": 2,
+          "lines": [
+            {
+              "lyric": "",
+              "chords": [
+                {
+                  "chord": "Am",
+                  "position": 0
+                },
+                {
+                  "chord": "G",
+                  "position": 0
+                },
+                {
+                  "chord": "F",
+                  "position": 0
+                },
+                {
+                  "chord": "E",
+                  "position": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Chorus",
+          "repeat": 1,
+          "lines": [
+            {
+              "lyric": "",
+              "chords": [
+                {
+                  "chord": "Am",
+                  "position": 0
+                },
+                {
+                  "chord": "G",
+                  "position": 0
+                },
+                {
+                  "chord": "F",
+                  "position": 0
+                },
+                {
+                  "chord": "E",
+                  "position": 0
+                },
+                {
+                  "chord": "Am",
+                  "position": 0
+                },
+                {
+                  "chord": "G",
+                  "position": 0
+                },
+                {
+                  "chord": "F",
+                  "position": 0
+                },
+                {
+                  "chord": "E",
+                  "position": 0
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pee_loon",
+      "title": "Pee Loon",
+      "artist": "Mohit Chauhan",
+      "album": "Once Upon a Time in Mumbaai",
+      "difficulty": "intermediate",
+      "key": "A",
+      "capo": 2,
+      "bpm": 96,
+      "duration": 260,
+      "strummingPattern": "D DU UDU",
+      "originalChords": [
+        "G",
+        "D",
+        "C",
+        "Em"
+      ],
+      "tutorialUrl": "https://www.youtube.com/results?search_query=Pee+Loon+guitar+chords+tutorial",
+      "tags": [
+        "sufi",
+        "romantic",
+        "bollywood"
+      ],
+      "language": "hi",
+      "sections": [
+        {
+          "name": "Verse",
+          "repeat": 2,
+          "lines": [
+            {
+              "lyric": "",
+              "chords": [
+                {
+                  "chord": "G",
+                  "position": 0
+                },
+                {
+                  "chord": "D",
+                  "position": 0
+                },
+                {
+                  "chord": "C",
+                  "position": 0
+                },
+                {
+                  "chord": "D",
+                  "position": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Chorus",
+          "repeat": 1,
+          "lines": [
+            {
+              "lyric": "",
+              "chords": [
+                {
+                  "chord": "Em",
+                  "position": 0
+                },
+                {
+                  "chord": "C",
+                  "position": 0
+                },
+                {
+                  "chord": "G",
+                  "position": 0
+                },
+                {
+                  "chord": "D",
+                  "position": 0
+                },
+                {
+                  "chord": "Em",
+                  "position": 0
+                },
+                {
+                  "chord": "C",
+                  "position": 0
+                },
+                {
+                  "chord": "G",
+                  "position": 0
+                },
+                {
+                  "chord": "G",
+                  "position": 0
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "courses": [
+    {
+      "id": "course_guitar_foundations",
+      "title": "Guitar Foundations",
+      "emoji": "🎸",
+      "difficulty": "beginner",
+      "description": "Your first chords, your first strumming pattern and your first clean chord changes.",
+      "lessonIds": [
+        "open_chord_foundation",
+        "basic_chords",
+        "strumming_patterns",
+        "chord_transitions"
+      ],
+      "instrument": "guitar",
+      "estimatedMinutes": 115
+    },
+    {
+      "id": "course_bollywood_rhythm",
+      "title": "Bollywood Rhythm",
+      "emoji": "🥁",
+      "difficulty": "intermediate",
+      "description": "The strumming feel behind Bollywood favourites, plus the barre chords they need.",
+      "lessonIds": [
+        "bollywood_8beat",
+        "barre_chords",
+        "fingerstyle_basics"
+      ],
+      "instrument": "guitar",
+      "estimatedMinutes": 110
+    },
+    {
+      "id": "course_technique_builder",
+      "title": "Technique Builder",
+      "emoji": "⚡",
+      "difficulty": "advanced",
+      "description": "Dexterity drills, scales and the theory to move songs into any key.",
+      "lessonIds": [
+        "spider_walk",
+        "scales_exercises",
+        "capo_quiz"
+      ],
+      "instrument": "guitar",
+      "estimatedMinutes": 65
+    }
+  ],
+  "chords": []
+}

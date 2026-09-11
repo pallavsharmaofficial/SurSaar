@@ -1,0 +1,12 @@
+{
+  "_comment": "Allow-list of chord-sheet sites the ingester may fetch. Empty by default: add hosts only after checking their terms of service and robots.txt. Each entry can override the generic parser with CSS-ish hints.",
+  "sources": [
+  ],
+  "_example": {
+    "host": "example-chords.com",
+    "name": "Example Chords",
+    "searchPathTemplate": "/search?q={query}",
+    "sheetSelector": "pre",
+    "attribution": "Chords sourced from Example Chords"
+  }
+}

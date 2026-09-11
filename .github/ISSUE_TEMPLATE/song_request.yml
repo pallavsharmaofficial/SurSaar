@@ -1,0 +1,27 @@
+name: Song request
+description: Ask for a song to be added to the SurSaar catalogue (chords, key, capo, strumming, structure).
+title: "Song request: "
+labels: [song-request]
+body:
+  - type: input
+    id: song
+    attributes:
+      label: Song title
+      placeholder: Kabira
+    validations:
+      required: true
+  - type: input
+    id: artist
+    attributes:
+      label: Artist (optional)
+      placeholder: Tochi Raina
+  - type: input
+    id: url
+    attributes:
+      label: Chord sheet URL (optional)
+      description: If you already know a page with the chords, paste it and the ingester will parse that page. The site must be in tools/ingest/sources.json.
+  - type: markdown
+    attributes:
+      value: |
+        The ingestion workflow only stores chord names, key, capo, strumming and the chord order per section.
+        Lyrics are never stored. Please only link to sources whose terms allow this use.

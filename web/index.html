@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--
+    The base href is replaced by `flutter build web --base-href /SurSaar/app/`
+    in the Pages workflow so the app can live under a sub-path.
+  -->
+  <base href="$FLUTTER_BASE_HREF">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="SurSaar – learn guitar with an AI teacher that watches your hands, listens to your chords and keeps you on the beat. Runs entirely in your browser.">
+  <meta name="theme-color" content="#0F172A">
+  <meta name="color-scheme" content="dark">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="SurSaar – AI guitar teacher in your browser">
+  <meta property="og:description" content="Real-time chord, strumming and finger-position coaching with your camera and microphone. Nothing is uploaded.">
+  <meta property="og:type" content="website">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="SurSaar">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>SurSaar – AI Guitar Teacher</title>
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Camera, hand tracking, microphone and metronome for the AI teacher. -->
+  <script src="teacher/sursaar_teacher.js"></script>
+
+  <style>
+    html, body { height: 100%; margin: 0; background: #0F172A; }
+    #sursaar-splash {
+      position: fixed; inset: 0; display: flex; flex-direction: column;
+      align-items: center; justify-content: center; gap: 16px;
+      background: #0F172A; color: #F8FAFC;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      transition: opacity .3s ease;
+    }
+    #sursaar-splash .logo { font-size: 42px; font-weight: 700; letter-spacing: .5px; }
+    #sursaar-splash .logo span { color: #FF6B6B; }
+    #sursaar-splash .bar { width: 160px; height: 4px; border-radius: 2px; background: #1E293B; overflow: hidden; }
+    #sursaar-splash .bar::after {
+      content: ""; display: block; width: 40%; height: 100%; background: #2D31FA;
+      animation: sursaar-slide 1.1s infinite ease-in-out;
+    }
+    @keyframes sursaar-slide { 0% { transform: translateX(-100%);} 100% { transform: translateX(350%);} }
+    flt-glass-pane, flutter-view { background: #0F172A; }
+  </style>
+</head>
+<body>
+  <div id="sursaar-splash" aria-hidden="true">
+    <div class="logo">Sur<span>Saar</span></div>
+    <div class="bar"></div>
+    <div style="font-size:13px;opacity:.7">Loading your AI guitar teacher…</div>
+  </div>
+  <script>
+    window.addEventListener('flutter-first-frame', function () {
+      var splash = document.getElementById('sursaar-splash');
+      if (!splash) return;
+      splash.style.opacity = '0';
+      setTimeout(function () { splash.remove(); }, 320);
+    });
+  </script>
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>
