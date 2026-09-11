@@ -13,15 +13,15 @@ class UserProgress extends Equatable {
   });
 
   factory UserProgress.initial() => const UserProgress(
-        totalPracticeTime: 0,
-        songsLearned: 0,
-        currentStreak: 0,
-        longestStreak: 0,
-        averageAccuracy: 0.0,
-        lessonsCompleted: 0,
-        level: 1,
-      xp: 0,
-      );
+    totalPracticeTime: 0,
+    songsLearned: 0,
+    currentStreak: 0,
+    longestStreak: 0,
+    averageAccuracy: 0.0,
+    lessonsCompleted: 0,
+    level: 1,
+    xp: 0,
+  );
 
   final int totalPracticeTime; // in minutes
   final int songsLearned;
@@ -56,13 +56,13 @@ class UserProgress extends Equatable {
 
   @override
   List<Object?> get props => <Object?>[
-        totalPracticeTime,
-        songsLearned,
-        currentStreak,
-        longestStreak,
-        averageAccuracy,
-        lessonsCompleted,
-        level,
-        xp,
-      ];
+    totalPracticeTime,
+    songsLearned,
+    currentStreak,
+    longestStreak,
+    averageAccuracy,
+    lessonsCompleted,
+    level,
+    xp,
+  ];
 }

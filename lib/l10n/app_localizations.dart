@@ -63,7 +63,7 @@ import 'app_localizations_hi.dart';
 /// property.
 abstract class AppLocalizations {
   AppLocalizations(String locale)
-      : localeName = intl.Intl.canonicalizedLocale(locale.toString());
+    : localeName = intl.Intl.canonicalizedLocale(locale.toString());
 
   final String localeName;
 
@@ -86,16 +86,16 @@ abstract class AppLocalizations {
   /// of delegates is preferred or required.
   static const List<LocalizationsDelegate<dynamic>> localizationsDelegates =
       <LocalizationsDelegate<dynamic>>[
-    delegate,
-    GlobalMaterialLocalizations.delegate,
-    GlobalCupertinoLocalizations.delegate,
-    GlobalWidgetsLocalizations.delegate,
-  ];
+        delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+      ];
 
   /// A list of this localizations delegate's supported locales.
   static const List<Locale> supportedLocales = <Locale>[
     Locale('en'),
-    Locale('hi')
+    Locale('hi'),
   ];
 
   /// No description provided for @appTitle.
@@ -200,24 +200,6 @@ abstract class AppLocalizations {
   /// **'Practice Mode'**
   String get practiceMode;
 
-  /// No description provided for @listening.
-  ///
-  /// In en, this message translates to:
-  /// **'Listening...'**
-  String get listening;
-
-  /// No description provided for @tapToStart.
-  ///
-  /// In en, this message translates to:
-  /// **'Tap to start practicing'**
-  String get tapToStart;
-
-  /// No description provided for @aiPracticePlaceholder.
-  ///
-  /// In en, this message translates to:
-  /// **'AI-powered practice mode coming soon! This feature will listen to your playing and provide real-time feedback.'**
-  String get aiPracticePlaceholder;
-
   /// No description provided for @accuracy.
   ///
   /// In en, this message translates to:
@@ -241,18 +223,6 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Save Session'**
   String get savePractice;
-
-  /// No description provided for @comingSoon.
-  ///
-  /// In en, this message translates to:
-  /// **'Coming Soon'**
-  String get comingSoon;
-
-  /// No description provided for @aiFeatureDescription.
-  ///
-  /// In en, this message translates to:
-  /// **'This AI feature is under development. It will use machine learning to analyze your playing, detect chord accuracy, and provide personalized feedback.'**
-  String get aiFeatureDescription;
 
   /// No description provided for @ok.
   ///
@@ -398,23 +368,11 @@ abstract class AppLocalizations {
   /// **'Settings'**
   String get settings;
 
-  /// No description provided for @notifications.
-  ///
-  /// In en, this message translates to:
-  /// **'Notifications'**
-  String get notifications;
-
   /// No description provided for @language.
   ///
   /// In en, this message translates to:
   /// **'Language'**
   String get language;
-
-  /// No description provided for @theme.
-  ///
-  /// In en, this message translates to:
-  /// **'Theme'**
-  String get theme;
 
   /// No description provided for @about.
   ///
@@ -469,6 +427,354 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Complete a practice session to unlock achievements.'**
   String get noAchievements;
+
+  /// No description provided for @home.
+  ///
+  /// In en, this message translates to:
+  /// **'Home'**
+  String get home;
+
+  /// No description provided for @learn.
+  ///
+  /// In en, this message translates to:
+  /// **'Learn'**
+  String get learn;
+
+  /// No description provided for @courses.
+  ///
+  /// In en, this message translates to:
+  /// **'Courses'**
+  String get courses;
+
+  /// No description provided for @searchSongs.
+  ///
+  /// In en, this message translates to:
+  /// **'Search songs'**
+  String get searchSongs;
+
+  /// No description provided for @searchHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Song, artist, chord or tag…'**
+  String get searchHint;
+
+  /// No description provided for @noResultsFor.
+  ///
+  /// In en, this message translates to:
+  /// **'No songs found for'**
+  String get noResultsFor;
+
+  /// No description provided for @requestSong.
+  ///
+  /// In en, this message translates to:
+  /// **'Request this song'**
+  String get requestSong;
+
+  /// No description provided for @requestSongHint.
+  ///
+  /// In en, this message translates to:
+  /// **'We\'ll add the chords, strumming and structure to the catalogue so you can practise it with the AI teacher.'**
+  String get requestSongHint;
+
+  /// No description provided for @aiTeacher.
+  ///
+  /// In en, this message translates to:
+  /// **'AI Teacher'**
+  String get aiTeacher;
+
+  /// No description provided for @aiTeacherTagline.
+  ///
+  /// In en, this message translates to:
+  /// **'Turn on your camera and mic. I\'ll show you where your fingers go, listen to every chord and keep you on the beat.'**
+  String get aiTeacherTagline;
+
+  /// No description provided for @aiTeacherHowItWorks.
+  ///
+  /// In en, this message translates to:
+  /// **'How the teacher works'**
+  String get aiTeacherHowItWorks;
+
+  /// No description provided for @aiTeacherExplanation.
+  ///
+  /// In en, this message translates to:
+  /// **'The microphone listens for the chord you play and compares it with the target. The camera tracks your hands so the overlay can point each finger to its string and fret, and the metronome grid checks your strumming timing. Everything runs on your device; nothing is uploaded.'**
+  String get aiTeacherExplanation;
+
+  /// No description provided for @quickPractice.
+  ///
+  /// In en, this message translates to:
+  /// **'Quick practice'**
+  String get quickPractice;
+
+  /// No description provided for @quickPracticeHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Pick a few chords and a strumming pattern to start an ad-hoc session.'**
+  String get quickPracticeHint;
+
+  /// No description provided for @pickChords.
+  ///
+  /// In en, this message translates to:
+  /// **'Pick chords'**
+  String get pickChords;
+
+  /// No description provided for @practiceWithTeacher.
+  ///
+  /// In en, this message translates to:
+  /// **'Practise with the AI Teacher'**
+  String get practiceWithTeacher;
+
+  /// No description provided for @playNow.
+  ///
+  /// In en, this message translates to:
+  /// **'Play now'**
+  String get playNow;
+
+  /// No description provided for @nextChord.
+  ///
+  /// In en, this message translates to:
+  /// **'Next'**
+  String get nextChord;
+
+  /// No description provided for @chordsShort.
+  ///
+  /// In en, this message translates to:
+  /// **'Chords'**
+  String get chordsShort;
+
+  /// No description provided for @timing.
+  ///
+  /// In en, this message translates to:
+  /// **'Timing'**
+  String get timing;
+
+  /// No description provided for @overall.
+  ///
+  /// In en, this message translates to:
+  /// **'Overall'**
+  String get overall;
+
+  /// No description provided for @hearing.
+  ///
+  /// In en, this message translates to:
+  /// **'Hearing'**
+  String get hearing;
+
+  /// No description provided for @pause.
+  ///
+  /// In en, this message translates to:
+  /// **'Pause'**
+  String get pause;
+
+  /// No description provided for @resume.
+  ///
+  /// In en, this message translates to:
+  /// **'Resume'**
+  String get resume;
+
+  /// No description provided for @playAgain.
+  ///
+  /// In en, this message translates to:
+  /// **'Play again'**
+  String get playAgain;
+
+  /// No description provided for @finish.
+  ///
+  /// In en, this message translates to:
+  /// **'Finish'**
+  String get finish;
+
+  /// No description provided for @done.
+  ///
+  /// In en, this message translates to:
+  /// **'Done'**
+  String get done;
+
+  /// No description provided for @bar.
+  ///
+  /// In en, this message translates to:
+  /// **'Bar'**
+  String get bar;
+
+  /// No description provided for @camera.
+  ///
+  /// In en, this message translates to:
+  /// **'Camera'**
+  String get camera;
+
+  /// No description provided for @microphone.
+  ///
+  /// In en, this message translates to:
+  /// **'Microphone'**
+  String get microphone;
+
+  /// No description provided for @metronome.
+  ///
+  /// In en, this message translates to:
+  /// **'Metronome'**
+  String get metronome;
+
+  /// No description provided for @cameraStartsOnPlay.
+  ///
+  /// In en, this message translates to:
+  /// **'The camera starts when you press play.'**
+  String get cameraStartsOnPlay;
+
+  /// No description provided for @cameraUnavailable.
+  ///
+  /// In en, this message translates to:
+  /// **'Camera is not available on this device.'**
+  String get cameraUnavailable;
+
+  /// No description provided for @handTrackingWebOnly.
+  ///
+  /// In en, this message translates to:
+  /// **'Finger guidance with hand tracking is available in the web app; on mobile the teacher listens and shows the chord diagram.'**
+  String get handTrackingWebOnly;
+
+  /// No description provided for @howToPlay.
+  ///
+  /// In en, this message translates to:
+  /// **'How to play'**
+  String get howToPlay;
+
+  /// No description provided for @sessionComplete.
+  ///
+  /// In en, this message translates to:
+  /// **'Session complete'**
+  String get sessionComplete;
+
+  /// No description provided for @chordsPlayed.
+  ///
+  /// In en, this message translates to:
+  /// **'chords played'**
+  String get chordsPlayed;
+
+  /// No description provided for @strums.
+  ///
+  /// In en, this message translates to:
+  /// **'strums'**
+  String get strums;
+
+  /// No description provided for @sessionSaved.
+  ///
+  /// In en, this message translates to:
+  /// **'Saved'**
+  String get sessionSaved;
+
+  /// No description provided for @keyLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Key'**
+  String get keyLabel;
+
+  /// No description provided for @sections.
+  ///
+  /// In en, this message translates to:
+  /// **'Song structure'**
+  String get sections;
+
+  /// No description provided for @source.
+  ///
+  /// In en, this message translates to:
+  /// **'Source'**
+  String get source;
+
+  /// No description provided for @difficultyAll.
+  ///
+  /// In en, this message translates to:
+  /// **'All'**
+  String get difficultyAll;
+
+  /// No description provided for @startCourse.
+  ///
+  /// In en, this message translates to:
+  /// **'Start'**
+  String get startCourse;
+
+  /// No description provided for @continueCourse.
+  ///
+  /// In en, this message translates to:
+  /// **'Continue'**
+  String get continueCourse;
+
+  /// No description provided for @courseComplete.
+  ///
+  /// In en, this message translates to:
+  /// **'Course complete!'**
+  String get courseComplete;
+
+  /// No description provided for @markComplete.
+  ///
+  /// In en, this message translates to:
+  /// **'Mark lesson complete'**
+  String get markComplete;
+
+  /// No description provided for @completed.
+  ///
+  /// In en, this message translates to:
+  /// **'Completed'**
+  String get completed;
+
+  /// No description provided for @teacherSettings.
+  ///
+  /// In en, this message translates to:
+  /// **'Teacher settings'**
+  String get teacherSettings;
+
+  /// No description provided for @leftHanded.
+  ///
+  /// In en, this message translates to:
+  /// **'Left-handed player'**
+  String get leftHanded;
+
+  /// No description provided for @mirrorCamera.
+  ///
+  /// In en, this message translates to:
+  /// **'Mirror camera preview'**
+  String get mirrorCamera;
+
+  /// No description provided for @showHandOverlay.
+  ///
+  /// In en, this message translates to:
+  /// **'Show hand tracking overlay'**
+  String get showHandOverlay;
+
+  /// No description provided for @defaultTempo.
+  ///
+  /// In en, this message translates to:
+  /// **'Default tempo'**
+  String get defaultTempo;
+
+  /// No description provided for @website.
+  ///
+  /// In en, this message translates to:
+  /// **'Website'**
+  String get website;
+
+  /// No description provided for @sourceCode.
+  ///
+  /// In en, this message translates to:
+  /// **'Source code on GitHub'**
+  String get sourceCode;
+
+  /// No description provided for @privacyNote.
+  ///
+  /// In en, this message translates to:
+  /// **'Camera and microphone are processed on your device only. Nothing is uploaded.'**
+  String get privacyNote;
+
+  /// No description provided for @recentSessions.
+  ///
+  /// In en, this message translates to:
+  /// **'Recent sessions'**
+  String get recentSessions;
+
+  /// No description provided for @noSessions.
+  ///
+  /// In en, this message translates to:
+  /// **'No sessions yet. Start a quick practice to see your history here.'**
+  String get noSessions;
 }
 
 class _AppLocalizationsDelegate
@@ -498,8 +804,9 @@ AppLocalizations lookupAppLocalizations(Locale locale) {
   }
 
   throw FlutterError(
-      'AppLocalizations.delegate failed to load unsupported locale "$locale". This is likely '
-      'an issue with the localizations generation tool. Please file an issue '
-      'on GitHub with a reproducible sample app and the gen-l10n configuration '
-      'that was used.');
+    'AppLocalizations.delegate failed to load unsupported locale "$locale". This is likely '
+    'an issue with the localizations generation tool. Please file an issue '
+    'on GitHub with a reproducible sample app and the gen-l10n configuration '
+    'that was used.',
+  );
 }

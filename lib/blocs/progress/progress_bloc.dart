@@ -4,10 +4,9 @@ import 'progress_event.dart';
 import 'progress_state.dart';
 
 class ProgressBloc extends Bloc<ProgressEvent, ProgressState> {
-  ProgressBloc({
-    required ProgressRepository repository,
-  })  : _repository = repository,
-        super(ProgressState.initial()) {
+  ProgressBloc({required ProgressRepository repository})
+    : _repository = repository,
+      super(ProgressState.initial()) {
     on<ProgressLoadRequested>(_onLoadRequested);
     on<ProgressPracticeTimeUpdated>(_onPracticeTimeUpdated);
     on<ProgressSongLearnedIncremented>(_onSongLearnedIncremented);
@@ -23,12 +22,7 @@ class ProgressBloc extends Bloc<ProgressEvent, ProgressState> {
     emit(state.copyWith(status: ProgressStatus.loading));
     try {
       final progress = await _repository.getProgress();
-      emit(
-        state.copyWith(
-          status: ProgressStatus.loaded,
-          progress: progress,
-        ),
-      );
+      emit(state.copyWith(status: ProgressStatus.loaded, progress: progress));
     } catch (e) {
       emit(
         state.copyWith(

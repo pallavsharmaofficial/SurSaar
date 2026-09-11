@@ -28,11 +28,7 @@ class ProgressStatCard extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          Icon(
-            icon,
-            color: theme.colorScheme.primary,
-            size: 32,
-          ),
+          Icon(icon, color: theme.colorScheme.primary, size: 32),
           const SizedBox(height: 8),
           Flexible(
             child: Text(

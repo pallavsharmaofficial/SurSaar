@@ -63,16 +63,6 @@ class AppLocalizationsHi extends AppLocalizations {
   String get practiceMode => 'अभ्यास मोड';
 
   @override
-  String get listening => 'सुन रहा है...';
-
-  @override
-  String get tapToStart => 'शुरू करने के लिए टैप करें';
-
-  @override
-  String get aiPracticePlaceholder =>
-      'AI-संचालित अभ्यास मोड जल्द आ रहा है! यह फीचर आपकी बजाई को सुनेगा और रियल-टाइम फीडबैक देगा।';
-
-  @override
   String get accuracy => 'सटीकता';
 
   @override
@@ -83,13 +73,6 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get savePractice => 'सेव करें';
-
-  @override
-  String get comingSoon => 'जल्द आ रहा है';
-
-  @override
-  String get aiFeatureDescription =>
-      'यह AI फीचर विकास में है। यह मशीन लर्निंग का उपयोग करके आपकी बजाई का विश्लेषण करेगा।';
 
   @override
   String get ok => 'ठीक है';
@@ -165,13 +148,7 @@ class AppLocalizationsHi extends AppLocalizations {
   String get settings => 'सेटिंग्स';
 
   @override
-  String get notifications => 'सूचनाएं';
-
-  @override
   String get language => 'भाषा';
-
-  @override
-  String get theme => 'थीम';
 
   @override
   String get about => 'के बारे में';
@@ -199,4 +176,185 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get noAchievements => 'अभ्यास पूरा करें और उपलब्धियाँ अनलॉक करें।';
+
+  @override
+  String get home => 'होम';
+
+  @override
+  String get learn => 'सीखें';
+
+  @override
+  String get courses => 'कोर्स';
+
+  @override
+  String get searchSongs => 'गाने खोजें';
+
+  @override
+  String get searchHint => 'गाना, कलाकार, कॉर्ड या टैग…';
+
+  @override
+  String get noResultsFor => 'इसके लिए कोई गाना नहीं मिला';
+
+  @override
+  String get requestSong => 'यह गाना जोड़ने का अनुरोध करें';
+
+  @override
+  String get requestSongHint =>
+      'हम कॉर्ड, स्ट्रमिंग और संरचना कैटलॉग में जोड़ देंगे ताकि आप AI टीचर के साथ अभ्यास कर सकें।';
+
+  @override
+  String get aiTeacher => 'AI टीचर';
+
+  @override
+  String get aiTeacherTagline =>
+      'कैमरा और माइक चालू करें। मैं दिखाऊँगा कि उंगलियाँ कहाँ रखनी हैं, हर कॉर्ड सुनूँगा और आपको ताल पर रखूँगा।';
+
+  @override
+  String get aiTeacherHowItWorks => 'टीचर कैसे काम करता है';
+
+  @override
+  String get aiTeacherExplanation =>
+      'माइक्रोफ़ोन आपके बजाए कॉर्ड को सुनकर लक्ष्य से मिलाता है। कैमरा आपके हाथों को ट्रैक करता है ताकि हर उंगली को उसकी स्ट्रिंग और फ्रेट दिखाई जा सके, और मेट्रोनोम ग्रिड स्ट्रमिंग की टाइमिंग जाँचता है। सब कुछ आपके डिवाइस पर ही चलता है; कुछ भी अपलोड नहीं होता।';
+
+  @override
+  String get quickPractice => 'त्वरित अभ्यास';
+
+  @override
+  String get quickPracticeHint =>
+      'कुछ कॉर्ड और एक स्ट्रमिंग पैटर्न चुनकर तुरंत सेशन शुरू करें।';
+
+  @override
+  String get pickChords => 'कॉर्ड चुनें';
+
+  @override
+  String get practiceWithTeacher => 'AI टीचर के साथ अभ्यास करें';
+
+  @override
+  String get playNow => 'अभी बजाएँ';
+
+  @override
+  String get nextChord => 'अगला';
+
+  @override
+  String get chordsShort => 'कॉर्ड';
+
+  @override
+  String get timing => 'टाइमिंग';
+
+  @override
+  String get overall => 'कुल';
+
+  @override
+  String get hearing => 'सुन रहा हूँ';
+
+  @override
+  String get pause => 'रोकें';
+
+  @override
+  String get resume => 'जारी रखें';
+
+  @override
+  String get playAgain => 'फिर से बजाएँ';
+
+  @override
+  String get finish => 'समाप्त';
+
+  @override
+  String get done => 'हो गया';
+
+  @override
+  String get bar => 'बार';
+
+  @override
+  String get camera => 'कैमरा';
+
+  @override
+  String get microphone => 'माइक्रोफ़ोन';
+
+  @override
+  String get metronome => 'मेट्रोनोम';
+
+  @override
+  String get cameraStartsOnPlay => 'प्ले दबाने पर कैमरा चालू होगा।';
+
+  @override
+  String get cameraUnavailable => 'इस डिवाइस पर कैमरा उपलब्ध नहीं है।';
+
+  @override
+  String get handTrackingWebOnly =>
+      'हैंड ट्रैकिंग के साथ उंगली मार्गदर्शन वेब ऐप में उपलब्ध है; मोबाइल पर टीचर सुनता है और कॉर्ड डायग्राम दिखाता है।';
+
+  @override
+  String get howToPlay => 'कैसे बजाएँ';
+
+  @override
+  String get sessionComplete => 'सेशन पूरा';
+
+  @override
+  String get chordsPlayed => 'कॉर्ड बजाए';
+
+  @override
+  String get strums => 'स्ट्रम';
+
+  @override
+  String get sessionSaved => 'सेव हो गया';
+
+  @override
+  String get keyLabel => 'की';
+
+  @override
+  String get sections => 'गाने की संरचना';
+
+  @override
+  String get source => 'स्रोत';
+
+  @override
+  String get difficultyAll => 'सभी';
+
+  @override
+  String get startCourse => 'शुरू करें';
+
+  @override
+  String get continueCourse => 'जारी रखें';
+
+  @override
+  String get courseComplete => 'कोर्स पूरा!';
+
+  @override
+  String get markComplete => 'पाठ पूरा करें';
+
+  @override
+  String get completed => 'पूरा हुआ';
+
+  @override
+  String get teacherSettings => 'टीचर सेटिंग्स';
+
+  @override
+  String get leftHanded => 'बाएँ हाथ से बजाते हैं';
+
+  @override
+  String get mirrorCamera => 'कैमरा प्रीव्यू मिरर करें';
+
+  @override
+  String get showHandOverlay => 'हैंड ट्रैकिंग ओवरले दिखाएँ';
+
+  @override
+  String get defaultTempo => 'डिफ़ॉल्ट टेम्पो';
+
+  @override
+  String get website => 'वेबसाइट';
+
+  @override
+  String get sourceCode => 'GitHub पर सोर्स कोड';
+
+  @override
+  String get privacyNote =>
+      'कैमरा और माइक्रोफ़ोन केवल आपके डिवाइस पर प्रोसेस होते हैं। कुछ भी अपलोड नहीं होता।';
+
+  @override
+  String get recentSessions => 'हाल के सेशन';
+
+  @override
+  String get noSessions =>
+      'अभी कोई सेशन नहीं। इतिहास देखने के लिए त्वरित अभ्यास शुरू करें।';
 }

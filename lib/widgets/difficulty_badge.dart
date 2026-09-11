@@ -3,10 +3,7 @@ import '../models/lesson.dart';
 import '../models/song.dart';
 
 class DifficultyBadge extends StatelessWidget {
-  const DifficultyBadge({
-    super.key,
-    required this.difficulty,
-  });
+  const DifficultyBadge({super.key, required this.difficulty});
 
   final dynamic difficulty;
 

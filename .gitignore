@@ -43,3 +43,10 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+# Generated web build output used by the Pages workflow
+/site/app/
+/site/content/
+
+# local Pages preview
+/dist/

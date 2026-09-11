@@ -1,12 +1,7 @@
 import 'package:equatable/equatable.dart';
 import '../../models/song.dart';
 
-enum SongFinderStatus {
-  initial,
-  loading,
-  ready,
-  error,
-}
+enum SongFinderStatus { initial, loading, ready, error }
 
 class SongFinderState extends Equatable {
   const SongFinderState({
@@ -19,12 +14,12 @@ class SongFinderState extends Equatable {
   });
 
   factory SongFinderState.initial() => const SongFinderState(
-        status: SongFinderStatus.initial,
-        selectedChord: 'G',
-        capoFret: 0,
-        allSongs: <Song>[],
-        filteredSongs: <Song>[],
-      );
+    status: SongFinderStatus.initial,
+    selectedChord: 'G',
+    capoFret: 0,
+    allSongs: <Song>[],
+    filteredSongs: <Song>[],
+  );
 
   final SongFinderStatus status;
   final String selectedChord;
@@ -53,11 +48,11 @@ class SongFinderState extends Equatable {
 
   @override
   List<Object?> get props => <Object?>[
-        status,
-        selectedChord,
-        capoFret,
-        allSongs,
-        filteredSongs,
-        errorMessage,
-      ];
+    status,
+    selectedChord,
+    capoFret,
+    allSongs,
+    filteredSongs,
+    errorMessage,
+  ];
 }

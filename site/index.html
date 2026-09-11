@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SurSaar – Learn guitar with an AI teacher in your browser</title>
+  <meta name="description" content="SurSaar watches your hands, listens to your chords and keeps you on the beat. A free, open-source AI guitar teacher for web and mobile. Everything runs on your device.">
+  <meta name="theme-color" content="#0F172A">
+  <meta property="og:title" content="SurSaar – AI guitar teacher">
+  <meta property="og:description" content="Real-time chord, strumming and finger-position coaching with your camera and microphone.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="./">
+      <img src="assets/logo.svg" alt="" width="34" height="34">
+      <span>Sur<em>Saar</em></span>
+    </a>
+    <nav>
+      <a href="#how">How it works</a>
+      <a href="#features">Features</a>
+      <a href="#songs">Songs</a>
+      <a href="#roadmap">Roadmap</a>
+      <a href="https://github.com/pallavsharmaofficial/SurSaar" rel="noopener">GitHub</a>
+      <a class="btn btn-primary" href="app/">Open the web app</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">AI-powered real-time music school · guitar first</p>
+        <h1>A guitar teacher that <span class="hl">watches</span>, <span class="hl">listens</span> and <span class="hl">corrects you</span> as you play.</h1>
+        <p class="lead">
+          Point your camera at your hands, plug nothing in. SurSaar shows you where each finger goes,
+          hears every chord you strum, checks your timing against the strumming pattern and tells you
+          what to fix — live, in the browser, with nothing uploaded.
+        </p>
+        <div class="cta">
+          <a class="btn btn-primary btn-lg" href="app/">Start practising free</a>
+          <a class="btn btn-ghost btn-lg" href="#how">See how it works</a>
+        </div>
+        <p class="fine">Works in Chrome, Edge and Safari on desktop and phones. Camera and microphone stay on your device.</p>
+      </div>
+      <div class="hero-demo" aria-hidden="true">
+        <div class="stage">
+          <div class="stage-top">
+            <div class="card">
+              <small>Play now</small>
+              <strong>G</strong>
+              <span class="next">Next: C</span>
+            </div>
+            <div class="rings">
+              <div class="ring good"><b>92%</b><i>chords</i></div>
+              <div class="ring ok"><b>78%</b><i>timing</i></div>
+            </div>
+          </div>
+          <svg class="hand" viewBox="0 0 320 220">
+            <g stroke="#7CF29A" stroke-width="3" fill="none" stroke-linecap="round">
+              <path d="M60 200 L90 140 L120 95 L140 60 L150 40"/>
+              <path d="M60 200 L110 150 L150 115 L175 85 L185 65"/>
+              <path d="M60 200 L130 165 L175 140 L205 118 L220 100"/>
+              <path d="M60 200 L145 185 L195 170 L225 158 L245 150"/>
+              <path d="M60 200 L95 205 L120 190 L140 175"/>
+            </g>
+            <g fill="#FACC15">
+              <circle cx="150" cy="40" r="11"/><circle cx="185" cy="65" r="11"/><circle cx="220" cy="100" r="11"/>
+            </g>
+            <g fill="#0F172A" font-size="12" font-weight="700" text-anchor="middle">
+              <text x="150" y="44">1</text><text x="185" y="69">2</text><text x="220" y="104">3</text>
+            </g>
+            <g fill="#F8FAFC" font-size="10">
+              <text x="165" y="32">2nd fret · A</text><text x="200" y="58">3rd fret · low E</text><text x="235" y="93">3rd fret · high e</text>
+            </g>
+          </svg>
+          <div class="coach">🎙 That sounds like Em — target is G. Curl your ring finger.</div>
+          <div class="grid">
+            <span class="d on">↓</span><span>·</span><span class="d">↓</span><span class="u">↑</span><span>·</span><span class="u">↑</span><span class="d">↓</span><span class="u">↑</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="how" class="section">
+      <h2>How it works</h2>
+      <div class="steps">
+        <div class="step">
+          <span class="num">1</span>
+          <h3>Pick a song, a lesson or just a few chords</h3>
+          <p>Search the catalogue, follow a course from the first open chords to barre chords and Bollywood rhythms, or start an ad-hoc drill with any chords and strumming pattern.</p>
+        </div>
+        <div class="step">
+          <span class="num">2</span>
+          <h3>Turn on the camera and mic</h3>
+          <p>Hand tracking finds your fretting hand and paints each finger with its string and fret. The microphone feeds a chord recogniser and an onset detector. A metronome counts you in.</p>
+        </div>
+        <div class="step">
+          <span class="num">3</span>
+          <h3>Play — and get corrected live</h3>
+          <p>Wrong chord? It names what it heard. Late strum? It tells you to relax onto the click. Missed the change? It calls the next chord a beat ahead. Your score and history are saved locally.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="section alt">
+      <h2>What's inside</h2>
+      <div class="features">
+        <div class="feature"><span>👀</span><h3>Finger guidance in AR</h3><p>MediaPipe hand landmarks map your fingertips to the target chord shape and flag straight or misplaced fingers.</p></div>
+        <div class="feature"><span>🎧</span><h3>Chord recognition</h3><p>A chroma-based recogniser compares what you play to the target and to all 24 triads, so it can say "that sounds like Em".</p></div>
+        <div class="feature"><span>🥁</span><h3>Strumming & timing</h3><p>Every strumming pattern becomes an eighth-note grid. Onsets are matched to slots: hit, early, late, missed.</p></div>
+        <div class="feature"><span>🎼</span><h3>Chord diagrams for any chord</h3><p>49 stored open shapes plus movable E- and A-shape barres derived on the fly, with capo transposition.</p></div>
+        <div class="feature"><span>📚</span><h3>Courses or ad hoc</h3><p>Guided paths with progress, or a two-tap quick practice. Lessons drill chords, strumming, technique or a whole song.</p></div>
+        <div class="feature"><span>🔎</span><h3>Song search & requests</h3><p>Find songs by title, artist, chord or tag. Missing one? Request it and the ingestion pipeline adds chords, key, capo and strumming.</p></div>
+        <div class="feature"><span>🔒</span><h3>Private by design</h3><p>Audio and video never leave the device. Progress lives in your browser or phone. No account needed.</p></div>
+        <div class="feature"><span>🌐</span><h3>Web + mobile, one codebase</h3><p>Flutter app for the web (this site), Android and iOS. Hindi and English.</p></div>
+      </div>
+    </section>
+
+    <section id="songs" class="section">
+      <h2>Songs in the catalogue</h2>
+      <p class="muted">Bollywood classics to start with. Chords, key, capo and strumming come from the community and are marked as such — lyrics are never bundled.</p>
+      <div id="song-list" class="songs">
+        <p class="muted">Loading catalogue…</p>
+      </div>
+      <p><a class="btn btn-ghost" href="https://github.com/pallavsharmaofficial/SurSaar/issues/new?labels=song-request&template=song_request.yml&title=Song%20request%3A%20" rel="noopener">Request a song</a></p>
+    </section>
+
+    <section id="roadmap" class="section alt">
+      <h2>Roadmap</h2>
+      <ul class="roadmap">
+        <li><b>Now</b> — Web app with camera hand tracking, chord and timing coaching, courses, song search and requests. Mobile app with audio coaching and chord diagrams.</li>
+        <li><b>Next</b> — Fretboard registration (knowing which fret a finger is on), hand tracking on Android/iOS, sampled metronome and backing loops, downloadable chord sheets.</li>
+        <li><b>Later</b> — Tabs and single-note melodies, personalised drills from your mistakes, piano and vocals, cloud sync and sharing.</li>
+      </ul>
+      <p class="muted">SurSaar is open source under the MIT licence. Contributions welcome on <a href="https://github.com/pallavsharmaofficial/SurSaar" rel="noopener">GitHub</a>.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> SurSaar · <a href="privacy.html">Privacy</a> · <a href="app/">Web app</a> · <a href="https://github.com/pallavsharmaofficial/SurSaar" rel="noopener">Source</a></p>
+  </footer>
+
+  <script src="site.js"></script>
+</body>
+</html>

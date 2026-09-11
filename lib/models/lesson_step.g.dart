@@ -7,10 +7,10 @@ part of 'lesson_step.dart';
 // **************************************************************************
 
 LessonStep _$LessonStepFromJson(Map<String, dynamic> json) => LessonStep(
-      title: json['title'] as String,
-      description: json['description'] as String,
-      durationMinutes: (json['durationMinutes'] as num).toInt(),
-    );
+  title: json['title'] as String,
+  description: json['description'] as String,
+  durationMinutes: (json['durationMinutes'] as num).toInt(),
+);
 
 Map<String, dynamic> _$LessonStepToJson(LessonStep instance) =>
     <String, dynamic>{

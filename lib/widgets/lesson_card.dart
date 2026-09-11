@@ -4,11 +4,7 @@ import '../models/lesson.dart';
 import 'difficulty_badge.dart';
 
 class LessonCard extends StatelessWidget {
-  const LessonCard({
-    super.key,
-    required this.lesson,
-    required this.onTap,
-  });
+  const LessonCard({super.key, required this.lesson, required this.onTap});
 
   final Lesson lesson;
   final VoidCallback onTap;

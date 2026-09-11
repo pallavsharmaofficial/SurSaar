@@ -1,12 +1,7 @@
 import 'package:equatable/equatable.dart';
 import '../../models/profile.dart';
 
-enum ProfileStatus {
-  initial,
-  loading,
-  ready,
-  error,
-}
+enum ProfileStatus { initial, loading, ready, error }
 
 class ProfileState extends Equatable {
   const ProfileState({
@@ -16,12 +11,12 @@ class ProfileState extends Equatable {
   });
 
   factory ProfileState.initial() => const ProfileState(
-        status: ProfileStatus.initial,
-        profile: Profile(
-          name: 'Music Learner',
-          bio: 'Learning music, one chord at a time.',
-        ),
-      );
+    status: ProfileStatus.initial,
+    profile: Profile(
+      name: 'Music Learner',
+      bio: 'Learning music, one chord at a time.',
+    ),
+  );
 
   final ProfileStatus status;
   final Profile profile;

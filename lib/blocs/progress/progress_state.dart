@@ -1,12 +1,7 @@
 import 'package:equatable/equatable.dart';
 import '../../models/user_progress.dart';
 
-enum ProgressStatus {
-  initial,
-  loading,
-  loaded,
-  error,
-}
+enum ProgressStatus { initial, loading, loaded, error }
 
 class ProgressState extends Equatable {
   const ProgressState({
@@ -16,9 +11,9 @@ class ProgressState extends Equatable {
   });
 
   factory ProgressState.initial() => ProgressState(
-        status: ProgressStatus.initial,
-        progress: UserProgress.initial(),
-      );
+    status: ProgressStatus.initial,
+    progress: UserProgress.initial(),
+  );
 
   final ProgressStatus status;
   final UserProgress progress;

@@ -12,10 +12,7 @@ class ProfileLoadRequested extends ProfileEvent {
 }
 
 class ProfileSaved extends ProfileEvent {
-  const ProfileSaved({
-    required this.name,
-    required this.bio,
-  });
+  const ProfileSaved({required this.name, required this.bio});
 
   final String name;
   final String bio;

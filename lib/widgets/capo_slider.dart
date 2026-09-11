@@ -31,9 +31,9 @@ class CapoSlider extends StatelessWidget {
             const SizedBox(width: 8),
             Text(
               l10n.capoLabel(capoFret),
-              style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                    color: AppColors.textOnDark,
-                  ),
+              style: Theme.of(
+                context,
+              ).textTheme.titleMedium?.copyWith(color: AppColors.textOnDark),
             ),
           ],
         ),

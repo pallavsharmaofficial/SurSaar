@@ -21,7 +21,7 @@ class EnhancedSongCard extends StatelessWidget {
     final theme = Theme.of(context);
     final playableChords = ChordTransposer.transposeProgression(
       song.originalChords,
-      -capoFret,
+      song.capo - capoFret,
     );
 
     return Card(
@@ -110,10 +110,7 @@ class EnhancedSongCard extends StatelessWidget {
                     ),
                   ],
                   const Spacer(),
-                  const Icon(
-                    Icons.chevron_right,
-                    color: AppColors.textOnLight,
-                  ),
+                  const Icon(Icons.chevron_right, color: AppColors.textOnLight),
                 ],
               ),
             ],

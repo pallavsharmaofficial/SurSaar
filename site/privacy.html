@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SurSaar – Privacy</title>
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="./"><img src="assets/logo.svg" alt="" width="34" height="34"><span>Sur<em>Saar</em></span></a>
+    <nav><a href="./">Home</a><a class="btn btn-primary" href="app/">Open the web app</a></nav>
+  </header>
+  <main class="section narrow">
+    <h1>Privacy</h1>
+    <p><b>Camera and microphone stay on your device.</b> The web app asks the browser for camera and microphone access only when you press play in a practice session. Video frames are analysed by MediaPipe hand tracking running in your browser; audio is analysed by a chord and onset detector written in Dart, also in your browser. No audio, video or landmarks are ever sent to a server.</p>
+    <p><b>Your progress is local.</b> Sessions, favourites, lesson progress and settings are stored in your browser's local storage (or the app's private storage on a phone). Clearing site data removes them. There are no accounts.</p>
+    <p><b>Content is fetched from GitHub.</b> The song and lesson catalogue is a public JSON file in the project repository. Loading it makes a normal HTTPS request to GitHub; the app also works fully offline from a bundled copy. The hand-tracking model and its runtime are fetched from jsDelivr and Google's model storage the first time the camera is used.</p>
+    <p><b>No analytics, no ads, no third-party trackers.</b></p>
+    <p>Questions? Open an issue on <a href="https://github.com/pallavsharmaofficial/SurSaar/issues" rel="noopener">GitHub</a>.</p>
+  </main>
+  <footer><p><a href="./">Home</a></p></footer>
+</body>
+</html>

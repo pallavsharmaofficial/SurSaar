@@ -1,140 +1,80 @@
 import '../core/utils/chord_transposer.dart';
 import '../data/local/app_database.dart';
 import '../models/song.dart';
+import 'content_repository.dart';
 
 class SongRepository {
   const SongRepository({
     required AppDatabase database,
-  }) : _database = database;
+    required ContentRepository content,
+  }) : _database = database,
+       _content = content;
 
   final AppDatabase _database;
-
-  List<Song> _baseSongs() => const <Song>[
-        Song(
-          id: 'o_sanam',
-          title: 'O Sanam',
-          artist: 'Lucky Ali',
-          difficulty: SongDifficulty.beginner,
-          strummingPattern: 'D D U U D U',
-          originalChords: <String>['G', 'C', 'D', 'Em'],
-          tutorialUrl: 'https://www.youtube.com/watch?v=uiL9Q2PKi1A',
-          bpm: 92,
-          duration: 248,
-        ),
-        Song(
-          id: 'yaaron',
-          title: 'Yaaron',
-          artist: 'KK',
-          difficulty: SongDifficulty.beginner,
-          strummingPattern: 'D D U U D U',
-          originalChords: <String>['G', 'Em', 'C', 'D'],
-          tutorialUrl: 'https://www.youtube.com/watch?v=j2Oa8G9vLZY',
-          bpm: 88,
-          duration: 301,
-        ),
-        Song(
-          id: 'channa_mereya',
-          title: 'Channa Mereya',
-          artist: 'Arijit Singh',
-          difficulty: SongDifficulty.intermediate,
-          strummingPattern: 'D DU UDU',
-          originalChords: <String>['C', 'Am', 'F', 'G'],
-          tutorialUrl: 'https://www.youtube.com/watch?v=QF9mJf8siXc',
-          bpm: 75,
-          duration: 294,
-        ),
-        Song(
-          id: 'tum_hi_ho',
-          title: 'Tum Hi Ho',
-          artist: 'Arijit Singh',
-          difficulty: SongDifficulty.intermediate,
-          strummingPattern: 'D D U U D U',
-          originalChords: <String>['Em', 'C', 'D', 'G'],
-          tutorialUrl: 'https://www.youtube.com/watch?v=0RszmOFN2U4',
-          bpm: 78,
-          duration: 262,
-        ),
-        Song(
-          id: 'tere_sang_yaara',
-          title: 'Tere Sang Yaara',
-          artist: 'Atif Aslam',
-          difficulty: SongDifficulty.beginner,
-          strummingPattern: 'D DU UDU',
-          originalChords: <String>['C', 'G', 'Am', 'F'],
-          tutorialUrl: 'https://www.youtube.com/watch?v=example',
-          bpm: 82,
-          duration: 285,
-        ),
-        Song(
-          id: 'pal',
-          title: 'Pal',
-          artist: 'KK',
-          difficulty: SongDifficulty.beginner,
-          strummingPattern: 'D D U U D U',
-          originalChords: <String>['G', 'D', 'Em', 'C'],
-          tutorialUrl: 'https://www.youtube.com/watch?v=example',
-          bpm: 90,
-          duration: 315,
-        ),
-        Song(
-          id: 'tera_ban_jaunga',
-          title: 'Tera Ban Jaunga',
-          artist: 'Akhil Sachdeva',
-          difficulty: SongDifficulty.intermediate,
-          strummingPattern: 'D DU UDU',
-          originalChords: <String>['Em', 'G', 'D', 'C'],
-          tutorialUrl: 'https://www.youtube.com/watch?v=example',
-          bpm: 80,
-          duration: 275,
-        ),
-        Song(
-          id: 'raabta',
-          title: 'Raabta',
-          artist: 'Arijit Singh',
-          difficulty: SongDifficulty.advanced,
-          strummingPattern: 'D DUDUDU',
-          originalChords: <String>['Am', 'F', 'C', 'G', 'Em'],
-          tutorialUrl: 'https://www.youtube.com/watch?v=example',
-          bpm: 95,
-          duration: 242,
-        ),
-      ];
+  final ContentRepository _content;
 
   Future<List<Song>> getSongs() async {
+    final bundle = await _content.ensureLoaded();
     final favorites = await _database.getFavoriteSongIds();
-    return _baseSongs()
-        .map(
-          (song) => song.copyWith(
-            isFavorite: favorites.contains(song.id),
-          ),
-        )
-        .toList(growable: false);
+    final songs = bundle.songs
+        .map((song) => song.copyWith(isFavorite: favorites.contains(song.id)))
+        .toList();
+    songs.sort(
+      (a, b) => a.title.toLowerCase().compareTo(b.title.toLowerCase()),
+    );
+    return songs;
   }
 
+  /// Songs whose shapes include [rootChord] when played with a capo on
+  /// [capoFret] (sheet shapes are relative to the song's own capo).
   Future<List<Song>> filterSongs({
     required String rootChord,
     required int capoFret,
   }) async {
     final songs = await getSongs();
-    return songs.where((song) {
-      final playableChords = ChordTransposer.transposeProgression(
-        song.originalChords,
-        -capoFret,
-      );
-      return playableChords.contains(rootChord);
-    }).toList(growable: false);
+    return songs
+        .where((song) {
+          final playableChords = ChordTransposer.transposeProgression(
+            song.originalChords,
+            song.capo - capoFret,
+          );
+          return playableChords.contains(rootChord);
+        })
+        .toList(growable: false);
   }
 
+  /// Free-text search over title, artist, album, tags and chord names.
   Future<List<Song>> searchSongs(String query) async {
     final songs = await getSongs();
-    final lowerQuery = query.toLowerCase();
-    return songs
-        .where(
-          (song) =>
-              song.title.toLowerCase().contains(lowerQuery) ||
-              song.artist.toLowerCase().contains(lowerQuery),
-        )
+    final terms = query
+        .toLowerCase()
+        .split(RegExp(r'\s+'))
+        .where((t) => t.isNotEmpty)
         .toList(growable: false);
+    if (terms.isEmpty) return songs;
+
+    int score(Song song) {
+      final haystack = <String>[
+        song.title.toLowerCase(),
+        song.artist.toLowerCase(),
+        (song.album ?? '').toLowerCase(),
+        ...song.tags.map((t) => t.toLowerCase()),
+        ...song.uniqueChords.map((c) => c.toLowerCase()),
+      ];
+      var total = 0;
+      for (final term in terms) {
+        if (song.title.toLowerCase().startsWith(term)) total += 5;
+        if (haystack.any((h) => h == term)) total += 3;
+        if (haystack.any((h) => h.contains(term))) total += 1;
+      }
+      return total;
+    }
+
+    final scored = <(Song, int)>[
+      for (final song in songs)
+        if (score(song) > 0) (song, score(song)),
+    ]..sort((a, b) => b.$2.compareTo(a.$2));
+    return scored.map((e) => e.$1).toList(growable: false);
   }
 
   Future<List<Song>> getSongsByDifficulty(SongDifficulty difficulty) async {
@@ -146,20 +86,13 @@ class SongRepository {
 
   Future<Song?> getSongById(String id) async {
     final songs = await getSongs();
-    try {
-      return songs.firstWhere((song) => song.id == id);
-    } catch (_) {
-      return null;
+    for (final song in songs) {
+      if (song.id == id) return song;
     }
+    return null;
   }
 
   Future<void> toggleFavorite(String songId, bool isFavorite) async {
     await _database.setFavorite(songId, isFavorite);
-  }
-
-  /// Update songs from fetched content bundle
-  Future<void> updateSongs(List<Song> songs) async {
-    // Store songs in memory and optionally in database if needed
-    // This method can be extended to persist songs to database if desired
   }
 }

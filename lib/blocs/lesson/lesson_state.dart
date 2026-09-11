@@ -1,12 +1,7 @@
 import 'package:equatable/equatable.dart';
 import '../../models/lesson.dart';
 
-enum LessonStatus {
-  initial,
-  loading,
-  loaded,
-  error,
-}
+enum LessonStatus { initial, loading, loaded, error }
 
 class LessonState extends Equatable {
   const LessonState({
@@ -17,10 +12,10 @@ class LessonState extends Equatable {
   });
 
   factory LessonState.initial() => const LessonState(
-        status: LessonStatus.initial,
-        lessons: <Lesson>[],
-        selectedDifficulty: null,
-      );
+    status: LessonStatus.initial,
+    lessons: <Lesson>[],
+    selectedDifficulty: null,
+  );
 
   final LessonStatus status;
   final List<Lesson> lessons;
@@ -37,13 +32,18 @@ class LessonState extends Equatable {
     return LessonState(
       status: status ?? this.status,
       lessons: lessons ?? this.lessons,
-      selectedDifficulty:
-          clearDifficulty ? null : (selectedDifficulty ?? this.selectedDifficulty),
+      selectedDifficulty: clearDifficulty
+          ? null
+          : (selectedDifficulty ?? this.selectedDifficulty),
       errorMessage: errorMessage ?? this.errorMessage,
     );
   }
 
   @override
-  List<Object?> get props =>
-      <Object?>[status, lessons, selectedDifficulty, errorMessage];
+  List<Object?> get props => <Object?>[
+    status,
+    lessons,
+    selectedDifficulty,
+    errorMessage,
+  ];
 }

@@ -17,10 +17,10 @@ class Achievement extends Equatable {
 
   @override
   List<Object?> get props => <Object?>[
-        id,
-        title,
-        description,
-        iconAsset,
-        earnedAt,
-      ];
+    id,
+    title,
+    description,
+    iconAsset,
+    earnedAt,
+  ];
 }

@@ -19,7 +19,7 @@ class ChordChip extends StatelessWidget {
       label: Text(
         chord,
         style: TextStyle(
-          color: isSelected ? AppColors.surfaceLight : AppColors.textOnDark,
+          color: isSelected ? AppColors.surfaceLight : AppColors.textOnLight,
           fontWeight: FontWeight.w600,
         ),
       ),

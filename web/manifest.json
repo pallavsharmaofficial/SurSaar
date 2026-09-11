@@ -1,12 +1,12 @@
 {
-    "name": "sursaar",
-    "short_name": "sursaar",
+    "name": "SurSaar – AI Guitar Teacher",
+    "short_name": "SurSaar",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#0175C2",
-    "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
-    "orientation": "portrait-primary",
+    "background_color": "#0F172A",
+    "theme_color": "#0F172A",
+    "description": "Learn guitar with an AI teacher that watches your hands, listens to your chords and keeps you on the beat.",
+    "orientation": "any",
     "prefer_related_applications": false,
     "icons": [
         {

@@ -4,19 +4,20 @@ import 'app_colors.dart';
 
 class AppTheme {
   static ThemeData get light {
-    final colorScheme = ColorScheme.fromSeed(
-      seedColor: AppColors.primary,
-      brightness: Brightness.light,
-      primary: AppColors.primary,
-      secondary: AppColors.secondary,
-      tertiary: AppColors.successGold,
-      surface: AppColors.surfaceLight,
-    ).copyWith(
-      onPrimary: AppColors.surfaceLight,
-      onSecondary: AppColors.surfaceLight,
-      onTertiary: AppColors.textOnLight,
-      onSurface: AppColors.textOnLight,
-    );
+    final colorScheme =
+        ColorScheme.fromSeed(
+          seedColor: AppColors.primary,
+          brightness: Brightness.light,
+          primary: AppColors.primary,
+          secondary: AppColors.secondary,
+          tertiary: AppColors.successGold,
+          surface: AppColors.surfaceLight,
+        ).copyWith(
+          onPrimary: AppColors.surfaceLight,
+          onSecondary: AppColors.surfaceLight,
+          onTertiary: AppColors.textOnLight,
+          onSurface: AppColors.textOnLight,
+        );
 
     return ThemeData(
       colorScheme: colorScheme,
@@ -54,9 +55,7 @@ class AppTheme {
         color: AppColors.surfaceLight,
         elevation: 0.6,
         surfaceTintColor: AppColors.surfaceLight,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(16),
-        ),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
       ),
       filledButtonTheme: FilledButtonThemeData(
         style: FilledButton.styleFrom(
@@ -74,9 +73,7 @@ class AppTheme {
         backgroundColor: colorScheme.primary,
         foregroundColor: colorScheme.onPrimary,
         elevation: 4,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(16),
-        ),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
       ),
       navigationBarTheme: NavigationBarThemeData(
         backgroundColor: colorScheme.surface,
@@ -111,19 +108,20 @@ class AppTheme {
   }
 
   static ThemeData get dark {
-    final colorScheme = ColorScheme.fromSeed(
-      seedColor: AppColors.primary,
-      brightness: Brightness.dark,
-      primary: AppColors.primary,
-      secondary: AppColors.secondary,
-      tertiary: AppColors.successGold,
-      surface: AppColors.backgroundDark,
-    ).copyWith(
-      onPrimary: AppColors.surfaceLight,
-      onSecondary: AppColors.surfaceLight,
-      onTertiary: AppColors.textOnLight,
-      onSurface: AppColors.textOnDark,
-    );
+    final colorScheme =
+        ColorScheme.fromSeed(
+          seedColor: AppColors.primary,
+          brightness: Brightness.dark,
+          primary: AppColors.primary,
+          secondary: AppColors.secondary,
+          tertiary: AppColors.successGold,
+          surface: AppColors.backgroundDark,
+        ).copyWith(
+          onPrimary: AppColors.surfaceLight,
+          onSecondary: AppColors.surfaceLight,
+          onTertiary: AppColors.textOnLight,
+          onSurface: AppColors.textOnDark,
+        );
 
     return ThemeData(
       colorScheme: colorScheme,
@@ -161,9 +159,7 @@ class AppTheme {
         color: AppColors.surfaceLight,
         elevation: 0.6,
         surfaceTintColor: AppColors.surfaceLight,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(16),
-        ),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
       ),
       filledButtonTheme: FilledButtonThemeData(
         style: FilledButton.styleFrom(
@@ -181,9 +177,7 @@ class AppTheme {
         backgroundColor: colorScheme.primary,
         foregroundColor: colorScheme.onPrimary,
         elevation: 4,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(16),
-        ),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
       ),
       navigationBarTheme: NavigationBarThemeData(
         backgroundColor: colorScheme.surface,

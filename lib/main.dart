@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
-import 'core/app.dart';
 
-void main() {
+import 'core/app.dart';
+import 'data/content/chord_library.dart';
+import 'data/local/local_store.dart';
+
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  runApp(const App());
+  final chordLibrary = await ChordLibrary.loadFromAsset();
+  runApp(App(store: PrefsLocalStore(), chordLibrary: chordLibrary));
 }

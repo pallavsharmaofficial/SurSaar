@@ -12,10 +12,6 @@ class LessonLoadRequested extends LessonEvent {
   const LessonLoadRequested();
 }
 
-class FetchContentEvent extends LessonEvent {
-  const FetchContentEvent();
-}
-
 class LessonDifficultyFilterChanged extends LessonEvent {
   const LessonDifficultyFilterChanged(this.difficulty);
 

@@ -1,0 +1,87 @@
+name: Ingest requested song
+
+# Runs when someone opens an issue with the "song-request" label (the
+# in-app "Request this song" button opens that issue pre-filled), or when
+# triggered manually. Searches the configured sources for the chord sheet,
+# extracts chords / key / capo / strumming / structure, merges the song into
+# content/sursaar_content.json and comments back on the issue.
+
+on:
+  issues:
+    types: [opened, labeled]
+  workflow_dispatch:
+    inputs:
+      query:
+        description: "Song title (optionally 'title - artist')"
+        required: true
+      sourceUrl:
+        description: "Optional: exact chord-sheet URL to parse"
+        required: false
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  ingest:
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      contains(github.event.issue.labels.*.name, 'song-request')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Resolve query
+        id: q
+        env:
+          ISSUE_TITLE: ${{ github.event.issue.title }}
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          INPUT_QUERY: ${{ github.event.inputs.query }}
+          INPUT_URL: ${{ github.event.inputs.sourceUrl }}
+        run: |
+          node tools/ingest/cli.mjs resolve-request >> "$GITHUB_OUTPUT"
+
+      - name: Ingest
+        id: ingest
+        env:
+          SURSAAR_SEARCH_PROVIDER: ${{ vars.SURSAAR_SEARCH_PROVIDER }}
+        run: |
+          node tools/ingest/cli.mjs ingest "${{ steps.q.outputs.query }}" \
+            --artist "${{ steps.q.outputs.artist }}" \
+            --url "${{ steps.q.outputs.url }}" \
+            --out content/sursaar_content.json \
+            --report ingest-report.md
+          echo "report<<EOF" >> "$GITHUB_OUTPUT"
+          cat ingest-report.md >> "$GITHUB_OUTPUT"
+          echo "EOF" >> "$GITHUB_OUTPUT"
+
+      - name: Commit content
+        run: |
+          git config user.name "sursaar-content-bot"
+          git config user.email "sursaar-content-bot@users.noreply.github.com"
+          if git diff --quiet content/sursaar_content.json; then
+            echo "No content change"
+          else
+            git add content/sursaar_content.json
+            git commit -m "content: ingest '${{ steps.q.outputs.query }}' (#${{ github.event.issue.number || 'manual' }})"
+            git push
+          fi
+
+      - name: Comment on issue
+        if: github.event_name == 'issues'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const body = `${{ steps.ingest.outputs.report }}`;
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body,
+            });

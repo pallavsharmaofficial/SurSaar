@@ -4,10 +4,9 @@ import 'profile_event.dart';
 import 'profile_state.dart';
 
 class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
-  ProfileBloc({
-    required ProfileRepository repository,
-  })  : _repository = repository,
-        super(ProfileState.initial()) {
+  ProfileBloc({required ProfileRepository repository})
+    : _repository = repository,
+      super(ProfileState.initial()) {
     on<ProfileLoadRequested>(_onLoadRequested);
     on<ProfileSaved>(_onProfileSaved);
     on<ProfilePhotoUpdated>(_onPhotoUpdated);
@@ -37,10 +36,7 @@ class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
     ProfileSaved event,
     Emitter<ProfileState> emit,
   ) async {
-    final updated = state.profile.copyWith(
-      name: event.name,
-      bio: event.bio,
-    );
+    final updated = state.profile.copyWith(name: event.name, bio: event.bio);
     await _repository.saveProfile(updated);
     emit(state.copyWith(profile: updated));
   }
@@ -49,9 +45,9 @@ class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
     ProfilePhotoUpdated event,
     Emitter<ProfileState> emit,
   ) async {
-    final path = await _repository.pickAndSaveProfilePhoto();
-    if (path == null) return;
-    final updated = state.profile.copyWith(photoPath: path);
+    final data = await _repository.pickProfilePhoto();
+    if (data == null) return;
+    final updated = state.profile.copyWith(photoData: data);
     await _repository.saveProfile(updated);
     emit(state.copyWith(profile: updated));
   }

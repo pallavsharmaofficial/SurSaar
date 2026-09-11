@@ -2,9 +2,8 @@ import '../data/local/app_database.dart';
 import '../models/achievement.dart';
 
 class AchievementRepository {
-  const AchievementRepository({
-    required AppDatabase database,
-  }) : _database = database;
+  const AchievementRepository({required AppDatabase database})
+    : _database = database;
 
   final AppDatabase _database;
 

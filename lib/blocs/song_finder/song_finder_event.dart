@@ -11,6 +11,11 @@ class SongFinderStarted extends SongFinderEvent {
   const SongFinderStarted();
 }
 
+/// Reloads songs (after returning from a detail screen or pull-to-refresh).
+class SongFinderRefreshed extends SongFinderEvent {
+  const SongFinderRefreshed();
+}
+
 class SongFinderChordSelected extends SongFinderEvent {
   const SongFinderChordSelected(this.chord);
 
