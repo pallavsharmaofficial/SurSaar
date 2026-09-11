@@ -40,7 +40,8 @@ class PracticePlan {
     this.sourceId,
     this.beatsPerBar = 4,
     this.subtitle,
-  });
+    List<String>? learnSequence,
+  }) : _learnSequence = learnSequence;
 
   final String title;
   final String? subtitle;
@@ -53,6 +54,22 @@ class PracticePlan {
   /// Song id, lesson id or null for ad-hoc practice.
   final String? sourceId;
   final int beatsPerBar;
+
+  final List<String>? _learnSequence;
+
+  /// The chords learn mode walks through, one at a time.
+  ///
+  /// Chord drills repeat their chords; songs follow their chord changes with
+  /// back-to-back repeats of the same chord merged.
+  List<String> get learnSteps {
+    final explicit = _learnSequence;
+    if (explicit != null && explicit.isNotEmpty) return explicit;
+    final steps = <String>[];
+    for (final target in targets) {
+      if (steps.isEmpty || steps.last != target.chord) steps.add(target.chord);
+    }
+    return steps;
+  }
 
   double get totalBeats => targets.isEmpty ? 0 : targets.last.endBeat;
 
@@ -124,6 +141,9 @@ class PracticePlan {
         capo: capo,
         sourceId: sourceId,
         beatsPerBar: beatsPerBar,
+        learnSequence: _learnSequence
+            ?.map((c) => ChordTransposer.transposeChord(c, shift))
+            .toList(growable: false),
       );
     }
     return PracticePlan(
@@ -136,6 +156,7 @@ class PracticePlan {
       capo: capo ?? this.capo,
       sourceId: sourceId,
       beatsPerBar: beatsPerBar,
+      learnSequence: _learnSequence,
     );
   }
 
@@ -246,6 +267,10 @@ class PracticePlan {
       mode: mode,
       sourceId: sourceId,
       beatsPerBar: beatsPerBar,
+      // One chord: place it three times. Several: go through them twice.
+      learnSequence: list.length == 1
+          ? <String>[list.first, list.first, list.first]
+          : <String>[...list, ...list],
     );
   }
 

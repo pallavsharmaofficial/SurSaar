@@ -17,6 +17,15 @@ watches, listens and corrects in real time, on the web and on phones.
   ingestion CLI + workflow that extracts chords / key / capo / strumming /
   structure from allow-listed sources (never lyrics).
 
+## Done (v1.2 – beginner experience)
+
+- **Learn mode** that waits on every chord, with celebrations, streaks, escalating hints, skip, stars and "practise the tricky chords".
+- Guided setup on the practice screen: turn on camera & mic, live checks for "I can see your hand" and "I can hear your guitar".
+- Animated chord diagrams with one colour per finger (also on the camera overlay), tap-any-chord sheet with **Hear it**, voice coach.
+- Guitar **tuner** (YIN pitch detection, animated needle, per-string check marks).
+- First-run onboarding, a "Start here" card (first chord in Learn mode), page transitions.
+- Camera fixes: hand tracking in a Web Worker and preloaded, persistent preview (no freeze after the first session), single detection loop, idempotent microphone start.
+
 ## Next
 
 1. **Fretboard registration.** Detect strings and frets in the frame (edge /

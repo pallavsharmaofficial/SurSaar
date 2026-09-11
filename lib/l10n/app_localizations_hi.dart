@@ -357,4 +357,208 @@ class AppLocalizationsHi extends AppLocalizations {
   @override
   String get noSessions =>
       'अभी कोई सेशन नहीं। इतिहास देखने के लिए त्वरित अभ्यास शुरू करें।';
+
+  @override
+  String get modeLearn => 'सीखें';
+
+  @override
+  String get modeLearnHint => 'हर कॉर्ड पर आपका इंतज़ार करता है';
+
+  @override
+  String get modePlayAlong => 'साथ बजाएँ';
+
+  @override
+  String get modePlayAlongHint => 'कॉर्ड ताल पर बदलते हैं';
+
+  @override
+  String get setupTitle => 'चलिए तैयारी करें';
+
+  @override
+  String get setupSubtitle =>
+      'कैमरा और माइक चालू करें ताकि मैं आपके हाथ देख सकूँ और गिटार सुन सकूँ।';
+
+  @override
+  String get setupTurnOn => 'कैमरा और माइक चालू करें';
+
+  @override
+  String get setupStarting => 'शुरू हो रहा है…';
+
+  @override
+  String get checkCamera => 'कैमरा चालू है';
+
+  @override
+  String get checkHandWaiting => 'कॉर्ड वाला हाथ दिखाएँ';
+
+  @override
+  String get checkHandDone => 'मुझे आपका हाथ दिख रहा है';
+
+  @override
+  String get checkMicWaiting => 'एक बार तार बजाएँ';
+
+  @override
+  String get checkMicDone => 'मुझे आपका गिटार सुनाई दे रहा है';
+
+  @override
+  String get trackingLoading => 'हैंड ट्रैकिंग लोड हो रही है…';
+
+  @override
+  String get trackingError =>
+      'हैंड ट्रैकिंग उपलब्ध नहीं है। मैं फिर भी सुनूँगा।';
+
+  @override
+  String get hearIt => 'सुनें';
+
+  @override
+  String get skip => 'छोड़ें';
+
+  @override
+  String get voiceCoach => 'आवाज़';
+
+  @override
+  String chordOf(int current, int total) {
+    return 'कॉर्ड $current / $total';
+  }
+
+  @override
+  String get holdChord => 'पकड़े रखें…';
+
+  @override
+  String get strumAgain => 'फिर से स्ट्रम करें';
+
+  @override
+  String get listeningPaused => 'सुनना रुका है';
+
+  @override
+  String get moreOptions => 'और विकल्प';
+
+  @override
+  String get speedSlow => 'धीमा';
+
+  @override
+  String get speedMedium => 'मध्यम';
+
+  @override
+  String get speedSong => 'गाने की गति';
+
+  @override
+  String get fingerLegend => 'उंगलियों के रंग';
+
+  @override
+  String get fingerIndex => 'तर्जनी';
+
+  @override
+  String get fingerMiddle => 'मध्यमा';
+
+  @override
+  String get fingerRing => 'अनामिका';
+
+  @override
+  String get fingerPinky => 'कनिष्ठा';
+
+  @override
+  String youPlayed(int count, int total) {
+    return 'आपने $total में से $count कॉर्ड बजाए';
+  }
+
+  @override
+  String bestStreak(int count) {
+    return 'सबसे लंबी लय: $count';
+  }
+
+  @override
+  String get trickyChords => 'अभ्यास के लिए कॉर्ड';
+
+  @override
+  String get practiceTricky => 'इनका अभ्यास करें';
+
+  @override
+  String get allClean => 'हर कॉर्ड साफ़ बजा!';
+
+  @override
+  String get savedToProgress => 'आपकी प्रगति में सेव हो गया';
+
+  @override
+  String inARow(int count) {
+    return 'लगातार $count!';
+  }
+
+  @override
+  String get readyHint =>
+      'तैयार हों तो स्टार्ट दबाएँ। हर कॉर्ड पर अपना समय लें।';
+
+  @override
+  String get paused => 'रुका हुआ';
+
+  @override
+  String get tuner => 'ट्यूनर';
+
+  @override
+  String get tunerTitle => 'अपना गिटार ट्यून करें';
+
+  @override
+  String get tunerHint => 'एक बार में एक तार बजाएँ और गूँजने दें।';
+
+  @override
+  String get tuneUp => 'ऊपर ट्यून करें';
+
+  @override
+  String get tuneDown => 'नीचे ट्यून करें';
+
+  @override
+  String get inTune => 'सुर में';
+
+  @override
+  String get tunerAuto => 'ऑटो';
+
+  @override
+  String get tunerListen => 'सुनना शुरू करें';
+
+  @override
+  String get playReference => 'सुर बजाएँ';
+
+  @override
+  String get tunerWaiting => 'कोई तार बजाएँ…';
+
+  @override
+  String get startHere => 'यहाँ से शुरू करें';
+
+  @override
+  String get firstChordTitle => '2 मिनट में आपका पहला कॉर्ड';
+
+  @override
+  String get firstChordBody =>
+      'E माइनर सीखें, सिर्फ़ दो उंगलियाँ। टीचर आपका इंतज़ार करता है।';
+
+  @override
+  String get onboardingTitle1 => 'कोई गाना या कॉर्ड चुनें';
+
+  @override
+  String get onboardingBody1 =>
+      'कोर्स शुरू करें, गाना खोजें, या कोई भी कॉर्ड अभ्यास करें।';
+
+  @override
+  String get onboardingTitle2 => 'टीचर देखता और सुनता है';
+
+  @override
+  String get onboardingBody2 =>
+      'रंगीन बिंदु दिखाते हैं कि कौन-सी उंगली कहाँ जाएगी। माइक सुनता है कि कॉर्ड सही है या नहीं।';
+
+  @override
+  String get onboardingTitle3 => 'अपनी गति से सीखें';
+
+  @override
+  String get onboardingBody3 =>
+      'लर्न मोड में कॉर्ड बजाने तक कुछ आगे नहीं बढ़ता। तैयार हों तो \'साथ बजाएँ\' से गति बढ़ाएँ।';
+
+  @override
+  String get next => 'आगे';
+
+  @override
+  String get getStarted => 'शुरू करें';
+
+  @override
+  String get practiceThisChord => 'यह कॉर्ड अभ्यास करें';
+
+  @override
+  String get tapChordHint => 'कॉर्ड देखने और सुनने के लिए उस पर टैप करें';
 }

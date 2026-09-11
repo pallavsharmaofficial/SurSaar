@@ -15,6 +15,7 @@ import '../../widgets/section_header.dart';
 import '../../widgets/teacher/chord_diagram.dart';
 import '../../widgets/teacher/strumming_timeline.dart';
 import '../../widgets/app_back_button.dart';
+import '../../widgets/chord_sheet.dart';
 
 class SongDetailScreen extends StatefulWidget {
   const SongDetailScreen({super.key, required this.songId, this.initialSong});
@@ -183,6 +184,13 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
                     label: '$_capo',
                     onChanged: (v) => setState(() => _capo = v.round()),
                   ),
+                  Text(
+                    l10n.tapChordHint,
+                    style: theme.textTheme.bodySmall?.copyWith(
+                      color: AppColors.textOnDark.withValues(alpha: 0.6),
+                    ),
+                  ),
+                  const SizedBox(height: 8),
                   SizedBox(
                     height: 190,
                     child: ListView.separated(
@@ -201,6 +209,8 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
                                 borderRadius: BorderRadius.circular(14),
                               ),
                               child: ChordDiagram(
+                                onTap: () =>
+                                    ChordSheet.show(context, voicing.name),
                                 voicing: voicing,
                                 size: 100,
                                 color: AppColors.textOnLight,

@@ -1,103 +1,112 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart' show rootBundle;
 import 'package:flutter_test/flutter_test.dart';
-import 'package:go_router/go_router.dart';
-import 'package:http/http.dart' as http;
-import 'package:http/testing.dart';
-import 'package:sursaar/core/app.dart';
-import 'package:sursaar/core/routing/app_router.dart';
-import 'package:sursaar/data/content/chord_library.dart';
-import 'package:sursaar/data/local/local_store.dart';
+import 'package:sursaar/widgets/chord_sheet.dart';
 import 'package:sursaar/widgets/teacher/chord_diagram.dart';
 import 'package:sursaar/widgets/teacher/chord_ribbon.dart';
 import 'package:sursaar/widgets/teacher/strumming_timeline.dart';
 
+import 'test_app.dart';
+
 void main() {
-  late GoRouter router;
-
-  Future<void> settle(WidgetTester tester) => tester.pumpAndSettle(
-    const Duration(milliseconds: 100),
-    EnginePhase.sendSemanticsUpdate,
-    const Duration(seconds: 20),
-  );
-
-  Future<void> pumpApp(WidgetTester tester) async {
-    tester.view.physicalSize = const Size(1400, 900);
-    tester.view.devicePixelRatio = 1;
-    addTearDown(tester.view.reset);
-    // Asset futures cached by a previous test belong to that test's
-    // fake-async zone and would never complete here.
-    rootBundle.clear();
-    router = AppRouter.createRouter();
-    await tester.pumpWidget(
-      App(
-        store: InMemoryLocalStore(),
-        chordLibrary: await ChordLibrary.loadFromAsset(),
-        httpClient: MockClient((_) async => http.Response('offline', 503)),
-        router: router,
-      ),
-    );
-    await settle(tester);
-  }
-
-  testWidgets('home lists bundled songs and opens the AI teacher hero', (
+  testWidgets('home shows the teacher hero, start-here card and songs', (
     tester,
   ) async {
-    await pumpApp(tester);
+    // Tall viewport so the song list below the new cards is laid out.
+    await pumpTestApp(tester, size: const Size(1400, 2000));
     expect(find.text('AI Teacher'), findsOneWidget);
     expect(find.text('Quick practice'), findsOneWidget);
+    expect(find.text('Start here'), findsOneWidget);
     expect(find.text('Channa Mereya'), findsWidgets);
   });
 
-  testWidgets('song detail shows diagrams, strumming grid and sections', (
+  testWidgets('first launch shows onboarding, then home', (tester) async {
+    final (_, store) = await pumpTestApp(tester, onboardingSeen: false);
+    expect(find.text('Pick a song or a chord'), findsOneWidget);
+    await tester.tap(find.text('Next'));
+    await settle(tester);
+    await tester.tap(find.text('Next'));
+    await settle(tester);
+    await tester.tap(find.text('Get started'));
+    await settle(tester);
+    expect(find.text('AI Teacher'), findsOneWidget);
+    expect(
+      await store.getString('settings'),
+      contains('"onboarding_seen":true'),
+    );
+  });
+
+  testWidgets('song detail: diagrams, strumming, sections, chord sheet', (
     tester,
   ) async {
-    await pumpApp(tester);
+    final (router, _) = await pumpTestApp(tester);
     router.go('/song/channa_mereya');
     await settle(tester);
 
-    expect(find.text('Channa Mereya'), findsWidgets);
     expect(find.text('Practise with the AI Teacher'), findsOneWidget);
-    // C Am F G shapes at the sheet capo
     expect(find.byType(ChordDiagram), findsNWidgets(4));
-    expect(find.text('C'), findsWidgets);
     expect(find.byType(StrummingTimeline), findsOneWidget);
     expect(find.text('Verse'), findsOneWidget);
-    expect(find.text('Chorus'), findsOneWidget);
+    expect(find.text('Tap a chord to see and hear it'), findsOneWidget);
+
+    await tester.tap(find.byType(ChordDiagram).first);
+    await settle(tester);
+    expect(find.byType(ChordSheet), findsOneWidget);
+    expect(find.text('Practise this chord'), findsOneWidget);
   });
 
-  testWidgets('teacher screen initialises a song plan without crashing', (
+  testWidgets('practice screen starts in learn mode with a setup card', (
     tester,
   ) async {
-    await pumpApp(tester);
+    final (router, _) = await pumpTestApp(tester);
     router.go('/practice/song/channa_mereya');
     await settle(tester);
 
-    expect(find.text('Play now'), findsOneWidget);
-    expect(find.byType(ChordRibbon), findsOneWidget);
+    expect(find.text('Learn'), findsWidgets);
+    expect(find.text('Play along'), findsOneWidget);
+    expect(find.text("Let's get set up"), findsOneWidget);
     expect(find.text('Start Practice'), findsOneWidget);
     expect(find.textContaining('How to play'), findsOneWidget);
+    expect(find.byType(ChordRibbon), findsNothing);
+
+    await tester.tap(find.text('Play along'));
+    await settle(tester);
+    expect(find.byType(ChordRibbon), findsOneWidget);
+
+    await tester.tap(find.text('More options'));
+    await settle(tester);
+    expect(find.text('Tempo: 75 BPM'), findsOneWidget);
     expect(tester.takeException(), isNull);
   });
 
-  testWidgets('ad-hoc practice route builds from query parameters', (
+  testWidgets('ad-hoc practice route honours chords, tempo and mode', (
     tester,
   ) async {
-    await pumpApp(tester);
-    router.go('/practice/adhoc?chords=Em,C&pattern=D%20DU%20UDU&bpm=90');
+    final (router, _) = await pumpTestApp(tester);
+    router.go(
+      '/practice/adhoc?chords=Em,C&pattern=D%20DU%20UDU&bpm=90&mode=learn',
+    );
     await settle(tester);
 
     expect(find.text('Quick practice'), findsWidgets);
-    expect(find.textContaining('90 BPM'), findsOneWidget);
     expect(find.text('Em'), findsWidgets);
-    expect(tester.takeException(), isNull);
+    await tester.tap(find.text('More options'));
+    await settle(tester);
+    expect(find.text('Tempo: 90 BPM'), findsOneWidget);
+  });
+
+  testWidgets('tuner screen offers to listen', (tester) async {
+    final (router, _) = await pumpTestApp(tester);
+    router.go('/tuner');
+    await settle(tester);
+    expect(find.text('Tune your guitar'), findsOneWidget);
+    expect(find.text('Start listening'), findsOneWidget);
+    expect(find.text('Low E'), findsOneWidget);
   });
 
   testWidgets('learn tab shows courses and lessons', (tester) async {
-    await pumpApp(tester);
+    final (router, _) = await pumpTestApp(tester);
     router.go('/learn');
     await settle(tester);
-
     expect(find.text('Guitar Foundations'), findsOneWidget);
     expect(find.text('Basic Guitar Chords'), findsOneWidget);
     router.go('/course/course_guitar_foundations');
@@ -111,7 +120,7 @@ void main() {
   testWidgets('search finds songs by chord and offers requests', (
     tester,
   ) async {
-    await pumpApp(tester);
+    final (router, _) = await pumpTestApp(tester);
     router.go('/search?q=Bm');
     await settle(tester);
     expect(find.text('Kabira'), findsOneWidget);

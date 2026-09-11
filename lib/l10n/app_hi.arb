@@ -118,5 +118,102 @@
   "sourceCode": "GitHub पर सोर्स कोड",
   "privacyNote": "कैमरा और माइक्रोफ़ोन केवल आपके डिवाइस पर प्रोसेस होते हैं। कुछ भी अपलोड नहीं होता।",
   "recentSessions": "हाल के सेशन",
-  "noSessions": "अभी कोई सेशन नहीं। इतिहास देखने के लिए त्वरित अभ्यास शुरू करें।"
+  "noSessions": "अभी कोई सेशन नहीं। इतिहास देखने के लिए त्वरित अभ्यास शुरू करें।",
+  "modeLearn": "सीखें",
+  "modeLearnHint": "हर कॉर्ड पर आपका इंतज़ार करता है",
+  "modePlayAlong": "साथ बजाएँ",
+  "modePlayAlongHint": "कॉर्ड ताल पर बदलते हैं",
+  "setupTitle": "चलिए तैयारी करें",
+  "setupSubtitle": "कैमरा और माइक चालू करें ताकि मैं आपके हाथ देख सकूँ और गिटार सुन सकूँ।",
+  "setupTurnOn": "कैमरा और माइक चालू करें",
+  "setupStarting": "शुरू हो रहा है…",
+  "checkCamera": "कैमरा चालू है",
+  "checkHandWaiting": "कॉर्ड वाला हाथ दिखाएँ",
+  "checkHandDone": "मुझे आपका हाथ दिख रहा है",
+  "checkMicWaiting": "एक बार तार बजाएँ",
+  "checkMicDone": "मुझे आपका गिटार सुनाई दे रहा है",
+  "trackingLoading": "हैंड ट्रैकिंग लोड हो रही है…",
+  "trackingError": "हैंड ट्रैकिंग उपलब्ध नहीं है। मैं फिर भी सुनूँगा।",
+  "hearIt": "सुनें",
+  "skip": "छोड़ें",
+  "voiceCoach": "आवाज़",
+  "chordOf": "कॉर्ड {current} / {total}",
+  "@chordOf": {
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "holdChord": "पकड़े रखें…",
+  "strumAgain": "फिर से स्ट्रम करें",
+  "listeningPaused": "सुनना रुका है",
+  "moreOptions": "और विकल्प",
+  "speedSlow": "धीमा",
+  "speedMedium": "मध्यम",
+  "speedSong": "गाने की गति",
+  "fingerLegend": "उंगलियों के रंग",
+  "fingerIndex": "तर्जनी",
+  "fingerMiddle": "मध्यमा",
+  "fingerRing": "अनामिका",
+  "fingerPinky": "कनिष्ठा",
+  "youPlayed": "आपने {total} में से {count} कॉर्ड बजाए",
+  "@youPlayed": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "bestStreak": "सबसे लंबी लय: {count}",
+  "@bestStreak": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "trickyChords": "अभ्यास के लिए कॉर्ड",
+  "practiceTricky": "इनका अभ्यास करें",
+  "allClean": "हर कॉर्ड साफ़ बजा!",
+  "savedToProgress": "आपकी प्रगति में सेव हो गया",
+  "inARow": "लगातार {count}!",
+  "@inARow": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "readyHint": "तैयार हों तो स्टार्ट दबाएँ। हर कॉर्ड पर अपना समय लें।",
+  "paused": "रुका हुआ",
+  "tuner": "ट्यूनर",
+  "tunerTitle": "अपना गिटार ट्यून करें",
+  "tunerHint": "एक बार में एक तार बजाएँ और गूँजने दें।",
+  "tuneUp": "ऊपर ट्यून करें",
+  "tuneDown": "नीचे ट्यून करें",
+  "inTune": "सुर में",
+  "tunerAuto": "ऑटो",
+  "tunerListen": "सुनना शुरू करें",
+  "playReference": "सुर बजाएँ",
+  "tunerWaiting": "कोई तार बजाएँ…",
+  "startHere": "यहाँ से शुरू करें",
+  "firstChordTitle": "2 मिनट में आपका पहला कॉर्ड",
+  "firstChordBody": "E माइनर सीखें, सिर्फ़ दो उंगलियाँ। टीचर आपका इंतज़ार करता है।",
+  "onboardingTitle1": "कोई गाना या कॉर्ड चुनें",
+  "onboardingBody1": "कोर्स शुरू करें, गाना खोजें, या कोई भी कॉर्ड अभ्यास करें।",
+  "onboardingTitle2": "टीचर देखता और सुनता है",
+  "onboardingBody2": "रंगीन बिंदु दिखाते हैं कि कौन-सी उंगली कहाँ जाएगी। माइक सुनता है कि कॉर्ड सही है या नहीं।",
+  "onboardingTitle3": "अपनी गति से सीखें",
+  "onboardingBody3": "लर्न मोड में कॉर्ड बजाने तक कुछ आगे नहीं बढ़ता। तैयार हों तो 'साथ बजाएँ' से गति बढ़ाएँ।",
+  "next": "आगे",
+  "getStarted": "शुरू करें",
+  "practiceThisChord": "यह कॉर्ड अभ्यास करें",
+  "tapChordHint": "कॉर्ड देखने और सुनने के लिए उस पर टैप करें"
 }

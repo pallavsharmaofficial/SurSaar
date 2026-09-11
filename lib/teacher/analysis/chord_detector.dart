@@ -49,6 +49,9 @@ class ChordDetector {
   int get sampleRate => _sampleRate;
   int get frameSize => _frameSize;
 
+  /// Audio covered by each new detection, in milliseconds.
+  int get hopMs => (_hop * 1000 / _sampleRate).round();
+
   void _configure(int sampleRate) {
     _sampleRate = sampleRate;
     final wanted = sampleRate * frameSeconds;

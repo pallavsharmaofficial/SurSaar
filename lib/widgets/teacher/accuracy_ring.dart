@@ -9,6 +9,7 @@ class AccuracyRing extends StatelessWidget {
     required this.label,
     this.size = 84,
     this.color,
+    this.background,
   });
 
   /// 0..1
@@ -16,6 +17,9 @@ class AccuracyRing extends StatelessWidget {
   final String label;
   final double size;
   final Color? color;
+
+  /// Optional disc behind the ring (for use over the camera).
+  final Color? background;
 
   @override
   Widget build(BuildContext context) {
@@ -27,9 +31,12 @@ class AccuracyRing extends StatelessWidget {
             : value >= 0.5
             ? const Color(0xFFFACC15)
             : const Color(0xFFF87171));
-    return SizedBox(
+    return Container(
       width: size,
       height: size,
+      decoration: background == null
+          ? null
+          : BoxDecoration(color: background, shape: BoxShape.circle),
       child: CustomPaint(
         painter: _RingPainter(value: value, color: ringColor),
         child: Center(

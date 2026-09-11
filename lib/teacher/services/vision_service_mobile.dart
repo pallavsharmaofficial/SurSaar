@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:camera/camera.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
 
 import '../models/hand_frame.dart';
@@ -9,11 +10,13 @@ import 'vision_service.dart';
 VisionService createPlatformVisionService() => MobileVisionService();
 
 /// Camera preview through the `camera` plugin. Hand landmarks are not
-/// produced on mobile yet; the engine degrades gracefully (audio-only
-/// coaching plus the chord diagram).
+/// produced on mobile yet; the engine coaches by ear instead.
 class MobileVisionService implements VisionService {
   final StreamController<HandFrame> _controller =
       StreamController<HandFrame>.broadcast();
+  final ValueNotifier<TrackingStatus> _status = ValueNotifier<TrackingStatus>(
+    TrackingStatus.unavailable,
+  );
   CameraController? _camera;
   bool _running = false;
   String? _lastError;
@@ -31,7 +34,13 @@ class MobileVisionService implements VisionService {
   String? get lastError => _lastError;
 
   @override
+  ValueListenable<TrackingStatus> get trackingStatus => _status;
+
+  @override
   Stream<HandFrame> get frames => _controller.stream;
+
+  @override
+  Future<void> warmUp() async {}
 
   @override
   Future<void> start({bool frontCamera = true, bool mirror = true}) async {
@@ -39,7 +48,7 @@ class MobileVisionService implements VisionService {
     try {
       final cameras = await availableCameras();
       if (cameras.isEmpty) {
-        _lastError = 'No camera found on this device.';
+        _lastError = 'No camera was found on this device.';
         return;
       }
       final wanted = frontCamera
@@ -59,7 +68,7 @@ class MobileVisionService implements VisionService {
       _running = true;
       _lastError = null;
     } catch (error) {
-      _lastError = 'Camera unavailable: $error';
+      _lastError = 'Could not start the camera: $error';
       _running = false;
     }
   }
@@ -92,6 +101,7 @@ class MobileVisionService implements VisionService {
   @override
   Future<void> dispose() async {
     await stop();
+    _status.dispose();
     await _controller.close();
   }
 }

@@ -58,30 +58,35 @@ class StrummingTimeline extends StatelessWidget {
                       break;
                   }
                 }
-                return AnimatedContainer(
-                  duration: const Duration(milliseconds: 90),
-                  width: cellW - 4,
-                  height: compact ? 34 : 46,
-                  margin: const EdgeInsets.symmetric(horizontal: 2),
-                  decoration: BoxDecoration(
-                    color: bg,
-                    borderRadius: BorderRadius.circular(8),
-                    border: Border.all(
-                      color: isCurrent
-                          ? theme.colorScheme.secondary
-                          : Colors.transparent,
-                      width: 2.5,
+                return AnimatedScale(
+                  scale: isCurrent ? 1.12 : 1,
+                  duration: const Duration(milliseconds: 120),
+                  curve: Curves.easeOutBack,
+                  child: AnimatedContainer(
+                    duration: const Duration(milliseconds: 90),
+                    width: cellW - 4,
+                    height: compact ? 34 : 46,
+                    margin: const EdgeInsets.symmetric(horizontal: 2),
+                    decoration: BoxDecoration(
+                      color: bg,
+                      borderRadius: BorderRadius.circular(8),
+                      border: Border.all(
+                        color: isCurrent
+                            ? theme.colorScheme.secondary
+                            : Colors.transparent,
+                        width: 2.5,
+                      ),
                     ),
-                  ),
-                  alignment: Alignment.center,
-                  child: Text(
-                    StrummingPattern.arrow(stroke),
-                    style: TextStyle(
-                      color: stroke == StrokeType.rest
-                          ? fg.withValues(alpha: 0.35)
-                          : fg,
-                      fontSize: compact ? 16 : 22,
-                      fontWeight: FontWeight.bold,
+                    alignment: Alignment.center,
+                    child: Text(
+                      StrummingPattern.arrow(stroke),
+                      style: TextStyle(
+                        color: stroke == StrokeType.rest
+                            ? fg.withValues(alpha: 0.35)
+                            : fg,
+                        fontSize: compact ? 16 : 22,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
                 );

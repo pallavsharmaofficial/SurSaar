@@ -2,6 +2,7 @@ import 'package:equatable/equatable.dart';
 
 import '../../teacher/engine/practice_plan.dart';
 import '../../teacher/engine/teacher_engine.dart';
+import '../../teacher/services/vision_service.dart';
 
 abstract class TeacherEvent extends Equatable {
   const TeacherEvent();
@@ -11,12 +12,20 @@ abstract class TeacherEvent extends Equatable {
 }
 
 class TeacherInitialized extends TeacherEvent {
-  const TeacherInitialized(this.plan);
+  const TeacherInitialized(this.plan, {this.mode});
 
   final PracticePlan plan;
 
+  /// Overrides the learner's saved preference (e.g. from a link).
+  final CoachingMode? mode;
+
   @override
-  List<Object?> get props => <Object?>[plan];
+  List<Object?> get props => <Object?>[plan, mode];
+}
+
+/// Turn on the camera and microphone without starting the session.
+class TeacherServicesRequested extends TeacherEvent {
+  const TeacherServicesRequested();
 }
 
 class TeacherStarted extends TeacherEvent {
@@ -33,6 +42,37 @@ class TeacherResumed extends TeacherEvent {
 
 class TeacherStopped extends TeacherEvent {
   const TeacherStopped();
+}
+
+class TeacherModeChanged extends TeacherEvent {
+  const TeacherModeChanged(this.mode);
+
+  final CoachingMode mode;
+
+  @override
+  List<Object?> get props => <Object?>[mode];
+}
+
+class TeacherSkipRequested extends TeacherEvent {
+  const TeacherSkipRequested();
+}
+
+class TeacherHearChordRequested extends TeacherEvent {
+  const TeacherHearChordRequested(this.chord);
+
+  final String chord;
+
+  @override
+  List<Object?> get props => <Object?>[chord];
+}
+
+class TeacherVoiceToggled extends TeacherEvent {
+  const TeacherVoiceToggled(this.enabled);
+
+  final bool enabled;
+
+  @override
+  List<Object?> get props => <Object?>[enabled];
 }
 
 class TeacherBpmChanged extends TeacherEvent {
@@ -90,9 +130,14 @@ class TeacherSnapshotArrived extends TeacherEvent {
   final TeacherSnapshot snapshot;
 
   @override
-  List<Object?> get props => <Object?>[
-    snapshot.phase,
-    snapshot.elapsedMs,
-    snapshot.beat,
-  ];
+  List<Object?> get props => <Object?>[snapshot];
+}
+
+class TeacherTrackingStatusChanged extends TeacherEvent {
+  const TeacherTrackingStatusChanged(this.status);
+
+  final TrackingStatus status;
+
+  @override
+  List<Object?> get props => <Object?>[status];
 }
