@@ -189,6 +189,39 @@ class HandFrame {
 
   bool get hasHands => hands.isNotEmpty;
 
+  /// Blends this frame towards [previous] so the overlay stops jittering.
+  HandFrame smoothedFrom(HandFrame? previous, {double factor = 0.5}) {
+    if (previous == null || previous.hands.length != hands.length) return this;
+    final blended = <Hand>[];
+    for (var i = 0; i < hands.length; i++) {
+      final before = previous.hands[i];
+      final now = hands[i];
+      if (before.handedness != now.handedness) return this;
+      blended.add(
+        Hand(
+          handedness: now.handedness,
+          score: now.score,
+          landmarks: List<HandLandmark>.generate(
+            now.landmarks.length,
+            (j) => HandLandmark(
+              before[j].x + (now[j].x - before[j].x) * factor,
+              before[j].y + (now[j].y - before[j].y) * factor,
+              before[j].z + (now[j].z - before[j].z) * factor,
+            ),
+            growable: false,
+          ),
+        ),
+      );
+    }
+    return HandFrame(
+      hands: blended,
+      timestampMs: timestampMs,
+      imageWidth: imageWidth,
+      imageHeight: imageHeight,
+      mirrored: mirrored,
+    );
+  }
+
   Hand? handFor(Handedness handedness) {
     for (final hand in hands) {
       if (hand.handedness == handedness) return hand;

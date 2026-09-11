@@ -237,5 +237,15 @@
   "refreshSongs": "नए गाने देखें",
   "songsUpdated": "गानों की सूची अपडेट हो गई",
   "keepLyrics": "बोल इस डिवाइस पर रखें",
-  "sectionsFound": "सेक्शन"
+  "sectionsFound": "सेक्शन",
+  "displaySettings": "क्या दिखाएँ",
+  "showHandSkeleton": "हाथ की ट्रैकिंग लाइनें",
+  "showFingerGuides": "उंगली गाइड",
+  "showNeckGuide": "गिटार नेक गाइड",
+  "showSoundField": "गिटार से निकलता संगीत",
+  "showCoachMessages": "कोच के संदेश",
+  "showBeatDots": "बीट डॉट्स",
+  "showStatusChips": "स्टेटस चिप्स",
+  "cameraView": "कैमरा व्यू",
+  "mirrorPreview": "प्रीव्यू मिरर करें"
 }

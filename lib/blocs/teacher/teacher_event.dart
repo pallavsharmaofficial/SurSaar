@@ -1,5 +1,6 @@
 import 'package:equatable/equatable.dart';
 
+import '../../models/user_settings.dart';
 import '../../teacher/engine/practice_plan.dart';
 import '../../teacher/engine/teacher_engine.dart';
 import '../../teacher/services/vision_service.dart';
@@ -140,4 +141,13 @@ class TeacherTrackingStatusChanged extends TeacherEvent {
 
   @override
   List<Object?> get props => <Object?>[status];
+}
+
+class TeacherSettingsChanged extends TeacherEvent {
+  const TeacherSettingsChanged(this.settings);
+
+  final UserSettings settings;
+
+  @override
+  List<Object?> get props => <Object?>[settings];
 }

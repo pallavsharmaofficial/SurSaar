@@ -237,5 +237,15 @@
   "refreshSongs": "Check for new songs",
   "songsUpdated": "Song list updated",
   "keepLyrics": "Keep the lyrics on this device",
-  "sectionsFound": "Sections"
+  "sectionsFound": "Sections",
+  "displaySettings": "What to show",
+  "showHandSkeleton": "Hand tracking lines",
+  "showFingerGuides": "Finger guides",
+  "showNeckGuide": "Guitar neck guide",
+  "showSoundField": "Music from the guitar",
+  "showCoachMessages": "Coach messages",
+  "showBeatDots": "Beat dots",
+  "showStatusChips": "Status chips",
+  "cameraView": "Camera view",
+  "mirrorPreview": "Mirror the preview"
 }

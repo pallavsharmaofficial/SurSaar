@@ -1285,6 +1285,66 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Sections'**
   String get sectionsFound;
+
+  /// No description provided for @displaySettings.
+  ///
+  /// In en, this message translates to:
+  /// **'What to show'**
+  String get displaySettings;
+
+  /// No description provided for @showHandSkeleton.
+  ///
+  /// In en, this message translates to:
+  /// **'Hand tracking lines'**
+  String get showHandSkeleton;
+
+  /// No description provided for @showFingerGuides.
+  ///
+  /// In en, this message translates to:
+  /// **'Finger guides'**
+  String get showFingerGuides;
+
+  /// No description provided for @showNeckGuide.
+  ///
+  /// In en, this message translates to:
+  /// **'Guitar neck guide'**
+  String get showNeckGuide;
+
+  /// No description provided for @showSoundField.
+  ///
+  /// In en, this message translates to:
+  /// **'Music from the guitar'**
+  String get showSoundField;
+
+  /// No description provided for @showCoachMessages.
+  ///
+  /// In en, this message translates to:
+  /// **'Coach messages'**
+  String get showCoachMessages;
+
+  /// No description provided for @showBeatDots.
+  ///
+  /// In en, this message translates to:
+  /// **'Beat dots'**
+  String get showBeatDots;
+
+  /// No description provided for @showStatusChips.
+  ///
+  /// In en, this message translates to:
+  /// **'Status chips'**
+  String get showStatusChips;
+
+  /// No description provided for @cameraView.
+  ///
+  /// In en, this message translates to:
+  /// **'Camera view'**
+  String get cameraView;
+
+  /// No description provided for @mirrorPreview.
+  ///
+  /// In en, this message translates to:
+  /// **'Mirror the preview'**
+  String get mirrorPreview;
 }
 
 class _AppLocalizationsDelegate

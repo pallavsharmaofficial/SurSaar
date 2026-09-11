@@ -8,6 +8,7 @@ import '../../models/strumming_pattern.dart';
 import '../../models/user_settings.dart';
 import '../analysis/chord_detector.dart';
 import '../analysis/chord_shape_coach.dart';
+import '../analysis/guitar_pose.dart';
 import '../analysis/hand_motion_tracker.dart';
 import '../analysis/onset_detector.dart';
 import '../analysis/timing_scorer.dart';
@@ -133,6 +134,8 @@ class TeacherSnapshot {
     this.listeningPaused = false,
     this.celebrating = false,
     this.waitingForFreshStrum = false,
+    this.pose = GuitarPose.none,
+    this.strumId = 0,
   });
 
   final TeacherPhase phase;
@@ -201,6 +204,12 @@ class TeacherSnapshot {
 
   /// Learn mode: the same chord again – waiting for a new strum.
   final bool waitingForFreshStrum;
+
+  /// Where the guitar is in the camera frame.
+  final GuitarPose pose;
+
+  /// Increases on every strum heard, so the UI can react to each one.
+  final int strumId;
 
   bool get isLearn => mode == CoachingMode.learn;
 
@@ -314,6 +323,7 @@ class TeacherEngine {
   final int Function() _clock;
   final TimingScorer _timing;
   final HandMotionTracker _motion;
+  final GuitarPoseTracker _poseTracker = GuitarPoseTracker();
   final ChordShapeCoach _coach = const ChordShapeCoach();
   ChordDetector? _chordDetector;
   OnsetDetector? _onsetDetector;
@@ -364,6 +374,7 @@ class TeacherEngine {
 
   // senses
   HandFrame _lastHands = HandFrame.empty;
+  int _strumId = 0;
   int _lastHandsMs = 0;
   int _lastFrettingSeenMs = 0;
   int _lastShapeMs = 0;
@@ -608,8 +619,13 @@ class TeacherEngine {
     _emitIfIdle();
   }
 
-  void onHands(HandFrame frame) {
+  void onHands(HandFrame rawFrame) {
     final now = _clock();
+    final frame = rawFrame.smoothedFrom(
+      _lastHandsMs > 0 && now - _lastHandsMs < 400 ? _lastHands : null,
+    );
+    _poseTracker.leftHanded = settings.leftHanded;
+    _poseTracker.update(frame);
     _lastHands = frame;
     _lastHandsMs = now;
     _motion.add(frame);
@@ -865,6 +881,7 @@ class TeacherEngine {
     final sinceClick = onset.timestampMs - _lastClickMs;
     if (sinceClick >= 0 && sinceClick < 70) return;
     _heardStrum = true;
+    _strumId++;
     final direction = _lastHandsMs > 0
         ? _motion.directionAt(onset.timestampMs)
         : null;
@@ -1308,6 +1325,8 @@ class TeacherEngine {
       heardStrum: _heardStrum,
       handSeen: _lastFrettingSeenMs > 0 && now - _lastFrettingSeenMs < 1500,
       listeningPaused: now < _suppressUntilMs,
+      pose: _poseTracker.pose,
+      strumId: _strumId,
       celebrating: celebrating,
       waitingForFreshStrum: learn && _needsFreshStrum && !_pendingAdvance,
     );

@@ -632,4 +632,34 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get sectionsFound => 'Sections';
+
+  @override
+  String get displaySettings => 'What to show';
+
+  @override
+  String get showHandSkeleton => 'Hand tracking lines';
+
+  @override
+  String get showFingerGuides => 'Finger guides';
+
+  @override
+  String get showNeckGuide => 'Guitar neck guide';
+
+  @override
+  String get showSoundField => 'Music from the guitar';
+
+  @override
+  String get showCoachMessages => 'Coach messages';
+
+  @override
+  String get showBeatDots => 'Beat dots';
+
+  @override
+  String get showStatusChips => 'Status chips';
+
+  @override
+  String get cameraView => 'Camera view';
+
+  @override
+  String get mirrorPreview => 'Mirror the preview';
 }

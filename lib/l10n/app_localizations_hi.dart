@@ -631,4 +631,34 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get sectionsFound => 'सेक्शन';
+
+  @override
+  String get displaySettings => 'क्या दिखाएँ';
+
+  @override
+  String get showHandSkeleton => 'हाथ की ट्रैकिंग लाइनें';
+
+  @override
+  String get showFingerGuides => 'उंगली गाइड';
+
+  @override
+  String get showNeckGuide => 'गिटार नेक गाइड';
+
+  @override
+  String get showSoundField => 'गिटार से निकलता संगीत';
+
+  @override
+  String get showCoachMessages => 'कोच के संदेश';
+
+  @override
+  String get showBeatDots => 'बीट डॉट्स';
+
+  @override
+  String get showStatusChips => 'स्टेटस चिप्स';
+
+  @override
+  String get cameraView => 'कैमरा व्यू';
+
+  @override
+  String get mirrorPreview => 'प्रीव्यू मिरर करें';
 }
