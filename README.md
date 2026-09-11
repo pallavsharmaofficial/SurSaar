@@ -38,6 +38,7 @@ comes. Everything runs on your device; nothing is uploaded.
 - **Songs:** search by title, artist, chord or tag; chord diagrams for every
   chord (49 stored shapes + derived barres) with a capo slider; strumming grid;
   song structure with chord changes; one tap into the teacher.
+- **Add any song yourself:** paste a chord sheet you found online and the app reads the chords, sections, key and capo, even when the line breaks were lost in the copy. Imported songs stay on your device, lyrics included.
 - **Song requests → automatic ingestion:** *Request this song* opens a GitHub
   issue; a workflow searches allow-listed chord sites, extracts chords, key,
   capo, strumming and structure, commits them to the catalogue and replies on

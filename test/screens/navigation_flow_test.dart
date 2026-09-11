@@ -5,6 +5,7 @@ import 'package:sursaar/widgets/teacher/chord_diagram.dart';
 import 'package:sursaar/widgets/teacher/chord_ribbon.dart';
 import 'package:sursaar/widgets/teacher/strumming_timeline.dart';
 
+import '../data/chord_sheet_parser_test.dart' show gluedSheet;
 import 'test_app.dart';
 
 void main() {
@@ -125,5 +126,37 @@ void main() {
     await settle(tester);
     expect(find.text('Kabira'), findsOneWidget);
     expect(find.text('Request this song'), findsOneWidget);
+  });
+
+  testWidgets('search offers online chords and pasting when nothing matches', (
+    tester,
+  ) async {
+    final (router, _) = await pumpTestApp(tester);
+    router.go('/search?q=zzzz');
+    await settle(tester);
+    expect(find.textContaining('No songs found for'), findsOneWidget);
+    expect(find.text('Find chords online'), findsOneWidget);
+    expect(find.text('Paste a chord sheet'), findsWidgets);
+  });
+
+  testWidgets('pasting a chord sheet adds your own song', (tester) async {
+    // Tall viewport so the whole import form is laid out.
+    final (router, _) = await pumpTestApp(tester, size: const Size(1400, 2200));
+    router.go('/import?q=Tere Paas Main');
+    await settle(tester);
+    expect(find.text('Add a song'), findsOneWidget);
+
+    await tester.enterText(find.byType(TextField).last, gluedSheet);
+    await settle(tester);
+    expect(find.text('Chords found'), findsOneWidget);
+    expect(find.text('Am'), findsWidgets);
+    expect(find.textContaining('Verse 1'), findsWidgets);
+
+    await tester.tap(find.text('Add to my songs'));
+    await settle(tester);
+
+    // lands on the new song, marked as the learner's own
+    expect(find.text('Added by you'), findsOneWidget);
+    expect(find.text('Practise with the AI Teacher'), findsOneWidget);
   });
 }

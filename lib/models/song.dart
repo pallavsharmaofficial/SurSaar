@@ -59,6 +59,7 @@ class Song extends Equatable {
     this.instrument = 'guitar',
     this.tabs,
     this.notes,
+    this.addedByUser = false,
   });
 
   factory Song.fromJson(Map<String, dynamic> json) => _$SongFromJson(json);
@@ -108,6 +109,9 @@ class Song extends Equatable {
   /// Free-form notes ("verify against the tutorial", capo tips…).
   final String? notes;
 
+  /// Added on this device from a pasted chord sheet.
+  final bool addedByUser;
+
   /// Parsed strumming grid.
   StrummingPattern get strumming => StrummingPattern.parse(strummingPattern);
 
@@ -156,6 +160,7 @@ class Song extends Equatable {
     String? instrument,
     String? tabs,
     String? notes,
+    bool? addedByUser,
   }) {
     return Song(
       id: id ?? this.id,
@@ -182,6 +187,7 @@ class Song extends Equatable {
       instrument: instrument ?? this.instrument,
       tabs: tabs ?? this.tabs,
       notes: notes ?? this.notes,
+      addedByUser: addedByUser ?? this.addedByUser,
     );
   }
 
@@ -211,6 +217,7 @@ class Song extends Equatable {
     instrument,
     tabs,
     notes,
+    addedByUser,
   ];
 
   Map<String, dynamic> toJson() => _$SongToJson(this);

@@ -1,7 +1,7 @@
 {
   "version": "2.0.0",
   "schemaVersion": 2,
-  "lastUpdated": "2026-09-11",
+  "lastUpdated": "2026-09-12",
   "lessons": [
     {
       "id": "open_chord_foundation",
@@ -1553,6 +1553,353 @@
           ]
         }
       ]
+    },
+    {
+      "id": "tere_paas_main",
+      "title": "Tere Paas Main",
+      "artist": "Unknown",
+      "difficulty": "intermediate",
+      "key": "C",
+      "capo": 0,
+      "bpm": 82,
+      "strummingPattern": "D DU UDU",
+      "originalChords": [
+        "C",
+        "Em",
+        "F",
+        "Dm",
+        "G",
+        "Am",
+        "A#",
+        "D"
+      ],
+      "tutorialUrl": "https://www.youtube.com/results?search_query=Tere+Paas+Main+guitar+chords",
+      "language": "hi",
+      "tags": [
+        "requested",
+        "romantic",
+        "bollywood"
+      ],
+      "sections": [
+        {
+          "name": "Verse",
+          "repeat": 1,
+          "lines": [
+            {
+              "lyric": "",
+              "chords": [
+                {
+                  "chord": "C",
+                  "position": 0
+                }
+              ]
+            },
+            {
+              "lyric": "",
+              "chords": [
+                {
+                  "chord": "Em",
+                  "position": 0
+                },
+                {
+                  "chord": "F",
+                  "position": 0
+                },
+                {
+                  "chord": "Dm",
+                  "position": 0
+                },
+                {
+                  "chord": "G",
+                  "position": 0
+                }
+              ]
+            },
+            {
+              "lyric": "",
+              "chords": [
+                {
+                  "chord": "C",
+                  "position": 0
+                }
+              ]
+            },
+            {
+              "lyric": "",
+              "chords": [
+                {
+                  "chord": "F",
+                  "position": 0
+                },
+                {
+                  "chord": "G",
+                  "position": 0
+                },
+                {
+                  "chord": "C",
+                  "position": 0
+                }
+              ]
+            },
+            {
+              "lyric": "",
+              "chords": [
+                {
+                  "chord": "F",
+                  "position": 0
+                },
+                {
+                  "chord": "G",
+                  "position": 0
+                }
+              ]
+            },
+            {
+              "lyric": "",
+              "chords": [
+                {
+                  "chord": "Am",
+                  "position": 0
+                },
+                {
+                  "chord": "Em",
+                  "position": 0
+                }
+              ]
+            },
+            {
+              "lyric": "",
+              "chords": [
+                {
+                  "chord": "Dm",
+                  "position": 0
+                },
+                {
+                  "chord": "G",
+                  "position": 0
+                }
+              ]
+            },
+            {
+              "lyric": "",
+              "chords": [
+                {
+                  "chord": "C",
+                  "position": 0
+                }
+              ]
+            },
+            {
+              "lyric": "",
+              "chords": [
+                {
+                  "chord": "Em",
+                  "position": 0
+                },
+                {
+                  "chord": "F",
+                  "position": 0
+                },
+                {
+                  "chord": "Dm",
+                  "position": 0
+                },
+                {
+                  "chord": "G",
+                  "position": 0
+                }
+              ]
+            },
+            {
+              "lyric": "",
+              "chords": [
+                {
+                  "chord": "C",
+                  "position": 0
+                }
+              ]
+            },
+            {
+              "lyric": "",
+              "chords": [
+                {
+                  "chord": "F",
+                  "position": 0
+                },
+                {
+                  "chord": "G",
+                  "position": 0
+                },
+                {
+                  "chord": "C",
+                  "position": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Chorus",
+          "repeat": 1,
+          "lines": [
+            {
+              "lyric": "",
+              "chords": [
+                {
+                  "chord": "A#",
+                  "position": 0
+                },
+                {
+                  "chord": "G",
+                  "position": 0
+                }
+              ]
+            },
+            {
+              "lyric": "",
+              "chords": [
+                {
+                  "chord": "A#",
+                  "position": 0
+                },
+                {
+                  "chord": "F",
+                  "position": 0
+                },
+                {
+                  "chord": "G",
+                  "position": 0
+                }
+              ]
+            },
+            {
+              "lyric": "",
+              "chords": [
+                {
+                  "chord": "C",
+                  "position": 0
+                },
+                {
+                  "chord": "F",
+                  "position": 0
+                }
+              ]
+            },
+            {
+              "lyric": "",
+              "chords": [
+                {
+                  "chord": "D",
+                  "position": 0
+                },
+                {
+                  "chord": "G",
+                  "position": 0
+                },
+                {
+                  "chord": "F",
+                  "position": 0
+                },
+                {
+                  "chord": "G",
+                  "position": 0
+                }
+              ]
+            },
+            {
+              "lyric": "",
+              "chords": [
+                {
+                  "chord": "C",
+                  "position": 0
+                }
+              ]
+            },
+            {
+              "lyric": "",
+              "chords": [
+                {
+                  "chord": "Em",
+                  "position": 0
+                },
+                {
+                  "chord": "F",
+                  "position": 0
+                },
+                {
+                  "chord": "Dm",
+                  "position": 0
+                },
+                {
+                  "chord": "G",
+                  "position": 0
+                }
+              ]
+            },
+            {
+              "lyric": "",
+              "chords": [
+                {
+                  "chord": "C",
+                  "position": 0
+                }
+              ]
+            },
+            {
+              "lyric": "",
+              "chords": [
+                {
+                  "chord": "F",
+                  "position": 0
+                },
+                {
+                  "chord": "G",
+                  "position": 0
+                },
+                {
+                  "chord": "C",
+                  "position": 0
+                }
+              ]
+            },
+            {
+              "lyric": "",
+              "chords": [
+                {
+                  "chord": "F",
+                  "position": 0
+                },
+                {
+                  "chord": "G",
+                  "position": 0
+                },
+                {
+                  "chord": "C",
+                  "position": 0
+                }
+              ]
+            },
+            {
+              "lyric": "",
+              "chords": [
+                {
+                  "chord": "F",
+                  "position": 0
+                },
+                {
+                  "chord": "G",
+                  "position": 0
+                },
+                {
+                  "chord": "C",
+                  "position": 0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "notes": "Added from a chord sheet shared by a learner. Title and artist still need confirming, and lyrics are not stored here. A# is the same chord as Bb."
     }
   ],
   "courses": [

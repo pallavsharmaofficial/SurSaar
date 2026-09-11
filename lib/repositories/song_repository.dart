@@ -16,7 +16,12 @@ class SongRepository {
   Future<List<Song>> getSongs() async {
     final bundle = await _content.ensureLoaded();
     final favorites = await _database.getFavoriteSongIds();
-    final songs = bundle.songs
+    final byId = <String, Song>{for (final song in bundle.songs) song.id: song};
+    // The learner's own imports win over a catalogue song with the same id.
+    for (final song in await userSongs()) {
+      byId[song.id] = song;
+    }
+    final songs = byId.values
         .map((song) => song.copyWith(isFavorite: favorites.contains(song.id)))
         .toList();
     songs.sort(
@@ -94,5 +99,46 @@ class SongRepository {
 
   Future<void> toggleFavorite(String songId, bool isFavorite) async {
     await _database.setFavorite(songId, isFavorite);
+  }
+
+  /// Songs the learner imported on this device.
+  Future<List<Song>> userSongs() async {
+    final rows = await _database.getUserSongs();
+    final songs = <Song>[];
+    for (final row in rows) {
+      try {
+        songs.add(Song.fromJson(row).copyWith(addedByUser: true));
+      } catch (_) {
+        // skip anything that no longer parses
+      }
+    }
+    return songs;
+  }
+
+  /// Stores [song] on this device; returns it with its final id.
+  Future<Song> addUserSong(Song song) async {
+    final rows = await _database.getUserSongs();
+    rows.removeWhere((row) => row['id'] == song.id);
+    final stored = song.copyWith(addedByUser: true);
+    rows.add(stored.toJson());
+    await _database.saveUserSongs(rows);
+    return stored;
+  }
+
+  Future<void> deleteUserSong(String id) async {
+    final rows = await _database.getUserSongs()
+      ..removeWhere((row) => row['id'] == id);
+    await _database.saveUserSongs(rows);
+    await _database.setFavorite(id, false);
+  }
+
+  /// Every song id in use, for generating a unique id for an import.
+  Future<Set<String>> knownIds() async =>
+      (await getSongs()).map((song) => song.id).toSet();
+
+  /// Fetches the published catalogue again ("check for new songs").
+  Future<int> refreshCatalogue() async {
+    final bundle = await _content.refresh();
+    return bundle.songs.length;
   }
 }

@@ -45,4 +45,12 @@ class AppConstants {
   static const String webAppUrl = '${websiteUrl}app/';
   static const String feedbackUrl = '$repositoryUrl/issues/new/choose';
   static const String songRequestUrl = '$repositoryUrl/issues/new';
+
+  /// A web search for a song's chords, used by "Find chords online".
+  static String webSearchUrl(String query) {
+    final terms = query.trim().isEmpty
+        ? 'guitar chords'
+        : '$query guitar chords';
+    return 'https://duckduckgo.com/?q=${Uri.encodeQueryComponent(terms)}';
+  }
 }
