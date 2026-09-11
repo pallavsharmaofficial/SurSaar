@@ -6,6 +6,7 @@ import 'package:sursaar/l10n/app_localizations.dart';
 import '../../core/theme/app_colors.dart';
 import '../../repositories/course_repository.dart';
 import '../../widgets/difficulty_badge.dart';
+import '../../widgets/app_back_button.dart';
 
 class CourseDetailScreen extends StatefulWidget {
   const CourseDetailScreen({super.key, required this.courseId});
@@ -34,20 +35,23 @@ class _CourseDetailScreenState extends State<CourseDetailScreen> {
         final progress = snapshot.data;
         if (snapshot.connectionState != ConnectionState.done) {
           return Scaffold(
-            appBar: AppBar(),
+            appBar: AppBar(leading: const AppBackButton()),
             body: const Center(child: CircularProgressIndicator()),
           );
         }
         if (progress == null) {
           return Scaffold(
-            appBar: AppBar(),
+            appBar: AppBar(leading: const AppBackButton()),
             body: Center(child: Text(l10n.noLessonsAvailable)),
           );
         }
         final course = progress.course;
         final next = progress.nextLesson;
         return Scaffold(
-          appBar: AppBar(title: Text(course.title)),
+          appBar: AppBar(
+            leading: const AppBackButton(),
+            title: Text(course.title),
+          ),
           body: ListView(
             padding: const EdgeInsets.all(16),
             children: <Widget>[

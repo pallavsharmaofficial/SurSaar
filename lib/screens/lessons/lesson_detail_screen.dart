@@ -12,6 +12,7 @@ import '../../repositories/progress_repository.dart';
 import '../../widgets/difficulty_badge.dart';
 import '../../widgets/teacher/chord_diagram.dart';
 import '../../widgets/teacher/strumming_timeline.dart';
+import '../../widgets/app_back_button.dart';
 
 class LessonDetailScreen extends StatefulWidget {
   const LessonDetailScreen({
@@ -61,7 +62,7 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
     if (!wasCompleted && mounted) {
       await context.read<ProgressRepository>().incrementLessonsCompleted();
     }
-    if (mounted) context.pop();
+    if (mounted) popOrGoHome(context);
   }
 
   @override
@@ -71,7 +72,7 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
     final lesson = _lesson;
     if (lesson == null) {
       return Scaffold(
-        appBar: AppBar(),
+        appBar: AppBar(leading: const AppBackButton()),
         body: Center(
           child: _loading
               ? const CircularProgressIndicator()
@@ -81,7 +82,7 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
     }
     final library = context.read<ChordLibrary>();
     return Scaffold(
-      appBar: AppBar(title: Text(lesson.title)),
+      appBar: AppBar(leading: const AppBackButton(), title: Text(lesson.title)),
       body: ListView(
         padding: const EdgeInsets.all(16),
         children: <Widget>[
@@ -90,13 +91,18 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
               DifficultyBadge(difficulty: lesson.difficulty),
               const SizedBox(width: 8),
               if (lesson.category != null)
-                Text(
-                  lesson.category!,
-                  style: theme.textTheme.bodySmall?.copyWith(
-                    color: AppColors.textOnDark,
+                Expanded(
+                  child: Text(
+                    lesson.category!,
+                    style: theme.textTheme.bodySmall?.copyWith(
+                      color: AppColors.textOnDark,
+                    ),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
                   ),
-                ),
-              const Spacer(),
+                )
+              else
+                const Spacer(),
               Text(
                 '${lesson.duration} min',
                 style: theme.textTheme.bodySmall?.copyWith(

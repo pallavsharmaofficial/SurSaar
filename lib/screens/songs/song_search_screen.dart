@@ -10,6 +10,7 @@ import '../../core/theme/app_colors.dart';
 import '../../models/song.dart';
 import '../../repositories/song_repository.dart';
 import '../../widgets/enhanced_song_card.dart';
+import '../../widgets/app_back_button.dart';
 
 class SongSearchScreen extends StatefulWidget {
   const SongSearchScreen({super.key, this.initialQuery = ''});
@@ -68,6 +69,7 @@ class _SongSearchScreenState extends State<SongSearchScreen> {
     final theme = Theme.of(context);
     return Scaffold(
       appBar: AppBar(
+        leading: const AppBackButton(),
         title: TextField(
           controller: _controller,
           autofocus: widget.initialQuery.isEmpty,

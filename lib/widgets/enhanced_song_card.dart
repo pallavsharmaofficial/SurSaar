@@ -102,14 +102,18 @@ class EnhancedSongCard extends StatelessWidget {
                       color: AppColors.textOnLight,
                     ),
                     const SizedBox(width: 4),
-                    Text(
-                      '${song.bpm} BPM',
-                      style: theme.textTheme.bodySmall?.copyWith(
-                        color: AppColors.textOnLight,
+                    Expanded(
+                      child: Text(
+                        '${song.bpm} BPM',
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: theme.textTheme.bodySmall?.copyWith(
+                          color: AppColors.textOnLight,
+                        ),
                       ),
                     ),
                   ],
-                  const Spacer(),
+                  if (song.bpm == null) const Spacer(),
                   const Icon(Icons.chevron_right, color: AppColors.textOnLight),
                 ],
               ),

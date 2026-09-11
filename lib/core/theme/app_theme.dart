@@ -49,7 +49,7 @@ class AppTheme {
           color: AppColors.surfaceLight,
           fontSize: 14,
         ),
-        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
       ),
       cardTheme: CardThemeData(
         color: AppColors.surfaceLight,
@@ -153,7 +153,7 @@ class AppTheme {
           color: AppColors.surfaceLight,
           fontSize: 14,
         ),
-        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
       ),
       cardTheme: CardThemeData(
         color: AppColors.surfaceLight,

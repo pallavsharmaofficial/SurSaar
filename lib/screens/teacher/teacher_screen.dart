@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:go_router/go_router.dart';
 import 'package:sursaar/l10n/app_localizations.dart';
 
 import '../../blocs/teacher/teacher_bloc.dart';
@@ -26,6 +25,7 @@ import '../../widgets/teacher/chord_ribbon.dart';
 import '../../widgets/teacher/coach_banner.dart';
 import '../../widgets/teacher/hand_overlay_painter.dart';
 import '../../widgets/teacher/strumming_timeline.dart';
+import '../../widgets/app_back_button.dart';
 
 /// Describes what the teacher should practise. Resolved to a
 /// [PracticePlan] once the content is loaded.
@@ -124,7 +124,7 @@ class _PlanResolverState extends State<_PlanResolver> {
         final plan = snapshot.data;
         if (plan == null) {
           return Scaffold(
-            appBar: AppBar(),
+            appBar: AppBar(leading: const AppBackButton()),
             body: const Center(child: Text('Nothing to practise here yet.')),
           );
         }
@@ -160,6 +160,7 @@ class _TeacherViewState extends State<_TeacherView> {
           return Scaffold(
             backgroundColor: AppColors.backgroundDark,
             appBar: AppBar(
+              leading: const AppBackButton(),
               backgroundColor: AppColors.backgroundDark,
               title: Text(plan.title),
             ),
@@ -169,6 +170,7 @@ class _TeacherViewState extends State<_TeacherView> {
         return Scaffold(
           backgroundColor: AppColors.backgroundDark,
           appBar: AppBar(
+            leading: const AppBackButton(),
             backgroundColor: AppColors.backgroundDark,
             title: Column(
               children: <Widget>[
@@ -666,10 +668,16 @@ class _Panel extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
             Text(l10n.strummingPatternLabel, style: _h(theme)),
-            Text(
-              plan.pattern.notation,
-              style: theme.textTheme.bodySmall?.copyWith(
-                color: AppColors.textOnDark.withValues(alpha: 0.7),
+            const SizedBox(width: 12),
+            Flexible(
+              child: Text(
+                plan.pattern.notation,
+                textAlign: TextAlign.end,
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                style: theme.textTheme.bodySmall?.copyWith(
+                  color: AppColors.textOnDark.withValues(alpha: 0.7),
+                ),
               ),
             ),
           ],
@@ -728,6 +736,7 @@ class _Panel extends StatelessWidget {
                 size: 18,
               ),
               label: Text(l10n.camera),
+              labelStyle: _chipLabel(state.cameraEnabled),
               selected: state.cameraEnabled,
               onSelected: state.cameraSupported
                   ? (v) => bloc.add(TeacherCameraToggled(v))
@@ -739,6 +748,7 @@ class _Panel extends StatelessWidget {
                 size: 18,
               ),
               label: Text(l10n.microphone),
+              labelStyle: _chipLabel(state.micEnabled),
               selected: state.micEnabled,
               onSelected: state.micSupported
                   ? (v) => bloc.add(TeacherMicToggled(v))
@@ -747,6 +757,7 @@ class _Panel extends StatelessWidget {
             FilterChip(
               avatar: const Icon(Icons.timer_outlined, size: 18),
               label: Text(l10n.metronome),
+              labelStyle: _chipLabel(state.metronomeEnabled),
               selected: state.metronomeEnabled,
               onSelected: (v) => bloc.add(TeacherMetronomeToggled(v)),
             ),
@@ -818,6 +829,11 @@ class _Panel extends StatelessWidget {
       ],
     );
   }
+
+  TextStyle _chipLabel(bool selected) => TextStyle(
+    color: selected ? Colors.white : AppColors.textOnLight,
+    fontWeight: FontWeight.w600,
+  );
 
   TextStyle? _h(ThemeData theme) => theme.textTheme.titleSmall?.copyWith(
     fontWeight: FontWeight.bold,
@@ -901,7 +917,7 @@ class _SummaryCard extends StatelessWidget {
               ),
               const SizedBox(width: 8),
               OutlinedButton(
-                onPressed: () => context.pop(),
+                onPressed: () => popOrGoHome(context),
                 style: OutlinedButton.styleFrom(
                   foregroundColor: Colors.white,
                   side: const BorderSide(color: Colors.white54),
