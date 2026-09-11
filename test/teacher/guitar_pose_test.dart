@@ -1,5 +1,3 @@
-import 'dart:ui' show Offset;
-
 import 'package:flutter_test/flutter_test.dart';
 import 'package:sursaar/teacher/analysis/guitar_pose.dart';
 import 'package:sursaar/teacher/models/hand_frame.dart';
