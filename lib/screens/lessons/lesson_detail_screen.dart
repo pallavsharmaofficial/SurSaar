@@ -13,6 +13,7 @@ import '../../widgets/difficulty_badge.dart';
 import '../../widgets/teacher/chord_diagram.dart';
 import '../../widgets/teacher/strumming_timeline.dart';
 import '../../widgets/app_back_button.dart';
+import '../../widgets/chord_sheet.dart';
 
 class LessonDetailScreen extends StatefulWidget {
   const LessonDetailScreen({
@@ -163,6 +164,7 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
                       borderRadius: BorderRadius.circular(14),
                     ),
                     child: ChordDiagram(
+                      onTap: () => ChordSheet.show(context, voicing.name),
                       voicing: voicing,
                       size: 90,
                       color: AppColors.textOnLight,

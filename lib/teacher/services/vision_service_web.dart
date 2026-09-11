@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:js_interop';
 import 'dart:ui_web' as ui_web;
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
 
 import '../models/hand_frame.dart';
@@ -10,16 +11,22 @@ import 'vision_service.dart';
 
 VisionService createPlatformVisionService() => WebVisionService();
 
-/// Web implementation: camera via getUserMedia + MediaPipe Hand Landmarker,
-/// both driven from `web/teacher/sursaar_teacher.js`.
+/// Web implementation backed by `web/teacher/sursaar_teacher.js`.
 class WebVisionService implements VisionService {
+  WebVisionService()
+    : _status = ValueNotifier<TrackingStatus>(
+        teacherJsAvailable ? TrackingStatus.idle : TrackingStatus.unavailable,
+      );
+
   static const String viewType = 'sursaar-vision-view';
   static bool _factoryRegistered = false;
 
   final StreamController<HandFrame> _controller =
       StreamController<HandFrame>.broadcast();
+  final ValueNotifier<TrackingStatus> _status;
   bool _running = false;
   bool _mirror = true;
+  bool _disposed = false;
   String? _lastError;
 
   @override
@@ -35,38 +42,74 @@ class WebVisionService implements VisionService {
   String? get lastError => _lastError;
 
   @override
+  ValueListenable<TrackingStatus> get trackingStatus => _status;
+
+  @override
   Stream<HandFrame> get frames => _controller.stream;
+
+  void _setStatus(TrackingStatus status) {
+    if (!_disposed) _status.value = status;
+  }
+
+  void _onStatus(JSString status) {
+    switch (status.toDart) {
+      case 'loading':
+        _setStatus(TrackingStatus.loading);
+      case 'ready':
+        _setStatus(TrackingStatus.ready);
+      case 'error':
+        _setStatus(TrackingStatus.error);
+    }
+  }
+
+  @override
+  Future<void> warmUp() async {
+    if (!teacherJsAvailable || _status.value == TrackingStatus.ready) return;
+    try {
+      final ok = await teacherJs.preloadVision(_onStatus.toJS).toDart;
+      _setStatus(ok.toDart ? TrackingStatus.ready : TrackingStatus.error);
+    } catch (_) {
+      _setStatus(TrackingStatus.error);
+    }
+  }
+
+  static void _registerFactory() {
+    if (_factoryRegistered || !teacherJsAvailable) return;
+    _factoryRegistered = true;
+    ui_web.platformViewRegistry.registerViewFactory(
+      viewType,
+      (int viewId) => teacherJs.createVisionView(viewId.toJS),
+    );
+  }
 
   @override
   Future<void> start({bool frontCamera = true, bool mirror = true}) async {
-    if (_running) return;
     if (!teacherJsAvailable) {
-      _lastError =
-          'Teacher script not loaded (web/teacher/sursaar_teacher.js).';
+      _lastError = 'The camera helper did not load. Reload the page.';
       return;
     }
     _mirror = mirror && frontCamera;
     _registerFactory();
     teacherJs.setMirror(_mirror.toJS);
+    _lastError = null;
     try {
       await teacherJs
           .startVision(frontCamera.toJS, _onFrame.toJS, _onError.toJS)
           .toDart;
       _running = true;
-      _lastError = null;
+      if (_status.value == TrackingStatus.idle) {
+        _setStatus(TrackingStatus.loading);
+      }
+      unawaited(warmUp());
     } catch (error) {
-      _lastError = 'Camera unavailable: $error';
+      _lastError ??= _describe(error);
       _running = false;
     }
   }
 
-  void _registerFactory() {
-    if (_factoryRegistered) return;
-    _factoryRegistered = true;
-    ui_web.platformViewRegistry.registerViewFactory(
-      viewType,
-      (int viewId) => teacherJs.getVisionContainer(),
-    );
+  static String _describe(Object error) {
+    final text = error.toString();
+    return text.startsWith('Error: ') ? text.substring(7) : text;
   }
 
   void _onError(JSString message) {
@@ -81,6 +124,7 @@ class WebVisionService implements VisionService {
     JSNumber width,
     JSNumber height,
   ) {
+    if (_controller.isClosed) return;
     final flat = landmarks.toDart;
     final labels = handedness.toDart;
     final scoreList = scores.toDart;
@@ -97,23 +141,21 @@ class WebVisionService implements VisionService {
         ),
         growable: false,
       );
-      // MediaPipe labels assume a mirrored (selfie) input. We hand it the raw
-      // camera stream, so its "Left" is the learner's right hand.
+      // MediaPipe labels assume a mirrored selfie image. The worker receives
+      // the raw camera frame, so its "Left" is the learner's right hand.
       final label = labels[i].toDart;
-      final handednessValue = label == 'Left'
-          ? Handedness.right
-          : label == 'Right'
-          ? Handedness.left
-          : Handedness.unknown;
       hands.add(
         Hand(
-          handedness: handednessValue,
+          handedness: label == 'Left'
+              ? Handedness.right
+              : label == 'Right'
+              ? Handedness.left
+              : Handedness.unknown,
           score: i < scoreList.length ? scoreList[i] : 0,
           landmarks: points,
         ),
       );
     }
-    if (_controller.isClosed) return;
     _controller.add(
       HandFrame(
         hands: hands,
@@ -142,6 +184,8 @@ class WebVisionService implements VisionService {
   @override
   Future<void> dispose() async {
     await stop();
+    _disposed = true;
+    _status.dispose();
     await _controller.close();
   }
 }

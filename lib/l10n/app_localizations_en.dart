@@ -358,4 +358,208 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get noSessions =>
       'No sessions yet. Start a quick practice to see your history here.';
+
+  @override
+  String get modeLearn => 'Learn';
+
+  @override
+  String get modeLearnHint => 'Waits for you on every chord';
+
+  @override
+  String get modePlayAlong => 'Play along';
+
+  @override
+  String get modePlayAlongHint => 'Chords change on the beat';
+
+  @override
+  String get setupTitle => 'Let\'s get set up';
+
+  @override
+  String get setupSubtitle =>
+      'Turn on your camera and microphone so I can see your hands and hear your guitar.';
+
+  @override
+  String get setupTurnOn => 'Turn on camera & mic';
+
+  @override
+  String get setupStarting => 'Starting…';
+
+  @override
+  String get checkCamera => 'Camera is on';
+
+  @override
+  String get checkHandWaiting => 'Show your fretting hand';
+
+  @override
+  String get checkHandDone => 'I can see your hand';
+
+  @override
+  String get checkMicWaiting => 'Strum the strings once';
+
+  @override
+  String get checkMicDone => 'I can hear your guitar';
+
+  @override
+  String get trackingLoading => 'Loading hand tracking…';
+
+  @override
+  String get trackingError =>
+      'Hand tracking is unavailable. I\'ll still listen.';
+
+  @override
+  String get hearIt => 'Hear it';
+
+  @override
+  String get skip => 'Skip';
+
+  @override
+  String get voiceCoach => 'Voice';
+
+  @override
+  String chordOf(int current, int total) {
+    return 'Chord $current of $total';
+  }
+
+  @override
+  String get holdChord => 'Hold it…';
+
+  @override
+  String get strumAgain => 'Strum again';
+
+  @override
+  String get listeningPaused => 'Listening paused';
+
+  @override
+  String get moreOptions => 'More options';
+
+  @override
+  String get speedSlow => 'Slow';
+
+  @override
+  String get speedMedium => 'Medium';
+
+  @override
+  String get speedSong => 'Song speed';
+
+  @override
+  String get fingerLegend => 'Finger colours';
+
+  @override
+  String get fingerIndex => 'Index';
+
+  @override
+  String get fingerMiddle => 'Middle';
+
+  @override
+  String get fingerRing => 'Ring';
+
+  @override
+  String get fingerPinky => 'Pinky';
+
+  @override
+  String youPlayed(int count, int total) {
+    return 'You played $count of $total chords';
+  }
+
+  @override
+  String bestStreak(int count) {
+    return 'Best streak: $count';
+  }
+
+  @override
+  String get trickyChords => 'Chords to practise';
+
+  @override
+  String get practiceTricky => 'Practise these';
+
+  @override
+  String get allClean => 'Every chord was clean!';
+
+  @override
+  String get savedToProgress => 'Saved to your progress';
+
+  @override
+  String inARow(int count) {
+    return '$count in a row!';
+  }
+
+  @override
+  String get readyHint =>
+      'Press Start when you\'re ready. Take your time on each chord.';
+
+  @override
+  String get paused => 'Paused';
+
+  @override
+  String get tuner => 'Tuner';
+
+  @override
+  String get tunerTitle => 'Tune your guitar';
+
+  @override
+  String get tunerHint => 'Pluck one string at a time and let it ring.';
+
+  @override
+  String get tuneUp => 'Tune up';
+
+  @override
+  String get tuneDown => 'Tune down';
+
+  @override
+  String get inTune => 'In tune';
+
+  @override
+  String get tunerAuto => 'Auto';
+
+  @override
+  String get tunerListen => 'Start listening';
+
+  @override
+  String get playReference => 'Play note';
+
+  @override
+  String get tunerWaiting => 'Pluck a string…';
+
+  @override
+  String get startHere => 'Start here';
+
+  @override
+  String get firstChordTitle => 'Your first chord in 2 minutes';
+
+  @override
+  String get firstChordBody =>
+      'Learn E minor, just two fingers. The teacher waits for you.';
+
+  @override
+  String get onboardingTitle1 => 'Pick a song or a chord';
+
+  @override
+  String get onboardingBody1 =>
+      'Start a course, search for a song, or practise any chords you like.';
+
+  @override
+  String get onboardingTitle2 => 'The teacher watches and listens';
+
+  @override
+  String get onboardingBody2 =>
+      'Coloured dots show where each finger goes. The microphone hears whether the chord is right.';
+
+  @override
+  String get onboardingTitle3 => 'Go at your own pace';
+
+  @override
+  String get onboardingBody3 =>
+      'In Learn mode nothing moves until you play the chord. Speed up with Play along when you\'re ready.';
+
+  @override
+  String get next => 'Next';
+
+  @override
+  String get getStarted => 'Get started';
+
+  @override
+  String get practiceThisChord => 'Practise this chord';
+
+  @override
+  String get tapChordHint => 'Tap a chord to see and hear it';
 }

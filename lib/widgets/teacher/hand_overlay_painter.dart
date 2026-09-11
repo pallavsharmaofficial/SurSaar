@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../teacher/analysis/chord_shape_coach.dart';
+import 'finger_colors.dart';
 import '../../teacher/models/hand_frame.dart';
 
 /// Paints hand skeletons and finger guides over the camera preview.
@@ -60,17 +61,18 @@ class HandOverlayPainter extends CustomPainter {
     // finger guides on the fretting hand
     for (final guide in shape.guides) {
       final at = map(guide.landmark);
+      final fingerColor = FingerColors.of(guide.finger);
       canvas.drawCircle(
         at,
-        14,
-        Paint()..color = guideColor.withValues(alpha: 0.25),
+        16,
+        Paint()..color = fingerColor.withValues(alpha: 0.3),
       );
-      canvas.drawCircle(at, 9, Paint()..color = guideColor);
+      canvas.drawCircle(at, 10, Paint()..color = fingerColor);
       _label(
         canvas,
-        '${guide.finger}',
+        FingerColors.label(guide.finger),
         at - const Offset(4.5, 8),
-        const Color(0xFF0F172A),
+        Colors.white,
         13,
         bold: true,
       );

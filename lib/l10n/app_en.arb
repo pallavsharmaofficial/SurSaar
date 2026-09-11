@@ -118,5 +118,102 @@
   "sourceCode": "Source code on GitHub",
   "privacyNote": "Camera and microphone are processed on your device only. Nothing is uploaded.",
   "recentSessions": "Recent sessions",
-  "noSessions": "No sessions yet. Start a quick practice to see your history here."
+  "noSessions": "No sessions yet. Start a quick practice to see your history here.",
+  "modeLearn": "Learn",
+  "modeLearnHint": "Waits for you on every chord",
+  "modePlayAlong": "Play along",
+  "modePlayAlongHint": "Chords change on the beat",
+  "setupTitle": "Let's get set up",
+  "setupSubtitle": "Turn on your camera and microphone so I can see your hands and hear your guitar.",
+  "setupTurnOn": "Turn on camera & mic",
+  "setupStarting": "Starting…",
+  "checkCamera": "Camera is on",
+  "checkHandWaiting": "Show your fretting hand",
+  "checkHandDone": "I can see your hand",
+  "checkMicWaiting": "Strum the strings once",
+  "checkMicDone": "I can hear your guitar",
+  "trackingLoading": "Loading hand tracking…",
+  "trackingError": "Hand tracking is unavailable. I'll still listen.",
+  "hearIt": "Hear it",
+  "skip": "Skip",
+  "voiceCoach": "Voice",
+  "chordOf": "Chord {current} of {total}",
+  "@chordOf": {
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "holdChord": "Hold it…",
+  "strumAgain": "Strum again",
+  "listeningPaused": "Listening paused",
+  "moreOptions": "More options",
+  "speedSlow": "Slow",
+  "speedMedium": "Medium",
+  "speedSong": "Song speed",
+  "fingerLegend": "Finger colours",
+  "fingerIndex": "Index",
+  "fingerMiddle": "Middle",
+  "fingerRing": "Ring",
+  "fingerPinky": "Pinky",
+  "youPlayed": "You played {count} of {total} chords",
+  "@youPlayed": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "bestStreak": "Best streak: {count}",
+  "@bestStreak": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "trickyChords": "Chords to practise",
+  "practiceTricky": "Practise these",
+  "allClean": "Every chord was clean!",
+  "savedToProgress": "Saved to your progress",
+  "inARow": "{count} in a row!",
+  "@inARow": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "readyHint": "Press Start when you're ready. Take your time on each chord.",
+  "paused": "Paused",
+  "tuner": "Tuner",
+  "tunerTitle": "Tune your guitar",
+  "tunerHint": "Pluck one string at a time and let it ring.",
+  "tuneUp": "Tune up",
+  "tuneDown": "Tune down",
+  "inTune": "In tune",
+  "tunerAuto": "Auto",
+  "tunerListen": "Start listening",
+  "playReference": "Play note",
+  "tunerWaiting": "Pluck a string…",
+  "startHere": "Start here",
+  "firstChordTitle": "Your first chord in 2 minutes",
+  "firstChordBody": "Learn E minor, just two fingers. The teacher waits for you.",
+  "onboardingTitle1": "Pick a song or a chord",
+  "onboardingBody1": "Start a course, search for a song, or practise any chords you like.",
+  "onboardingTitle2": "The teacher watches and listens",
+  "onboardingBody2": "Coloured dots show where each finger goes. The microphone hears whether the chord is right.",
+  "onboardingTitle3": "Go at your own pace",
+  "onboardingBody3": "In Learn mode nothing moves until you play the chord. Speed up with Play along when you're ready.",
+  "next": "Next",
+  "getStarted": "Get started",
+  "practiceThisChord": "Practise this chord",
+  "tapChordHint": "Tap a chord to see and hear it"
 }

@@ -1,25 +1,28 @@
+import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../models/coaching_mode.dart';
 import '../../models/lesson.dart';
 import '../../models/song.dart';
 import '../../screens/courses/course_detail_screen.dart';
 import '../../screens/home/home_screen.dart';
 import '../../screens/learn/learn_screen.dart';
 import '../../screens/lessons/lesson_detail_screen.dart';
+import '../../screens/onboarding/onboarding_screen.dart';
 import '../../screens/profile/profile_screen.dart';
 import '../../screens/progress/progress_screen.dart';
 import '../../screens/shell/app_shell_screen.dart';
 import '../../screens/songs/song_detail_screen.dart';
 import '../../screens/songs/song_search_screen.dart';
 import '../../screens/teacher/teacher_screen.dart';
+import '../../screens/tuner/tuner_screen.dart';
 
 /// Routes are plain URLs so every screen deep-links on the web
-/// (e.g. `#/song/kabira`, `#/practice/adhoc?chords=G,C,D&pattern=D%20DU%20UDU`).
+/// (e.g. `#/song/kabira`, `#/practice/adhoc?chords=Em&mode=learn`).
 class AppRouter {
   const AppRouter._();
 
-  /// Creates a router. Each [App] owns its own instance (a shared static
-  /// router breaks when the app is rebuilt, e.g. in tests or hot restart).
+  /// Each [App] owns its own router.
   static GoRouter createRouter({String initialLocation = '/home'}) => GoRouter(
     initialLocation: initialLocation,
     routes: <RouteBase>[
@@ -54,55 +57,78 @@ class AppRouter {
         ],
       ),
       GoRoute(
+        path: '/onboarding',
+        name: 'onboarding',
+        pageBuilder: (context, state) => _page(state, const OnboardingScreen()),
+      ),
+      GoRoute(
+        path: '/tuner',
+        name: 'tuner',
+        pageBuilder: (context, state) => _page(state, const TunerScreen()),
+      ),
+      GoRoute(
         path: '/search',
         name: 'search',
-        builder: (context, state) => SongSearchScreen(
-          initialQuery: state.uri.queryParameters['q'] ?? '',
+        pageBuilder: (context, state) => _page(
+          state,
+          SongSearchScreen(initialQuery: state.uri.queryParameters['q'] ?? ''),
         ),
       ),
       GoRoute(
         path: '/song/:id',
         name: 'songDetail',
-        builder: (context, state) {
+        pageBuilder: (context, state) {
           final extra = state.extra;
-          return SongDetailScreen(
-            songId: state.pathParameters['id']!,
-            initialSong: extra is Song ? extra : null,
+          return _page(
+            state,
+            SongDetailScreen(
+              songId: state.pathParameters['id']!,
+              initialSong: extra is Song ? extra : null,
+            ),
           );
         },
       ),
       GoRoute(
         path: '/course/:id',
         name: 'courseDetail',
-        builder: (context, state) =>
-            CourseDetailScreen(courseId: state.pathParameters['id']!),
+        pageBuilder: (context, state) => _page(
+          state,
+          CourseDetailScreen(courseId: state.pathParameters['id']!),
+        ),
       ),
       GoRoute(
         path: '/lesson/:id',
         name: 'lessonDetail',
-        builder: (context, state) {
+        pageBuilder: (context, state) {
           final extra = state.extra;
-          return LessonDetailScreen(
-            lessonId: state.pathParameters['id']!,
-            initialLesson: extra is Lesson ? extra : null,
+          return _page(
+            state,
+            LessonDetailScreen(
+              lessonId: state.pathParameters['id']!,
+              initialLesson: extra is Lesson ? extra : null,
+            ),
           );
         },
       ),
       GoRoute(
         path: '/practice/adhoc',
         name: 'practiceAdhoc',
-        builder: (context, state) {
+        pageBuilder: (context, state) {
           final query = state.uri.queryParameters;
           final chords = (query['chords'] ?? 'G,C,D')
               .split(',')
               .map((c) => c.trim())
               .where((c) => c.isNotEmpty)
               .toList(growable: false);
-          return TeacherScreen(
-            request: TeacherRequest.adhoc(
-              chords: chords,
-              pattern: query['pattern'],
-              bpm: int.tryParse(query['bpm'] ?? ''),
+          return _page(
+            state,
+            TeacherScreen(
+              request: TeacherRequest.adhoc(
+                chords: chords,
+                pattern: query['pattern'],
+                bpm: int.tryParse(query['bpm'] ?? ''),
+                mode: _mode(state),
+              ),
             ),
           );
         },
@@ -110,15 +136,27 @@ class AppRouter {
       GoRoute(
         path: '/practice/song/:id',
         name: 'practiceSong',
-        builder: (context, state) => TeacherScreen(
-          request: TeacherRequest.song(state.pathParameters['id']!),
+        pageBuilder: (context, state) => _page(
+          state,
+          TeacherScreen(
+            request: TeacherRequest.song(
+              state.pathParameters['id']!,
+              mode: _mode(state),
+            ),
+          ),
         ),
       ),
       GoRoute(
         path: '/practice/lesson/:id',
         name: 'practiceLesson',
-        builder: (context, state) => TeacherScreen(
-          request: TeacherRequest.lesson(state.pathParameters['id']!),
+        pageBuilder: (context, state) => _page(
+          state,
+          TeacherScreen(
+            request: TeacherRequest.lesson(
+              state.pathParameters['id']!,
+              mode: _mode(state),
+            ),
+          ),
         ),
       ),
       // legacy v1 link
@@ -129,4 +167,34 @@ class AppRouter {
       ),
     ],
   );
+
+  static CoachingMode? _mode(GoRouterState state) {
+    final value = state.uri.queryParameters['mode'];
+    return value == null || value.isEmpty ? null : CoachingMode.parse(value);
+  }
+
+  static Page<void> _page(GoRouterState state, Widget child) {
+    return CustomTransitionPage<void>(
+      key: state.pageKey,
+      child: child,
+      transitionDuration: const Duration(milliseconds: 280),
+      reverseTransitionDuration: const Duration(milliseconds: 220),
+      transitionsBuilder: (context, animation, secondaryAnimation, child) {
+        final curved = CurvedAnimation(
+          parent: animation,
+          curve: Curves.easeOutCubic,
+        );
+        return FadeTransition(
+          opacity: curved,
+          child: SlideTransition(
+            position: Tween<Offset>(
+              begin: const Offset(0, 0.04),
+              end: Offset.zero,
+            ).animate(curved),
+            child: child,
+          ),
+        );
+      },
+    );
+  }
 }

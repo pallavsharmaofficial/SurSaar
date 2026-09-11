@@ -775,6 +775,384 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'No sessions yet. Start a quick practice to see your history here.'**
   String get noSessions;
+
+  /// No description provided for @modeLearn.
+  ///
+  /// In en, this message translates to:
+  /// **'Learn'**
+  String get modeLearn;
+
+  /// No description provided for @modeLearnHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Waits for you on every chord'**
+  String get modeLearnHint;
+
+  /// No description provided for @modePlayAlong.
+  ///
+  /// In en, this message translates to:
+  /// **'Play along'**
+  String get modePlayAlong;
+
+  /// No description provided for @modePlayAlongHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Chords change on the beat'**
+  String get modePlayAlongHint;
+
+  /// No description provided for @setupTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Let\'s get set up'**
+  String get setupTitle;
+
+  /// No description provided for @setupSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Turn on your camera and microphone so I can see your hands and hear your guitar.'**
+  String get setupSubtitle;
+
+  /// No description provided for @setupTurnOn.
+  ///
+  /// In en, this message translates to:
+  /// **'Turn on camera & mic'**
+  String get setupTurnOn;
+
+  /// No description provided for @setupStarting.
+  ///
+  /// In en, this message translates to:
+  /// **'Starting…'**
+  String get setupStarting;
+
+  /// No description provided for @checkCamera.
+  ///
+  /// In en, this message translates to:
+  /// **'Camera is on'**
+  String get checkCamera;
+
+  /// No description provided for @checkHandWaiting.
+  ///
+  /// In en, this message translates to:
+  /// **'Show your fretting hand'**
+  String get checkHandWaiting;
+
+  /// No description provided for @checkHandDone.
+  ///
+  /// In en, this message translates to:
+  /// **'I can see your hand'**
+  String get checkHandDone;
+
+  /// No description provided for @checkMicWaiting.
+  ///
+  /// In en, this message translates to:
+  /// **'Strum the strings once'**
+  String get checkMicWaiting;
+
+  /// No description provided for @checkMicDone.
+  ///
+  /// In en, this message translates to:
+  /// **'I can hear your guitar'**
+  String get checkMicDone;
+
+  /// No description provided for @trackingLoading.
+  ///
+  /// In en, this message translates to:
+  /// **'Loading hand tracking…'**
+  String get trackingLoading;
+
+  /// No description provided for @trackingError.
+  ///
+  /// In en, this message translates to:
+  /// **'Hand tracking is unavailable. I\'ll still listen.'**
+  String get trackingError;
+
+  /// No description provided for @hearIt.
+  ///
+  /// In en, this message translates to:
+  /// **'Hear it'**
+  String get hearIt;
+
+  /// No description provided for @skip.
+  ///
+  /// In en, this message translates to:
+  /// **'Skip'**
+  String get skip;
+
+  /// No description provided for @voiceCoach.
+  ///
+  /// In en, this message translates to:
+  /// **'Voice'**
+  String get voiceCoach;
+
+  /// No description provided for @chordOf.
+  ///
+  /// In en, this message translates to:
+  /// **'Chord {current} of {total}'**
+  String chordOf(int current, int total);
+
+  /// No description provided for @holdChord.
+  ///
+  /// In en, this message translates to:
+  /// **'Hold it…'**
+  String get holdChord;
+
+  /// No description provided for @strumAgain.
+  ///
+  /// In en, this message translates to:
+  /// **'Strum again'**
+  String get strumAgain;
+
+  /// No description provided for @listeningPaused.
+  ///
+  /// In en, this message translates to:
+  /// **'Listening paused'**
+  String get listeningPaused;
+
+  /// No description provided for @moreOptions.
+  ///
+  /// In en, this message translates to:
+  /// **'More options'**
+  String get moreOptions;
+
+  /// No description provided for @speedSlow.
+  ///
+  /// In en, this message translates to:
+  /// **'Slow'**
+  String get speedSlow;
+
+  /// No description provided for @speedMedium.
+  ///
+  /// In en, this message translates to:
+  /// **'Medium'**
+  String get speedMedium;
+
+  /// No description provided for @speedSong.
+  ///
+  /// In en, this message translates to:
+  /// **'Song speed'**
+  String get speedSong;
+
+  /// No description provided for @fingerLegend.
+  ///
+  /// In en, this message translates to:
+  /// **'Finger colours'**
+  String get fingerLegend;
+
+  /// No description provided for @fingerIndex.
+  ///
+  /// In en, this message translates to:
+  /// **'Index'**
+  String get fingerIndex;
+
+  /// No description provided for @fingerMiddle.
+  ///
+  /// In en, this message translates to:
+  /// **'Middle'**
+  String get fingerMiddle;
+
+  /// No description provided for @fingerRing.
+  ///
+  /// In en, this message translates to:
+  /// **'Ring'**
+  String get fingerRing;
+
+  /// No description provided for @fingerPinky.
+  ///
+  /// In en, this message translates to:
+  /// **'Pinky'**
+  String get fingerPinky;
+
+  /// No description provided for @youPlayed.
+  ///
+  /// In en, this message translates to:
+  /// **'You played {count} of {total} chords'**
+  String youPlayed(int count, int total);
+
+  /// No description provided for @bestStreak.
+  ///
+  /// In en, this message translates to:
+  /// **'Best streak: {count}'**
+  String bestStreak(int count);
+
+  /// No description provided for @trickyChords.
+  ///
+  /// In en, this message translates to:
+  /// **'Chords to practise'**
+  String get trickyChords;
+
+  /// No description provided for @practiceTricky.
+  ///
+  /// In en, this message translates to:
+  /// **'Practise these'**
+  String get practiceTricky;
+
+  /// No description provided for @allClean.
+  ///
+  /// In en, this message translates to:
+  /// **'Every chord was clean!'**
+  String get allClean;
+
+  /// No description provided for @savedToProgress.
+  ///
+  /// In en, this message translates to:
+  /// **'Saved to your progress'**
+  String get savedToProgress;
+
+  /// No description provided for @inARow.
+  ///
+  /// In en, this message translates to:
+  /// **'{count} in a row!'**
+  String inARow(int count);
+
+  /// No description provided for @readyHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Press Start when you\'re ready. Take your time on each chord.'**
+  String get readyHint;
+
+  /// No description provided for @paused.
+  ///
+  /// In en, this message translates to:
+  /// **'Paused'**
+  String get paused;
+
+  /// No description provided for @tuner.
+  ///
+  /// In en, this message translates to:
+  /// **'Tuner'**
+  String get tuner;
+
+  /// No description provided for @tunerTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Tune your guitar'**
+  String get tunerTitle;
+
+  /// No description provided for @tunerHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Pluck one string at a time and let it ring.'**
+  String get tunerHint;
+
+  /// No description provided for @tuneUp.
+  ///
+  /// In en, this message translates to:
+  /// **'Tune up'**
+  String get tuneUp;
+
+  /// No description provided for @tuneDown.
+  ///
+  /// In en, this message translates to:
+  /// **'Tune down'**
+  String get tuneDown;
+
+  /// No description provided for @inTune.
+  ///
+  /// In en, this message translates to:
+  /// **'In tune'**
+  String get inTune;
+
+  /// No description provided for @tunerAuto.
+  ///
+  /// In en, this message translates to:
+  /// **'Auto'**
+  String get tunerAuto;
+
+  /// No description provided for @tunerListen.
+  ///
+  /// In en, this message translates to:
+  /// **'Start listening'**
+  String get tunerListen;
+
+  /// No description provided for @playReference.
+  ///
+  /// In en, this message translates to:
+  /// **'Play note'**
+  String get playReference;
+
+  /// No description provided for @tunerWaiting.
+  ///
+  /// In en, this message translates to:
+  /// **'Pluck a string…'**
+  String get tunerWaiting;
+
+  /// No description provided for @startHere.
+  ///
+  /// In en, this message translates to:
+  /// **'Start here'**
+  String get startHere;
+
+  /// No description provided for @firstChordTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Your first chord in 2 minutes'**
+  String get firstChordTitle;
+
+  /// No description provided for @firstChordBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Learn E minor, just two fingers. The teacher waits for you.'**
+  String get firstChordBody;
+
+  /// No description provided for @onboardingTitle1.
+  ///
+  /// In en, this message translates to:
+  /// **'Pick a song or a chord'**
+  String get onboardingTitle1;
+
+  /// No description provided for @onboardingBody1.
+  ///
+  /// In en, this message translates to:
+  /// **'Start a course, search for a song, or practise any chords you like.'**
+  String get onboardingBody1;
+
+  /// No description provided for @onboardingTitle2.
+  ///
+  /// In en, this message translates to:
+  /// **'The teacher watches and listens'**
+  String get onboardingTitle2;
+
+  /// No description provided for @onboardingBody2.
+  ///
+  /// In en, this message translates to:
+  /// **'Coloured dots show where each finger goes. The microphone hears whether the chord is right.'**
+  String get onboardingBody2;
+
+  /// No description provided for @onboardingTitle3.
+  ///
+  /// In en, this message translates to:
+  /// **'Go at your own pace'**
+  String get onboardingTitle3;
+
+  /// No description provided for @onboardingBody3.
+  ///
+  /// In en, this message translates to:
+  /// **'In Learn mode nothing moves until you play the chord. Speed up with Play along when you\'re ready.'**
+  String get onboardingBody3;
+
+  /// No description provided for @next.
+  ///
+  /// In en, this message translates to:
+  /// **'Next'**
+  String get next;
+
+  /// No description provided for @getStarted.
+  ///
+  /// In en, this message translates to:
+  /// **'Get started'**
+  String get getStarted;
+
+  /// No description provided for @practiceThisChord.
+  ///
+  /// In en, this message translates to:
+  /// **'Practise this chord'**
+  String get practiceThisChord;
+
+  /// No description provided for @tapChordHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Tap a chord to see and hear it'**
+  String get tapChordHint;
 }
 
 class _AppLocalizationsDelegate

@@ -15,17 +15,23 @@ import '../../widgets/chord_chip.dart';
 import '../../widgets/enhanced_song_card.dart';
 import '../../widgets/quick_practice_sheet.dart';
 import '../../widgets/section_header.dart';
+import '../../data/content/chord_library.dart';
+import '../../repositories/settings_repository.dart';
+import '../teacher/teacher_screen.dart';
+import '../../widgets/teacher/chord_diagram.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) =>
-          SongFinderBloc(repository: context.read<SongRepository>())
-            ..add(const SongFinderStarted()),
-      child: const _HomeView(),
+    return _OnboardingGate(
+      child: BlocProvider(
+        create: (context) =>
+            SongFinderBloc(repository: context.read<SongRepository>())
+              ..add(const SongFinderStarted()),
+        child: const _HomeView(),
+      ),
     );
   }
 }
@@ -59,6 +65,12 @@ class _HomeView extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.fromLTRB(16, 8, 16, 0),
                 child: _TeacherHero(l10n: l10n, theme: theme),
+              ),
+            ),
+            const SliverToBoxAdapter(
+              child: Padding(
+                padding: EdgeInsets.fromLTRB(16, 12, 16, 0),
+                child: _StartHereCard(),
               ),
             ),
             SliverToBoxAdapter(
@@ -294,5 +306,131 @@ class _TeacherHero extends StatelessWidget {
         ],
       ),
     ).animate().fadeIn(duration: 400.ms).slideY(begin: 0.1, end: 0);
+  }
+}
+
+/// Opens the onboarding cards the first time the app starts.
+class _OnboardingGate extends StatefulWidget {
+  const _OnboardingGate({required this.child});
+
+  final Widget child;
+
+  @override
+  State<_OnboardingGate> createState() => _OnboardingGateState();
+}
+
+class _OnboardingGateState extends State<_OnboardingGate> {
+  bool _checked = false;
+
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) => _check());
+  }
+
+  Future<void> _check() async {
+    if (_checked) return;
+    _checked = true;
+    final settings = await context.read<SettingsRepository>().getSettings();
+    if (!mounted || settings.onboardingSeen) return;
+    context.push('/onboarding');
+  }
+
+  @override
+  Widget build(BuildContext context) => widget.child;
+}
+
+/// The easiest possible first step for a new guitarist.
+class _StartHereCard extends StatelessWidget {
+  const _StartHereCard();
+
+  @override
+  Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
+    final theme = Theme.of(context);
+    final voicing = context.read<ChordLibrary>().voicingFor('Em');
+    return Container(
+      padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        color: const Color(0xFF1E293B),
+        borderRadius: BorderRadius.circular(20),
+        border: Border.all(color: Colors.white12),
+      ),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Container(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 10,
+                    vertical: 4,
+                  ),
+                  decoration: BoxDecoration(
+                    color: AppColors.successGold,
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  child: Text(
+                    l10n.startHere,
+                    style: theme.textTheme.labelMedium?.copyWith(
+                      color: AppColors.textOnLight,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 10),
+                Text(
+                  l10n.firstChordTitle,
+                  style: theme.textTheme.titleMedium?.copyWith(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                const SizedBox(height: 4),
+                Text(
+                  l10n.firstChordBody,
+                  style: theme.textTheme.bodySmall?.copyWith(
+                    color: Colors.white70,
+                  ),
+                ),
+                const SizedBox(height: 12),
+                Wrap(
+                  spacing: 8,
+                  runSpacing: 8,
+                  children: <Widget>[
+                    FilledButton.icon(
+                      onPressed: () => context.push(
+                        adhocPracticeLocation(const <String>['Em']),
+                      ),
+                      icon: const Icon(Icons.play_arrow_rounded),
+                      label: Text(l10n.startPractice),
+                      style: FilledButton.styleFrom(
+                        backgroundColor: AppColors.primary,
+                        foregroundColor: Colors.white,
+                      ),
+                    ),
+                    OutlinedButton.icon(
+                      onPressed: () => context.push('/tuner'),
+                      icon: const Icon(Icons.tune_rounded),
+                      label: Text(l10n.tunerTitle),
+                      style: OutlinedButton.styleFrom(
+                        foregroundColor: Colors.white,
+                        side: const BorderSide(color: Colors.white30),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+          if (voicing != null) ...<Widget>[
+            const SizedBox(width: 12),
+            ChordDiagram(voicing: voicing, size: 80, color: Colors.white),
+          ],
+        ],
+      ),
+    ).animate().fadeIn(delay: 150.ms, duration: 400.ms).slideY(begin: 0.1);
   }
 }

@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
 
 import '../models/hand_frame.dart';
@@ -10,6 +11,9 @@ VisionService createPlatformVisionService() => UnsupportedVisionService();
 class UnsupportedVisionService implements VisionService {
   final StreamController<HandFrame> _controller =
       StreamController<HandFrame>.broadcast();
+  final ValueNotifier<TrackingStatus> _status = ValueNotifier<TrackingStatus>(
+    TrackingStatus.unavailable,
+  );
 
   @override
   bool get supportsPreview => false;
@@ -21,10 +25,16 @@ class UnsupportedVisionService implements VisionService {
   bool get isRunning => false;
 
   @override
-  String? get lastError => 'Camera is not available on this platform.';
+  String? get lastError => 'The camera is not available on this device.';
+
+  @override
+  ValueListenable<TrackingStatus> get trackingStatus => _status;
 
   @override
   Stream<HandFrame> get frames => _controller.stream;
+
+  @override
+  Future<void> warmUp() async {}
 
   @override
   Future<void> start({bool frontCamera = true, bool mirror = true}) async {}
@@ -36,5 +46,8 @@ class UnsupportedVisionService implements VisionService {
   Widget buildPreview(BuildContext context) => const SizedBox.expand();
 
   @override
-  Future<void> dispose() => _controller.close();
+  Future<void> dispose() async {
+    _status.dispose();
+    await _controller.close();
+  }
 }

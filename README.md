@@ -21,6 +21,8 @@ comes. Everything runs on your device; nothing is uploaded.
 
 ## What it does today
 
+- **Learn mode for beginners:** the teacher waits on every chord until you play it, celebrates, and gives hints if you're stuck. Play along mode keeps tempo when you're ready.
+- **Tuner, voice coach and "Hear it":** tune each string with an animated needle, hear what a chord should sound like, and get spoken cues so your eyes can stay on the guitar.
 - **AI teacher (web):** MediaPipe hand tracking paints each fingertip with its
   string and fret for the target chord and flags posture (straight fingers,
   flat barre). A chroma-based recogniser hears the chord you play and says
