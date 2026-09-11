@@ -89,9 +89,12 @@ async function main() {
     if (/^_?no response_?$/i.test(artist)) artist = '';
     if (/^_?no response_?$/i.test(url)) url = '';
     if (!artist && query.includes(' - ')) [query, artist] = query.split(' - ').map((s) => s.trim());
-    console.log(`query=${query}`);
-    console.log(`artist=${artist}`);
-    console.log(`url=${url}`);
+    // Values go to $GITHUB_OUTPUT: strip newlines so they cannot inject
+    // extra output keys, and cap the length.
+    const clean = (v) => String(v || '').replace(/[\r\n]+/g, ' ').trim().slice(0, 200);
+    console.log(`query=${clean(query)}`);
+    console.log(`artist=${clean(artist)}`);
+    console.log(`url=${clean(url)}`);
     return;
   }
 
