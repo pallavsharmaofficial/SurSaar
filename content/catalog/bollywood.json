@@ -1,0 +1,2471 @@
+[
+  {
+    "id": "agar_tum_saath_ho",
+    "title": "Agar Tum Saath Ho",
+    "artist": "Alka Yagnik, Arijit Singh",
+    "album": "Tamasha",
+    "year": 2015,
+    "collection": "bollywood",
+    "difficulty": "beginner",
+    "key": "D#",
+    "capo": 1,
+    "bpm": 70,
+    "duration": 341,
+    "strummingPattern": "D DU UDU",
+    "originalChords": [
+      "D",
+      "Bm",
+      "A",
+      "G"
+    ],
+    "sections": [
+      {
+        "name": "Verse",
+        "repeat": 2,
+        "chords": [
+          "D",
+          "Bm",
+          "D",
+          "Bm",
+          "D",
+          "A",
+          "G",
+          "D"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "repeat": 2,
+        "chords": [
+          "G",
+          "D",
+          "G",
+          "D"
+        ]
+      },
+      {
+        "name": "Interlude",
+        "repeat": 1,
+        "chords": [
+          "G",
+          "A",
+          "G",
+          "D"
+        ]
+      },
+      {
+        "name": "Antara",
+        "repeat": 1,
+        "chords": [
+          "A",
+          "D",
+          "A",
+          "G",
+          "D",
+          "A",
+          "D",
+          "A",
+          "G",
+          "A",
+          "D"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "D to Bm change",
+      "slow ballad D DU UDU"
+    ],
+    "tags": [
+      "romantic",
+      "sad",
+      "2010s",
+      "ar-rahman"
+    ],
+    "language": "hi",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Agar+Tum+Saath+Ho+guitar+chords+lesson",
+    "sourceUrl": "https://www.silentguitarchords.com/agar-tum-saath-ho-guitar-chords/",
+    "notes": "Capo 1, D-family shapes. Sources agree on capo 1 with D/Bm/A/G. Bm can be played as a 4-string mini barre. Play softly; arpeggiate the verse.",
+    "confidence": "high"
+  },
+  {
+    "id": "phir_le_aaya_dil",
+    "title": "Phir Le Aaya Dil (Reprise)",
+    "artist": "Arijit Singh",
+    "album": "Barfi!",
+    "year": 2012,
+    "collection": "bollywood",
+    "difficulty": "beginner",
+    "key": "G",
+    "capo": 0,
+    "bpm": 74,
+    "duration": 285,
+    "strummingPattern": "D D DU DU",
+    "originalChords": [
+      "G",
+      "Am",
+      "D",
+      "C"
+    ],
+    "sections": [
+      {
+        "name": "Intro",
+        "repeat": 1,
+        "chords": [
+          "G",
+          "Am",
+          "D",
+          "G",
+          "Am",
+          "D"
+        ]
+      },
+      {
+        "name": "Verse",
+        "repeat": 2,
+        "chords": [
+          "G",
+          "Am",
+          "D",
+          "G",
+          "Am",
+          "D",
+          "Am",
+          "C",
+          "G",
+          "D"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "repeat": 2,
+        "chords": [
+          "C",
+          "Am",
+          "D",
+          "C",
+          "D",
+          "G"
+        ]
+      },
+      {
+        "name": "Interlude",
+        "repeat": 1,
+        "chords": [
+          "G",
+          "C",
+          "D",
+          "G"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "G to Am change",
+      "C to D walk back to G"
+    ],
+    "tags": [
+      "romantic",
+      "sad",
+      "2010s",
+      "pritam"
+    ],
+    "language": "hi",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Phir+Le+Aaya+Dil+Reprise+guitar+chords+lesson",
+    "sourceUrl": "https://guitartwitt.com/phir-le-aya-dil-chords-by-arijit-singh/",
+    "notes": "Arijit Singh reprise version, no capo, open G/Am/C/D. Other versions differ: Shafqat Amanat Ali's is in A, Rekha Bhardwaj's in C. Duration is the soundtrack reprise (~4:45).",
+    "confidence": "high"
+  },
+  {
+    "id": "iktara",
+    "title": "Iktara",
+    "artist": "Kavita Seth, Amit Trivedi",
+    "album": "Wake Up Sid",
+    "year": 2009,
+    "collection": "bollywood",
+    "difficulty": "beginner",
+    "key": "G",
+    "capo": 0,
+    "bpm": 96,
+    "duration": 245,
+    "strummingPattern": "D D DU DU D",
+    "originalChords": [
+      "G",
+      "C",
+      "D",
+      "Am",
+      "F"
+    ],
+    "sections": [
+      {
+        "name": "Intro",
+        "repeat": 1,
+        "chords": [
+          "G",
+          "C",
+          "G",
+          "C"
+        ]
+      },
+      {
+        "name": "Verse",
+        "repeat": 2,
+        "chords": [
+          "G",
+          "C",
+          "G",
+          "C",
+          "G",
+          "C",
+          "G",
+          "D"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "repeat": 2,
+        "chords": [
+          "G",
+          "G",
+          "Am",
+          "C"
+        ]
+      },
+      {
+        "name": "Antara",
+        "repeat": 1,
+        "chords": [
+          "G",
+          "G",
+          "Am",
+          "C",
+          "G",
+          "G",
+          "Am",
+          "C",
+          "F",
+          "G"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "G to C change",
+      "steady down-strum feel"
+    ],
+    "tags": [
+      "indie",
+      "mellow",
+      "2000s",
+      "amit-trivedi"
+    ],
+    "language": "hi",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Iktara+guitar+chords+lesson",
+    "sourceUrl": "https://rewindcaps.com/iktara-chords/",
+    "notes": "Two sources agree: key G, no capo, G/C/Am/D with a single F in the antara (F can be played as Fmaj7 x33210). Some players note the record may use open-G tuning; standard tuning works fine. BPM approximate.",
+    "confidence": "high"
+  },
+  {
+    "id": "hawayein",
+    "title": "Hawayein",
+    "artist": "Arijit Singh",
+    "album": "Jab Harry Met Sejal",
+    "year": 2017,
+    "collection": "bollywood",
+    "difficulty": "beginner",
+    "key": "D",
+    "capo": 0,
+    "bpm": 92,
+    "duration": 290,
+    "strummingPattern": "D DU UDU",
+    "originalChords": [
+      "D",
+      "G",
+      "A",
+      "Em"
+    ],
+    "sections": [
+      {
+        "name": "Intro",
+        "repeat": 1,
+        "chords": [
+          "D",
+          "G",
+          "A",
+          "D"
+        ]
+      },
+      {
+        "name": "Verse",
+        "repeat": 2,
+        "chords": [
+          "D",
+          "G",
+          "A",
+          "D"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "repeat": 2,
+        "chords": [
+          "G",
+          "D",
+          "G",
+          "D"
+        ]
+      },
+      {
+        "name": "Antara",
+        "repeat": 1,
+        "chords": [
+          "D",
+          "G",
+          "Em",
+          "A",
+          "D"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "D-G-A three-chord changes",
+      "Em to A transition"
+    ],
+    "tags": [
+      "romantic",
+      "2010s",
+      "pritam"
+    ],
+    "language": "hi",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Hawayein+guitar+chords+lesson",
+    "sourceUrl": "https://tabandchord.com/2017/08/hawayein-chords-jab-harry-met-sejal/",
+    "notes": "Sources agree on no capo with D, G, A, Em. Strumming varies between sources (DDU UDU vs D UDUD UDUD DU); the simpler one is used. BPM approximate.",
+    "confidence": "medium"
+  },
+  {
+    "id": "saiyaara",
+    "title": "Saiyaara",
+    "artist": "Faheem Abdullah, Arslan Nizami",
+    "album": "Saiyaara",
+    "year": 2025,
+    "collection": "bollywood",
+    "difficulty": "beginner",
+    "key": "G#m",
+    "capo": 4,
+    "bpm": 83,
+    "duration": 370,
+    "strummingPattern": "D D U U D U",
+    "originalChords": [
+      "Em",
+      "D",
+      "C",
+      "Bm",
+      "G"
+    ],
+    "sections": [
+      {
+        "name": "Intro",
+        "repeat": 1,
+        "chords": [
+          "Em",
+          "D",
+          "C",
+          "Em"
+        ]
+      },
+      {
+        "name": "Verse",
+        "repeat": 2,
+        "chords": [
+          "Em",
+          "D",
+          "C",
+          "D"
+        ]
+      },
+      {
+        "name": "Pre-Chorus",
+        "repeat": 1,
+        "chords": [
+          "Em",
+          "D",
+          "C",
+          "D",
+          "Bm",
+          "G",
+          "C",
+          "D"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "repeat": 2,
+        "chords": [
+          "Em",
+          "D",
+          "C",
+          "D",
+          "Em",
+          "D",
+          "C",
+          "D"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "Em-D-C-D loop",
+      "smooth chord changes on the beat"
+    ],
+    "tags": [
+      "romantic",
+      "2020s",
+      "trending"
+    ],
+    "language": "hi",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Saiyaara+guitar+chords+lesson",
+    "sourceUrl": "https://guitartwitt.com/saiyaara-title-song-chords-by-faheem-abdullah/",
+    "notes": "Capo 4 with Em-family shapes (sounds G#m); two sources agree on capo 4 and the Em-D-C-D loop. Bm only appears in the pre-chorus; Cmaj7 can replace C for colour.",
+    "confidence": "high"
+  },
+  {
+    "id": "tum_se_hi",
+    "title": "Tum Se Hi",
+    "artist": "Mohit Chauhan",
+    "album": "Jab We Met",
+    "year": 2007,
+    "collection": "bollywood",
+    "difficulty": "beginner",
+    "key": "F#",
+    "capo": 4,
+    "bpm": 92,
+    "duration": 322,
+    "strummingPattern": "D D U U D U",
+    "originalChords": [
+      "D",
+      "G",
+      "A",
+      "Bm"
+    ],
+    "sections": [
+      {
+        "name": "Intro",
+        "repeat": 1,
+        "chords": [
+          "D",
+          "G",
+          "A",
+          "G"
+        ]
+      },
+      {
+        "name": "Verse",
+        "repeat": 2,
+        "chords": [
+          "D",
+          "A",
+          "G",
+          "G",
+          "A",
+          "D"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "repeat": 2,
+        "chords": [
+          "A",
+          "G",
+          "A",
+          "G",
+          "D",
+          "D"
+        ]
+      },
+      {
+        "name": "Antara",
+        "repeat": 1,
+        "chords": [
+          "D",
+          "Bm",
+          "D",
+          "G",
+          "A",
+          "D"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "D-G-A changes",
+      "D DUUDU groove"
+    ],
+    "tags": [
+      "romantic",
+      "2000s",
+      "pritam"
+    ],
+    "language": "hi",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Tum+Se+Hi+guitar+chords+lesson",
+    "sourceUrl": "https://chordsfactory.com/tumse-hi-jab-we-met-guitar-chords/",
+    "notes": "Capo 4 with D shapes is the common version (capo 6 with C shapes also gives the same key). One source lists a no-capo G version, which is a half-step off the record.",
+    "confidence": "medium"
+  },
+  {
+    "id": "raataan_lambiyan",
+    "title": "Raataan Lambiyan",
+    "artist": "Jubin Nautiyal, Asees Kaur",
+    "album": "Shershaah",
+    "year": 2021,
+    "collection": "bollywood",
+    "difficulty": "beginner",
+    "key": "A#",
+    "capo": 1,
+    "bpm": 92,
+    "duration": 230,
+    "strummingPattern": "D DU DU",
+    "originalChords": [
+      "A",
+      "E",
+      "D"
+    ],
+    "sections": [
+      {
+        "name": "Verse",
+        "repeat": 2,
+        "chords": [
+          "A",
+          "E",
+          "D",
+          "D"
+        ]
+      },
+      {
+        "name": "Pre-Chorus",
+        "repeat": 1,
+        "chords": [
+          "A",
+          "D",
+          "A",
+          "E"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "repeat": 2,
+        "chords": [
+          "D",
+          "E",
+          "D",
+          "E"
+        ]
+      },
+      {
+        "name": "Outro",
+        "repeat": 1,
+        "chords": [
+          "A",
+          "D",
+          "A",
+          "E"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "A-E-D open chords",
+      "D to E change"
+    ],
+    "tags": [
+      "romantic",
+      "2020s",
+      "tanishk-bagchi"
+    ],
+    "language": "hi",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Raataan+Lambiyan+guitar+chords+lesson",
+    "sourceUrl": "https://chordsfactory.com/raataan-lambiyaan-chords/",
+    "notes": "Capo 1 with A/E/D shapes; an alternative is capo 3 with G/C/D shapes (same sounding key). Strumming differs across sources; DDU DD and D DUD are both common.",
+    "confidence": "medium"
+  },
+  {
+    "id": "ilahi",
+    "title": "Ilahi",
+    "artist": "Mohit Chauhan",
+    "album": "Yeh Jawaani Hai Deewani",
+    "year": 2013,
+    "collection": "bollywood",
+    "difficulty": "beginner",
+    "key": "A",
+    "capo": 0,
+    "bpm": 132,
+    "duration": 228,
+    "strummingPattern": "D UDU D UDU",
+    "originalChords": [
+      "A",
+      "Dsus2",
+      "D",
+      "E"
+    ],
+    "sections": [
+      {
+        "name": "Intro",
+        "repeat": 2,
+        "chords": [
+          "A",
+          "Dsus2",
+          "A",
+          "Dsus2"
+        ]
+      },
+      {
+        "name": "Verse",
+        "repeat": 1,
+        "chords": [
+          "A",
+          "A",
+          "A",
+          "A",
+          "A",
+          "A",
+          "D",
+          "A"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "repeat": 2,
+        "chords": [
+          "A",
+          "Dsus2",
+          "A",
+          "Dsus2"
+        ]
+      },
+      {
+        "name": "Antara",
+        "repeat": 2,
+        "chords": [
+          "A",
+          "E",
+          "A",
+          "E"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "fast A-Dsus2 rocking",
+      "keeping a quick, even strum"
+    ],
+    "tags": [
+      "travel",
+      "upbeat",
+      "2010s",
+      "pritam"
+    ],
+    "language": "hi",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Ilahi+guitar+chords+lesson",
+    "sourceUrl": "https://ajsfrethouse.com/yeh-jawaani-hai-deewani-ilahi-guitar-chord/",
+    "notes": "Sources agree: key A, no capo, A with Dsus2/D and E. Only three shapes but the tempo is quick (~132 BPM) - practise slowly first.",
+    "confidence": "high"
+  },
+  {
+    "id": "kesariya",
+    "title": "Kesariya",
+    "artist": "Arijit Singh",
+    "album": "Brahmastra Part One: Shiva",
+    "year": 2022,
+    "collection": "bollywood",
+    "difficulty": "beginner",
+    "key": "C",
+    "capo": 0,
+    "bpm": 94,
+    "duration": 268,
+    "strummingPattern": "D DU DU DU",
+    "originalChords": [
+      "Fmaj7",
+      "G",
+      "C",
+      "F"
+    ],
+    "sections": [
+      {
+        "name": "Intro",
+        "repeat": 1,
+        "chords": [
+          "Fmaj7",
+          "G",
+          "Fmaj7",
+          "G"
+        ]
+      },
+      {
+        "name": "Verse",
+        "repeat": 2,
+        "chords": [
+          "Fmaj7",
+          "G",
+          "Fmaj7",
+          "G",
+          "Fmaj7",
+          "G",
+          "C",
+          "C"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "repeat": 2,
+        "chords": [
+          "Fmaj7",
+          "C",
+          "Fmaj7",
+          "C",
+          "F",
+          "C",
+          "F",
+          "G"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "Fmaj7 as an easy F",
+      "Fmaj7 to G change"
+    ],
+    "tags": [
+      "romantic",
+      "2020s",
+      "pritam"
+    ],
+    "language": "hi",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Kesariya+guitar+chords+lesson",
+    "sourceUrl": "https://guitartwitt.com/kesariya-chords-by-arijit-singh/",
+    "notes": "Key C, no capo, built on Fmaj7-G-C. The full F in the chorus can stay Fmaj7 for beginners. Some sheets offer a capo-2 C/G/Am/F version for singing range.",
+    "confidence": "high"
+  },
+  {
+    "id": "tujhe_kitna_chahne_lage",
+    "title": "Tujhe Kitna Chahne Lage",
+    "artist": "Arijit Singh",
+    "album": "Kabir Singh",
+    "year": 2019,
+    "collection": "bollywood",
+    "difficulty": "beginner",
+    "key": "B",
+    "capo": 4,
+    "bpm": 90,
+    "duration": 285,
+    "strummingPattern": "D D UUDUD DU",
+    "originalChords": [
+      "G",
+      "Em",
+      "C",
+      "D",
+      "Bm",
+      "Am"
+    ],
+    "sections": [
+      {
+        "name": "Intro",
+        "repeat": 1,
+        "chords": [
+          "G",
+          "Em",
+          "C",
+          "D"
+        ]
+      },
+      {
+        "name": "Verse",
+        "repeat": 2,
+        "chords": [
+          "G",
+          "Em",
+          "C",
+          "D"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "repeat": 2,
+        "chords": [
+          "C",
+          "Bm",
+          "Am",
+          "D",
+          "C",
+          "D",
+          "G",
+          "G"
+        ]
+      },
+      {
+        "name": "Antara",
+        "repeat": 1,
+        "chords": [
+          "G",
+          "D",
+          "Em",
+          "Bm",
+          "C",
+          "C"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "G-Em-C-D loop",
+      "Bm-Am walk-down in chorus"
+    ],
+    "tags": [
+      "romantic",
+      "sad",
+      "2010s",
+      "mithoon"
+    ],
+    "language": "hi",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Tujhe+Kitna+Chahne+Lage+guitar+chords+lesson",
+    "sourceUrl": "https://rewindcaps.com/tujhe-kitna-chahne-lage-chords/",
+    "notes": "Capo 4 with G shapes (original key B). Multiple sources list G/Em/C/D plus Am/Bm with capo 4. Verse is all open chords; the chorus adds Bm.",
+    "confidence": "high"
+  },
+  {
+    "id": "jo_bhi_main",
+    "title": "Jo Bhi Main",
+    "artist": "Mohit Chauhan",
+    "album": "Rockstar",
+    "year": 2011,
+    "collection": "bollywood",
+    "difficulty": "beginner",
+    "key": "Em",
+    "capo": 0,
+    "bpm": 100,
+    "duration": 241,
+    "strummingPattern": "D D UUD DUDU",
+    "originalChords": [
+      "Em",
+      "Em7",
+      "G",
+      "D",
+      "Am"
+    ],
+    "sections": [
+      {
+        "name": "Intro",
+        "repeat": 1,
+        "chords": [
+          "Em",
+          "Em7",
+          "Em",
+          "Em7"
+        ]
+      },
+      {
+        "name": "Verse",
+        "repeat": 2,
+        "chords": [
+          "G",
+          "D",
+          "Am",
+          "D"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "repeat": 2,
+        "chords": [
+          "Em",
+          "Em7",
+          "Em",
+          "Em7"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "Em to Em7 colour change",
+      "G-D-Am-D"
+    ],
+    "tags": [
+      "rock",
+      "soulful",
+      "2010s",
+      "ar-rahman"
+    ],
+    "language": "hi",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Jo+Bhi+Main+guitar+chords+lesson",
+    "sourceUrl": "https://chordsfactory.com/jo-bhi-main-rockstar-easy-guitar-chords/",
+    "notes": "Sources agree: no capo, Em/D/G/Am, with Em7, Dsus4, Dsus2 as optional colours. BPM and duration approximate.",
+    "confidence": "medium"
+  },
+  {
+    "id": "ishq_bulaava",
+    "title": "Ishq Bulaava",
+    "artist": "Sanam Puri, Shipra Goyal",
+    "album": "Hasee Toh Phasee",
+    "year": 2014,
+    "collection": "bollywood",
+    "difficulty": "beginner",
+    "key": "Am",
+    "capo": 0,
+    "bpm": 160,
+    "duration": 257,
+    "strummingPattern": "D U UD DUD",
+    "originalChords": [
+      "Am",
+      "G",
+      "Em",
+      "C",
+      "D"
+    ],
+    "sections": [
+      {
+        "name": "Intro",
+        "repeat": 2,
+        "chords": [
+          "Am",
+          "G",
+          "Am",
+          "G"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "repeat": 2,
+        "chords": [
+          "Am",
+          "G",
+          "Am",
+          "G",
+          "Am",
+          "G",
+          "Am",
+          "G"
+        ]
+      },
+      {
+        "name": "Verse",
+        "repeat": 1,
+        "chords": [
+          "Em",
+          "G",
+          "G",
+          "Am",
+          "Am",
+          "G",
+          "C",
+          "C"
+        ]
+      },
+      {
+        "name": "Antara",
+        "repeat": 1,
+        "chords": [
+          "Em",
+          "G",
+          "Em",
+          "D",
+          "Am",
+          "Am"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "Am-G rocking in 6/8",
+      "Em-D changes"
+    ],
+    "tags": [
+      "romantic",
+      "2010s",
+      "vishal-shekhar"
+    ],
+    "language": "hi",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Ishq+Bulaava+guitar+chords+lesson",
+    "sourceUrl": "https://www.chordzone.org/2014/06/hasee-toh-phasee-ishq-bulavaa.html",
+    "notes": "6/8 feel (160 BPM eighth-note pulse). Sources agree on key Am, no capo, Am-G core; verse and antara voicings vary (Em/D/Bm vs Em/G/C) - simplest open shapes used. Duration approximate.",
+    "confidence": "medium"
+  },
+  {
+    "id": "kun_faya_kun",
+    "title": "Kun Faya Kun",
+    "artist": "A.R. Rahman, Javed Ali, Mohit Chauhan",
+    "album": "Rockstar",
+    "year": 2011,
+    "collection": "bollywood",
+    "difficulty": "intermediate",
+    "key": "C#",
+    "capo": 1,
+    "bpm": 72,
+    "duration": 472,
+    "strummingPattern": "D DU UDU",
+    "originalChords": [
+      "C",
+      "F",
+      "G",
+      "Am",
+      "Em"
+    ],
+    "sections": [
+      {
+        "name": "Intro",
+        "repeat": 1,
+        "chords": [
+          "C",
+          "F",
+          "G",
+          "C"
+        ]
+      },
+      {
+        "name": "Verse",
+        "repeat": 2,
+        "chords": [
+          "Am",
+          "C",
+          "G",
+          "Am",
+          "G",
+          "C"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "repeat": 2,
+        "chords": [
+          "C",
+          "Em",
+          "Am",
+          "F",
+          "Em",
+          "Am",
+          "Em",
+          "G",
+          "F",
+          "C"
+        ]
+      },
+      {
+        "name": "Antara",
+        "repeat": 1,
+        "chords": [
+          "C",
+          "Am",
+          "C",
+          "Am",
+          "G",
+          "C",
+          "Am",
+          "C"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "C-Em-Am movement",
+      "F barre or Fmaj7 substitute"
+    ],
+    "tags": [
+      "sufi",
+      "devotional",
+      "2010s",
+      "ar-rahman"
+    ],
+    "language": "hi",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Kun+Faya+Kun+guitar+chords+lesson",
+    "sourceUrl": "https://www.silentguitarchords.com/kun-faya-kun-guitar-chords/",
+    "notes": "Capo 1 with C shapes confirmed by multiple sources. Section order varies between sheets; this follows the most common layout. One sheet adds a Cm at the end of the antara.",
+    "confidence": "medium"
+  },
+  {
+    "id": "shayad",
+    "title": "Shayad",
+    "artist": "Arijit Singh",
+    "album": "Love Aaj Kal",
+    "year": 2020,
+    "collection": "bollywood",
+    "difficulty": "intermediate",
+    "key": "Fm",
+    "capo": 1,
+    "bpm": 90,
+    "duration": 247,
+    "strummingPattern": "D DU DU DU",
+    "originalChords": [
+      "Em",
+      "Am",
+      "Bm",
+      "C",
+      "D",
+      "G"
+    ],
+    "sections": [
+      {
+        "name": "Intro",
+        "repeat": 1,
+        "chords": [
+          "Em",
+          "Am",
+          "Bm",
+          "C",
+          "D",
+          "G"
+        ]
+      },
+      {
+        "name": "Verse",
+        "repeat": 2,
+        "chords": [
+          "C",
+          "D",
+          "G",
+          "Am",
+          "D",
+          "Em"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "repeat": 2,
+        "chords": [
+          "Em",
+          "D",
+          "C",
+          "D",
+          "Bm",
+          "C",
+          "Em",
+          "Em"
+        ]
+      },
+      {
+        "name": "Antara",
+        "repeat": 1,
+        "chords": [
+          "G",
+          "C",
+          "G",
+          "C",
+          "Em",
+          "C",
+          "G",
+          "D"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "Bm barre",
+      "Em-D-C-D-Bm descent"
+    ],
+    "tags": [
+      "romantic",
+      "2020s",
+      "pritam"
+    ],
+    "language": "hi",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Shayad+guitar+chords+lesson",
+    "sourceUrl": "https://rewindcaps.com/love-aaj-kal-shayad-chords/",
+    "notes": "Capo 1, Em-scale shapes (sounds Fm) - all sources agree. The chorus line order differs between sheets; this uses the most common Em-D-C-D-Bm-C-Em shape.",
+    "confidence": "medium"
+  },
+  {
+    "id": "apna_bana_le",
+    "title": "Apna Bana Le",
+    "artist": "Arijit Singh",
+    "album": "Bhediya",
+    "year": 2022,
+    "collection": "bollywood",
+    "difficulty": "intermediate",
+    "key": "A",
+    "capo": 2,
+    "bpm": 94,
+    "duration": 261,
+    "strummingPattern": "D D UUDUD DU",
+    "originalChords": [
+      "C",
+      "D",
+      "Em",
+      "Bm",
+      "Am",
+      "G"
+    ],
+    "sections": [
+      {
+        "name": "Intro",
+        "repeat": 1,
+        "chords": [
+          "C",
+          "D",
+          "Em",
+          "D"
+        ]
+      },
+      {
+        "name": "Verse",
+        "repeat": 2,
+        "chords": [
+          "Em",
+          "D",
+          "C",
+          "D",
+          "Bm",
+          "Am",
+          "Bm",
+          "C",
+          "D"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "repeat": 2,
+        "chords": [
+          "C",
+          "D",
+          "Em",
+          "D",
+          "Am",
+          "C",
+          "G",
+          "Em",
+          "D",
+          "C",
+          "D",
+          "G"
+        ]
+      },
+      {
+        "name": "Antara",
+        "repeat": 2,
+        "chords": [
+          "G",
+          "C",
+          "Em",
+          "D"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "C-D-Em pull",
+      "Bm-Am-Bm passing chords"
+    ],
+    "tags": [
+      "romantic",
+      "2020s",
+      "sachin-jigar"
+    ],
+    "language": "hi",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Apna+Bana+Le+guitar+chords+lesson",
+    "sourceUrl": "https://chordsfactory.com/apna-bana-le-chords/",
+    "notes": "Two sources agree on capo 2 with G-family shapes (G/C/D/Em/Am/Bm). The sounding key is stated differently across sites (A vs B); A is what capo 2 + G shapes gives. Strumming suggestions vary.",
+    "confidence": "medium"
+  },
+  {
+    "id": "satranga",
+    "title": "Satranga",
+    "artist": "Arijit Singh",
+    "album": "Animal",
+    "year": 2023,
+    "collection": "bollywood",
+    "difficulty": "intermediate",
+    "key": "C",
+    "capo": 0,
+    "bpm": 89,
+    "duration": 271,
+    "strummingPattern": "D D UUD DDU",
+    "originalChords": [
+      "C",
+      "Am",
+      "G",
+      "F"
+    ],
+    "sections": [
+      {
+        "name": "Intro",
+        "repeat": 1,
+        "chords": [
+          "C",
+          "Am",
+          "C",
+          "C"
+        ]
+      },
+      {
+        "name": "Verse",
+        "repeat": 2,
+        "chords": [
+          "C",
+          "Am",
+          "C",
+          "G",
+          "Am",
+          "F",
+          "C",
+          "F"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "repeat": 2,
+        "chords": [
+          "Am",
+          "G",
+          "F",
+          "G",
+          "F",
+          "C",
+          "C"
+        ]
+      },
+      {
+        "name": "Outro",
+        "repeat": 1,
+        "chords": [
+          "G",
+          "F",
+          "C",
+          "C"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "F barre",
+      "Am-G-F descending"
+    ],
+    "tags": [
+      "romantic",
+      "2020s"
+    ],
+    "language": "hi",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Satranga+guitar+chords+lesson",
+    "sourceUrl": "https://guitartwitt.com/satranga-chords-by-arijit-singh/",
+    "notes": "Key C, no capo, C/Am/F/G. A popular 'easy' capo-5 version uses G-family shapes (plus F#, B7) - same sounding key. Sheets disagree on bar order; this is the simplest.",
+    "confidence": "medium"
+  },
+  {
+    "id": "zehnaseeb",
+    "title": "Zehnaseeb",
+    "artist": "Chinmayi Sripaada, Shekhar Ravjiani",
+    "album": "Hasee Toh Phasee",
+    "year": 2014,
+    "collection": "bollywood",
+    "difficulty": "intermediate",
+    "key": "D",
+    "capo": 0,
+    "bpm": 79,
+    "duration": 272,
+    "strummingPattern": "D DUUD",
+    "originalChords": [
+      "D",
+      "G",
+      "Am",
+      "C",
+      "Bm"
+    ],
+    "sections": [
+      {
+        "name": "Intro",
+        "repeat": 1,
+        "chords": [
+          "D",
+          "G",
+          "Am",
+          "C",
+          "D"
+        ]
+      },
+      {
+        "name": "Verse",
+        "repeat": 2,
+        "chords": [
+          "D",
+          "Am",
+          "G",
+          "G"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "repeat": 2,
+        "chords": [
+          "D",
+          "G",
+          "Am",
+          "C",
+          "D",
+          "D"
+        ]
+      },
+      {
+        "name": "Antara",
+        "repeat": 1,
+        "chords": [
+          "C",
+          "Bm",
+          "D",
+          "C",
+          "Bm",
+          "G",
+          "D"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "D-G-Am-C borrowed chord colour",
+      "Bm barre"
+    ],
+    "tags": [
+      "romantic",
+      "2010s",
+      "vishal-shekhar"
+    ],
+    "language": "hi",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Zehnaseeb+guitar+chords+lesson",
+    "sourceUrl": "https://tabandchord.com/2014/02/zehnaseeb-chords-hasee-toh-phasee/",
+    "notes": "Sources agree on key D, no capo, D-G-Am-C hook. Mute strings on the 2nd downstroke for a groove. One sheet adds E and B passing chords; omitted here. Listed 158 BPM elsewhere is double-time.",
+    "confidence": "medium"
+  },
+  {
+    "id": "khairiyat",
+    "title": "Khairiyat",
+    "artist": "Arijit Singh",
+    "album": "Chhichhore",
+    "year": 2019,
+    "collection": "bollywood",
+    "difficulty": "intermediate",
+    "key": "Cm",
+    "capo": 3,
+    "bpm": 88,
+    "duration": 280,
+    "strummingPattern": "D DU UDU",
+    "originalChords": [
+      "Am",
+      "G",
+      "F",
+      "E",
+      "Dm",
+      "C"
+    ],
+    "sections": [
+      {
+        "name": "Intro",
+        "repeat": 2,
+        "chords": [
+          "Am",
+          "Am",
+          "G",
+          "F"
+        ]
+      },
+      {
+        "name": "Verse",
+        "repeat": 2,
+        "chords": [
+          "Am",
+          "F",
+          "G",
+          "E",
+          "Dm",
+          "F",
+          "G",
+          "E"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "repeat": 2,
+        "chords": [
+          "Am",
+          "F",
+          "G",
+          "E",
+          "C",
+          "F",
+          "G",
+          "E"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "Am-F-G-E minor cadence",
+      "E major in a minor key"
+    ],
+    "tags": [
+      "sad",
+      "2010s",
+      "pritam"
+    ],
+    "language": "hi",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Khairiyat+guitar+chords+lesson",
+    "sourceUrl": "https://www.silentguitarchords.com/khairiyat-guitar-chords/",
+    "notes": "Original key Cm (confirmed by multiple sources); capo 3 with Am/F/G/E/Dm/C shapes avoids the Cm/A#/G# barres. F can be played as a mini barre.",
+    "confidence": "high"
+  },
+  {
+    "id": "main_rang_sharbaton_ka",
+    "title": "Main Rang Sharbaton Ka",
+    "artist": "Atif Aslam, Chinmayi Sripaada",
+    "album": "Phata Poster Nikhla Hero",
+    "year": 2013,
+    "collection": "bollywood",
+    "difficulty": "intermediate",
+    "key": "G",
+    "capo": 7,
+    "bpm": 80,
+    "duration": 296,
+    "strummingPattern": "D DU UDU",
+    "originalChords": [
+      "C",
+      "Am",
+      "F",
+      "G"
+    ],
+    "sections": [
+      {
+        "name": "Intro",
+        "repeat": 1,
+        "chords": [
+          "C",
+          "Am",
+          "F",
+          "G"
+        ]
+      },
+      {
+        "name": "Verse",
+        "repeat": 2,
+        "chords": [
+          "C",
+          "Am",
+          "F",
+          "C"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "repeat": 2,
+        "chords": [
+          "C",
+          "F",
+          "G",
+          "C"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "C-Am-F-G cycle",
+      "F barre high up with capo 7"
+    ],
+    "tags": [
+      "romantic",
+      "2010s",
+      "pritam"
+    ],
+    "language": "hi",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Main+Rang+Sharbaton+Ka+guitar+chords+lesson",
+    "sourceUrl": "https://www.silentguitarchords.com/main-rang-sharbaton-ka-chords-with-capo-and-strumming-pattern/",
+    "notes": "Sounding key G. Capo 7 with C shapes is common; the same progression without capo is G-Em-C-D. Duration approximate.",
+    "confidence": "medium"
+  },
+  {
+    "id": "tu_jaane_na",
+    "title": "Tu Jaane Na",
+    "artist": "Atif Aslam",
+    "album": "Ajab Prem Ki Ghazab Kahani",
+    "year": 2009,
+    "collection": "bollywood",
+    "difficulty": "intermediate",
+    "key": "A",
+    "capo": 0,
+    "bpm": 90,
+    "duration": 342,
+    "strummingPattern": "D DU UDU",
+    "originalChords": [
+      "A",
+      "C#m",
+      "Bm",
+      "E",
+      "F#m",
+      "D"
+    ],
+    "sections": [
+      {
+        "name": "Intro",
+        "repeat": 1,
+        "chords": [
+          "A",
+          "C#m",
+          "Bm",
+          "E"
+        ]
+      },
+      {
+        "name": "Verse",
+        "repeat": 2,
+        "chords": [
+          "A",
+          "C#m",
+          "Bm",
+          "E"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "repeat": 2,
+        "chords": [
+          "A",
+          "E",
+          "A",
+          "E"
+        ]
+      },
+      {
+        "name": "Antara",
+        "repeat": 1,
+        "chords": [
+          "A",
+          "F#m",
+          "E",
+          "D",
+          "Bm"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "C#m and Bm barre chords",
+      "A-E chorus"
+    ],
+    "tags": [
+      "romantic",
+      "sad",
+      "2000s",
+      "pritam"
+    ],
+    "language": "hi",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Tu+Jaane+Na+guitar+chords+lesson",
+    "sourceUrl": "https://guitar-gaga.com/chords/tu-jaane-na-movie-ajab-prem-ki-ghazab-kahani-chords/",
+    "notes": "Key A. No-capo A/C#m/Bm/E is used here; easier alternative is capo 2 with G/Bm/Am/D (same key). Other sheets in G or D are off-key.",
+    "confidence": "medium"
+  },
+  {
+    "id": "dil_diyan_gallan",
+    "title": "Dil Diyan Gallan",
+    "artist": "Atif Aslam",
+    "album": "Tiger Zinda Hai",
+    "year": 2017,
+    "collection": "bollywood",
+    "difficulty": "intermediate",
+    "key": "D",
+    "capo": 0,
+    "bpm": 76,
+    "duration": 260,
+    "strummingPattern": "D U X U U X U",
+    "originalChords": [
+      "D",
+      "Bm",
+      "G",
+      "A",
+      "F#m"
+    ],
+    "sections": [
+      {
+        "name": "Intro",
+        "repeat": 1,
+        "chords": [
+          "D",
+          "Bm",
+          "G",
+          "D"
+        ]
+      },
+      {
+        "name": "Verse",
+        "repeat": 2,
+        "chords": [
+          "D",
+          "Bm",
+          "G",
+          "D"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "repeat": 2,
+        "chords": [
+          "D",
+          "Bm",
+          "G",
+          "A"
+        ]
+      },
+      {
+        "name": "Antara",
+        "repeat": 1,
+        "chords": [
+          "Bm",
+          "A",
+          "G",
+          "A",
+          "D",
+          "F#m",
+          "G",
+          "A"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "chuck (mute) strum",
+      "Bm and F#m barres"
+    ],
+    "tags": [
+      "romantic",
+      "2010s",
+      "vishal-shekhar"
+    ],
+    "language": "hi",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Dil+Diyan+Gallan+guitar+chords+lesson",
+    "sourceUrl": "https://chordsfactory.com/dil-diya-gallan-guitar-chords-atif-aslam/",
+    "notes": "Key D, no capo (D/Bm/G/A/F#m). Alternative capo-2 C-shape version gives the same key. X = palm-muted chuck.",
+    "confidence": "medium"
+  },
+  {
+    "id": "o_maahi",
+    "title": "O Maahi",
+    "artist": "Arijit Singh",
+    "album": "Dunki",
+    "year": 2023,
+    "collection": "bollywood",
+    "difficulty": "intermediate",
+    "key": "C#",
+    "capo": 1,
+    "bpm": 88,
+    "duration": 233,
+    "strummingPattern": "D DU UDU",
+    "originalChords": [
+      "C",
+      "G",
+      "F",
+      "Am"
+    ],
+    "sections": [
+      {
+        "name": "Intro",
+        "repeat": 1,
+        "chords": [
+          "C",
+          "G",
+          "C",
+          "G",
+          "F",
+          "C",
+          "G",
+          "G"
+        ]
+      },
+      {
+        "name": "Verse",
+        "repeat": 2,
+        "chords": [
+          "C",
+          "G",
+          "F",
+          "C",
+          "Am",
+          "G"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "repeat": 2,
+        "chords": [
+          "C",
+          "F",
+          "G",
+          "Am",
+          "C",
+          "G"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "C-G-F changes",
+      "F barre"
+    ],
+    "tags": [
+      "romantic",
+      "2020s",
+      "pritam"
+    ],
+    "language": "hi",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=O+Maahi+guitar+chords+lesson",
+    "sourceUrl": "https://guitartwitt.com/o-maahi-chords-by-arijit-singh/",
+    "notes": "Capo 1 with C/G/F/Am/Em shapes (sounds C#) - two sources agree. One sheet lists 177 BPM, which is double-time; ~88 used. Em appears in the second verse.",
+    "confidence": "medium"
+  },
+  {
+    "id": "chaleya",
+    "title": "Chaleya",
+    "artist": "Arijit Singh, Shilpa Rao",
+    "album": "Jawan",
+    "year": 2023,
+    "collection": "bollywood",
+    "difficulty": "intermediate",
+    "key": "Am",
+    "capo": 0,
+    "bpm": 94,
+    "duration": 200,
+    "strummingPattern": "D UDUD UDUD DU",
+    "originalChords": [
+      "Am",
+      "Dm7",
+      "F",
+      "Am7",
+      "G",
+      "C",
+      "Em"
+    ],
+    "sections": [
+      {
+        "name": "Verse",
+        "repeat": 2,
+        "chords": [
+          "Am",
+          "Dm7",
+          "Am",
+          "Dm7"
+        ]
+      },
+      {
+        "name": "Pre-Chorus",
+        "repeat": 1,
+        "chords": [
+          "F",
+          "F",
+          "Am7",
+          "G"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "repeat": 2,
+        "chords": [
+          "Am7",
+          "F",
+          "F",
+          "C",
+          "Am7",
+          "F",
+          "G",
+          "G"
+        ]
+      },
+      {
+        "name": "Antara",
+        "repeat": 1,
+        "chords": [
+          "Am7",
+          "G",
+          "F",
+          "G",
+          "F",
+          "Em",
+          "Am",
+          "G"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "Am7 and Dm7 voicings",
+      "F barre"
+    ],
+    "tags": [
+      "romantic",
+      "dance",
+      "2020s",
+      "anirudh"
+    ],
+    "language": "hi",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Chaleya+guitar+chords+lesson",
+    "sourceUrl": "https://guitartwitt.com/chaleya-chords-by-arijit-singh/",
+    "notes": "Key Am, no capo, ~94 BPM - sources agree. The verse uses Amadd9 on the sheet; plain Am works. F7 on the sheet simplified to F.",
+    "confidence": "medium"
+  },
+  {
+    "id": "zinda",
+    "title": "Zinda",
+    "artist": "Siddharth Mahadevan",
+    "album": "Bhaag Milkha Bhaag",
+    "year": 2013,
+    "collection": "bollywood",
+    "difficulty": "intermediate",
+    "key": "Em",
+    "capo": 0,
+    "bpm": 100,
+    "duration": 218,
+    "strummingPattern": "D D D U D U D D",
+    "originalChords": [
+      "Em",
+      "C",
+      "D",
+      "G"
+    ],
+    "sections": [
+      {
+        "name": "Intro",
+        "repeat": 1,
+        "chords": [
+          "Em",
+          "Em",
+          "Em",
+          "Em"
+        ]
+      },
+      {
+        "name": "Verse",
+        "repeat": 1,
+        "chords": [
+          "Em",
+          "Em",
+          "C",
+          "Em",
+          "C",
+          "Em",
+          "D"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "repeat": 4,
+        "chords": [
+          "Em",
+          "C",
+          "G",
+          "D"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "palm-muted Em drive",
+      "Em-C-G-D power-chord feel"
+    ],
+    "tags": [
+      "rock",
+      "motivational",
+      "2010s",
+      "shankar-ehsaan-loy"
+    ],
+    "language": "hi",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Zinda+guitar+chords+lesson",
+    "sourceUrl": "https://indianguitartabs.com/chords/threads/zinda-bhaag-milkha-bhaag-guitar-chords.55716/",
+    "notes": "Key Em, no capo. Sources disagree on the chorus (Em-C-G-D vs Em-G-D-A); Em-C-G-D (played as power chords on the record) is the most common. Duration and BPM approximate.",
+    "confidence": "medium"
+  },
+  {
+    "id": "kal_ho_naa_ho",
+    "title": "Kal Ho Naa Ho",
+    "artist": "Sonu Nigam",
+    "album": "Kal Ho Naa Ho",
+    "year": 2003,
+    "collection": "bollywood",
+    "difficulty": "advanced",
+    "key": "C",
+    "capo": 0,
+    "bpm": 84,
+    "duration": 321,
+    "strummingPattern": "D DU UDU",
+    "originalChords": [
+      "F",
+      "G",
+      "C",
+      "Am",
+      "Gm",
+      "Dm7"
+    ],
+    "sections": [
+      {
+        "name": "Intro",
+        "repeat": 1,
+        "chords": [
+          "F",
+          "G",
+          "F",
+          "G",
+          "C"
+        ]
+      },
+      {
+        "name": "Verse",
+        "repeat": 2,
+        "chords": [
+          "C",
+          "Am",
+          "C",
+          "Am",
+          "F",
+          "C",
+          "F",
+          "Gm",
+          "C",
+          "G"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "repeat": 2,
+        "chords": [
+          "F",
+          "C",
+          "F",
+          "Gm",
+          "C",
+          "C"
+        ]
+      },
+      {
+        "name": "Antara",
+        "repeat": 2,
+        "chords": [
+          "G",
+          "Dm7",
+          "G",
+          "Dm7",
+          "C",
+          "C"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "Gm barre",
+      "F full barre",
+      "Dm7 voicing"
+    ],
+    "tags": [
+      "inspirational",
+      "2000s",
+      "shankar-ehsaan-loy"
+    ],
+    "language": "hi",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Kal+Ho+Naa+Ho+guitar+chords+lesson",
+    "sourceUrl": "https://www.musiceducademy.com/songs/kal-ho-naa-ho-chords-sonu-nigam",
+    "notes": "Sources agree on key C, no capo, with C/F/G/Am(or Em)/Gm/Gm7/Dm7. The Gm (and later Cm/Fm/D# section) make it advanced; one sheet uses Em where another uses Am in the verse.",
+    "confidence": "medium"
+  },
+  {
+    "id": "pehla_nasha",
+    "title": "Pehla Nasha",
+    "artist": "Udit Narayan, Sadhana Sargam",
+    "album": "Jo Jeeta Wohi Sikandar",
+    "year": 1992,
+    "collection": "bollywood",
+    "difficulty": "advanced",
+    "key": "F",
+    "capo": 0,
+    "bpm": 90,
+    "duration": 292,
+    "strummingPattern": "D D UUDU",
+    "originalChords": [
+      "F",
+      "C",
+      "A#",
+      "Dm",
+      "Gm",
+      "G#"
+    ],
+    "sections": [
+      {
+        "name": "Intro",
+        "repeat": 1,
+        "chords": [
+          "F",
+          "C",
+          "A#",
+          "Dm",
+          "C",
+          "Gm",
+          "C",
+          "F"
+        ]
+      },
+      {
+        "name": "Verse",
+        "repeat": 2,
+        "chords": [
+          "F",
+          "A#",
+          "F",
+          "C",
+          "F",
+          "C",
+          "Dm",
+          "A#",
+          "C",
+          "F"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "repeat": 2,
+        "chords": [
+          "F",
+          "Dm",
+          "C",
+          "F",
+          "C",
+          "A#",
+          "F",
+          "A#",
+          "C",
+          "A#",
+          "F",
+          "C"
+        ]
+      },
+      {
+        "name": "Bridge",
+        "repeat": 1,
+        "chords": [
+          "A#",
+          "G#",
+          "A#",
+          "G#",
+          "F"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "F and A# barre chords",
+      "G# borrowed chord"
+    ],
+    "tags": [
+      "romantic",
+      "classic",
+      "90s"
+    ],
+    "language": "hi",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Pehla+Nasha+guitar+chords+lesson",
+    "sourceUrl": "https://guitar-gaga.com/chords/pehla-nasha-chords/",
+    "notes": "Key F, no capo (two sources agree). Barre-heavy: F, A#, Gm, G#. Beginners can use capo 3 with D/G/A/Bm shapes or capo 5 with C/F/G/Am shapes (same key).",
+    "confidence": "high"
+  },
+  {
+    "id": "bekhayali",
+    "title": "Bekhayali",
+    "artist": "Sachet Tandon",
+    "album": "Kabir Singh",
+    "year": 2019,
+    "collection": "bollywood",
+    "difficulty": "advanced",
+    "key": "Am",
+    "capo": 0,
+    "bpm": 90,
+    "duration": 371,
+    "strummingPattern": "D D D DUDUDU",
+    "originalChords": [
+      "Am",
+      "Am/G",
+      "F",
+      "G",
+      "Dm",
+      "Em",
+      "C",
+      "D"
+    ],
+    "sections": [
+      {
+        "name": "Intro",
+        "repeat": 2,
+        "chords": [
+          "Am",
+          "Am/G",
+          "F",
+          "G"
+        ]
+      },
+      {
+        "name": "Verse",
+        "repeat": 2,
+        "chords": [
+          "Am",
+          "Am/G",
+          "F",
+          "G"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "repeat": 2,
+        "chords": [
+          "Am",
+          "Am/G",
+          "F",
+          "G",
+          "F",
+          "Dm",
+          "Em",
+          "Em"
+        ]
+      },
+      {
+        "name": "Antara",
+        "repeat": 1,
+        "chords": [
+          "F",
+          "G",
+          "F",
+          "Em",
+          "Am",
+          "C",
+          "G",
+          "D"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "Am to Am/G bass walk",
+      "intense driving strum",
+      "F barre"
+    ],
+    "tags": [
+      "sad",
+      "rock",
+      "2010s",
+      "sachet-parampara"
+    ],
+    "language": "hi",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Bekhayali+guitar+chords+lesson",
+    "sourceUrl": "https://www.musiceducademy.com/songs/bekhayali-chords-kabir-singh",
+    "notes": "Key Am, ~90 BPM, no capo - sources agree. Sheet's Am/F written here as F. A capo-5 version exists for easier shapes.",
+    "confidence": "medium"
+  },
+  {
+    "id": "ae_dil_hai_mushkil",
+    "title": "Ae Dil Hai Mushkil",
+    "artist": "Arijit Singh",
+    "album": "Ae Dil Hai Mushkil",
+    "year": 2016,
+    "collection": "bollywood",
+    "difficulty": "advanced",
+    "key": "D#m",
+    "capo": 1,
+    "bpm": 80,
+    "duration": 269,
+    "strummingPattern": "D D UD",
+    "originalChords": [
+      "Dm",
+      "A",
+      "Gm",
+      "A#",
+      "Am",
+      "C"
+    ],
+    "sections": [
+      {
+        "name": "Intro",
+        "repeat": 1,
+        "chords": [
+          "Dm",
+          "Dm",
+          "A",
+          "Gm",
+          "A#",
+          "A",
+          "Dm"
+        ]
+      },
+      {
+        "name": "Verse",
+        "repeat": 2,
+        "chords": [
+          "Dm",
+          "A#",
+          "Gm",
+          "Am"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "repeat": 2,
+        "chords": [
+          "Dm",
+          "Dm",
+          "A",
+          "Gm",
+          "A#",
+          "A",
+          "Dm"
+        ]
+      },
+      {
+        "name": "Antara",
+        "repeat": 1,
+        "chords": [
+          "Dm",
+          "A#",
+          "Gm",
+          "A",
+          "Dm",
+          "A#",
+          "C",
+          "A"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "A# and Gm barres",
+      "quick Gm-A#-A changes"
+    ],
+    "tags": [
+      "sad",
+      "2010s",
+      "pritam"
+    ],
+    "language": "hi",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Ae+Dil+Hai+Mushkil+guitar+chords+lesson",
+    "sourceUrl": "https://guitartwitt.com/ae-dil-hai-mushkil-arijit-singh-guitar-chords/",
+    "notes": "Sounds D#m. Capo 1 with Dm shapes (Dm/A#/Gm/A/C/Am) vs capo 4 with Bm/Em/G/F# - both give D#m and both need barres.",
+    "confidence": "medium"
+  },
+  {
+    "id": "muskurane",
+    "title": "Muskurane",
+    "artist": "Arijit Singh",
+    "album": "Citylights",
+    "year": 2014,
+    "collection": "bollywood",
+    "difficulty": "advanced",
+    "key": "Bm",
+    "capo": 0,
+    "bpm": 76,
+    "duration": 334,
+    "strummingPattern": "D UDUD UDUD",
+    "originalChords": [
+      "Bm",
+      "A",
+      "G",
+      "F#",
+      "Em"
+    ],
+    "sections": [
+      {
+        "name": "Verse",
+        "repeat": 2,
+        "chords": [
+          "Bm",
+          "A",
+          "A",
+          "G",
+          "F#",
+          "Bm",
+          "F#",
+          "Bm"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "repeat": 2,
+        "chords": [
+          "Bm",
+          "A",
+          "A",
+          "G",
+          "F#",
+          "Bm",
+          "F#",
+          "Bm"
+        ]
+      },
+      {
+        "name": "Antara",
+        "repeat": 1,
+        "chords": [
+          "A",
+          "G",
+          "Bm",
+          "G",
+          "Bm",
+          "Em",
+          "G",
+          "Bm"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "Bm and F# barre chords",
+      "Bm-A-G-F# descent"
+    ],
+    "tags": [
+      "romantic",
+      "2010s",
+      "jeet-gannguli"
+    ],
+    "language": "hi",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Muskurane+guitar+chords+lesson",
+    "sourceUrl": "https://tabandchord.com/2014/05/muskurane-chords-city-lights/",
+    "notes": "Key Bm, no capo: Bm/A/G/F#/Em. Easier: capo 2 with Am/G/F/E shapes (same key). Strumming suggestions vary widely.",
+    "confidence": "medium"
+  },
+  {
+    "id": "sadda_haq",
+    "title": "Sadda Haq",
+    "artist": "Mohit Chauhan",
+    "album": "Rockstar",
+    "year": 2011,
+    "collection": "bollywood",
+    "difficulty": "advanced",
+    "key": "F#m",
+    "capo": 0,
+    "bpm": 104,
+    "duration": 364,
+    "strummingPattern": "D D D D D D D D",
+    "originalChords": [
+      "F#m",
+      "D",
+      "Bm",
+      "E"
+    ],
+    "sections": [
+      {
+        "name": "Intro",
+        "repeat": 2,
+        "chords": [
+          "F#m",
+          "D",
+          "Bm",
+          "D"
+        ]
+      },
+      {
+        "name": "Verse",
+        "repeat": 2,
+        "chords": [
+          "D",
+          "Bm",
+          "D",
+          "F#m"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "repeat": 2,
+        "chords": [
+          "F#m",
+          "D",
+          "Bm",
+          "D"
+        ]
+      },
+      {
+        "name": "Antara",
+        "repeat": 1,
+        "chords": [
+          "F#m",
+          "D",
+          "E",
+          "E"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "palm-muted down-strokes",
+      "F#m and Bm barres"
+    ],
+    "tags": [
+      "rock",
+      "rebellious",
+      "2010s",
+      "ar-rahman"
+    ],
+    "language": "hi",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Sadda+Haq+guitar+chords+lesson",
+    "sourceUrl": "https://chordsfactory.com/sadda-haq-chords/",
+    "notes": "Key F#m with F#m/D/Bm/E (A in places) - sources agree. Played as all palm-muted downstrokes; power chords also work. BPM approximate.",
+    "confidence": "medium"
+  }
+]

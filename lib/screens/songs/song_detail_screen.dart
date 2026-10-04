@@ -181,14 +181,11 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
                     ],
                   ).animate().fadeIn(duration: 400.ms),
                   const SizedBox(height: 20),
-                  // teacher CTA
+                  // tutor + teacher CTAs
                   FilledButton.icon(
-                        onPressed: () => context.pushNamed(
-                          'practiceSong',
-                          pathParameters: <String, String>{'id': song.id},
-                        ),
-                        icon: const Icon(Icons.auto_awesome),
-                        label: Text(l10n.practiceWithTeacher),
+                        onPressed: () => context.push('/tutor/song/${song.id}'),
+                        icon: const Icon(Icons.school_rounded),
+                        label: Text(l10n.learnWithTutor),
                         style: FilledButton.styleFrom(
                           backgroundColor: AppColors.primary,
                           foregroundColor: AppColors.surfaceLight,
@@ -198,6 +195,19 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
                       .animate()
                       .fadeIn(delay: 100.ms, duration: 400.ms)
                       .scale(begin: const Offset(0.95, 0.95)),
+                  const SizedBox(height: 8),
+                  OutlinedButton.icon(
+                    onPressed: () => context.pushNamed(
+                      'practiceSong',
+                      pathParameters: <String, String>{'id': song.id},
+                    ),
+                    icon: const Icon(Icons.auto_awesome),
+                    label: Text(l10n.practiceWithTeacher),
+                    style: OutlinedButton.styleFrom(
+                      foregroundColor: AppColors.textOnDark,
+                      minimumSize: const Size.fromHeight(44),
+                    ),
+                  ),
                   const SizedBox(height: 24),
                   // capo + chords
                   Row(

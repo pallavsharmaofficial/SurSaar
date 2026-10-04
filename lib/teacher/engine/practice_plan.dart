@@ -2,6 +2,7 @@ import '../../core/utils/chord_transposer.dart';
 import '../../models/lesson.dart';
 import '../../models/song.dart';
 import '../../models/strumming_pattern.dart';
+import '../melody/melody_tab.dart';
 
 enum PracticeMode { song, lesson, adhoc }
 
@@ -40,6 +41,8 @@ class PracticePlan {
     this.sourceId,
     this.beatsPerBar = 4,
     this.subtitle,
+    this.isMelody = false,
+    this.boxStart = 1,
     List<String>? learnSequence,
   }) : _learnSequence = learnSequence;
 
@@ -54,6 +57,12 @@ class PracticePlan {
   /// Song id, lesson id or null for ad-hoc practice.
   final String? sourceId;
   final int beatsPerBar;
+
+  /// Targets are single notes ([TabNote.token]s) rather than chords.
+  final bool isMelody;
+
+  /// Melody plans: lowest fretted note, for one-finger-per-fret fingering.
+  final int boxStart;
 
   final List<String>? _learnSequence;
 
@@ -119,7 +128,10 @@ class PracticePlan {
   }
 
   PracticePlan copyWith({int? bpm, int? capo}) {
-    if (capo != null && capo != this.capo && mode == PracticeMode.song) {
+    if (capo != null &&
+        capo != this.capo &&
+        mode == PracticeMode.song &&
+        !isMelody) {
       // Re-transpose the chord shapes for the new capo position.
       final shift = this.capo - capo;
       return PracticePlan(
@@ -156,6 +168,8 @@ class PracticePlan {
       capo: capo ?? this.capo,
       sourceId: sourceId,
       beatsPerBar: beatsPerBar,
+      isMelody: isMelody,
+      boxStart: boxStart,
       learnSequence: _learnSequence,
     );
   }
@@ -271,6 +285,45 @@ class PracticePlan {
       learnSequence: list.length == 1
           ? <String>[list.first, list.first, list.first]
           : <String>[...list, ...list],
+    );
+  }
+
+  /// A single-note tab: each note is a target, played one at a time in
+  /// learn mode (repeated notes are separate plucks) and on its beat in
+  /// play-along.
+  factory PracticePlan.forMelody(
+    List<TabNote> notes, {
+    required String title,
+    String? subtitle,
+    int bpm = 70,
+    PracticeMode mode = PracticeMode.song,
+    String? sourceId,
+    int? boxStart,
+  }) {
+    final targets = <ChordTarget>[];
+    var beat = 0.0;
+    for (final note in notes) {
+      targets.add(
+        ChordTarget(
+          chord: note.token,
+          startBeat: beat,
+          endBeat: beat + note.beats,
+          section: note.section,
+        ),
+      );
+      beat += note.beats;
+    }
+    return PracticePlan(
+      title: title,
+      subtitle: subtitle,
+      targets: targets,
+      pattern: StrummingPattern.parse('D D D D'),
+      bpm: bpm,
+      mode: mode,
+      sourceId: sourceId,
+      isMelody: true,
+      boxStart: boxStart ?? MelodyTab(notes).boxStart,
+      learnSequence: notes.map((n) => n.token).toList(growable: false),
     );
   }
 

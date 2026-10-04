@@ -661,4 +661,239 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get mirrorPreview => 'प्रीव्यू मिरर करें';
+
+  @override
+  String get learnWithTutor => 'ट्यूटर के साथ सीखें';
+
+  @override
+  String get songLibrary => 'गानों की लाइब्रेरी';
+
+  @override
+  String get shelfAll => 'सभी';
+
+  @override
+  String get shelfBollywood => 'बॉलीवुड';
+
+  @override
+  String get shelfGlobal => 'ग्लोबल हिट्स';
+
+  @override
+  String get shelfBand => 'बैंड म्यूज़िक';
+
+  @override
+  String get shelfInstrumental => 'इंस्ट्रुमेंटल';
+
+  @override
+  String get singleNoteTab => 'सिंगल-नोट टैब';
+
+  @override
+  String get tutorDebrief => 'आपके ट्यूटर के नोट्स';
+
+  @override
+  String get whatWentWell => 'क्या अच्छा रहा';
+
+  @override
+  String get whatToImprove => 'किस पर काम करें';
+
+  @override
+  String get yourPlayingStyle => 'आपकी बजाने की शैली';
+
+  @override
+  String get continueLabel => 'जारी रखें';
+
+  @override
+  String get songJourney => 'गाने का रास्ता';
+
+  @override
+  String get chordSheet => 'कॉर्ड चार्ट';
+
+  @override
+  String get tabSheet => 'टैब';
+
+  @override
+  String get continueLearning => 'सीखना जारी रखें';
+
+  @override
+  String get tutorSuggests => 'आपका ट्यूटर सुझाता है';
+
+  @override
+  String get goodMorning => 'सुप्रभात';
+
+  @override
+  String get goodAfternoon => 'नमस्ते';
+
+  @override
+  String get goodEvening => 'शुभ संध्या';
+
+  @override
+  String get tutorIntroNew =>
+      'मैं आपका गिटार ट्यूटर हूँ। मैं देखूँगा, सुनूँगा और बताऊँगा कि आगे क्या बजाना है।';
+
+  @override
+  String get tutorIntroBack => 'आज के लिए मैंने यह चुना है।';
+
+  @override
+  String chordsKnown(int count) {
+    return '$count कॉर्ड आते हैं';
+  }
+
+  @override
+  String minutesPlayed(int count) {
+    return '$count मिनट बजाया';
+  }
+
+  @override
+  String sessionsCount(int count) {
+    return '$count सेशन';
+  }
+
+  @override
+  String get todaysLesson => 'आज का पाठ';
+
+  @override
+  String get pickUpWhereYouLeft => 'जहाँ छोड़ा था वहीं से';
+
+  @override
+  String get styleEmpty =>
+      'एक पाठ बजाइए, फिर मैं आपकी आदतें पहचानना शुरू करूँगा।';
+
+  @override
+  String get searchLibraryHint => 'गाना, कलाकार या कॉर्ड…';
+
+  @override
+  String get readyForMe => 'मेरे लिए तैयार';
+
+  @override
+  String libraryCount(int count) {
+    return '$count गाने';
+  }
+
+  @override
+  String get difficultyBeginner => 'शुरुआती';
+
+  @override
+  String get difficultyIntermediate => 'मध्यम';
+
+  @override
+  String get difficultyAdvanced => 'एडवांस्ड';
+
+  @override
+  String get restartJourneyTitle => 'यह गाना फिर से शुरू करें';
+
+  @override
+  String get restartJourneyBody =>
+      'मैं आपकी अभी की क्षमता के हिसाब से स्टेप फिर से बनाऊँगा। आपका रिकॉर्ड बना रहेगा।';
+
+  @override
+  String get restart => 'फिर से शुरू करें';
+
+  @override
+  String get pasteTab => 'सिंगल-नोट टैब पेस्ट करें';
+
+  @override
+  String get pasteTabHelp =>
+      'ASCII टैब पेस्ट करें (e|---0---|, B|--1--3--|…)। यह इसी डिवाइस पर रहेगा और मैं इसे नोट-दर-नोट सिखाऊँगा।';
+
+  @override
+  String get songDetails => 'गाने की जानकारी';
+
+  @override
+  String get chartVerified => 'जाँचा हुआ चार्ट';
+
+  @override
+  String get chartCommunity => 'कम्युनिटी चार्ट – अपने कानों पर भरोसा करें';
+
+  @override
+  String get journeyComplete =>
+      'आपने यह गाना पूरा कर लिया। निखारने के लिए कोई भी स्टेप दोबारा बजाएँ।';
+
+  @override
+  String journeyIntro(int count) {
+    return 'मैंने आपके लिए $count स्टेप बनाए हैं – एक-एक करके, आगे कब बढ़ना है मैं बताऊँगा।';
+  }
+
+  @override
+  String startStep(int number, String title) {
+    return 'स्टेप $number: $title';
+  }
+
+  @override
+  String get yourPath => 'आपका रास्ता';
+
+  @override
+  String tempoPercent(int percent) {
+    return '$percent% गति';
+  }
+
+  @override
+  String passMark(int score) {
+    return '$score% पर पास';
+  }
+
+  @override
+  String get noTabYet =>
+      'अभी कोई टैब नहीं – नोट-दर-नोट सीखने के लिए एक पेस्ट करें।';
+
+  @override
+  String get whatYouWillLearn => 'आप क्या सीखेंगे';
+
+  @override
+  String get tutorNotes => 'ट्यूटर के नोट्स';
+
+  @override
+  String get chartSource => 'चार्ट स्रोत';
+
+  @override
+  String get tabNotRecognised => 'अभी कोई टैब लाइन नहीं मिली।';
+
+  @override
+  String tabRecognised(int notes, int sections) {
+    return '$sections हिस्सों में $notes नोट्स';
+  }
+
+  @override
+  String get useThisTab => 'यह टैब सीखें';
+
+  @override
+  String get resetTutorTitle => 'ट्यूटर की याददाश्त रीसेट करें';
+
+  @override
+  String get resetTutorBody =>
+      'अपने कॉर्ड स्किल, आदतें और गानों के रास्ते भूल जाएँ? आपका अभ्यास रिकॉर्ड बना रहेगा।';
+
+  @override
+  String get tutorObservations => 'मैंने क्या देखा';
+
+  @override
+  String get chordMastery => 'कॉर्ड पर पकड़';
+
+  @override
+  String get chordChanges => 'कॉर्ड बदलना';
+
+  @override
+  String get timingEmpty =>
+      'क्लिक के साथ एक बार साथ बजाइए, मैं आपकी टाइमिंग समझ लूँगा।';
+
+  @override
+  String get tutorDiary => 'ट्यूटर की डायरी';
+
+  @override
+  String get drill => 'अभ्यास';
+
+  @override
+  String get rushing => 'जल्दी';
+
+  @override
+  String get onTheBeat => 'ताल पर';
+
+  @override
+  String get dragging => 'देर से';
+
+  @override
+  String timingSummary(int offset, int spread, int accuracy) {
+    return 'ताल से औसतन $offset ms, फैलाव ±$spread ms, $accuracy% समय पर।';
+  }
+
+  @override
+  String get notesHeading => 'नोट्स';
 }

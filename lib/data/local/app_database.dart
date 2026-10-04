@@ -19,6 +19,7 @@ class AppDatabase {
   static const String _settingsKey = 'settings';
   static const String _courseProgressKey = 'course_progress';
   static const String _userSongsKey = 'user_songs';
+  static const String _skillProfileKey = 'skill_profile';
 
   // --------------------------------------------------------------- my songs
 
@@ -150,6 +151,17 @@ class AppDatabase {
 
   Future<void> saveCourseProgress(Map<String, dynamic> progress) =>
       _store.setJsonMap(_courseProgressKey, progress);
+
+  // ------------------------------------------------------------ tutor memory
+
+  /// The tutor's skill profile of the learner (chords, habits, journeys).
+  Future<Map<String, dynamic>> getSkillProfile() async =>
+      await _store.getJsonMap(_skillProfileKey) ?? <String, dynamic>{};
+
+  Future<void> saveSkillProfile(Map<String, dynamic> profile) =>
+      _store.setJsonMap(_skillProfileKey, profile);
+
+  Future<void> clearSkillProfile() => _store.remove(_skillProfileKey);
 }
 
 class LessonProgressRow {

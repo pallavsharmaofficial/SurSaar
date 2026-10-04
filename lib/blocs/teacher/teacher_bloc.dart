@@ -13,6 +13,7 @@ import '../../teacher/models/hand_frame.dart';
 import '../../teacher/services/audio_capture_service.dart';
 import '../../teacher/services/sound_service.dart';
 import '../../teacher/services/vision_service.dart';
+import '../../tutor/tutor_repository.dart';
 import 'teacher_event.dart';
 import 'teacher_state.dart';
 
@@ -26,6 +27,7 @@ class TeacherBloc extends Bloc<TeacherEvent, TeacherState> {
     required SettingsRepository settingsRepository,
     required PracticeRepository practiceRepository,
     required ProgressRepository progressRepository,
+    TutorRepository? tutorRepository,
     VisionService? visionService,
     AudioCaptureService? audioService,
     TeacherSoundService? soundService,
@@ -33,6 +35,7 @@ class TeacherBloc extends Bloc<TeacherEvent, TeacherState> {
        _settingsRepository = settingsRepository,
        _practiceRepository = practiceRepository,
        _progressRepository = progressRepository,
+       _tutor = tutorRepository,
        _vision = visionService ?? createVisionService(),
        _audio = audioService ?? createAudioCaptureService(),
        _sound = soundService ?? createTeacherSoundService(),
@@ -65,6 +68,7 @@ class TeacherBloc extends Bloc<TeacherEvent, TeacherState> {
   final SettingsRepository _settingsRepository;
   final PracticeRepository _practiceRepository;
   final ProgressRepository _progressRepository;
+  final TutorRepository? _tutor;
   final VisionService _vision;
   final AudioCaptureService _audio;
   final TeacherSoundService _sound;
@@ -126,6 +130,9 @@ class TeacherBloc extends Bloc<TeacherEvent, TeacherState> {
         canSpeak: _sound.canSpeak,
         trackingStatus: _vision.trackingStatus.value,
         saved: false,
+        journeySongId: event.journeySongId,
+        stageIndex: event.stageIndex,
+        clearFeedback: true,
       ),
     );
     // Load hand tracking while the learner reads the screen.
@@ -197,6 +204,7 @@ class TeacherBloc extends Bloc<TeacherEvent, TeacherState> {
         startedAt: DateTime.now(),
         saved: false,
         snapshot: engine.snapshot,
+        clearFeedback: true,
       ),
     );
   }
@@ -379,6 +387,19 @@ class TeacherBloc extends Bloc<TeacherEvent, TeacherState> {
       durationInSeconds: duration,
       accuracy: snapshot.score,
     );
+    final report = snapshot.report;
+    final tutor = _tutor;
+    if (report != null && tutor != null) {
+      final feedback = await tutor.recordSession(
+        report,
+        songId: state.journeySongId ?? plan.sourceId,
+        stageIndex: state.stageIndex,
+        title: plan.subtitle == null
+            ? plan.title
+            : '${plan.title} · ${plan.subtitle}',
+      );
+      if (!isClosed) emit(state.copyWith(feedback: feedback));
+    }
     if (!isClosed) emit(state.copyWith(saving: false, saved: true));
   }
 

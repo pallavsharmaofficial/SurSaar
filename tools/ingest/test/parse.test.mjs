@@ -84,3 +84,13 @@ test('validate rejects lyrics in the bundle', () => {
   const errors = validateBundle({ songs: [{ id: 'x', title: 't', artist: 'a', difficulty: 'beginner', strummingPattern: 'D', originalChords: ['G'], lyrics: 'nope' }], lessons: [], courses: [] });
   assert.equal(errors.length, 1);
 });
+
+test('only instrumentals may ship without chords', () => {
+  const song = (extra) => ({
+    id: 'tune', title: 'Tune', artist: 'A', difficulty: 'beginner',
+    strummingPattern: 'D D D D', originalChords: [], ...extra,
+  });
+  const bundle = (s) => ({ songs: [s], lessons: [], courses: [] });
+  assert.ok(validateBundle(bundle(song({}))).some((e) => e.includes('originalChords empty')));
+  assert.ok(!validateBundle(bundle(song({ collection: 'instrumental' }))).some((e) => e.includes('originalChords')));
+});

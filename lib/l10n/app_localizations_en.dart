@@ -662,4 +662,238 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get mirrorPreview => 'Mirror the preview';
+
+  @override
+  String get learnWithTutor => 'Learn with Tutor';
+
+  @override
+  String get songLibrary => 'Song library';
+
+  @override
+  String get shelfAll => 'All';
+
+  @override
+  String get shelfBollywood => 'Bollywood';
+
+  @override
+  String get shelfGlobal => 'Global hits';
+
+  @override
+  String get shelfBand => 'Band music';
+
+  @override
+  String get shelfInstrumental => 'Instrumental';
+
+  @override
+  String get singleNoteTab => 'Single-note tab';
+
+  @override
+  String get tutorDebrief => 'Your tutor\'s notes';
+
+  @override
+  String get whatWentWell => 'What went well';
+
+  @override
+  String get whatToImprove => 'What to work on';
+
+  @override
+  String get yourPlayingStyle => 'Your playing style';
+
+  @override
+  String get continueLabel => 'Continue';
+
+  @override
+  String get songJourney => 'Song path';
+
+  @override
+  String get chordSheet => 'Chord chart';
+
+  @override
+  String get tabSheet => 'Tab';
+
+  @override
+  String get continueLearning => 'Continue learning';
+
+  @override
+  String get tutorSuggests => 'Your tutor suggests';
+
+  @override
+  String get goodMorning => 'Good morning';
+
+  @override
+  String get goodAfternoon => 'Good afternoon';
+
+  @override
+  String get goodEvening => 'Good evening';
+
+  @override
+  String get tutorIntroNew =>
+      'I\'m your guitar tutor. I\'ll watch, listen and tell you exactly what to play next.';
+
+  @override
+  String get tutorIntroBack => 'Here\'s what I picked for you today.';
+
+  @override
+  String chordsKnown(int count) {
+    return '$count chords known';
+  }
+
+  @override
+  String minutesPlayed(int count) {
+    return '$count min played';
+  }
+
+  @override
+  String sessionsCount(int count) {
+    return '$count sessions';
+  }
+
+  @override
+  String get todaysLesson => 'TODAY\'S LESSON';
+
+  @override
+  String get pickUpWhereYouLeft => 'PICK UP WHERE YOU LEFT OFF';
+
+  @override
+  String get styleEmpty =>
+      'Play a lesson and I will start noticing your habits.';
+
+  @override
+  String get searchLibraryHint => 'Song, artist or chord…';
+
+  @override
+  String get readyForMe => 'Ready for me';
+
+  @override
+  String libraryCount(int count) {
+    return '$count songs';
+  }
+
+  @override
+  String get difficultyBeginner => 'Beginner';
+
+  @override
+  String get difficultyIntermediate => 'Intermediate';
+
+  @override
+  String get difficultyAdvanced => 'Advanced';
+
+  @override
+  String get restartJourneyTitle => 'Restart this song';
+
+  @override
+  String get restartJourneyBody =>
+      'I will rebuild the steps from what you can play now. Your skill history stays.';
+
+  @override
+  String get restart => 'Restart';
+
+  @override
+  String get pasteTab => 'Paste a single-note tab';
+
+  @override
+  String get pasteTabHelp =>
+      'Paste ASCII tab (e|---0---|, B|--1--3--|…). It stays on this device and I will teach it note by note.';
+
+  @override
+  String get songDetails => 'Song details';
+
+  @override
+  String get chartVerified => 'Verified chart';
+
+  @override
+  String get chartCommunity => 'Community chart – trust your ears';
+
+  @override
+  String get journeyComplete =>
+      'You finished this song. Replay any step to polish it.';
+
+  @override
+  String journeyIntro(int count) {
+    return 'I\'ve planned $count steps for you – one at a time, I\'ll tell you when to move on.';
+  }
+
+  @override
+  String startStep(int number, String title) {
+    return 'Step $number: $title';
+  }
+
+  @override
+  String get yourPath => 'Your path';
+
+  @override
+  String tempoPercent(int percent) {
+    return '$percent% speed';
+  }
+
+  @override
+  String passMark(int score) {
+    return 'pass at $score%';
+  }
+
+  @override
+  String get noTabYet => 'No tab yet – paste one to learn it note by note.';
+
+  @override
+  String get whatYouWillLearn => 'What you\'ll learn';
+
+  @override
+  String get tutorNotes => 'Tutor\'s notes';
+
+  @override
+  String get chartSource => 'Chart source';
+
+  @override
+  String get tabNotRecognised => 'No tab lines found yet.';
+
+  @override
+  String tabRecognised(int notes, int sections) {
+    return '$notes notes in $sections sections';
+  }
+
+  @override
+  String get useThisTab => 'Learn this tab';
+
+  @override
+  String get resetTutorTitle => 'Reset the tutor\'s memory';
+
+  @override
+  String get resetTutorBody =>
+      'Forget your chord skills, habits and song paths? Your practice history stays.';
+
+  @override
+  String get tutorObservations => 'What I have noticed';
+
+  @override
+  String get chordMastery => 'Chord mastery';
+
+  @override
+  String get chordChanges => 'Chord changes';
+
+  @override
+  String get timingEmpty =>
+      'Play along once with the click and I will map your timing.';
+
+  @override
+  String get tutorDiary => 'Tutor\'s diary';
+
+  @override
+  String get drill => 'Drill';
+
+  @override
+  String get rushing => 'Rushing';
+
+  @override
+  String get onTheBeat => 'On the beat';
+
+  @override
+  String get dragging => 'Dragging';
+
+  @override
+  String timingSummary(int offset, int spread, int accuracy) {
+    return 'Average $offset ms from the beat, spread ±$spread ms, $accuracy% on time.';
+  }
+
+  @override
+  String get notesHeading => 'Notes';
 }

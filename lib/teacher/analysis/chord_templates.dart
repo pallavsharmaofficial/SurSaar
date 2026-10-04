@@ -15,6 +15,7 @@ class ChordTemplates {
     'maj7': <int>[0, 4, 7, 11],
     'sus2': <int>[0, 2, 7],
     'sus4': <int>[0, 5, 7],
+    '7sus4': <int>[0, 5, 7, 10],
     'dim': <int>[0, 3, 6],
     'aug': <int>[0, 4, 8],
     'add9': <int>[0, 4, 7, 2],

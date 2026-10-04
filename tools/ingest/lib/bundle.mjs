@@ -40,7 +40,12 @@ export function validateBundle(bundle) {
     if (ids.has(song.id)) errors.push(`${where}: duplicate id`);
     ids.add(song.id);
     if (song.difficulty && !DIFFICULTIES.has(song.difficulty)) errors.push(`${where}: bad difficulty ${song.difficulty}`);
-    if (!Array.isArray(song.originalChords) || !song.originalChords.length) errors.push(`${where}: originalChords empty`);
+    // An instrumental may ship without chords: it is learned from a tab
+    // (bundled, or pasted by the learner when none is published).
+    const chordless = song.collection === 'instrumental';
+    if (!Array.isArray(song.originalChords) || (!song.originalChords.length && !chordless)) {
+      errors.push(`${where}: originalChords empty`);
+    }
     if (song.lyrics) errors.push(`${where}: lyrics must not be stored in the bundle`);
     for (const section of song.sections || []) {
       for (const line of section.lines || []) {

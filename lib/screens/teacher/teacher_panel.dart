@@ -17,6 +17,7 @@ import '../../widgets/teacher/chord_diagram.dart';
 import '../../widgets/teacher/chord_ribbon.dart';
 import '../../widgets/teacher/finger_colors.dart';
 import '../../widgets/teacher/strumming_timeline.dart';
+import '../../teacher/melody/melody_tab.dart';
 
 const Color _surface = Color(0xFF1E293B);
 const Color _green = Color(0xFF22C55E);
@@ -283,7 +284,17 @@ class _NowPlaying extends StatelessWidget {
         final voicing = d.voicing;
         if (d.chord == null || voicing == null) return const SizedBox.shrink();
         final bloc = context.read<TeacherBloc>();
-        final lines = ChordShapeCoach.placementText(voicing);
+        final note = TabNote.fromToken(d.chord);
+        final lines = note == null
+            ? ChordShapeCoach.placementText(voicing)
+            : <String>[
+                ...ChordShapeCoach.placementText(
+                  voicing,
+                ).where((l) => !l.startsWith('Skip the')),
+                if (note.fret == 0) 'Open ${note.stringName} string.',
+                'Pluck only the ${note.stringName} string – it should '
+                    'sound ${note.noteName}.',
+              ];
         return Container(
           padding: const EdgeInsets.all(16),
           decoration: BoxDecoration(
@@ -299,7 +310,7 @@ class _NowPlaying extends StatelessWidget {
                     child: AnimatedSwitcher(
                       duration: const Duration(milliseconds: 250),
                       child: Text(
-                        '${l10n.howToPlay} ${d.chord}',
+                        '${l10n.howToPlay} ${TabNote.display(d.chord!)}',
                         key: ValueKey<String>(d.chord!),
                         style: theme.textTheme.titleMedium?.copyWith(
                           color: Colors.white,
@@ -512,7 +523,10 @@ class _Progress extends StatelessWidget {
         return Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Text(l10n.chords, style: _heading(theme)),
+            Text(
+              plan.isMelody ? l10n.notesHeading : l10n.chords,
+              style: _heading(theme),
+            ),
             const SizedBox(height: 8),
             if (d.$3)
               _StepChips(
@@ -570,7 +584,7 @@ class _StepChips extends StatelessWidget {
                     const SizedBox(width: 4),
                   ],
                   Text(
-                    steps[i],
+                    TabNote.display(steps[i]),
                     style: theme.textTheme.titleSmall?.copyWith(
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
@@ -611,7 +625,8 @@ class _StrumSection extends StatelessWidget {
       builder: (context, state) {
         final plan = state.plan;
         final snapshot = state.snapshot;
-        if (plan == null) return const SizedBox.shrink();
+        // Single notes are plucked, not strummed.
+        if (plan == null || plan.isMelody) return const SizedBox.shrink();
         final running = state.phase == TeacherPhase.running;
         final slot = running ? (snapshot?.slotIndex ?? -1) : -1;
         final results = <int, TimingResult>{};

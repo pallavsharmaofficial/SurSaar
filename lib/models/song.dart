@@ -7,6 +7,21 @@ part 'song.g.dart';
 
 enum SongDifficulty { beginner, intermediate, advanced }
 
+/// Shelf of the song library a song belongs to.
+enum SongCollection {
+  bollywood,
+  global,
+  band,
+  instrumental;
+
+  static SongCollection? parse(String? value) {
+    for (final c in values) {
+      if (c.name == value) return c;
+    }
+    return null;
+  }
+}
+
 @JsonSerializable()
 class SongPerformanceMetrics extends Equatable {
   const SongPerformanceMetrics({
@@ -60,6 +75,9 @@ class Song extends Equatable {
     this.tabs,
     this.notes,
     this.addedByUser = false,
+    this.collection,
+    this.year,
+    this.techniqueFocus = const <String>[],
   });
 
   factory Song.fromJson(Map<String, dynamic> json) => _$SongFromJson(json);
@@ -112,6 +130,19 @@ class Song extends Equatable {
   /// Added on this device from a pasted chord sheet.
   final bool addedByUser;
 
+  /// Library shelf (Bollywood, Global, Bands, Instrumental).
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+  final SongCollection? collection;
+
+  /// Release year of the recording.
+  final int? year;
+
+  /// What the song teaches ("G to Em change", "palm muting"…).
+  final List<String> techniqueFocus;
+
+  /// The song has a single-note tab to play note by note.
+  bool get hasMelody => tabs != null && tabs!.trim().isNotEmpty;
+
   /// Parsed strumming grid.
   StrummingPattern get strumming => StrummingPattern.parse(strummingPattern);
 
@@ -161,6 +192,9 @@ class Song extends Equatable {
     String? tabs,
     String? notes,
     bool? addedByUser,
+    SongCollection? collection,
+    int? year,
+    List<String>? techniqueFocus,
   }) {
     return Song(
       id: id ?? this.id,
@@ -188,6 +222,9 @@ class Song extends Equatable {
       tabs: tabs ?? this.tabs,
       notes: notes ?? this.notes,
       addedByUser: addedByUser ?? this.addedByUser,
+      collection: collection ?? this.collection,
+      year: year ?? this.year,
+      techniqueFocus: techniqueFocus ?? this.techniqueFocus,
     );
   }
 
@@ -218,6 +255,9 @@ class Song extends Equatable {
     tabs,
     notes,
     addedByUser,
+    collection,
+    year,
+    techniqueFocus,
   ];
 
   Map<String, dynamic> toJson() => _$SongToJson(this);

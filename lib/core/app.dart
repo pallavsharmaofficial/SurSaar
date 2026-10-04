@@ -17,6 +17,7 @@ import '../repositories/profile_repository.dart';
 import '../repositories/progress_repository.dart';
 import '../repositories/settings_repository.dart';
 import '../repositories/song_repository.dart';
+import '../tutor/tutor_repository.dart';
 import 'routing/app_router.dart';
 import 'theme/app_theme.dart';
 
@@ -106,6 +107,14 @@ class _AppState extends State<App> {
         ),
         RepositoryProvider<SettingsRepository>(
           create: (context) => SettingsRepository(database: _database),
+        ),
+        RepositoryProvider<TutorRepository>(
+          create: (context) => TutorRepository(
+            database: _database,
+            songs: context.read<SongRepository>(),
+            chordLibrary: widget.chordLibrary,
+          ),
+          dispose: (tutor) => tutor.dispose(),
         ),
       ],
       child: MaterialApp.router(

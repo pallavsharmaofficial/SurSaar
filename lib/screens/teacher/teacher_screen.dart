@@ -16,11 +16,15 @@ import '../../repositories/settings_repository.dart';
 import '../../repositories/song_repository.dart';
 import '../../teacher/engine/practice_plan.dart';
 import '../../teacher/engine/teacher_engine.dart';
+import '../../tutor/journey.dart';
+import '../../tutor/tutor_repository.dart';
+import '../../widgets/tutor/sheet_views.dart';
 import '../../widgets/app_back_button.dart';
 import 'practice_settings_sheet.dart';
 import 'session_summary.dart';
 import 'teacher_panel.dart';
 import 'teacher_stage.dart';
+import 'tutor_feedback_card.dart';
 
 /// What the teacher should practise. Resolved to a [PracticePlan] once the
 /// content is loaded.
@@ -29,13 +33,15 @@ class TeacherRequest {
     : lessonId = null,
       chords = null,
       pattern = null,
-      bpm = null;
+      bpm = null,
+      stageIndex = null;
 
   const TeacherRequest.lesson(this.lessonId, {this.mode})
     : songId = null,
       chords = null,
       pattern = null,
-      bpm = null;
+      bpm = null,
+      stageIndex = null;
 
   const TeacherRequest.adhoc({
     required this.chords,
@@ -43,9 +49,21 @@ class TeacherRequest {
     this.bpm,
     this.mode,
   }) : songId = null,
-       lessonId = null;
+       lessonId = null,
+       stageIndex = null;
+
+  /// Step [stageIndex] of the tutor journey for [songId].
+  const TeacherRequest.stage(String this.songId, int this.stageIndex)
+    : lessonId = null,
+      chords = null,
+      pattern = null,
+      bpm = null,
+      mode = null;
 
   final String? songId;
+
+  /// Tutor journey step, when this session is one.
+  final int? stageIndex;
   final String? lessonId;
   final List<String>? chords;
   final String? pattern;
@@ -54,6 +72,10 @@ class TeacherRequest {
   /// Forces learn / play-along instead of the learner's saved preference.
   final CoachingMode? mode;
 }
+
+/// Location of step [stageIndex] of the tutor journey for [songId].
+String tutorStepLocation(String songId, int stageIndex) =>
+    '/tutor/song/$songId/step/$stageIndex';
 
 /// Location of an ad-hoc practice session for [chords].
 String adhocPracticeLocation(
@@ -86,6 +108,7 @@ class TeacherScreen extends StatelessWidget {
         settingsRepository: context.read<SettingsRepository>(),
         practiceRepository: context.read<PracticeRepository>(),
         progressRepository: context.read<ProgressRepository>(),
+        tutorRepository: context.read<TutorRepository>(),
       ),
       child: _PlanResolver(request: request),
     );
@@ -103,13 +126,25 @@ class _PlanResolver extends StatefulWidget {
 
 class _PlanResolverState extends State<_PlanResolver> {
   late final Future<PracticePlan?> _plan = _resolve();
+  CoachingMode? _stageMode;
 
   Future<PracticePlan?> _resolve() async {
     final request = widget.request;
     final settingsRepository = context.read<SettingsRepository>();
     final songRepository = context.read<SongRepository>();
     final lessonRepository = context.read<LessonRepository>();
+    final tutorRepository = context.read<TutorRepository>();
     final settings = await settingsRepository.getSettings();
+    final stageIndex = request.stageIndex;
+    if (request.songId != null && stageIndex != null) {
+      final song = await songRepository.getSongById(request.songId!);
+      if (song == null) return null;
+      final journey = await tutorRepository.journeyFor(song);
+      if (stageIndex < 0 || stageIndex >= journey.stages.length) return null;
+      final stage = journey.stages[stageIndex];
+      _stageMode = stage.mode;
+      return JourneyBuilder.planFor(song, stage);
+    }
     if (request.songId != null) {
       final song = await songRepository.getSongById(request.songId!);
       return song == null ? null : PracticePlan.forSong(song);
@@ -149,17 +184,31 @@ class _PlanResolverState extends State<_PlanResolver> {
             body: const Center(child: Text('Nothing to practise here yet.')),
           );
         }
-        return _TeacherView(plan: plan, mode: widget.request.mode);
+        return _TeacherView(
+          plan: plan,
+          mode: widget.request.mode ?? _stageMode,
+          journeySongId: widget.request.stageIndex == null
+              ? null
+              : widget.request.songId,
+          stageIndex: widget.request.stageIndex,
+        );
       },
     );
   }
 }
 
 class _TeacherView extends StatefulWidget {
-  const _TeacherView({required this.plan, this.mode});
+  const _TeacherView({
+    required this.plan,
+    this.mode,
+    this.journeySongId,
+    this.stageIndex,
+  });
 
   final PracticePlan plan;
   final CoachingMode? mode;
+  final String? journeySongId;
+  final int? stageIndex;
 
   @override
   State<_TeacherView> createState() => _TeacherViewState();
@@ -170,7 +219,12 @@ class _TeacherViewState extends State<_TeacherView> {
   void initState() {
     super.initState();
     context.read<TeacherBloc>().add(
-      TeacherInitialized(widget.plan, mode: widget.mode),
+      TeacherInitialized(
+        widget.plan,
+        mode: widget.mode,
+        journeySongId: widget.journeySongId,
+        stageIndex: widget.stageIndex,
+      ),
     );
   }
 
@@ -245,12 +299,46 @@ class _TeacherViewState extends State<_TeacherView> {
               context.pushReplacement(adhocPracticeLocation(chords)),
           onDone: () => popOrGoHome(context),
         );
+        final showSheet = _followsSong(plan);
         return Scaffold(
           backgroundColor: AppColors.backgroundDark,
           appBar: appBar,
           body: LayoutBuilder(
             builder: (context, constraints) {
               final wide = constraints.maxWidth >= 900;
+              final extraWide = constraints.maxWidth >= 1280 && showSheet;
+              if (extraWide) {
+                // Camera | the song's sheet | coach panel, side by side.
+                return Row(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: <Widget>[
+                    const Expanded(flex: 3, child: TeacherStage()),
+                    SizedBox(
+                      width: 340,
+                      child: SingleChildScrollView(
+                        padding: const EdgeInsets.fromLTRB(16, 16, 0, 16),
+                        child: SheetPanel(
+                          maxHeight: constraints.maxHeight - 120,
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      width: 420,
+                      child: SingleChildScrollView(
+                        padding: const EdgeInsets.all(16),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.stretch,
+                          children: <Widget>[
+                            summary,
+                            const TutorFeedbackCard(),
+                            const TeacherPanel(),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                );
+              }
               if (wide) {
                 return Row(
                   children: <Widget>[
@@ -261,7 +349,12 @@ class _TeacherViewState extends State<_TeacherView> {
                         padding: const EdgeInsets.all(16),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.stretch,
-                          children: <Widget>[summary, const TeacherPanel()],
+                          children: <Widget>[
+                            summary,
+                            const TutorFeedbackCard(),
+                            if (showSheet) const SheetPanel(),
+                            const TeacherPanel(),
+                          ],
                         ),
                       ),
                     ),
@@ -281,13 +374,98 @@ class _TeacherViewState extends State<_TeacherView> {
                     sliver: SliverToBoxAdapter(
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.stretch,
-                        children: <Widget>[summary, const TeacherPanel()],
+                        children: <Widget>[
+                          summary,
+                          const TutorFeedbackCard(),
+                          if (showSheet) const SheetPanel(),
+                          const TeacherPanel(),
+                        ],
                       ),
                     ),
                   ),
                 ],
               );
             },
+          ),
+        );
+      },
+    );
+  }
+}
+
+/// Whether [plan] walks through a song's own timeline (so the chord chart
+/// or tab is worth showing next to the camera).
+bool _followsSong(PracticePlan plan) =>
+    plan.isMelody ||
+    (plan.mode == PracticeMode.song &&
+        plan.targets.any(
+          (t) => !t.section.startsWith('Round ') && t.section != 'Changes',
+        ));
+
+/// The song's chord chart (or tab, for melodies) following the tutor.
+class SheetPanel extends StatelessWidget {
+  const SheetPanel({super.key, this.maxHeight = 240});
+
+  final double maxHeight;
+
+  @override
+  Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
+    final theme = Theme.of(context);
+    return BlocBuilder<TeacherBloc, TeacherState>(
+      buildWhen: (a, b) =>
+          a.plan != b.plan ||
+          a.mode != b.mode ||
+          a.phase != b.phase ||
+          a.snapshot?.targetIndex != b.snapshot?.targetIndex ||
+          a.snapshot?.noteDetection?.midi != b.snapshot?.noteDetection?.midi,
+      builder: (context, state) {
+        final plan = state.plan;
+        final snap = state.snapshot;
+        if (plan == null) return const SizedBox.shrink();
+        var current = -1;
+        if (snap != null && state.phase != TeacherPhase.idle) {
+          if (state.mode == CoachingMode.learn) {
+            final map = stepTargets(plan);
+            if (snap.targetIndex < map.length) current = map[snap.targetIndex];
+          } else {
+            current = snap.targetIndex;
+          }
+        }
+        final heard = snap?.noteDetection;
+        return Container(
+          margin: const EdgeInsets.only(bottom: 16),
+          padding: const EdgeInsets.all(14),
+          decoration: BoxDecoration(
+            color: const Color(0xFF1E293B),
+            borderRadius: BorderRadius.circular(16),
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              Text(
+                plan.isMelody ? l10n.tabSheet : l10n.chordSheet,
+                style: theme.textTheme.titleSmall?.copyWith(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              const SizedBox(height: 8),
+              if (plan.isMelody)
+                TabStaffView(
+                  plan: plan,
+                  currentTarget: current,
+                  heardMidi: heard == null || heard.isSilent
+                      ? null
+                      : heard.midi,
+                )
+              else
+                SongSheetView(
+                  plan: plan,
+                  currentTarget: current,
+                  maxHeight: maxHeight,
+                ),
+            ],
           ),
         );
       },
