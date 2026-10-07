@@ -758,6 +758,12 @@ abstract class AppLocalizations {
   /// **'Source code on GitHub'**
   String get sourceCode;
 
+  /// No description provided for @supportTheWork.
+  ///
+  /// In en, this message translates to:
+  /// **'Support the work'**
+  String get supportTheWork;
+
   /// No description provided for @privacyPolicy.
   ///
   /// In en, this message translates to:

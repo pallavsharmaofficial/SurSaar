@@ -229,6 +229,11 @@ class _ProfileViewState extends State<_ProfileView> {
                         url: AppConstants.feedbackUrl,
                       ),
                       _LinkTile(
+                        icon: Icons.favorite_outline,
+                        title: l10n.supportTheWork,
+                        url: AppConstants.supportUrl,
+                      ),
+                      _LinkTile(
                         icon: Icons.privacy_tip_outlined,
                         title: l10n.privacyPolicy,
                         url: AppConstants.privacyUrl,

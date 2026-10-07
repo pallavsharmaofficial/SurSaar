@@ -348,6 +348,9 @@ class AppLocalizationsHi extends AppLocalizations {
   String get sourceCode => 'GitHub पर सोर्स कोड';
 
   @override
+  String get supportTheWork => 'इस काम को सहयोग दें';
+
+  @override
   String get privacyPolicy => 'गोपनीयता नीति';
 
   @override

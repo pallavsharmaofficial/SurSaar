@@ -349,6 +349,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get sourceCode => 'Source code on GitHub';
 
   @override
+  String get supportTheWork => 'Support the work';
+
+  @override
   String get privacyPolicy => 'Privacy policy';
 
   @override
