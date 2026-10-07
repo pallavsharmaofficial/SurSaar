@@ -295,6 +295,10 @@ class _ChordDiagramPainter extends CustomPainter {
       text: TextSpan(
         text: text,
         style: TextStyle(
+          // Android's default family, named so that the finger numbers and
+          // the muted crosses are drawn by the same font wherever the
+          // painter runs (golden tests have no default font to borrow).
+          fontFamily: 'Roboto',
           color: color,
           fontSize: fontSize,
           fontWeight: bold ? FontWeight.bold : FontWeight.w500,

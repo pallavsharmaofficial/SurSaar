@@ -1,0 +1,28 @@
+SurSaar is a guitar teacher that listens while you play and tells you what to fix, in Hindi and English. Pick a Bollywood song or just a few chords, play, and it hears which chord you played and whether you were on the beat. No account, no advertising, and nothing to buy inside it.
+
+What it gives you
+
+• Learn mode for beginners: the teacher waits on every chord until you play it, celebrates when you get it, and gives hints when you are stuck. Switch to Play along when you are ready to keep the beat.
+• It hears your chord: the microphone listens and the teacher tells you what it heard, such as "that sounds like Em, the target is G".
+• Strumming checked against the beat: after a count-in, every strum is scored as on time, early, late or missed against the song's strumming pattern.
+• A guitar tuner: pluck a string and watch the needle settle.
+• Chord diagrams for every chord, with one colour for each finger and a capo slider that moves them for you.
+• Courses with saved progress: Guitar Foundations, Bollywood Rhythm and Technique Builder, or a two-tap quick practice with any chords, pattern and tempo you choose.
+• Over a hundred songs on four shelves, Bollywood, global, band and instrumental, each with chords, key, capo, tempo, strumming and structure. Search by title, artist, chord or tag.
+• Learn with Tutor: it remembers which chords you know and how fast your changes are, picks what to play next and tells you why, walks you through a song step by step, and after every session tells you what went well and what to practise.
+• Single-note melodies, taught note by note with pitch detection.
+• Add any song yourself: paste a chord sheet and the app reads the chords, sections, key and capo. It stays on your phone.
+• Missing a song? Request it and it can be added to the catalogue.
+• Streaks, achievements and a summary after every session.
+
+About the camera
+
+The camera shows your own hands beside the chord diagram while you practise. Finger tracking, where the teacher follows each fingertip, is in the web version for now; in this app the teacher coaches by ear.
+
+Your playing stays yours
+
+There is no account, no advertising and no analytics. The microphone is used only while you practise or tune, and the sound is analysed on your phone as it arrives. It is not recorded or uploaded, and neither is the camera picture. Your profile, progress and the songs you add are kept on your phone. The app downloads two things: the public song catalogue from GitHub, and its font from Google Fonts. Nothing you have played or typed goes with those requests, and the app works without a connection from the catalogue inside it.
+
+Free and open source
+
+SurSaar is free and MIT licensed. The catalogue holds chords and structure only, never lyrics, and the chords are community-sourced, so check them against the tutorial and adjust the capo to your voice. Source: github.com/pallavsharmaofficial/SurSaar

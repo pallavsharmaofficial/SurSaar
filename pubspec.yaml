@@ -40,6 +40,37 @@ dev_dependencies:
   flutter_lints: ^6.0.0
   build_runner: ^2.5.0
   json_serializable: ^6.9.0
+  flutter_launcher_icons: ^0.14.4
+  flutter_native_splash: ^2.4.6
+
+# The icon is a chord box, drawn by tools/branding/make_icon.py rather than
+# exported from a design file. The web icons and favicon come from the same
+# script, because a plain downscale of the 1024 pixel icon loses the small
+# optical size, so this tool is told to leave the web alone.
+flutter_launcher_icons:
+  image_path: assets/branding/icon-1024.png
+  android: true
+  ios: true
+  remove_alpha_ios: true
+  min_sdk_android: 24
+  adaptive_icon_background: "#2D31FA"
+  adaptive_icon_foreground: assets/branding/icon-foreground.png
+  adaptive_icon_monochrome: assets/branding/icon-monochrome.png
+
+# The app is dark only (ThemeMode.dark in lib/core/app.dart), so the launch
+# screen is the same navy in both modes; a white flash before a dark app is
+# what this is here to prevent.
+flutter_native_splash:
+  color: "#0F172A"
+  color_dark: "#0F172A"
+  image: assets/branding/splash-light.png
+  image_dark: assets/branding/splash-dark.png
+  android_12:
+    image: assets/branding/splash-light.png
+    icon_background_color: "#0F172A"
+    image_dark: assets/branding/splash-dark.png
+    icon_background_color_dark: "#0F172A"
+  web: false
 
 flutter:
   uses-material-design: true

@@ -3,23 +3,65 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SurSaar – Privacy</title>
-  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <title>Privacy · SurSaar</title>
+  <meta name="description" content="SurSaar has no account, no server and no analytics. Your playing, your camera picture and your progress stay on your device; the app only downloads the public song catalogue and its font.">
+  <link rel="canonical" href="https://pallavsharmaofficial.github.io/SurSaar/privacy.html">
+  <link rel="icon" type="image/png" href="favicon.png">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="nav">
-    <a class="brand" href="./"><img src="assets/logo.svg" alt="" width="34" height="34"><span>Sur<em>Saar</em></span></a>
+    <a class="brand" href="./"><img src="favicon.png" alt="" width="34" height="34"><span>Sur<em>Saar</em></span></a>
     <nav><a href="./">Home</a><a class="btn btn-primary" href="app/">Open the web app</a></nav>
   </header>
   <main class="section narrow">
     <h1>Privacy</h1>
-    <p><b>Camera and microphone stay on your device.</b> The web app asks the browser for camera and microphone access only when you press play in a practice session. Video frames are analysed by MediaPipe hand tracking running in your browser; audio is analysed by a chord and onset detector written in Dart, also in your browser. No audio, video or landmarks are ever sent to a server.</p>
-    <p><b>Your progress is local.</b> Sessions, favourites, lesson progress and settings are stored in your browser's local storage (or the app's private storage on a phone). Clearing site data removes them. There are no accounts.</p>
-    <p><b>Content is fetched from GitHub.</b> The song and lesson catalogue is a public JSON file in the project repository. Loading it makes a normal HTTPS request to GitHub; the app also works fully offline from a bundled copy. The hand-tracking model and its runtime are fetched from jsDelivr and Google's model storage the first time the camera is used.</p>
-    <p><b>No analytics, no ads, no third-party trackers.</b></p>
-    <p>Questions? Open an issue on <a href="https://github.com/pallavsharmaofficial/SurSaar/issues" rel="noopener">GitHub</a>.</p>
+    <p class="fine">Last updated 7 October 2026</p>
+
+    <h2>The short version</h2>
+    <p><b>SurSaar has no account, no server of its own, no analytics, no advertising and no tracking.</b> What you play, what the camera sees, your progress and the songs you add stay on your device. The app does make two kinds of ordinary network request, to GitHub for the public song catalogue and to Google Fonts for its typeface. Both are described below, and neither carries anything you have typed, played or shown the camera.</p>
+
+    <h2>What stays on your device</h2>
+    <p>These are written to the app's own private storage on Android and iOS, and to your browser's local storage on the web. They are never uploaded, and we cannot read them.</p>
+    <ul>
+      <li>Your profile: the name and bio you type, and the photo you pick, shrunk to at most 512 pixels.</li>
+      <li>Your settings, favourite songs, lesson and course progress, and achievements.</li>
+      <li>A summary of each practice session: when, for how long, your score, how many chords you played and how many you missed. Never the sound or the picture.</li>
+      <li>What the tutor has learned about you: how well you know each chord and which chord changes are slow.</li>
+      <li>Songs you add by pasting a chord sheet, including any lyrics in what you pasted.</li>
+      <li>A saved copy of the song catalogue, so the app works the next time you have no connection.</li>
+    </ul>
+
+    <h2>Microphone, camera and photos</h2>
+    <p>The app asks for each only when you use the feature that needs it. Every other screen works if you refuse.</p>
+    <ul>
+      <li><b>Microphone.</b> During a practice session and in the tuner, to hear which chord or note you play and whether you are on the beat. The sound is analysed on your device as it arrives. SurSaar does not record it, keep it or send it anywhere.</li>
+      <li><b>Camera.</b> During a practice session, to show you your own hands next to the chord diagram. On Android and iOS this is a live preview only: the app does not analyse, save or send the picture. In the web app, hand tracking runs inside your browser and nothing is sent. The first time you use the camera on the web, your browser downloads the tracking code from <code>cdn.jsdelivr.net</code> and its model from <code>storage.googleapis.com</code>, and those servers see your IP address like any website you visit.</li>
+      <li><b>Photos.</b> Only when you tap Change Photo on your profile, and only the one picture you choose.</li>
+    </ul>
+
+    <h2>What the app downloads</h2>
+    <ul>
+      <li><b>The song catalogue.</b> When it opens, the app asks GitHub for one public file of songs, lessons and chord shapes. The request carries no account and nothing personal, but GitHub, like any host, sees your IP address and the usual request details; see <a href="https://docs.github.com/site-policy/privacy-policies/github-privacy-statement" rel="noopener">GitHub's privacy statement</a>. If you are offline, the app uses the copy it saved, or the one bundled inside it.</li>
+      <li><b>Its typeface.</b> The app uses the Poppins font, which it downloads from Google Fonts the first time it is needed and then keeps. Google sees your IP address when it does; see <a href="https://policies.google.com/privacy" rel="noopener">Google's privacy policy</a>. If you are offline, the app uses a default font.</li>
+    </ul>
+    <p>The web app is served from GitHub Pages, so GitHub also sees the request for the page itself.</p>
+
+    <h2>Links that leave the app</h2>
+    <p>The website, the source code, tutorial videos, <i>Find chords online</i> and <i>Request this song</i> open in your browser or another app, and from there that site's own privacy policy applies. <i>Find chords online</i> searches DuckDuckGo for the words you typed. <i>Request this song</i> opens a pre-filled form on GitHub; nothing is sent unless you sign in there and submit it, and if you do, the request is a public GitHub issue under your GitHub name.</p>
+
+    <h2>Accounts, advertising and analytics</h2>
+    <p>There are none. The app contains no advertising network, no analytics or crash-reporting service and no other third-party code that collects data, only the open-source Flutter packages listed in the source.</p>
+
+    <h2>Children</h2>
+    <p>The app is not directed at children and collects personal information from no one, children included. A child practising guitar with it is doing so on their own device, and what they play never leaves it.</p>
+
+    <h2>Deleting your data</h2>
+    <p>We hold none, so there is nothing to ask us to delete. On your device you can remove a song you added from its page, reset the tutor's memory from the Insights screen, or erase everything by clearing the app's storage (Android: Settings, Apps, SurSaar, Storage, Clear data) or uninstalling it. On the web, clear the site's data in your browser.</p>
+
+    <h2>Changes and contact</h2>
+    <p>If this ever changes, and the intention is that it does not, the new policy will be published here before the change takes effect. The app is open source: you can read exactly what it does at <a href="https://github.com/pallavsharmaofficial/SurSaar" rel="noopener">github.com/pallavsharmaofficial/SurSaar</a> and raise anything at <a href="https://github.com/pallavsharmaofficial/SurSaar/issues" rel="noopener">its issue tracker</a>.</p>
   </main>
-  <footer><p><a href="./">Home</a></p></footer>
+  <footer><p><a href="./">Home</a> · <a href="terms.html">Terms</a> · <a href="app/">Web app</a> · MIT licensed</p></footer>
 </body>
 </html>

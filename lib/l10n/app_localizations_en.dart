@@ -349,6 +349,12 @@ class AppLocalizationsEn extends AppLocalizations {
   String get sourceCode => 'Source code on GitHub';
 
   @override
+  String get privacyPolicy => 'Privacy policy';
+
+  @override
+  String get termsOfUse => 'Terms of use';
+
+  @override
   String get privacyNote =>
       'Camera and microphone are processed on your device only. Nothing is uploaded.';
 

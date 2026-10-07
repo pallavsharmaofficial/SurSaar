@@ -16,6 +16,9 @@ import '../../repositories/settings_repository.dart';
 import '../../repositories/song_repository.dart';
 import '../../teacher/engine/practice_plan.dart';
 import '../../teacher/engine/teacher_engine.dart';
+import '../../teacher/services/audio_capture_service.dart';
+import '../../teacher/services/sound_service.dart';
+import '../../teacher/services/vision_service.dart';
 import '../../tutor/journey.dart';
 import '../../tutor/tutor_repository.dart';
 import '../../widgets/tutor/sheet_views.dart';
@@ -96,9 +99,21 @@ String adhocPracticeLocation(
 }
 
 class TeacherScreen extends StatelessWidget {
-  const TeacherScreen({super.key, required this.request});
+  const TeacherScreen({
+    super.key,
+    required this.request,
+    this.audioService,
+    this.visionService,
+    this.soundService,
+  });
 
   final TeacherRequest request;
+
+  /// Replace the microphone, camera and speaker (tests, store screenshots);
+  /// by default the platform's own are used.
+  final AudioCaptureService? audioService;
+  final VisionService? visionService;
+  final TeacherSoundService? soundService;
 
   @override
   Widget build(BuildContext context) {
@@ -109,6 +124,9 @@ class TeacherScreen extends StatelessWidget {
         practiceRepository: context.read<PracticeRepository>(),
         progressRepository: context.read<ProgressRepository>(),
         tutorRepository: context.read<TutorRepository>(),
+        audioService: audioService,
+        visionService: visionService,
+        soundService: soundService,
       ),
       child: _PlanResolver(request: request),
     );

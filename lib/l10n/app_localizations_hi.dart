@@ -348,6 +348,12 @@ class AppLocalizationsHi extends AppLocalizations {
   String get sourceCode => 'GitHub पर सोर्स कोड';
 
   @override
+  String get privacyPolicy => 'गोपनीयता नीति';
+
+  @override
+  String get termsOfUse => 'उपयोग की शर्तें';
+
+  @override
   String get privacyNote =>
       'कैमरा और माइक्रोफ़ोन केवल आपके डिवाइस पर प्रोसेस होते हैं। कुछ भी अपलोड नहीं होता।';
 

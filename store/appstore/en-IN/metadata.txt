@@ -1,0 +1,43 @@
+NAME (30 characters)
+SurSaar: AI Guitar Teacher
+
+SUBTITLE (30 characters)
+Guitar lessons that listen
+
+PROMOTIONAL TEXT (170 characters)
+A guitar teacher that listens to your chords and your strumming, in Hindi and English. Free, no account, no ads. Your playing is never recorded or uploaded.
+
+KEYWORDS (100 characters, comma separated, no spaces)
+guitar,chords,tuner,strumming,bollywood,lessons,teacher,capo,songs,hindi,music,learn,practice
+
+CATEGORY
+Primary: Music
+Secondary: Education
+
+AGE RATING
+4+ (no objectionable content)
+
+PRIVACY
+Data Not Collected. No tracking. Privacy policy:
+https://pallavsharmaofficial.github.io/SurSaar/privacy.html
+
+SUPPORT URL
+https://github.com/pallavsharmaofficial/SurSaar/issues
+
+MARKETING URL
+https://pallavsharmaofficial.github.io/SurSaar/
+
+DESCRIPTION
+(use store/play/en-IN/full_description.txt; the App Store allows the same text)
+
+REVIEW NOTES
+The app has no account and no server of its own, so there is nothing to sign in
+to. On launch it downloads one public JSON file of songs from GitHub and falls
+back to the copy bundled inside the app when offline. The microphone is used
+only during a practice session or in the tuner, to analyse the chord or pitch
+on the device; nothing is recorded or uploaded. The camera is used only during a
+practice session, as a live preview of the user's own hands; frames are not
+analysed, saved or sent. The photo library is used only when the user taps
+Change Photo on the Profile tab. Every screen works with all three refused.
+To try it: open Home, tap Tuner and pluck a string, or open Learn, choose a song
+and start a practice session. The app is free with no purchases.

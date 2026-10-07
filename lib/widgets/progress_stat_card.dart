@@ -21,7 +21,9 @@ class ProgressStatCard extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: theme.colorScheme.surfaceContainerHighest,
+        // Light like the session and achievement cards below it: the text is
+        // dark, and the dark theme's own container colour is dark too.
+        color: AppColors.surfaceLight,
         borderRadius: BorderRadius.circular(16),
       ),
       child: Column(

@@ -228,6 +228,16 @@ class _ProfileViewState extends State<_ProfileView> {
                         title: l10n.sendFeedback,
                         url: AppConstants.feedbackUrl,
                       ),
+                      _LinkTile(
+                        icon: Icons.privacy_tip_outlined,
+                        title: l10n.privacyPolicy,
+                        url: AppConstants.privacyUrl,
+                      ),
+                      _LinkTile(
+                        icon: Icons.description_outlined,
+                        title: l10n.termsOfUse,
+                        url: AppConstants.termsUrl,
+                      ),
                       const SizedBox(height: 12),
                       Text(
                         l10n.privacyNote,

@@ -1,35 +1,51 @@
 {
-    "name": "SurSaar – AI Guitar Teacher",
-    "short_name": "SurSaar",
-    "start_url": ".",
-    "display": "standalone",
-    "background_color": "#0F172A",
-    "theme_color": "#0F172A",
-    "description": "Learn guitar with an AI teacher that watches your hands, listens to your chords and keeps you on the beat.",
-    "orientation": "any",
-    "prefer_related_applications": false,
-    "icons": [
-        {
-            "src": "icons/Icon-192.png",
-            "sizes": "192x192",
-            "type": "image/png"
-        },
-        {
-            "src": "icons/Icon-512.png",
-            "sizes": "512x512",
-            "type": "image/png"
-        },
-        {
-            "src": "icons/Icon-maskable-192.png",
-            "sizes": "192x192",
-            "type": "image/png",
-            "purpose": "maskable"
-        },
-        {
-            "src": "icons/Icon-maskable-512.png",
-            "sizes": "512x512",
-            "type": "image/png",
-            "purpose": "maskable"
-        }
-    ]
+  "name": "SurSaar — सुरसार",
+  "short_name": "SurSaar",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "background_color": "#0F172A",
+  "theme_color": "#0F172A",
+  "description": "Learn guitar with an AI teacher that watches your hands, listens to your chords and keeps you on the beat. Hindi and English, free, no account.",
+  "lang": "en",
+  "dir": "ltr",
+  "categories": ["education", "music", "entertainment"],
+  "orientation": "any",
+  "prefer_related_applications": false,
+  "icons": [
+    { "src": "icons/Icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/Icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icons/Icon-maskable-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "icons/Icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    {
+      "name": "Tune your guitar",
+      "short_name": "Tuner",
+      "description": "Pluck a string and see how far off it is",
+      "url": "./#/tuner",
+      "icons": [{ "src": "icons/Icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Find a song",
+      "short_name": "Songs",
+      "description": "Search by title, artist, chord or tag",
+      "url": "./#/search",
+      "icons": [{ "src": "icons/Icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Learn",
+      "short_name": "Learn",
+      "description": "Courses, lessons and your guided practice",
+      "url": "./#/learn",
+      "icons": [{ "src": "icons/Icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Progress",
+      "short_name": "Progress",
+      "description": "Your streak, scores and what to practise next",
+      "url": "./#/progress",
+      "icons": [{ "src": "icons/Icon-192.png", "sizes": "192x192" }]
+    }
+  ]
 }

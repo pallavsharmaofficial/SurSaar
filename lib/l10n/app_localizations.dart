@@ -758,6 +758,18 @@ abstract class AppLocalizations {
   /// **'Source code on GitHub'**
   String get sourceCode;
 
+  /// No description provided for @privacyPolicy.
+  ///
+  /// In en, this message translates to:
+  /// **'Privacy policy'**
+  String get privacyPolicy;
+
+  /// No description provided for @termsOfUse.
+  ///
+  /// In en, this message translates to:
+  /// **'Terms of use'**
+  String get termsOfUse;
+
   /// No description provided for @privacyNote.
   ///
   /// In en, this message translates to:
