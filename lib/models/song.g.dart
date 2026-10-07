@@ -64,6 +64,17 @@ Song _$SongFromJson(Map<String, dynamic> json) => Song(
   tabs: json['tabs'] as String?,
   notes: json['notes'] as String?,
   addedByUser: json['addedByUser'] as bool? ?? false,
+  collection: $enumDecodeNullable(
+    _$SongCollectionEnumMap,
+    json['collection'],
+    unknownValue: JsonKey.nullForUndefinedEnumValue,
+  ),
+  year: (json['year'] as num?)?.toInt(),
+  techniqueFocus:
+      (json['techniqueFocus'] as List<dynamic>?)
+          ?.map((e) => e as String)
+          .toList() ??
+      const <String>[],
 );
 
 Map<String, dynamic> _$SongToJson(Song instance) => <String, dynamic>{
@@ -92,10 +103,20 @@ Map<String, dynamic> _$SongToJson(Song instance) => <String, dynamic>{
   'tabs': instance.tabs,
   'notes': instance.notes,
   'addedByUser': instance.addedByUser,
+  'collection': _$SongCollectionEnumMap[instance.collection],
+  'year': instance.year,
+  'techniqueFocus': instance.techniqueFocus,
 };
 
 const _$SongDifficultyEnumMap = {
   SongDifficulty.beginner: 'beginner',
   SongDifficulty.intermediate: 'intermediate',
   SongDifficulty.advanced: 'advanced',
+};
+
+const _$SongCollectionEnumMap = {
+  SongCollection.bollywood: 'bollywood',
+  SongCollection.global: 'global',
+  SongCollection.band: 'band',
+  SongCollection.instrumental: 'instrumental',
 };

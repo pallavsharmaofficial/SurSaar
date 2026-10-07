@@ -43,6 +43,9 @@ class AppConstants {
   static const String websiteUrl =
       'https://$githubOwner.github.io/$githubRepo/';
   static const String webAppUrl = '${websiteUrl}app/';
+  static const String privacyUrl = '${websiteUrl}privacy.html';
+  static const String termsUrl = '${websiteUrl}terms.html';
+  static const String supportUrl = '${websiteUrl}support.html';
   static const String feedbackUrl = '$repositoryUrl/issues/new/choose';
   static const String songRequestUrl = '$repositoryUrl/issues/new';
 

@@ -50,3 +50,8 @@ app.*.map.json
 
 # local Pages preview
 /dist/
+
+# Android release signing, kept off the repository
+android/key.properties
+*.jks
+*.keystore

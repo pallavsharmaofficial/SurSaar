@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 import '../../models/coaching_mode.dart';
 import '../../models/lesson.dart';
 import '../../models/song.dart';
+import '../../screens/library/library_screen.dart';
 import '../../screens/courses/course_detail_screen.dart';
 import '../../screens/home/home_screen.dart';
 import '../../screens/learn/learn_screen.dart';
@@ -17,6 +18,8 @@ import '../../screens/songs/song_detail_screen.dart';
 import '../../screens/songs/song_search_screen.dart';
 import '../../screens/teacher/teacher_screen.dart';
 import '../../screens/tuner/tuner_screen.dart';
+import '../../screens/tutor/insights_screen.dart';
+import '../../screens/tutor/journey_screen.dart';
 
 /// Routes are plain URLs so every screen deep-links on the web
 /// (e.g. `#/song/kabira`, `#/practice/adhoc?chords=Em&mode=learn`).
@@ -96,6 +99,44 @@ class AppRouter {
             ),
           );
         },
+      ),
+      GoRoute(
+        path: '/library',
+        name: 'library',
+        pageBuilder: (context, state) => _page(
+          state,
+          LibraryScreen(
+            initialShelf: SongCollection.parse(
+              state.uri.queryParameters['shelf'],
+            ),
+          ),
+        ),
+      ),
+      GoRoute(
+        path: '/tutor/insights',
+        name: 'tutorInsights',
+        pageBuilder: (context, state) => _page(state, const InsightsScreen()),
+      ),
+      GoRoute(
+        path: '/tutor/song/:id',
+        name: 'tutorJourney',
+        pageBuilder: (context, state) =>
+            _page(state, JourneyScreen(songId: state.pathParameters['id']!)),
+        routes: <RouteBase>[
+          GoRoute(
+            path: 'step/:index',
+            name: 'tutorStep',
+            pageBuilder: (context, state) => _page(
+              state,
+              TeacherScreen(
+                request: TeacherRequest.stage(
+                  state.pathParameters['id']!,
+                  int.tryParse(state.pathParameters['index'] ?? '') ?? 0,
+                ),
+              ),
+            ),
+          ),
+        ],
       ),
       GoRoute(
         path: '/course/:id',

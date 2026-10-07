@@ -115,7 +115,13 @@ class ContentRepository {
   }
 
   Future<ContentBundle> _loadLocalBundle() async {
-    final raw = await rootBundle.loadString(assetPath);
+    // Decoded here rather than with rootBundle.loadString, which hands assets
+    // over 50 KB to a background isolate; the JSON is parsed on this isolate
+    // anyway, and the isolate hop never completes under widget tests.
+    final data = await rootBundle.load(assetPath);
+    final raw = utf8.decode(
+      data.buffer.asUint8List(data.offsetInBytes, data.lengthInBytes),
+    );
     return parseBundle(raw);
   }
 

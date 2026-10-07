@@ -758,6 +758,24 @@ abstract class AppLocalizations {
   /// **'Source code on GitHub'**
   String get sourceCode;
 
+  /// No description provided for @supportTheWork.
+  ///
+  /// In en, this message translates to:
+  /// **'Support the work'**
+  String get supportTheWork;
+
+  /// No description provided for @privacyPolicy.
+  ///
+  /// In en, this message translates to:
+  /// **'Privacy policy'**
+  String get privacyPolicy;
+
+  /// No description provided for @termsOfUse.
+  ///
+  /// In en, this message translates to:
+  /// **'Terms of use'**
+  String get termsOfUse;
+
   /// No description provided for @privacyNote.
   ///
   /// In en, this message translates to:
@@ -1345,6 +1363,420 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Mirror the preview'**
   String get mirrorPreview;
+
+  /// No description provided for @learnWithTutor.
+  ///
+  /// In en, this message translates to:
+  /// **'Learn with Tutor'**
+  String get learnWithTutor;
+
+  /// No description provided for @songLibrary.
+  ///
+  /// In en, this message translates to:
+  /// **'Song library'**
+  String get songLibrary;
+
+  /// No description provided for @shelfAll.
+  ///
+  /// In en, this message translates to:
+  /// **'All'**
+  String get shelfAll;
+
+  /// No description provided for @shelfBollywood.
+  ///
+  /// In en, this message translates to:
+  /// **'Bollywood'**
+  String get shelfBollywood;
+
+  /// No description provided for @shelfGlobal.
+  ///
+  /// In en, this message translates to:
+  /// **'Global hits'**
+  String get shelfGlobal;
+
+  /// No description provided for @shelfBand.
+  ///
+  /// In en, this message translates to:
+  /// **'Band music'**
+  String get shelfBand;
+
+  /// No description provided for @shelfInstrumental.
+  ///
+  /// In en, this message translates to:
+  /// **'Instrumental'**
+  String get shelfInstrumental;
+
+  /// No description provided for @singleNoteTab.
+  ///
+  /// In en, this message translates to:
+  /// **'Single-note tab'**
+  String get singleNoteTab;
+
+  /// No description provided for @tutorDebrief.
+  ///
+  /// In en, this message translates to:
+  /// **'Your tutor\'s notes'**
+  String get tutorDebrief;
+
+  /// No description provided for @whatWentWell.
+  ///
+  /// In en, this message translates to:
+  /// **'What went well'**
+  String get whatWentWell;
+
+  /// No description provided for @whatToImprove.
+  ///
+  /// In en, this message translates to:
+  /// **'What to work on'**
+  String get whatToImprove;
+
+  /// No description provided for @yourPlayingStyle.
+  ///
+  /// In en, this message translates to:
+  /// **'Your playing style'**
+  String get yourPlayingStyle;
+
+  /// No description provided for @continueLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Continue'**
+  String get continueLabel;
+
+  /// No description provided for @songJourney.
+  ///
+  /// In en, this message translates to:
+  /// **'Song path'**
+  String get songJourney;
+
+  /// No description provided for @chordSheet.
+  ///
+  /// In en, this message translates to:
+  /// **'Chord chart'**
+  String get chordSheet;
+
+  /// No description provided for @tabSheet.
+  ///
+  /// In en, this message translates to:
+  /// **'Tab'**
+  String get tabSheet;
+
+  /// No description provided for @continueLearning.
+  ///
+  /// In en, this message translates to:
+  /// **'Continue learning'**
+  String get continueLearning;
+
+  /// No description provided for @tutorSuggests.
+  ///
+  /// In en, this message translates to:
+  /// **'Your tutor suggests'**
+  String get tutorSuggests;
+
+  /// No description provided for @goodMorning.
+  ///
+  /// In en, this message translates to:
+  /// **'Good morning'**
+  String get goodMorning;
+
+  /// No description provided for @goodAfternoon.
+  ///
+  /// In en, this message translates to:
+  /// **'Good afternoon'**
+  String get goodAfternoon;
+
+  /// No description provided for @goodEvening.
+  ///
+  /// In en, this message translates to:
+  /// **'Good evening'**
+  String get goodEvening;
+
+  /// No description provided for @tutorIntroNew.
+  ///
+  /// In en, this message translates to:
+  /// **'I\'m your guitar tutor. I\'ll watch, listen and tell you exactly what to play next.'**
+  String get tutorIntroNew;
+
+  /// No description provided for @tutorIntroBack.
+  ///
+  /// In en, this message translates to:
+  /// **'Here\'s what I picked for you today.'**
+  String get tutorIntroBack;
+
+  /// No description provided for @chordsKnown.
+  ///
+  /// In en, this message translates to:
+  /// **'{count} chords known'**
+  String chordsKnown(int count);
+
+  /// No description provided for @minutesPlayed.
+  ///
+  /// In en, this message translates to:
+  /// **'{count} min played'**
+  String minutesPlayed(int count);
+
+  /// No description provided for @sessionsCount.
+  ///
+  /// In en, this message translates to:
+  /// **'{count} sessions'**
+  String sessionsCount(int count);
+
+  /// No description provided for @todaysLesson.
+  ///
+  /// In en, this message translates to:
+  /// **'TODAY\'S LESSON'**
+  String get todaysLesson;
+
+  /// No description provided for @pickUpWhereYouLeft.
+  ///
+  /// In en, this message translates to:
+  /// **'PICK UP WHERE YOU LEFT OFF'**
+  String get pickUpWhereYouLeft;
+
+  /// No description provided for @styleEmpty.
+  ///
+  /// In en, this message translates to:
+  /// **'Play a lesson and I will start noticing your habits.'**
+  String get styleEmpty;
+
+  /// No description provided for @searchLibraryHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Song, artist or chord…'**
+  String get searchLibraryHint;
+
+  /// No description provided for @readyForMe.
+  ///
+  /// In en, this message translates to:
+  /// **'Ready for me'**
+  String get readyForMe;
+
+  /// No description provided for @libraryCount.
+  ///
+  /// In en, this message translates to:
+  /// **'{count} songs'**
+  String libraryCount(int count);
+
+  /// No description provided for @difficultyBeginner.
+  ///
+  /// In en, this message translates to:
+  /// **'Beginner'**
+  String get difficultyBeginner;
+
+  /// No description provided for @difficultyIntermediate.
+  ///
+  /// In en, this message translates to:
+  /// **'Intermediate'**
+  String get difficultyIntermediate;
+
+  /// No description provided for @difficultyAdvanced.
+  ///
+  /// In en, this message translates to:
+  /// **'Advanced'**
+  String get difficultyAdvanced;
+
+  /// No description provided for @restartJourneyTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Restart this song'**
+  String get restartJourneyTitle;
+
+  /// No description provided for @restartJourneyBody.
+  ///
+  /// In en, this message translates to:
+  /// **'I will rebuild the steps from what you can play now. Your skill history stays.'**
+  String get restartJourneyBody;
+
+  /// No description provided for @restart.
+  ///
+  /// In en, this message translates to:
+  /// **'Restart'**
+  String get restart;
+
+  /// No description provided for @pasteTab.
+  ///
+  /// In en, this message translates to:
+  /// **'Paste a single-note tab'**
+  String get pasteTab;
+
+  /// No description provided for @pasteTabHelp.
+  ///
+  /// In en, this message translates to:
+  /// **'Paste ASCII tab (e|---0---|, B|--1--3--|…). It stays on this device and I will teach it note by note.'**
+  String get pasteTabHelp;
+
+  /// No description provided for @songDetails.
+  ///
+  /// In en, this message translates to:
+  /// **'Song details'**
+  String get songDetails;
+
+  /// No description provided for @chartVerified.
+  ///
+  /// In en, this message translates to:
+  /// **'Verified chart'**
+  String get chartVerified;
+
+  /// No description provided for @chartCommunity.
+  ///
+  /// In en, this message translates to:
+  /// **'Community chart – trust your ears'**
+  String get chartCommunity;
+
+  /// No description provided for @journeyComplete.
+  ///
+  /// In en, this message translates to:
+  /// **'You finished this song. Replay any step to polish it.'**
+  String get journeyComplete;
+
+  /// No description provided for @journeyIntro.
+  ///
+  /// In en, this message translates to:
+  /// **'I\'ve planned {count} steps for you – one at a time, I\'ll tell you when to move on.'**
+  String journeyIntro(int count);
+
+  /// No description provided for @startStep.
+  ///
+  /// In en, this message translates to:
+  /// **'Step {number}: {title}'**
+  String startStep(int number, String title);
+
+  /// No description provided for @yourPath.
+  ///
+  /// In en, this message translates to:
+  /// **'Your path'**
+  String get yourPath;
+
+  /// No description provided for @tempoPercent.
+  ///
+  /// In en, this message translates to:
+  /// **'{percent}% speed'**
+  String tempoPercent(int percent);
+
+  /// No description provided for @passMark.
+  ///
+  /// In en, this message translates to:
+  /// **'pass at {score}%'**
+  String passMark(int score);
+
+  /// No description provided for @noTabYet.
+  ///
+  /// In en, this message translates to:
+  /// **'No tab yet – paste one to learn it note by note.'**
+  String get noTabYet;
+
+  /// No description provided for @whatYouWillLearn.
+  ///
+  /// In en, this message translates to:
+  /// **'What you\'ll learn'**
+  String get whatYouWillLearn;
+
+  /// No description provided for @tutorNotes.
+  ///
+  /// In en, this message translates to:
+  /// **'Tutor\'s notes'**
+  String get tutorNotes;
+
+  /// No description provided for @chartSource.
+  ///
+  /// In en, this message translates to:
+  /// **'Chart source'**
+  String get chartSource;
+
+  /// No description provided for @tabNotRecognised.
+  ///
+  /// In en, this message translates to:
+  /// **'No tab lines found yet.'**
+  String get tabNotRecognised;
+
+  /// No description provided for @tabRecognised.
+  ///
+  /// In en, this message translates to:
+  /// **'{notes} notes in {sections} sections'**
+  String tabRecognised(int notes, int sections);
+
+  /// No description provided for @useThisTab.
+  ///
+  /// In en, this message translates to:
+  /// **'Learn this tab'**
+  String get useThisTab;
+
+  /// No description provided for @resetTutorTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Reset the tutor\'s memory'**
+  String get resetTutorTitle;
+
+  /// No description provided for @resetTutorBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Forget your chord skills, habits and song paths? Your practice history stays.'**
+  String get resetTutorBody;
+
+  /// No description provided for @tutorObservations.
+  ///
+  /// In en, this message translates to:
+  /// **'What I have noticed'**
+  String get tutorObservations;
+
+  /// No description provided for @chordMastery.
+  ///
+  /// In en, this message translates to:
+  /// **'Chord mastery'**
+  String get chordMastery;
+
+  /// No description provided for @chordChanges.
+  ///
+  /// In en, this message translates to:
+  /// **'Chord changes'**
+  String get chordChanges;
+
+  /// No description provided for @timingEmpty.
+  ///
+  /// In en, this message translates to:
+  /// **'Play along once with the click and I will map your timing.'**
+  String get timingEmpty;
+
+  /// No description provided for @tutorDiary.
+  ///
+  /// In en, this message translates to:
+  /// **'Tutor\'s diary'**
+  String get tutorDiary;
+
+  /// No description provided for @drill.
+  ///
+  /// In en, this message translates to:
+  /// **'Drill'**
+  String get drill;
+
+  /// No description provided for @rushing.
+  ///
+  /// In en, this message translates to:
+  /// **'Rushing'**
+  String get rushing;
+
+  /// No description provided for @onTheBeat.
+  ///
+  /// In en, this message translates to:
+  /// **'On the beat'**
+  String get onTheBeat;
+
+  /// No description provided for @dragging.
+  ///
+  /// In en, this message translates to:
+  /// **'Dragging'**
+  String get dragging;
+
+  /// No description provided for @timingSummary.
+  ///
+  /// In en, this message translates to:
+  /// **'Average {offset} ms from the beat, spread ±{spread} ms, {accuracy}% on time.'**
+  String timingSummary(int offset, int spread, int accuracy);
+
+  /// No description provided for @notesHeading.
+  ///
+  /// In en, this message translates to:
+  /// **'Notes'**
+  String get notesHeading;
 }
 
 class _AppLocalizationsDelegate

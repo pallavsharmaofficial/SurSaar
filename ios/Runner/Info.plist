@@ -7,7 +7,12 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>Sursaar</string>
+	<string>SurSaar</string>
+	<key>CFBundleLocalizations</key>
+	<array>
+		<string>en</string>
+		<string>hi</string>
+	</array>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -26,12 +31,15 @@
 	<string>$(FLUTTER_BUILD_NUMBER)</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<!-- All three are optional: every other screen works with each of them refused. -->
 	<key>NSCameraUsageDescription</key>
-	<string>SurSaar uses the camera to track your hands and guide your finger placement while you practise.</string>
+	<string>The camera shows you your own hands while you practise, so you can line your fingers up with the chord diagram. The picture stays on this phone and is not saved.</string>
 	<key>NSMicrophoneUsageDescription</key>
-	<string>SurSaar listens to your guitar to recognise the chords you play and check your strumming timing.</string>
+	<string>SurSaar listens while you practise or tune, to hear which chord or note you play and whether you are on the beat. The sound is analysed on this phone as it arrives and is never recorded or uploaded.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Allow access to pick a profile photo.</string>
+	<string>SurSaar asks to see your photos only when you tap Change Photo, so you can pick a picture for your profile. It is shrunk and kept on this phone.</string>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -72,5 +80,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIStatusBarHidden</key>
+	<false/>
 </dict>
 </plist>

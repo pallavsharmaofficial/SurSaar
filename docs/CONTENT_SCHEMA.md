@@ -41,7 +41,10 @@
   "tutorialUrl": "https://…",
   "sourceUrl": "https://…",             // attribution for imported sheets
   "notes": "Community-sourced progression…",
-  "tabs": null,                         // optional ASCII tab block
+  "tabs": null,                         // optional single-note ASCII tab (see below)
+  "collection": "bollywood",            // library shelf: bollywood | global | band | instrumental
+  "year": 2013,
+  "techniqueFocus": ["D to Bm change"], // what the song teaches (shown on its journey)
   "addedByUser": false                  // true only for songs imported on a device
 }
 ```
@@ -54,6 +57,32 @@
   `capo`, exactly as chord sheets list them; `key` is the sounding key
   (shape key + capo). Choosing a different capo in the app re-transposes the
   shapes by `capo - newCapo`.
+
+## Single-note tabs
+
+`tabs` holds a melody as ASCII tab. When it is set, the tutor teaches the song
+note by note with pitch detection (see `docs/TUTOR.md`).
+
+```
+[Line 1]
+e|---------0---0---0-|
+B|-1---3-------------|
+G|-------------------|
+D|-------------------|
+A|-------------------|
+E|-------------------|
+```
+
+* `[Name]`, `Name:` or `# Name` start a section.
+* Partial blocks (one or two strings) are fine.
+* When several strings sound in one column, the highest is the melody note.
+* Spacing is rhythm: the most common gap is one beat. `tools/catalog` writes
+  four columns per beat.
+* Bundled tabs are only public-domain melodies or warm-ups written for the
+  app. Learners can paste any tab; it stays on their device.
+
+The tutor library shelves are built from `content/catalog/*.json` by
+`tools/catalog/build_catalog.py`.
 
 ## Songs the learner adds
 

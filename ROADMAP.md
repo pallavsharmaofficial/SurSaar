@@ -26,6 +26,27 @@ watches, listens and corrects in real time, on the web and on phones.
 - First-run onboarding, a "Start here" card (first chord in Learn mode), page transitions.
 - Camera fixes: hand tracking in a Web Worker and preloaded, persistent preview (no freeze after the first session), single detection loop, idempotent microphone start.
 
+## Done (v1.3 – the tutor)
+
+- **Learn with Tutor:** the Learn tab opens with your tutor. It shows today's
+  lesson with the reason it was picked, songs in progress, the best song from
+  each shelf, and what it has noticed about your playing.
+- **Song library:** 100 new chords-only songs on four shelves (30 Bollywood,
+  30 global, 30 band, 10 instrumental and devotional), researched from several
+  sources each. Search, difficulty filter and "Ready for me" are included.
+- **Song journeys:** meet the chords → smooth changes → groove → section by
+  section → play along slowly → perform. Each step has a pass mark, steps
+  unlock as you pass, and tempo drops automatically when a step is too fast.
+- **Side by side:** a three-column practice screen (camera · song sheet or
+  tab · coach) on wide screens. The sheet follows the current bar.
+- **Tutor debrief after every session:** what went well, what to work on
+  (with one-tap drills), playing-style notes, and the next step.
+- **Skill profile:** chord mastery, change speeds, timing habits, posture
+  habits, a diary, and an Insights screen.
+- **Melody mode:** single-note tabs taught note by note with pitch detection.
+  Includes an ASCII tab parser, so learners can paste a tab, and public-domain
+  devotional tunes converted from sargam.
+
 ## Next
 
 1. **Fretboard registration.** Detect strings and frets in the frame (edge /

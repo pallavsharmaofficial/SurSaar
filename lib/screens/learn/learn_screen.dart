@@ -15,6 +15,7 @@ import '../../repositories/lesson_repository.dart';
 import '../../widgets/course_card.dart';
 import '../../widgets/lesson_card.dart';
 import '../../widgets/section_header.dart';
+import '../tutor/tutor_hub.dart';
 
 /// Courses (guided paths) and the full lesson library.
 class LearnScreen extends StatelessWidget {
@@ -55,9 +56,10 @@ class _LearnView extends StatelessWidget {
       body: CustomScrollView(
         slivers: <Widget>[
           SliverAppBar.large(title: Text(l10n.learn)),
+          const SliverToBoxAdapter(child: TutorHub()),
           SliverToBoxAdapter(
             child: Padding(
-              padding: const EdgeInsets.fromLTRB(16, 0, 16, 8),
+              padding: const EdgeInsets.fromLTRB(16, 16, 16, 8),
               child: Text(
                 l10n.lessonsDescription,
                 style: theme.textTheme.bodyLarge?.copyWith(

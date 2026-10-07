@@ -20,6 +20,23 @@ At the end the learner gets 0–3 stars, their best streak, and the chords worth
 practising again. "Practise these" starts a Learn session with just those chords.
 Sessions are saved automatically.
 
+## Melody mode
+
+Plans built with `PracticePlan.forMelody` have note targets (`n:<string>:<fret>`)
+instead of chords. Audio goes to `NoteDetector` (YIN) rather than the chord
+detector. A note counts after ringing 150 ms within 0.6 semitones, and wrong
+notes are named with the fret distance ("Move 1 fret lower"). Diagrams and the
+camera overlay show a one-dot shape. Timing is not scored against the strum
+grid for melodies.
+
+## Session report
+
+On `stop()` the engine builds a `SessionReport` from its `PerformanceRecorder`.
+It covers chord-change times, confusions, strum offsets and directions, hand
+visibility, posture hints, pitch accuracy and more, and is exposed as
+`TeacherSnapshot.report`. `TeacherBloc` passes it to the tutor, which updates
+the learner's skill profile and writes the debrief. See `docs/TUTOR.md`.
+
 ## Inputs
 
 | Stream | Web | Android / iOS |

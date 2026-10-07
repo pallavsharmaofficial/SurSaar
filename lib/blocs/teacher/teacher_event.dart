@@ -13,15 +13,24 @@ abstract class TeacherEvent extends Equatable {
 }
 
 class TeacherInitialized extends TeacherEvent {
-  const TeacherInitialized(this.plan, {this.mode});
+  const TeacherInitialized(
+    this.plan, {
+    this.mode,
+    this.journeySongId,
+    this.stageIndex,
+  });
 
   final PracticePlan plan;
 
   /// Overrides the learner's saved preference (e.g. from a link).
   final CoachingMode? mode;
 
+  /// The tutor journey step this session belongs to, if any.
+  final String? journeySongId;
+  final int? stageIndex;
+
   @override
-  List<Object?> get props => <Object?>[plan, mode];
+  List<Object?> get props => <Object?>[plan, mode, journeySongId, stageIndex];
 }
 
 /// Turn on the camera and microphone without starting the session.

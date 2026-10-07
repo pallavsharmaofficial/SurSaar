@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../teacher/engine/practice_plan.dart';
+import '../../teacher/melody/melody_tab.dart';
 
 /// Upcoming chord targets, the current one enlarged with a progress bar.
 class ChordRibbon extends StatelessWidget {
@@ -50,7 +51,7 @@ class ChordRibbon extends StatelessWidget {
                         borderRadius: BorderRadius.circular(12),
                       ),
                       child: Text(
-                        target.chord,
+                        TabNote.display(target.chord),
                         style:
                             (isCurrent
                                     ? theme.textTheme.headlineSmall

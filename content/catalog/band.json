@@ -1,0 +1,2144 @@
+[
+  {
+    "id": "dil_mere",
+    "title": "Dil Mere",
+    "artist": "The Local Train",
+    "album": "Aalas Ka Pedh",
+    "year": 2015,
+    "collection": "band",
+    "difficulty": "beginner",
+    "key": "G#",
+    "capo": 1,
+    "bpm": 93,
+    "duration": 0,
+    "strummingPattern": "D DU D U D",
+    "originalChords": [
+      "G",
+      "D",
+      "Em",
+      "C"
+    ],
+    "sections": [
+      {
+        "name": "Intro",
+        "repeat": 1,
+        "chords": [
+          "G",
+          "D",
+          "Em",
+          "D",
+          "G",
+          "D",
+          "Em",
+          "G"
+        ]
+      },
+      {
+        "name": "Verse",
+        "repeat": 2,
+        "chords": [
+          "G",
+          "D",
+          "C",
+          "D"
+        ]
+      },
+      {
+        "name": "Bridge",
+        "repeat": 1,
+        "chords": [
+          "G",
+          "D",
+          "Em",
+          "D",
+          "C"
+        ]
+      },
+      {
+        "name": "Outro",
+        "repeat": 1,
+        "chords": [
+          "G",
+          "D",
+          "C",
+          "D",
+          "Em"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "open chords",
+      "capo use",
+      "G-D-C changes"
+    ],
+    "tags": [
+      "indie rock",
+      "hindi rock"
+    ],
+    "language": "hi",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Dil+Mere+The+Local+Train+guitar+lesson",
+    "sourceUrl": "https://guitartwitt.com/dil-mere-chords-by-the-local-train/",
+    "notes": "Guitartwitt: capo 1, key Ab(G#), G-D-Em-C shapes; Gitagram tab also lists key Ab. Signature intro is a picked riff (tab-only) - chords here are the rhythm part.",
+    "confidence": "medium"
+  },
+  {
+    "id": "sar_kiye_pahar",
+    "title": "Sar Kiye Pahar",
+    "artist": "Strings",
+    "album": "2",
+    "year": 1992,
+    "collection": "band",
+    "difficulty": "beginner",
+    "key": "G",
+    "capo": 0,
+    "bpm": 0,
+    "duration": 0,
+    "strummingPattern": "D DU UDU",
+    "originalChords": [
+      "G",
+      "C",
+      "F",
+      "Am"
+    ],
+    "sections": [
+      {
+        "name": "Chorus",
+        "repeat": 2,
+        "chords": [
+          "G",
+          "C",
+          "F",
+          "C",
+          "G"
+        ]
+      },
+      {
+        "name": "Verse",
+        "repeat": 2,
+        "chords": [
+          "Am",
+          "F",
+          "C",
+          "G"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "open chords",
+      "F chord",
+      "mixolydian flavour"
+    ],
+    "tags": [
+      "pakistani rock",
+      "pop rock"
+    ],
+    "language": "ur",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Sar+Kiye+Pahar+Strings+guitar+lesson",
+    "sourceUrl": "https://indichords.com/songDetails.jsp?songId=310&titleExtra=Sar-Ki-Ye-Pahar-Strings",
+    "notes": "Indichords and other sources (UG, guitarchordsgaga) agree on G-C-F-C-G chorus and Am-F-C-G verse, key G. F can be simplified to Fmaj7 for beginners. BPM/duration not verified.",
+    "confidence": "medium"
+  },
+  {
+    "id": "aadat",
+    "title": "Aadat",
+    "artist": "Jal",
+    "album": "Aadat",
+    "year": 2004,
+    "collection": "band",
+    "difficulty": "beginner",
+    "key": "C#m",
+    "capo": 4,
+    "bpm": 0,
+    "duration": 0,
+    "strummingPattern": "D UDUD UDUD DU",
+    "originalChords": [
+      "Am",
+      "F",
+      "G"
+    ],
+    "sections": [
+      {
+        "name": "Verse",
+        "repeat": 2,
+        "chords": [
+          "Am",
+          "F",
+          "Am",
+          "F"
+        ]
+      },
+      {
+        "name": "Interlude",
+        "repeat": 1,
+        "chords": [
+          "Am",
+          "G",
+          "F",
+          "F"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "repeat": 2,
+        "chords": [
+          "Am",
+          "G",
+          "F",
+          "G"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "two-chord verse",
+      "capo use",
+      "steady 16th strum"
+    ],
+    "tags": [
+      "pakistani rock",
+      "soft rock"
+    ],
+    "language": "ur",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Aadat+Jal+guitar+lesson",
+    "sourceUrl": "https://chordsfactory.com/aadat-guitar-chords-jal/",
+    "notes": "Chordsfactory: capo 4, Am-F-G shapes (sounding C#m). Gitagram lists capo 2 with the same shapes (sounding Bm) - most sources and the original recording key cited as C#m, so capo 4 used.",
+    "confidence": "medium"
+  },
+  {
+    "id": "woh_lamhe",
+    "title": "Woh Lamhe",
+    "artist": "Jal",
+    "album": "Aadat",
+    "year": 2004,
+    "collection": "band",
+    "difficulty": "beginner",
+    "key": "G#m",
+    "capo": 4,
+    "bpm": 0,
+    "duration": 0,
+    "strummingPattern": "D UDUD UDUD DU",
+    "originalChords": [
+      "Em",
+      "D",
+      "C"
+    ],
+    "sections": [
+      {
+        "name": "Verse",
+        "repeat": 2,
+        "chords": [
+          "Em",
+          "D",
+          "D",
+          "C",
+          "D",
+          "C"
+        ]
+      },
+      {
+        "name": "Bridge",
+        "repeat": 1,
+        "chords": [
+          "Em",
+          "D",
+          "C",
+          "D"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "repeat": 2,
+        "chords": [
+          "Em",
+          "D",
+          "C",
+          "D"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "three-chord song",
+      "capo use",
+      "Em-D-C movement"
+    ],
+    "tags": [
+      "pakistani rock",
+      "soft rock"
+    ],
+    "language": "ur",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Woh+Lamhe+Jal+guitar+lesson",
+    "sourceUrl": "https://chordsfactory.com/woh-lamhe-atif-aslam-guitar-chords/",
+    "notes": "Jal original detected as G#m-F#-E (no capo); Chordsfactory gives capo 4 Em-D-C shapes = same sounding chords. The later Jubin Nautiyal remake is in a different key - not this one.",
+    "confidence": "high"
+  },
+  {
+    "id": "dil_hare",
+    "title": "Dil Haarey",
+    "artist": "Jal",
+    "album": "Aadat",
+    "year": 2004,
+    "collection": "band",
+    "difficulty": "beginner",
+    "key": "G",
+    "capo": 0,
+    "bpm": 90,
+    "duration": 0,
+    "strummingPattern": "D DU UDU",
+    "originalChords": [
+      "G",
+      "C",
+      "D",
+      "Em"
+    ],
+    "sections": [
+      {
+        "name": "Intro",
+        "repeat": 1,
+        "chords": [
+          "G",
+          "C",
+          "D",
+          "G"
+        ]
+      },
+      {
+        "name": "Verse",
+        "repeat": 2,
+        "chords": [
+          "G",
+          "C",
+          "G",
+          "C",
+          "Em",
+          "C",
+          "Em",
+          "C"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "repeat": 2,
+        "chords": [
+          "G",
+          "C",
+          "G",
+          "C"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "open chords",
+      "G-C changes",
+      "Em"
+    ],
+    "tags": [
+      "pakistani rock",
+      "soft rock"
+    ],
+    "language": "ur",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Dil+Haarey+Jal+guitar+lesson",
+    "sourceUrl": "https://www.gitagram.com/chords/dil-hare/",
+    "notes": "Gitagram and Guitar-Gaga both give key G, G-C based. Guitar-Gaga's chorus adds D and Bm (G D C G C D Bm D C); Gitagram's simpler G-C version used here.",
+    "confidence": "medium"
+  },
+  {
+    "id": "kandisa",
+    "title": "Kandisa",
+    "artist": "Indian Ocean",
+    "album": "Kandisa",
+    "year": 2000,
+    "collection": "band",
+    "difficulty": "beginner",
+    "key": "D",
+    "capo": 0,
+    "bpm": 111,
+    "duration": 0,
+    "strummingPattern": "D D DU",
+    "originalChords": [
+      "D",
+      "A"
+    ],
+    "sections": [
+      {
+        "name": "Intro",
+        "repeat": 1,
+        "chords": [
+          "D",
+          "D",
+          "A",
+          "A"
+        ]
+      },
+      {
+        "name": "Verse",
+        "repeat": 2,
+        "chords": [
+          "D",
+          "A",
+          "D",
+          "A"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "repeat": 2,
+        "chords": [
+          "D",
+          "A",
+          "D",
+          "A"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "two-chord drone groove",
+      "rhythm feel"
+    ],
+    "tags": [
+      "fusion",
+      "indian rock"
+    ],
+    "language": "arc",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Kandisa+Indian+Ocean+guitar+lesson",
+    "sourceUrl": "http://hindiguitarchords.blogspot.com/2009/02/kandisa.html",
+    "notes": "Both sources agree on key D with a D-A core. Bridge colour chords disagree (blog: E; Chordify: G and Bm), so only the agreed D-A sections are included. Lyrics are an Aramaic chant - language code 'arc' (Aramaic); app may expect hi.",
+    "confidence": "medium"
+  },
+  {
+    "id": "dooba_dooba",
+    "title": "Dooba Dooba",
+    "artist": "Silk Route",
+    "album": "Boondein",
+    "year": 1998,
+    "collection": "band",
+    "difficulty": "beginner",
+    "key": "G",
+    "capo": 0,
+    "bpm": 0,
+    "duration": 0,
+    "strummingPattern": "D D UU DD DU",
+    "originalChords": [
+      "G",
+      "C",
+      "D"
+    ],
+    "sections": [
+      {
+        "name": "Intro",
+        "repeat": 1,
+        "chords": [
+          "G",
+          "C",
+          "G",
+          "G"
+        ]
+      },
+      {
+        "name": "Verse",
+        "repeat": 2,
+        "chords": [
+          "G",
+          "C",
+          "G",
+          "C"
+        ]
+      },
+      {
+        "name": "Pre-Chorus",
+        "repeat": 1,
+        "chords": [
+          "C",
+          "D",
+          "C",
+          "D",
+          "G"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "repeat": 2,
+        "chords": [
+          "G",
+          "C",
+          "G",
+          "G"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "G-C-D changes",
+      "open chords"
+    ],
+    "tags": [
+      "indipop",
+      "soft rock"
+    ],
+    "language": "hi",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Dooba+Dooba+Silk+Route+guitar+lesson",
+    "sourceUrl": "https://www.musiceducademy.com/songs/dooba-dooba-chords-mohit-chauhan",
+    "notes": "G-C-D shapes agree across Gitagram, Musiceducademy and GuitarTabsExplorer, but the SOUNDING key disagrees (G no capo / Ab capo 3 / F# capo 1). Shapes reliable; capo/key unverified.",
+    "confidence": "low"
+  },
+  {
+    "id": "dhaani",
+    "title": "Dhaani",
+    "artist": "Strings",
+    "album": "Dhaani",
+    "year": 2003,
+    "collection": "band",
+    "difficulty": "beginner",
+    "key": "A",
+    "capo": 0,
+    "bpm": 0,
+    "duration": 0,
+    "strummingPattern": "D DU UDU",
+    "originalChords": [
+      "A",
+      "G",
+      "D",
+      "F#m"
+    ],
+    "sections": [
+      {
+        "name": "Verse",
+        "repeat": 2,
+        "chords": [
+          "A",
+          "G",
+          "D",
+          "A"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "repeat": 2,
+        "chords": [
+          "A",
+          "G",
+          "D",
+          "A"
+        ]
+      },
+      {
+        "name": "Bridge",
+        "repeat": 1,
+        "chords": [
+          "F#m",
+          "A",
+          "G",
+          "G"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "A-G-D mixolydian loop",
+      "open chords"
+    ],
+    "tags": [
+      "pakistani rock",
+      "pop rock"
+    ],
+    "language": "ur",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Dhaani+Strings+guitar+lesson",
+    "sourceUrl": "https://tabandchord.com/2013/03/dhaani-guitar-chords-strings/",
+    "notes": "Tabandchord: A-G-D throughout, key A. GuitarTabsExplorer uses the same A-Em-G-D set but calls it D and gives a Bm-G-D-A bridge. Sounding tonic is A (A mixolydian); bridge chords differ between sources.",
+    "confidence": "medium"
+  },
+  {
+    "id": "good_riddance",
+    "title": "Good Riddance (Time of Your Life)",
+    "artist": "Green Day",
+    "album": "Nimrod",
+    "year": 1997,
+    "collection": "band",
+    "difficulty": "beginner",
+    "key": "G",
+    "capo": 0,
+    "bpm": 95,
+    "duration": 154,
+    "strummingPattern": "D D DU DU",
+    "originalChords": [
+      "G",
+      "Cadd9",
+      "D",
+      "Em"
+    ],
+    "sections": [
+      {
+        "name": "Intro",
+        "repeat": 1,
+        "chords": [
+          "G",
+          "G",
+          "Cadd9",
+          "D"
+        ]
+      },
+      {
+        "name": "Verse",
+        "repeat": 2,
+        "chords": [
+          "G",
+          "G",
+          "Cadd9",
+          "D"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "repeat": 1,
+        "chords": [
+          "Em",
+          "D",
+          "Cadd9",
+          "G",
+          "Em",
+          "D",
+          "Cadd9",
+          "G"
+        ]
+      },
+      {
+        "name": "Tag",
+        "repeat": 1,
+        "chords": [
+          "Em",
+          "G",
+          "Em",
+          "G",
+          "Em",
+          "D",
+          "G",
+          "G"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "G-Cadd9-D anchor fingers",
+      "steady strumming"
+    ],
+    "tags": [
+      "punk rock",
+      "acoustic ballad"
+    ],
+    "language": "en",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Good+Riddance+%28Time+of+Your+Life%29+Green+Day+guitar+lesson",
+    "sourceUrl": "https://tabs.ultimate-guitar.com/tab/green-day/good-riddance-time-of-your-life-chords-1061218",
+    "notes": "Standard tuning, no capo, key G - all major chord sites agree. Original is picked/strummed hybrid; the strum here is a simplification.",
+    "confidence": "high"
+  },
+  {
+    "id": "demons",
+    "title": "Demons",
+    "artist": "Imagine Dragons",
+    "album": "Night Visions",
+    "year": 2012,
+    "collection": "band",
+    "difficulty": "beginner",
+    "key": "D#",
+    "capo": 3,
+    "bpm": 90,
+    "duration": 177,
+    "strummingPattern": "D DU UDU",
+    "originalChords": [
+      "C",
+      "G",
+      "Am",
+      "F"
+    ],
+    "sections": [
+      {
+        "name": "Verse",
+        "repeat": 2,
+        "chords": [
+          "C",
+          "G",
+          "Am",
+          "F"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "repeat": 2,
+        "chords": [
+          "C",
+          "G",
+          "Am",
+          "F"
+        ]
+      },
+      {
+        "name": "Bridge",
+        "repeat": 1,
+        "chords": [
+          "Am",
+          "G",
+          "F",
+          "C"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "I-V-vi-IV",
+      "capo use"
+    ],
+    "tags": [
+      "pop rock",
+      "alt rock"
+    ],
+    "language": "en",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Demons+Imagine+Dragons+guitar+lesson",
+    "sourceUrl": "https://tabs.ultimate-guitar.com/tab/imagine-dragons/demons-chords-1210316",
+    "notes": "Sounding Eb(D#) major; capo 3 with C-G-Am-F shapes is the near-universal guitar version. Bridge order is an approximation of the same four-chord loop.",
+    "confidence": "high"
+  },
+  {
+    "id": "choo_lo",
+    "title": "Choo Lo",
+    "artist": "The Local Train",
+    "album": "Aalas Ka Pedh",
+    "year": 2015,
+    "collection": "band",
+    "difficulty": "intermediate",
+    "key": "E",
+    "capo": 2,
+    "bpm": 0,
+    "duration": 0,
+    "strummingPattern": "D D UDUD",
+    "originalChords": [
+      "D",
+      "A",
+      "Bm",
+      "G"
+    ],
+    "sections": [
+      {
+        "name": "Intro",
+        "repeat": 1,
+        "chords": [
+          "D",
+          "A",
+          "Bm",
+          "G"
+        ]
+      },
+      {
+        "name": "Verse",
+        "repeat": 2,
+        "chords": [
+          "D",
+          "A",
+          "G",
+          "A"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "repeat": 2,
+        "chords": [
+          "Bm",
+          "A",
+          "G",
+          "A"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "Bm barre",
+      "capo use",
+      "dynamic strumming"
+    ],
+    "tags": [
+      "indie rock",
+      "hindi rock"
+    ],
+    "language": "hi",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Choo+Lo+The+Local+Train+guitar+lesson",
+    "sourceUrl": "https://guitartwitt.com/choo-lo-chords-by-the-local-train/",
+    "notes": "Guitartwitt: capo 2, D-A-Bm-G, key E. Other sources use capo 4 with C-G-Am-F shapes - same sounding key E, so they agree.",
+    "confidence": "medium"
+  },
+  {
+    "id": "aaftaab",
+    "title": "Aaftaab",
+    "artist": "The Local Train",
+    "album": "Vaaqif",
+    "year": 2018,
+    "collection": "band",
+    "difficulty": "intermediate",
+    "key": "F#",
+    "capo": 6,
+    "bpm": 107,
+    "duration": 0,
+    "strummingPattern": "D DU UDU",
+    "originalChords": [
+      "C",
+      "G",
+      "Am",
+      "F",
+      "Dm"
+    ],
+    "sections": [
+      {
+        "name": "Intro",
+        "repeat": 1,
+        "chords": [
+          "C",
+          "G",
+          "Am",
+          "G",
+          "F",
+          "C"
+        ]
+      },
+      {
+        "name": "Verse",
+        "repeat": 2,
+        "chords": [
+          "C",
+          "G",
+          "Am",
+          "G",
+          "F",
+          "G"
+        ]
+      },
+      {
+        "name": "Pre-Chorus",
+        "repeat": 1,
+        "chords": [
+          "Am",
+          "G",
+          "C",
+          "G",
+          "F",
+          "G"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "repeat": 2,
+        "chords": [
+          "Dm",
+          "C",
+          "G",
+          "Am",
+          "F"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "high capo",
+      "Dm",
+      "C-G-Am-F movement"
+    ],
+    "tags": [
+      "indie rock",
+      "hindi rock"
+    ],
+    "language": "hi",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Aaftaab+The+Local+Train+guitar+lesson",
+    "sourceUrl": "https://www.gitagram.com/chords/aaftaab/",
+    "notes": "Gitagram: capo 6, C-shapes = F#; Chordify detection lists C#, B, F#, D#m (consistent). GuitarTabsExplorer shows the same progression in G with no capo (a semitone high). Chorus voicing differs between sources.",
+    "confidence": "medium"
+  },
+  {
+    "id": "maaeri",
+    "title": "Maaeri",
+    "artist": "Euphoria",
+    "album": "Phir Dhoom",
+    "year": 2000,
+    "collection": "band",
+    "difficulty": "intermediate",
+    "key": "D#",
+    "capo": 1,
+    "bpm": 0,
+    "duration": 0,
+    "strummingPattern": "D DU UDU",
+    "originalChords": [
+      "D",
+      "A",
+      "G",
+      "C",
+      "A#"
+    ],
+    "sections": [
+      {
+        "name": "Intro",
+        "repeat": 1,
+        "chords": [
+          "D",
+          "A",
+          "G",
+          "C"
+        ]
+      },
+      {
+        "name": "Verse",
+        "repeat": 2,
+        "chords": [
+          "D",
+          "A",
+          "D",
+          "A",
+          "G",
+          "A",
+          "D",
+          "C"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "repeat": 2,
+        "chords": [
+          "D",
+          "C",
+          "A#",
+          "C"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "capo use",
+      "A# (Bb) barre",
+      "sus2 colour"
+    ],
+    "tags": [
+      "hindi rock",
+      "pop rock"
+    ],
+    "language": "hi",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Maaeri+Euphoria+guitar+lesson",
+    "sourceUrl": "https://wrytin.com/manishchauhan/maaeri-chords-euphoria-jfsgrudn",
+    "notes": "Wrytin: capo 1, Dsus2-A-G-C verse (Dsus2 written as D), chorus Dsus2-Cadd9-Bb-C. Chordify gives the original as Eb(D#) major (D#, C#, G#, A#) which matches capo 1 D-C-G-A shapes; the A#-shape in the chorus is not in Chordify's list - doubt. Album attribution unverified.",
+    "confidence": "medium"
+  },
+  {
+    "id": "duur",
+    "title": "Duur",
+    "artist": "Strings",
+    "album": "Duur",
+    "year": 2000,
+    "collection": "band",
+    "difficulty": "intermediate",
+    "key": "F",
+    "capo": 3,
+    "bpm": 0,
+    "duration": 0,
+    "strummingPattern": "D DU UDU",
+    "originalChords": [
+      "D",
+      "G",
+      "A",
+      "Em",
+      "Bm"
+    ],
+    "sections": [
+      {
+        "name": "Chorus",
+        "repeat": 2,
+        "chords": [
+          "D",
+          "G",
+          "D",
+          "A"
+        ]
+      },
+      {
+        "name": "Verse",
+        "repeat": 2,
+        "chords": [
+          "Em",
+          "A",
+          "Bm",
+          "D",
+          "Em",
+          "A",
+          "G",
+          "A"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "Bm barre",
+      "capo use"
+    ],
+    "tags": [
+      "pakistani rock",
+      "pop rock"
+    ],
+    "language": "ur",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Duur+Strings+guitar+lesson",
+    "sourceUrl": "https://www.musiccircle.in/blog/duur-chords-strings-lyrics-with-chords-and-video-lesson-tamsguitar/",
+    "notes": "Musiccircle and Bajao Guitars give key F (F-Bb-C-Gm-Dm); shapes here are those chords with capo 3. Wrytin uses the same D-shape progression but with capo 2 (sounding E) - key disagreement noted.",
+    "confidence": "medium"
+  },
+  {
+    "id": "najane_kyun",
+    "title": "Najane Kyun",
+    "artist": "Strings",
+    "album": "Spider-Man 2 (Hindi soundtrack)",
+    "year": 2004,
+    "collection": "band",
+    "difficulty": "intermediate",
+    "key": "G",
+    "capo": 0,
+    "bpm": 0,
+    "duration": 0,
+    "strummingPattern": "D DU UDU",
+    "originalChords": [
+      "G",
+      "Bm",
+      "Em",
+      "D",
+      "C",
+      "Am"
+    ],
+    "sections": [
+      {
+        "name": "Verse",
+        "repeat": 2,
+        "chords": [
+          "G",
+          "Bm",
+          "Em",
+          "D",
+          "C"
+        ]
+      },
+      {
+        "name": "Pre-Chorus",
+        "repeat": 1,
+        "chords": [
+          "D",
+          "G",
+          "D",
+          "C"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "repeat": 1,
+        "chords": [
+          "Em",
+          "Am",
+          "D",
+          "Am",
+          "C",
+          "G",
+          "Em",
+          "Am",
+          "D",
+          "Am",
+          "C",
+          "G",
+          "Bm",
+          "D"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "Bm barre",
+      "chord rhythm in chorus"
+    ],
+    "tags": [
+      "pakistani rock",
+      "pop rock"
+    ],
+    "language": "ur",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Najane+Kyun+Strings+guitar+lesson",
+    "sourceUrl": "https://www.guitaretab.com/s/strings/278282.html",
+    "notes": "Guitaretab gives full structure in G; Chordify/search summaries agree on key G with G-D-C-Em-Bm-Am. Some versions add Gadd9/Dsus4 embellishments.",
+    "confidence": "medium"
+  },
+  {
+    "id": "yaar_bina",
+    "title": "Yaar Bina",
+    "artist": "Junoon",
+    "album": "Azadi",
+    "year": 1997,
+    "collection": "band",
+    "difficulty": "intermediate",
+    "key": "Am",
+    "capo": 0,
+    "bpm": 120,
+    "duration": 0,
+    "strummingPattern": "D DU UDU",
+    "originalChords": [
+      "Am",
+      "C",
+      "G",
+      "F",
+      "Dm"
+    ],
+    "sections": [
+      {
+        "name": "Intro",
+        "repeat": 1,
+        "chords": [
+          "Am",
+          "Am",
+          "Am",
+          "Am"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "repeat": 2,
+        "chords": [
+          "Am",
+          "C",
+          "G",
+          "F",
+          "Am"
+        ]
+      },
+      {
+        "name": "Bridge",
+        "repeat": 1,
+        "chords": [
+          "Dm",
+          "F",
+          "C",
+          "G",
+          "F"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "Am riff with hammer-ons",
+      "F barre"
+    ],
+    "tags": [
+      "sufi rock",
+      "pakistani rock"
+    ],
+    "language": "ur",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Yaar+Bina+Junoon+guitar+lesson",
+    "sourceUrl": "https://www.greatguitarchords.com/2010/10/yaar-bina-dil-mera-nahin-lagta-junoon.html",
+    "notes": "GreatGuitarChords and ChordU both put it in A minor with Am-C-G-F-Dm. Intro is an Am riff (tab) rather than strummed chords.",
+    "confidence": "medium"
+  },
+  {
+    "id": "jazba_e_junoon",
+    "title": "Jazba-e-Junoon",
+    "artist": "Junoon",
+    "album": "Inquilaab",
+    "year": 1996,
+    "collection": "band",
+    "difficulty": "intermediate",
+    "key": "Am",
+    "capo": 0,
+    "bpm": 0,
+    "duration": 0,
+    "strummingPattern": "D D U D U D D U",
+    "originalChords": [
+      "Am",
+      "G",
+      "F",
+      "C",
+      "E"
+    ],
+    "sections": [
+      {
+        "name": "Verse",
+        "repeat": 2,
+        "chords": [
+          "Am",
+          "G",
+          "Am",
+          "G",
+          "F",
+          "C",
+          "G",
+          "Am"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "repeat": 2,
+        "chords": [
+          "F",
+          "C",
+          "E",
+          "Am"
+        ]
+      },
+      {
+        "name": "Outro",
+        "repeat": 1,
+        "chords": [
+          "Am",
+          "F",
+          "Am",
+          "F",
+          "G",
+          "E",
+          "Am"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "E major (V in minor)",
+      "F barre",
+      "rock strumming"
+    ],
+    "tags": [
+      "sufi rock",
+      "pakistani rock"
+    ],
+    "language": "ur",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Jazba-e-Junoon+Junoon+guitar+lesson",
+    "sourceUrl": "https://www.indianguitartabs.com/chords/threads/jazba-junoon-chords.11918/",
+    "notes": "IndianGuitarTabs thread gives Am-G-F-C-E in A minor; UG summary agrees on Am-G-F-C. Section split is approximate and the original-recording key was not independently confirmed.",
+    "confidence": "low"
+  },
+  {
+    "id": "saari_raat_jaga",
+    "title": "Saari Raat Jaga",
+    "artist": "Noori",
+    "album": "Suno Ke Main Hun Jawan",
+    "year": 2003,
+    "collection": "band",
+    "difficulty": "intermediate",
+    "key": "C#m",
+    "capo": 4,
+    "bpm": 0,
+    "duration": 0,
+    "strummingPattern": "D DU UDU",
+    "originalChords": [
+      "Am",
+      "F",
+      "C",
+      "G",
+      "Em"
+    ],
+    "sections": [
+      {
+        "name": "Intro",
+        "repeat": 1,
+        "chords": [
+          "Am",
+          "F",
+          "Am",
+          "F",
+          "C",
+          "G",
+          "F",
+          "F"
+        ]
+      },
+      {
+        "name": "Verse",
+        "repeat": 2,
+        "chords": [
+          "Am",
+          "F",
+          "Am",
+          "F"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "repeat": 2,
+        "chords": [
+          "Am",
+          "F",
+          "Am",
+          "C",
+          "G",
+          "F"
+        ]
+      },
+      {
+        "name": "Bridge",
+        "repeat": 1,
+        "chords": [
+          "C",
+          "G",
+          "F",
+          "Em",
+          "F",
+          "C",
+          "G",
+          "Am"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "capo use",
+      "Am-F-C-G",
+      "Em"
+    ],
+    "tags": [
+      "pakistani rock",
+      "alt rock"
+    ],
+    "language": "ur",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Saari+Raat+Jaga+Noori+guitar+lesson",
+    "sourceUrl": "https://www.guitaretab.com/n/noori/223640.html",
+    "notes": "Guitaretab: no capo, key C#m (C#m-A-E-B-G#m-F#m); another chart uses capo 4 with Am-F-C-G - identical sounding chords. Capo 4 shapes used.",
+    "confidence": "medium"
+  },
+  {
+    "id": "aro_ekbar",
+    "title": "Aro Ekbar",
+    "artist": "Fossils",
+    "album": "Fossils",
+    "year": 2002,
+    "collection": "band",
+    "difficulty": "intermediate",
+    "key": "F#m",
+    "capo": 2,
+    "bpm": 0,
+    "duration": 0,
+    "strummingPattern": "D DU UDU",
+    "originalChords": [
+      "Em",
+      "G",
+      "A",
+      "D",
+      "C"
+    ],
+    "sections": [
+      {
+        "name": "Verse",
+        "repeat": 2,
+        "chords": [
+          "Em",
+          "G",
+          "A",
+          "D"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "repeat": 2,
+        "chords": [
+          "Em",
+          "G",
+          "A",
+          "C",
+          "D",
+          "Em"
+        ]
+      },
+      {
+        "name": "Instrumental",
+        "repeat": 1,
+        "chords": [
+          "Em",
+          "Em",
+          "C",
+          "C",
+          "G",
+          "G",
+          "A",
+          "A"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "capo use",
+      "Em-G-A-D shapes",
+      "dynamics"
+    ],
+    "tags": [
+      "bengali rock"
+    ],
+    "language": "bn",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Aro+Ekbar+Fossils+guitar+lesson",
+    "sourceUrl": "https://www.guitartabsexplorer.com/fossils-Tabs/aro-ekbar-crd.php",
+    "notes": "GuitarTabsExplorer: Em-G-A-D-C (no capo stated); GenuineChords: F#m-A-B-E-D, i.e. the same shapes a whole step up. Capo 2 reconciles both at F#m.",
+    "confidence": "medium"
+  },
+  {
+    "id": "take_it_easy",
+    "title": "Take It Easy",
+    "artist": "Eagles",
+    "album": "Eagles",
+    "year": 1972,
+    "collection": "band",
+    "difficulty": "intermediate",
+    "key": "G",
+    "capo": 0,
+    "bpm": 139,
+    "duration": 211,
+    "strummingPattern": "D DU UDU",
+    "originalChords": [
+      "G",
+      "D",
+      "C",
+      "Em",
+      "Am"
+    ],
+    "sections": [
+      {
+        "name": "Intro",
+        "repeat": 1,
+        "chords": [
+          "G",
+          "G",
+          "G",
+          "G"
+        ]
+      },
+      {
+        "name": "Verse",
+        "repeat": 2,
+        "chords": [
+          "G",
+          "G",
+          "D",
+          "C",
+          "G",
+          "G",
+          "C",
+          "C"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "repeat": 1,
+        "chords": [
+          "Em",
+          "C",
+          "G",
+          "G",
+          "Am",
+          "C",
+          "Em",
+          "Em",
+          "C",
+          "G",
+          "C",
+          "G",
+          "Am",
+          "C",
+          "G",
+          "G"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "fast country-rock strum",
+      "Am-C-Em chorus"
+    ],
+    "tags": [
+      "country rock",
+      "classic rock"
+    ],
+    "language": "en",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Take+It+Easy+Eagles+guitar+lesson",
+    "sourceUrl": "https://www.guitartabsexplorer.com/eagles-Tabs/take-it-easy-crd.php",
+    "notes": "Key G, standard tuning - GuitarTabsExplorer and UG agree on G-D-C-Em-Am. Original intro uses a Gsus/Csus voicing; simplified to G.",
+    "confidence": "high"
+  },
+  {
+    "id": "boulevard_of_broken_dreams",
+    "title": "Boulevard of Broken Dreams",
+    "artist": "Green Day",
+    "album": "American Idiot",
+    "year": 2004,
+    "collection": "band",
+    "difficulty": "intermediate",
+    "key": "Fm",
+    "capo": 1,
+    "bpm": 83,
+    "duration": 260,
+    "strummingPattern": "D D U D U D U",
+    "originalChords": [
+      "Em",
+      "G",
+      "D",
+      "A",
+      "C",
+      "B7"
+    ],
+    "sections": [
+      {
+        "name": "Verse",
+        "repeat": 4,
+        "chords": [
+          "Em",
+          "G",
+          "D",
+          "A"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "repeat": 2,
+        "chords": [
+          "C",
+          "G",
+          "D",
+          "Em"
+        ]
+      },
+      {
+        "name": "Post-Chorus",
+        "repeat": 1,
+        "chords": [
+          "C",
+          "G",
+          "B7",
+          "B7"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "capo use",
+      "B7",
+      "palm-muted verse"
+    ],
+    "tags": [
+      "punk rock",
+      "alt rock"
+    ],
+    "language": "en",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Boulevard+of+Broken+Dreams+Green+Day+guitar+lesson",
+    "sourceUrl": "https://tabs.ultimate-guitar.com/tab/green-day/boulevard-of-broken-dreams-chords-144877",
+    "notes": "Sounding F minor; capo 1 with Em-G-D-A shapes is the standard version (others play Fm-Ab-Eb-Bb barre). Post-chorus ends on B7 (sounding C7).",
+    "confidence": "high"
+  },
+  {
+    "id": "hey_jude",
+    "title": "Hey Jude",
+    "artist": "The Beatles",
+    "album": "Single (Hey Jude / Revolution)",
+    "year": 1968,
+    "collection": "band",
+    "difficulty": "intermediate",
+    "key": "F",
+    "capo": 3,
+    "bpm": 74,
+    "duration": 431,
+    "strummingPattern": "D D DU",
+    "originalChords": [
+      "D",
+      "A",
+      "A7",
+      "G",
+      "D7",
+      "Em",
+      "C"
+    ],
+    "sections": [
+      {
+        "name": "Verse",
+        "repeat": 4,
+        "chords": [
+          "D",
+          "A",
+          "A7",
+          "D",
+          "G",
+          "D",
+          "A7",
+          "D"
+        ]
+      },
+      {
+        "name": "Bridge",
+        "repeat": 1,
+        "chords": [
+          "D7",
+          "G",
+          "Em",
+          "A7",
+          "D"
+        ]
+      },
+      {
+        "name": "Coda",
+        "repeat": 4,
+        "chords": [
+          "D",
+          "C",
+          "G",
+          "D"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "capo use",
+      "dominant 7ths",
+      "long coda"
+    ],
+    "tags": [
+      "classic rock",
+      "pop rock"
+    ],
+    "language": "en",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Hey+Jude+The+Beatles+guitar+lesson",
+    "sourceUrl": "https://tabs.ultimate-guitar.com/tab/the-beatles/hey-jude-chords-1061739",
+    "notes": "Original in F (F-C-C7-Bb-Eb). Capo 3 with D-A-G-C shapes avoids barre chords; C shape in the coda sounds Eb.",
+    "confidence": "high"
+  },
+  {
+    "id": "fix_you",
+    "title": "Fix You",
+    "artist": "Coldplay",
+    "album": "X&Y",
+    "year": 2005,
+    "collection": "band",
+    "difficulty": "intermediate",
+    "key": "D#",
+    "capo": 3,
+    "bpm": 69,
+    "duration": 295,
+    "strummingPattern": "D D U D U",
+    "originalChords": [
+      "C",
+      "Em",
+      "Am",
+      "G",
+      "F"
+    ],
+    "sections": [
+      {
+        "name": "Intro",
+        "repeat": 1,
+        "chords": [
+          "C",
+          "Em",
+          "Am",
+          "G"
+        ]
+      },
+      {
+        "name": "Verse",
+        "repeat": 2,
+        "chords": [
+          "C",
+          "Em",
+          "Am",
+          "G",
+          "C",
+          "Em",
+          "Am",
+          "G"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "repeat": 1,
+        "chords": [
+          "F",
+          "C",
+          "G",
+          "G",
+          "F",
+          "C",
+          "G",
+          "G"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "capo use",
+      "F chord",
+      "slow build dynamics"
+    ],
+    "tags": [
+      "alt rock",
+      "ballad"
+    ],
+    "language": "en",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Fix+You+Coldplay+guitar+lesson",
+    "sourceUrl": "https://tabs.ultimate-guitar.com/tab/coldplay/fix-you-chords-115567",
+    "notes": "Sounding Eb(D#) major; capo 3 with C-Em-Am-G-F is the standard guitar version. Original is organ/piano-led.",
+    "confidence": "high"
+  },
+  {
+    "id": "in_the_end",
+    "title": "In the End",
+    "artist": "Linkin Park",
+    "album": "Hybrid Theory",
+    "year": 2000,
+    "collection": "band",
+    "difficulty": "intermediate",
+    "key": "D#m",
+    "capo": 6,
+    "bpm": 105,
+    "duration": 216,
+    "strummingPattern": "D DU UDU",
+    "originalChords": [
+      "Am",
+      "F",
+      "C",
+      "G"
+    ],
+    "sections": [
+      {
+        "name": "Verse",
+        "repeat": 4,
+        "chords": [
+          "Am",
+          "F",
+          "C",
+          "G"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "repeat": 2,
+        "chords": [
+          "F",
+          "C",
+          "G",
+          "Am"
+        ]
+      },
+      {
+        "name": "Bridge",
+        "repeat": 2,
+        "chords": [
+          "Am",
+          "F",
+          "C",
+          "G"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "high capo",
+      "minor-key loop"
+    ],
+    "tags": [
+      "nu metal",
+      "alt rock"
+    ],
+    "language": "en",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=In+the+End+Linkin+Park+guitar+lesson",
+    "sourceUrl": "https://tabs.ultimate-guitar.com/tab/linkin-park/in-the-end-chords-210373",
+    "notes": "Original is piano in Ebm (D#m-B-F#-C#). Capo 6 Am-F-C-G reproduces it; many tabs instead play Em-C-G-D tuned a half step down.",
+    "confidence": "high"
+  },
+  {
+    "id": "sayonee",
+    "title": "Sayonee",
+    "artist": "Junoon",
+    "album": "Azadi",
+    "year": 1997,
+    "collection": "band",
+    "difficulty": "advanced",
+    "key": "Dm",
+    "capo": 0,
+    "bpm": 176,
+    "duration": 0,
+    "strummingPattern": "DUD DUD DDUUD",
+    "originalChords": [
+      "Dm",
+      "A#",
+      "C",
+      "F",
+      "G",
+      "A"
+    ],
+    "sections": [
+      {
+        "name": "Intro",
+        "repeat": 2,
+        "chords": [
+          "Dm",
+          "A#",
+          "C",
+          "Dm"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "repeat": 1,
+        "chords": [
+          "Dm",
+          "A#",
+          "Dm",
+          "C",
+          "Dm",
+          "F",
+          "C",
+          "Dm"
+        ]
+      },
+      {
+        "name": "Bridge",
+        "repeat": 2,
+        "chords": [
+          "Dm",
+          "G",
+          "Dm",
+          "A"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "barre chords at 5th fret",
+      "fast tempo",
+      "sufi rock groove"
+    ],
+    "tags": [
+      "sufi rock",
+      "pakistani rock"
+    ],
+    "language": "ur",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Sayonee+Junoon+guitar+lesson",
+    "sourceUrl": "https://indianguitartabs.com/chords/threads/bestest-sayonee-chords-junoon.31531/",
+    "notes": "IndianGuitarTabs and Acousterr both put it in D minor (Acousterr simplifies to Dm-F-C). Chordify detection adds Gm, A7 and A#maj7. Sequence approximate; key consistent.",
+    "confidence": "medium"
+  },
+  {
+    "id": "bandeh",
+    "title": "Bandeh",
+    "artist": "Indian Ocean",
+    "album": "Black Friday (soundtrack)",
+    "year": 2005,
+    "collection": "band",
+    "difficulty": "advanced",
+    "key": "Cm",
+    "capo": 0,
+    "bpm": 0,
+    "duration": 0,
+    "strummingPattern": "D DU DU DU",
+    "originalChords": [
+      "Cm",
+      "G#",
+      "A#"
+    ],
+    "sections": [
+      {
+        "name": "Intro",
+        "repeat": 1,
+        "chords": [
+          "Cm",
+          "Cm",
+          "G#",
+          "A#"
+        ]
+      },
+      {
+        "name": "Verse",
+        "repeat": 2,
+        "chords": [
+          "Cm",
+          "G#",
+          "A#",
+          "Cm"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "repeat": 2,
+        "chords": [
+          "G#",
+          "A#",
+          "Cm",
+          "Cm"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "barre chords",
+      "Cm-G#-A# minor rock",
+      "dynamics"
+    ],
+    "tags": [
+      "fusion",
+      "indian rock"
+    ],
+    "language": "hi",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Bandeh+Indian+Ocean+guitar+lesson",
+    "sourceUrl": "http://nakulthapa.blogspot.com/2012/01/bandeh-indian-ocean.html",
+    "notes": "Several sources agree on C minor with Cm, Ab(G#), Bb(A#). Exact section order is approximate. Easier: capo 3 with Am-F-G shapes.",
+    "confidence": "medium"
+  },
+  {
+    "id": "fish_rock",
+    "title": "Fish Rock",
+    "artist": "Thaikkudam Bridge",
+    "album": "Single (Kappa TV Music Mojo)",
+    "year": 2013,
+    "collection": "band",
+    "difficulty": "advanced",
+    "key": "Dm",
+    "capo": 0,
+    "bpm": 76,
+    "duration": 0,
+    "strummingPattern": "DD UU D",
+    "originalChords": [
+      "Dm",
+      "Am",
+      "Gm",
+      "C"
+    ],
+    "sections": [
+      {
+        "name": "Intro",
+        "repeat": 1,
+        "chords": [
+          "Dm",
+          "Dm",
+          "Am",
+          "Am"
+        ]
+      },
+      {
+        "name": "Verse",
+        "repeat": 2,
+        "chords": [
+          "Dm",
+          "Am",
+          "Dm",
+          "Am",
+          "Gm",
+          "C"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "Gm barre",
+      "folk-rock groove",
+      "alternate-tuning lead (DADABE)"
+    ],
+    "tags": [
+      "folk rock",
+      "malayalam rock"
+    ],
+    "language": "ml",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Fish+Rock+Thaikkudam+Bridge+guitar+lesson",
+    "sourceUrl": "https://www.myoozic.com/threads/fish-rock-thaikkudam-bridge-guitar-chords.20450/",
+    "notes": "Myoozic: Dm-Am-Gm-C, key Dm; ChordU detection agrees on Dm/Am/Gm but lists F instead of C. Lead part uses DADABE tuning. Thin sourcing - treat as approximate.",
+    "confidence": "low"
+  },
+  {
+    "id": "firefly",
+    "title": "Firefly",
+    "artist": "When Chai Met Toast",
+    "album": "Joy of Little Things (single)",
+    "year": 2017,
+    "collection": "band",
+    "difficulty": "advanced",
+    "key": "B",
+    "capo": 0,
+    "bpm": 120,
+    "duration": 0,
+    "strummingPattern": "D D D D D D",
+    "originalChords": [
+      "B",
+      "F#",
+      "E",
+      "G#m",
+      "C#m"
+    ],
+    "sections": [
+      {
+        "name": "Intro",
+        "repeat": 1,
+        "chords": [
+          "B",
+          "B"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "repeat": 2,
+        "chords": [
+          "B",
+          "F#",
+          "B",
+          "F#"
+        ]
+      },
+      {
+        "name": "Instrumental",
+        "repeat": 1,
+        "chords": [
+          "B",
+          "E",
+          "B",
+          "E",
+          "G#m",
+          "E",
+          "G#m",
+          "E"
+        ]
+      },
+      {
+        "name": "Verse",
+        "repeat": 2,
+        "chords": [
+          "B",
+          "C#m",
+          "E",
+          "F#",
+          "G#m",
+          "C#m",
+          "E",
+          "F#"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "all-barre key of B",
+      "6/8 feel"
+    ],
+    "tags": [
+      "indie folk",
+      "english indie"
+    ],
+    "language": "en",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Firefly+When+Chai+Met+Toast+guitar+lesson",
+    "sourceUrl": "https://www.chordzone.org/2020/04/when-chai-met-toast-firefly-chords-for-guitar-and-piano.html",
+    "notes": "ChordZone and Khmerchords agree: key B, no capo, 6/8 at ~120. Original barre shapes kept for the advanced tier; easier version is capo 4 with G-Am-C-D-Em shapes.",
+    "confidence": "medium"
+  },
+  {
+    "id": "aahatein",
+    "title": "Aahatein",
+    "artist": "Agnee",
+    "album": "Single (MTV Splitsvilla 4)",
+    "year": 2010,
+    "collection": "band",
+    "difficulty": "advanced",
+    "key": "D",
+    "capo": 0,
+    "bpm": 143,
+    "duration": 0,
+    "strummingPattern": "D D U U UDU",
+    "originalChords": [
+      "D",
+      "Bm",
+      "Em",
+      "F#m",
+      "Am",
+      "C"
+    ],
+    "sections": [
+      {
+        "name": "Verse",
+        "repeat": 2,
+        "chords": [
+          "D",
+          "Bm",
+          "Em",
+          "F#m"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "repeat": 2,
+        "chords": [
+          "D",
+          "Bm",
+          "Em",
+          "F#m"
+        ]
+      },
+      {
+        "name": "Bridge",
+        "repeat": 1,
+        "chords": [
+          "Am",
+          "C",
+          "D",
+          "D"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "F#m barre",
+      "fast changes at 143 bpm"
+    ],
+    "tags": [
+      "hindi rock",
+      "pop rock"
+    ],
+    "language": "hi",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Aahatein+Agnee+guitar+lesson",
+    "sourceUrl": "https://www.musiceducademy.com/songs/aahatein-chords-agnee",
+    "notes": "Musiceducademy and other charts agree: key D, D-Bm-Em-F#m loop, no capo. Outro (C-G-A) omitted.",
+    "confidence": "medium"
+  },
+  {
+    "id": "here_comes_the_sun",
+    "title": "Here Comes the Sun",
+    "artist": "The Beatles",
+    "album": "Abbey Road",
+    "year": 1969,
+    "collection": "band",
+    "difficulty": "advanced",
+    "key": "A",
+    "capo": 7,
+    "bpm": 129,
+    "duration": 185,
+    "strummingPattern": "D DU UDU",
+    "originalChords": [
+      "D",
+      "G",
+      "A7",
+      "F",
+      "C"
+    ],
+    "sections": [
+      {
+        "name": "Intro",
+        "repeat": 1,
+        "chords": [
+          "D",
+          "G",
+          "A7",
+          "D",
+          "G",
+          "A7"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "repeat": 2,
+        "chords": [
+          "D",
+          "G",
+          "D",
+          "A7"
+        ]
+      },
+      {
+        "name": "Verse",
+        "repeat": 2,
+        "chords": [
+          "D",
+          "G",
+          "A7",
+          "D",
+          "G",
+          "A7"
+        ]
+      },
+      {
+        "name": "Bridge",
+        "repeat": 3,
+        "chords": [
+          "F",
+          "C",
+          "G",
+          "D",
+          "A7"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "capo 7",
+      "riff-based fills",
+      "odd-meter bridge"
+    ],
+    "tags": [
+      "classic rock",
+      "folk rock"
+    ],
+    "language": "en",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Here+Comes+the+Sun+The+Beatles+guitar+lesson",
+    "sourceUrl": "https://tabs.ultimate-guitar.com/tab/the-beatles/here-comes-the-sun-chords-35467",
+    "notes": "Sounding A major; capo 7 with D-G-A7 shapes as George Harrison played it. Bridge has shifting meters - bar count simplified.",
+    "confidence": "high"
+  }
+]

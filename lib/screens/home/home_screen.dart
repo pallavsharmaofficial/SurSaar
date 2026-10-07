@@ -222,7 +222,10 @@ class _HomeView extends StatelessWidget {
                                   },
                                 )
                                 .animate(
-                                  delay: Duration(milliseconds: 60 * index),
+                                  // Only the first screenful is staggered.
+                                  delay: Duration(
+                                    milliseconds: 60 * (index < 8 ? index : 8),
+                                  ),
                                 )
                                 .fadeIn(duration: 350.ms)
                                 .slideY(begin: 0.05, end: 0),
@@ -292,10 +295,19 @@ class _TeacherHero extends StatelessWidget {
                   foregroundColor: AppColors.primary,
                 ),
               ),
-              OutlinedButton.icon(
+              FilledButton.icon(
                 onPressed: () => context.go('/learn'),
-                icon: const Icon(Icons.school_outlined),
-                label: Text(l10n.courses),
+                icon: const Icon(Icons.school_rounded),
+                label: Text(l10n.learnWithTutor),
+                style: FilledButton.styleFrom(
+                  backgroundColor: AppColors.successGold,
+                  foregroundColor: AppColors.textOnLight,
+                ),
+              ),
+              OutlinedButton.icon(
+                onPressed: () => context.push('/library'),
+                icon: const Icon(Icons.library_music_outlined),
+                label: Text(l10n.songLibrary),
                 style: OutlinedButton.styleFrom(
                   foregroundColor: Colors.white,
                   side: const BorderSide(color: Colors.white54),

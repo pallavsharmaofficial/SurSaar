@@ -22,10 +22,23 @@ void main() {
     '/practice/lesson/strumming_patterns',
     '/practice/adhoc?chords=Em&mode=learn',
     '/practice/adhoc?chords=G,C,D,Em&pattern=D%20-%20D%20-%20UU%20-%20D%20-%20DU&bpm=80',
+    '/library',
+    '/library?shelf=instrumental',
+    '/tutor/insights',
+    '/tutor/song/kabira',
+    '/tutor/song/jana_gana_mana',
+    '/tutor/song/the_burning_ghat',
+    '/tutor/song/kabira/step/0',
+    '/tutor/song/kabira/step/4',
+    '/tutor/song/kabira/step/6',
+    '/tutor/song/jana_gana_mana/step/0',
+    '/tutor/song/jana_gana_mana/step/16',
   ];
   const sizes = <String, Size>{
     'phone': Size(360, 740),
     'tablet': Size(768, 1024),
+    // Three columns (camera · sheet · coach) on the teacher screen.
+    'desktop': Size(1400, 900),
   };
 
   for (final size in sizes.entries) {

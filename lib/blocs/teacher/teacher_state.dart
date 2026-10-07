@@ -4,6 +4,7 @@ import '../../models/user_settings.dart';
 import '../../teacher/engine/practice_plan.dart';
 import '../../teacher/engine/teacher_engine.dart';
 import '../../teacher/services/vision_service.dart';
+import '../../tutor/tutor_brain.dart';
 
 enum TeacherStatus { initial, ready, active, finished }
 
@@ -35,6 +36,9 @@ class TeacherState extends Equatable {
     this.saved = false,
     this.saving = false,
     this.startedAt,
+    this.journeySongId,
+    this.stageIndex,
+    this.feedback,
   });
 
   final TeacherStatus status;
@@ -65,6 +69,15 @@ class TeacherState extends Equatable {
   final bool saved;
   final bool saving;
   final DateTime? startedAt;
+
+  /// Set when this session is a step of a tutor journey.
+  final String? journeySongId;
+  final int? stageIndex;
+
+  /// The tutor's verdict on the last finished session.
+  final TutorFeedback? feedback;
+
+  bool get isJourneyStep => journeySongId != null && stageIndex != null;
 
   TeacherPhase get phase => snapshot?.phase ?? TeacherPhase.idle;
 
@@ -116,6 +129,10 @@ class TeacherState extends Equatable {
     bool? saved,
     bool? saving,
     DateTime? startedAt,
+    String? journeySongId,
+    int? stageIndex,
+    TutorFeedback? feedback,
+    bool clearFeedback = false,
   }) {
     return TeacherState(
       status: status ?? this.status,
@@ -145,6 +162,9 @@ class TeacherState extends Equatable {
       saved: saved ?? this.saved,
       saving: saving ?? this.saving,
       startedAt: startedAt ?? this.startedAt,
+      journeySongId: journeySongId ?? this.journeySongId,
+      stageIndex: stageIndex ?? this.stageIndex,
+      feedback: clearFeedback ? null : (feedback ?? this.feedback),
     );
   }
 
@@ -175,5 +195,8 @@ class TeacherState extends Equatable {
     saved,
     saving,
     startedAt,
+    journeySongId,
+    stageIndex,
+    feedback,
   ];
 }

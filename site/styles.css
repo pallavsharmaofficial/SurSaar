@@ -87,3 +87,9 @@ footer { border-top: 1px solid rgba(255,255,255,.06); padding: 24px; text-align:
   .nav nav a:not(.btn) { display: none; }
   .features { grid-template-columns: 1fr; }
 }
+
+/* Pages that are only text: privacy, terms. */
+.narrow h2 { font-size: 1.3rem; margin: 1.9em 0 .4em; }
+.narrow ul { padding-left: 1.2em; margin: 0 0 1em; }
+.narrow li { margin-bottom: .55em; }
+.narrow a { text-decoration: underline; text-underline-offset: 2px; }

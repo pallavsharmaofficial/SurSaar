@@ -160,7 +160,11 @@ class _SongSearchScreenState extends State<SongSearchScreen> {
                               extra: song,
                             ),
                           )
-                          .animate(delay: Duration(milliseconds: 40 * index))
+                          .animate(
+                            delay: Duration(
+                              milliseconds: 40 * (index < 10 ? index : 10),
+                            ),
+                          )
                           .fadeIn(duration: 300.ms),
                 );
               },

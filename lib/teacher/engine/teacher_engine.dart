@@ -10,16 +10,20 @@ import '../analysis/chord_detector.dart';
 import '../analysis/chord_shape_coach.dart';
 import '../analysis/guitar_pose.dart';
 import '../analysis/hand_motion_tracker.dart';
+import '../analysis/note_detector.dart';
 import '../analysis/onset_detector.dart';
 import '../analysis/timing_scorer.dart';
+import '../melody/melody_tab.dart';
 import '../models/audio_frame.dart';
 import '../models/chord_detection.dart';
 import '../models/hand_frame.dart';
 import '../models/strum_event.dart';
 import 'chord_speech.dart';
+import 'performance_recorder.dart';
 import 'practice_plan.dart';
 
 export '../../models/coaching_mode.dart';
+export 'performance_recorder.dart' show SessionReport;
 
 enum TeacherPhase { idle, countIn, running, paused, finished }
 
@@ -136,6 +140,8 @@ class TeacherSnapshot {
     this.waitingForFreshStrum = false,
     this.pose = GuitarPose.none,
     this.strumId = 0,
+    this.noteDetection,
+    this.report,
   });
 
   final TeacherPhase phase;
@@ -211,6 +217,14 @@ class TeacherSnapshot {
   /// Increases on every strum heard, so the UI can react to each one.
   final int strumId;
 
+  /// Melody plans: the last note heard.
+  final NoteDetection? noteDetection;
+
+  /// Set once the session has finished: what the tutor observed.
+  final SessionReport? report;
+
+  bool get isMelody => plan.isMelody;
+
   bool get isLearn => mode == CoachingMode.learn;
 
   bool get isActive =>
@@ -268,6 +282,9 @@ class TeacherEngine {
 
   /// How long the right chord must ring before it counts (learn mode).
   static const int holdToAcceptMs = 400;
+
+  /// A single note only needs to ring briefly to count.
+  static const int noteHoldToAcceptMs = 150;
   static const int celebrateMs = 900;
   static const int skipPauseMs = 300;
   static const int hintAfterMs = 7000;
@@ -310,6 +327,31 @@ class TeacherEngine {
     return targetScore >= 0.8 && best - targetScore <= 0.03;
   }
 
+  /// Whether [detection] is the note of [token] (any string, within a
+  /// little over half a semitone).
+  static bool acceptsNote(NoteDetection detection, String token) {
+    final note = TabNote.fromToken(token);
+    if (note == null || detection.isSilent) return false;
+    return detection.semitonesFrom(note.midi).abs() < 0.6;
+  }
+
+  /// Short on-screen name of a target ("Am" or "B3").
+  static String displayName(String target) => TabNote.display(target);
+
+  /// What the voice coach says for a target.
+  static String spokenName(String target) {
+    final note = TabNote.fromToken(target);
+    if (note == null) return ChordSpeech.name(target);
+    final string = switch (note.string) {
+      0 => 'low E',
+      5 => 'high E',
+      _ => note.stringName,
+    };
+    return note.fret == 0
+        ? '$string string, open'
+        : '$string string, fret ${note.fret}';
+  }
+
   final ChordLibrary chordLibrary;
   UserSettings settings;
   final int countInBeats;
@@ -327,6 +369,12 @@ class TeacherEngine {
   final ChordShapeCoach _coach = const ChordShapeCoach();
   ChordDetector? _chordDetector;
   OnsetDetector? _onsetDetector;
+  NoteDetector? _noteDetector;
+  NoteDetection? _lastNote;
+  NoteDetection? _lastWrongNote;
+  final PerformanceRecorder _recorder = PerformanceRecorder();
+  SessionReport? _report;
+  int _targetFirstCorrectMs = -1;
 
   final StreamController<TeacherSnapshot> _controller =
       StreamController<TeacherSnapshot>.broadcast();
@@ -507,6 +555,29 @@ class TeacherEngine {
     _pushCue(CueType.finished, '');
     final score = _score();
     final now = _clock();
+    _report = _recorder.build(
+      isLearn: _mode == CoachingMode.learn,
+      isMelody: _plan.isMelody,
+      bpm: _plan.bpm,
+      durationMs: _endElapsedMs,
+      score: score,
+      successes: _mode == CoachingMode.learn
+          ? _successes
+          : _stats.values.fold(0, (sum, s) => sum + s.successes),
+      skips: _skips,
+      bestCombo: _bestCombo,
+      chordResults:
+          <String, ({int attempts, int successes, int avgMs, int skips})>{
+            for (final stat in _stats.values)
+              stat.chord: (
+                attempts: stat.attempts,
+                successes: stat.successes,
+                avgMs: stat.averageMsToSuccess,
+                skips: stat.skips,
+              ),
+          },
+      strums: _strums,
+    );
     _message = CoachMessage(
       _finishText(score),
       tone: score >= 65 ? CoachTone.good : CoachTone.info,
@@ -546,6 +617,7 @@ class TeacherEngine {
 
   /// Stops listening for [duration] (e.g. while a reference chord plays).
   void suppressListening(Duration duration) {
+    if (_phase == TeacherPhase.running) _recorder.hearIt();
     _suppressUntilMs = _clock() + duration.inMilliseconds;
     _holdMs = 0;
     _emit();
@@ -575,6 +647,7 @@ class TeacherEngine {
   }
 
   void setCapo(int capo) {
+    if (_plan.isMelody) return;
     _plan = _plan.copyWith(capo: capo);
     _chordDetector?.setCandidates(_plan.chords);
     _emit();
@@ -590,10 +663,16 @@ class TeacherEngine {
   void onAudio(AudioFrame frame) {
     _audioActive = true;
     _updateLevel(frame);
-    final chordDetector = _chordDetector ??= ChordDetector(
-      sampleRate: frame.sampleRate,
-      candidates: _plan.chords,
-    );
+    final melody = _plan.isMelody;
+    final chordDetector = melody
+        ? null
+        : _chordDetector ??= ChordDetector(
+            sampleRate: frame.sampleRate,
+            candidates: _plan.chords,
+          );
+    final noteDetector = melody
+        ? _noteDetector ??= NoteDetector(sampleRate: frame.sampleRate)
+        : null;
     final onsetDetector = _onsetDetector ??= OnsetDetector(
       sampleRate: frame.sampleRate,
     );
@@ -605,13 +684,21 @@ class TeacherEngine {
     }
     if (_wasSuppressed) {
       _wasSuppressed = false;
-      chordDetector.reset();
+      chordDetector?.reset();
+      noteDetector?.reset();
       onsetDetector.reset();
     }
 
-    chordDetector.target = _currentChord;
-    for (final detection in chordDetector.feed(frame)) {
-      _handleDetection(detection);
+    if (chordDetector != null) {
+      chordDetector.target = _currentChord;
+      for (final detection in chordDetector.feed(frame)) {
+        _handleDetection(detection);
+      }
+    }
+    if (noteDetector != null) {
+      for (final detection in noteDetector.feed(frame)) {
+        _handleNote(detection);
+      }
     }
     for (final onset in onsetDetector.feed(frame)) {
       _handleOnset(onset);
@@ -637,6 +724,7 @@ class TeacherEngine {
       _shape = voicing == null
           ? ShapeFeedback.none
           : _coach.evaluate(voicing: voicing, frettingHand: fretting);
+      if (_phase == TeacherPhase.running) _recorder.shape(_shape);
     }
     _emitIfIdle();
   }
@@ -651,6 +739,9 @@ class TeacherEngine {
       return;
     }
     if (_phase != TeacherPhase.running) return;
+    if (_visionActive) {
+      _recorder.visionTick(handVisible: now - _lastFrettingSeenMs < 1500);
+    }
     if (_mode == CoachingMode.learn) {
       _tickLearn(now);
     } else {
@@ -680,7 +771,7 @@ class TeacherEngine {
         tone: CoachTone.good,
         atMs: now,
         speak: true,
-        spoken: 'Go. ${ChordSpeech.name(_currentChord ?? '')}',
+        spoken: 'Go. ${spokenName(_currentChord ?? '')}',
       );
     }
     _emit();
@@ -716,11 +807,14 @@ class TeacherEngine {
     }
     final missed = _timing.collectMisses(elapsedRunMs);
     if (missed.isNotEmpty) _lastTiming = missed.last;
+    missed.forEach(_recorder.timing);
     final index = _plan.indexAt(currentBeat);
     if (index != _lastTargetIndex) {
       _closeTarget();
       _lastTargetIndex = index;
       _wrongStreak = 0;
+      _targetFirstCorrectMs = -1;
+      _recorder.newStep();
     }
     if (_plan.totalBeats > 0 && currentBeat >= _plan.totalBeats) {
       stop();
@@ -766,8 +860,14 @@ class TeacherEngine {
     _endElapsedMs = 0;
     _timing.reset();
     _chordDetector?.reset();
+    _noteDetector?.reset();
     _onsetDetector?.reset();
     _motion.reset();
+    _recorder.reset();
+    _report = null;
+    _lastNote = null;
+    _lastWrongNote = null;
+    _targetFirstCorrectMs = -1;
   }
 
   ChordStat _statFor(String chord) =>
@@ -790,8 +890,12 @@ class TeacherEngine {
       frame.frettingHand(leftHanded: settings.leftHanded) ??
       (frame.hands.length == 1 ? frame.hands.first : null);
 
-  ChordVoicing? _voicingFor(String? chord) =>
-      chord == null || chord.isEmpty ? null : chordLibrary.voicingFor(chord);
+  ChordVoicing? _voicingFor(String? chord) {
+    if (chord == null || chord.isEmpty) return null;
+    final note = TabNote.fromToken(chord);
+    if (note != null) return note.voicing(boxStart: _plan.boxStart);
+    return chordLibrary.voicingFor(chord);
+  }
 
   void _updateLevel(AudioFrame frame) {
     final samples = frame.samples;
@@ -804,6 +908,7 @@ class TeacherEngine {
     final db = rms <= 1e-9 ? -120.0 : 20 * math.log(rms) / math.ln10;
     final level = ((db + 60) / 50).clamp(0.0, 1.0);
     _level = level > _level ? level : _level * 0.8 + level * 0.2;
+    if (_phase == TeacherPhase.running) _recorder.level(_level);
   }
 
   void _emitIfIdle() {
@@ -852,6 +957,9 @@ class TeacherEngine {
       _holdMs = math.max(0, _holdMs - hop);
       _wrongStreak++;
       _lastWrongChord = detection.chord;
+      if (detection.chord != null) {
+        _recorder.confusion(target, detection.chord!);
+      }
     }
   }
 
@@ -865,14 +973,101 @@ class TeacherEngine {
     _detTotal++;
     _targetDetections++;
     if (accepts(detection, target.chord)) {
-      _detCorrect++;
-      _targetCorrect++;
-      _goodStreak++;
-      _wrongStreak = 0;
+      _markTargetCorrect(target);
     } else {
       _wrongStreak++;
       _goodStreak = 0;
       _lastWrongChord = detection.chord;
+      if (detection.chord != null) {
+        _recorder.confusion(target.chord, detection.chord!);
+      }
+    }
+  }
+
+  void _markTargetCorrect(ChordTarget target) {
+    _detCorrect++;
+    _targetCorrect++;
+    _goodStreak++;
+    _wrongStreak = 0;
+    if (_targetFirstCorrectMs < 0) {
+      _targetFirstCorrectMs = math.max(
+        0,
+        elapsedRunMs - (target.startBeat * beatMs).round(),
+      );
+    }
+  }
+
+  // ------------------------------------------------------------------ melody
+
+  void _handleNote(NoteDetection detection) {
+    _lastNote = detection;
+    if (!detection.isSilent) _lastSoundMs = _clock();
+    if (_phase != TeacherPhase.running) return;
+    if (_mode == CoachingMode.learn) {
+      _learnNote(detection);
+    } else {
+      _playAlongNote(detection);
+    }
+  }
+
+  void _learnNote(NoteDetection detection) {
+    final now = _clock();
+    final steps = learnSteps;
+    if (_pendingAdvance ||
+        now < _celebrateUntilMs ||
+        _learnIndex >= steps.length ||
+        _needsFreshStrum) {
+      return;
+    }
+    final hop = _noteDetector?.hopMs ?? 30;
+    if (detection.isSilent) {
+      _holdMs = math.max(0, _holdMs - hop ~/ 2);
+      return;
+    }
+    final target = steps[_learnIndex];
+    _detTotal++;
+    if (acceptsNote(detection, target)) {
+      _detCorrect++;
+      _holdMs += hop;
+      _wrongStreak = 0;
+      if (_holdMs >= noteHoldToAcceptMs) {
+        _recorder.noteInTune(detection.cents);
+        _completeLearnStep(success: true);
+        _emit();
+      }
+    } else {
+      _holdMs = math.max(0, _holdMs - hop);
+      _wrongStreak++;
+      _lastWrongChord = detection.noteName;
+      _lastWrongNote = detection;
+      final note = TabNote.fromToken(target);
+      if (note != null) {
+        _recorder.confusion(target, detection.noteName);
+        // Count a wrong pitch once it has rung for a few frames.
+        if (_wrongStreak == 3) {
+          _recorder.wrongNote(detection.semitonesFrom(note.midi).round());
+        }
+      }
+    }
+  }
+
+  void _playAlongNote(NoteDetection detection) {
+    if (detection.isSilent) return;
+    final currentBeat = beat;
+    final target = _plan.targetAt(currentBeat);
+    if (target == null) return;
+    // short grace after each note start
+    if ((currentBeat - target.startBeat) * beatMs < 120) return;
+    _detTotal++;
+    _targetDetections++;
+    if (acceptsNote(detection, target.chord)) {
+      if (_targetCorrect == 0) _recorder.noteInTune(detection.cents);
+      _markTargetCorrect(target);
+    } else {
+      _wrongStreak++;
+      _goodStreak = 0;
+      _lastWrongChord = detection.noteName;
+      _recorder.confusion(target.chord, detection.noteName);
     }
   }
 
@@ -890,11 +1085,12 @@ class TeacherEngine {
     if (_phase != TeacherPhase.running) return;
     _strums++;
     _needsFreshStrum = false;
-    if (_mode != CoachingMode.playAlong) return;
+    if (_mode != CoachingMode.playAlong || _plan.isMelody) return;
     final elapsed = strum.timestampMs - _runStartMs - _pausedAccumMs;
     if (elapsed < 0) return;
     final timing = _timing.onStrum(strum, elapsed);
     _lastTiming = timing;
+    _recorder.timing(timing);
     switch (timing.result) {
       case TimingResult.late:
         _lateStreak++;
@@ -919,10 +1115,24 @@ class TeacherEngine {
     _needsFreshStrum = previous == chord;
     _statFor(chord).attempts++;
     _chordDetector?.target = chord;
-    final spoken = ChordSpeech.name(chord);
+    _recorder.newStep();
+    final spoken = spokenName(chord);
+    final note = TabNote.fromToken(chord);
     final String text;
     final String say;
-    if (previous == null) {
+    if (note != null) {
+      final where = '${note.placement} (${note.noteName})';
+      if (previous == null) {
+        text = 'Pluck $where.';
+        say = "Let's start. $spoken.";
+      } else if (previous == chord) {
+        text = 'Same note again – pluck $where once more.';
+        say = 'Again.';
+      } else {
+        text = 'Next: $where.';
+        say = spoken;
+      }
+    } else if (previous == null) {
       text = 'Play $chord and let it ring.';
       say = "Let's start. Play $spoken.";
     } else if (previous == chord) {
@@ -948,6 +1158,14 @@ class TeacherEngine {
     final now = _clock();
     final chord = learnSteps[_learnIndex];
     final stat = _statFor(chord);
+    final previous = _learnIndex > 0 ? learnSteps[_learnIndex - 1] : null;
+    if (previous != null) {
+      _recorder.transition(
+        previous,
+        chord,
+        ms: success ? math.max(0, now - _stepStartMs) : null,
+      );
+    }
     if (success) {
       stat.successes++;
       stat.msToSuccess += math.max(0, now - _stepStartMs);
@@ -962,7 +1180,7 @@ class TeacherEngine {
       _skips++;
       _combo = 0;
       _pushCue(CueType.skipped, chord);
-      _message = CoachMessage('Skipped $chord.', atMs: now);
+      _message = CoachMessage('Skipped ${displayName(chord)}.', atMs: now);
       _celebrateUntilMs = now + skipPauseMs;
     }
     _lastMessageMs = now;
@@ -971,8 +1189,19 @@ class TeacherEngine {
     _pendingAdvance = true;
   }
 
-  String _praise(String chord) {
+  String _praise(String target) {
     if (_combo >= 3) return '$_combo in a row! Keep going.';
+    final note = TabNote.fromToken(target);
+    if (note != null) {
+      final options = <String>[
+        'Yes! ${note.noteName}.',
+        'Clean note!',
+        'Right on pitch.',
+        'Nice – ${note.shortLabel}.',
+      ];
+      return options[_successes % options.length];
+    }
+    final chord = target;
     final options = <String>[
       "Nice! That's $chord.",
       'Great $chord!',
@@ -986,12 +1215,24 @@ class TeacherEngine {
     if (_lastTargetIndex < 0 || _lastTargetIndex >= _plan.targets.length) {
       return;
     }
-    final chord = _plan.targets[_lastTargetIndex].chord;
+    final closing = _plan.targets[_lastTargetIndex];
+    final chord = closing.chord;
     final stat = _statFor(chord);
     stat.attempts++;
     if (_targetDetections > 0) _chordsPlayed++;
     final ok =
         _targetDetections > 0 && _targetCorrect / _targetDetections >= 0.5;
+    if (_lastTargetIndex > 0) {
+      _recorder.transition(
+        _plan.targets[_lastTargetIndex - 1].chord,
+        chord,
+        ms: ok && _targetFirstCorrectMs >= 0 ? _targetFirstCorrectMs : null,
+      );
+    }
+    _recorder.section(closing.section, ok: ok);
+    if (ok && _targetFirstCorrectMs >= 0) {
+      stat.msToSuccess += _targetFirstCorrectMs;
+    }
     if (ok) {
       stat.successes++;
       _combo++;
@@ -1041,7 +1282,32 @@ class TeacherEngine {
       return;
     }
 
-    if (_wrongStreak >= 8) {
+    final targetNote = TabNote.fromToken(chord);
+    if (targetNote != null && _wrongStreak >= 12) {
+      final heard = _lastWrongNote;
+      if (heard != null) {
+        final diff = heard.semitonesFrom(targetNote.midi).round();
+        final frets = diff.abs() == 1 ? '1 fret' : '${diff.abs()} frets';
+        final direction = diff > 0 ? 'lower' : 'higher';
+        final text = diff.abs() <= 7
+            ? "That's ${heard.noteName}. Move $frets $direction – "
+                  '${targetNote.placement}.'
+            : "That's ${heard.noteName} – try the ${targetNote.stringName} "
+                  'string, fret ${targetNote.fret}.';
+        _say(
+          text,
+          CoachTone.warn,
+          now,
+          cooldownMs: 3500,
+          speak: true,
+          spoken: diff.abs() <= 7 ? '$frets $direction.' : spokenName(chord),
+        );
+      }
+      _wrongStreak = 0;
+      return;
+    }
+
+    if (targetNote == null && _wrongStreak >= 8) {
       final heard = _lastWrongChord;
       final hint = _shape.handVisible && _shape.hints.isNotEmpty
           ? ' ${_shape.hints.first}'
@@ -1064,8 +1330,10 @@ class TeacherEngine {
 
     if (waited > strongHintAfterMs && _hintLevel < 2) {
       _hintLevel = 2;
+      _recorder.hint();
       _say(
-        "Take your time. Tap 'Hear it' to hear $chord, or Skip to move on.",
+        "Take your time. Tap 'Hear it' to hear ${displayName(chord)}, or Skip "
+        'to move on.',
         CoachTone.info,
         now,
         cooldownMs: 0,
@@ -1077,6 +1345,7 @@ class TeacherEngine {
 
     if (waited > hintAfterMs && _hintLevel < 1) {
       _hintLevel = 1;
+      _recorder.hint();
       final voicing = _voicingFor(chord);
       final lines = voicing == null
           ? const <String>[]
@@ -1097,7 +1366,9 @@ class TeacherEngine {
 
     if (_audioActive && waited > 4000 && now - _lastSoundMs > 4000) {
       _say(
-        'Strum all the strings once and let them ring.',
+        targetNote != null
+            ? 'Pluck the ${targetNote.stringName} string and let it ring.'
+            : 'Strum all the strings once and let them ring.',
         CoachTone.warn,
         now,
         cooldownMs: 6000,
@@ -1119,10 +1390,11 @@ class TeacherEngine {
       _announcedNextIndex = index;
       _lastMessageMs = now;
       _message = CoachMessage(
-        'Next: ${next.chord}',
+        'Next: ${displayName(next.chord)}',
         atMs: now,
-        speak: true,
-        spoken: ChordSpeech.name(next.chord),
+        // Notes change too fast to announce each one out loud.
+        speak: !_plan.isMelody,
+        spoken: spokenName(next.chord),
       );
       return;
     }
@@ -1137,7 +1409,13 @@ class TeacherEngine {
     }
 
     if (_audioActive && now - _lastSoundMs > beatMs * _plan.beatsPerBar * 1.5) {
-      _say("Strum the strings — I can't hear you yet.", CoachTone.warn, now);
+      _say(
+        _plan.isMelody
+            ? "Pluck the notes — I can't hear you yet."
+            : "Strum the strings — I can't hear you yet.",
+        CoachTone.warn,
+        now,
+      );
       return;
     }
 
@@ -1148,8 +1426,9 @@ class TeacherEngine {
           : '';
       _say(
         heard == null
-            ? "That doesn't sound like ${target.chord} yet.$hint"
-            : 'That sounds like $heard — target is ${target.chord}.$hint',
+            ? "That doesn't sound like ${displayName(target.chord)} yet.$hint"
+            : 'That sounds like $heard — target is '
+                  '${displayName(target.chord)}.$hint',
         CoachTone.warn,
         now,
       );
@@ -1188,7 +1467,7 @@ class TeacherEngine {
 
     if (_goodStreak >= 5 && target != null) {
       _say(
-        'Clean ${target.chord}! Keep it going.',
+        'Clean ${displayName(target.chord)}! Keep it going.',
         CoachTone.good,
         now,
         cooldownMs: 4000,
@@ -1203,7 +1482,7 @@ class TeacherEngine {
       return attempted == 0 ? 0 : 100 * _successes / attempted;
     }
     final chord = _detTotal == 0 ? 0.0 : _detCorrect / _detTotal;
-    final timingWeight = _strums > 0 ? 0.4 : 0.0;
+    final timingWeight = _strums > 0 && !_plan.isMelody ? 0.4 : 0.0;
     return ((chord * (1 - timingWeight) + _timing.accuracy * timingWeight) *
             100)
         .clamp(0.0, 100.0);
@@ -1215,8 +1494,9 @@ class TeacherEngine {
       if (_successes == 0 && _skips == 0) {
         return 'Session ended. Press start whenever you are ready.';
       }
-      if (_successes == total) return 'You played every chord!';
-      return 'You played $_successes of $total chords.';
+      final unit = _plan.isMelody ? 'note' : 'chord';
+      if (_successes == total) return 'You played every $unit!';
+      return 'You played $_successes of $total ${unit}s.';
     }
     if (score >= 85) return 'Excellent! ${score.round()}% — that was clean.';
     if (score >= 65) {
@@ -1231,9 +1511,10 @@ class TeacherEngine {
   String _finishSpoken(double score) {
     if (_mode == CoachingMode.learn) {
       if (_successes == 0) return 'Session ended.';
+      final unit = _plan.isMelody ? 'note' : 'chord';
       return _successes == learnSteps.length
-          ? 'Well done. You played every chord.'
-          : 'Well done. You played $_successes chords.';
+          ? 'Well done. You played every $unit.'
+          : 'Well done. You played $_successes ${unit}s.';
     }
     return 'Session complete. ${score.round()} percent.';
   }
@@ -1329,6 +1610,8 @@ class TeacherEngine {
       strumId: _strumId,
       celebrating: celebrating,
       waitingForFreshStrum: learn && _needsFreshStrum && !_pendingAdvance,
+      noteDetection: _lastNote,
+      report: _phase == TeacherPhase.finished ? _report : null,
     );
     if (!_controller.isClosed) _controller.add(_snapshot);
   }

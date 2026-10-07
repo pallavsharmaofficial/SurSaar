@@ -108,7 +108,18 @@ void main() {
     final (router, _) = await pumpTestApp(tester);
     router.go('/learn');
     await settle(tester);
+    // The tutor hub comes first; the courses follow below it.
+    await tester.scrollUntilVisible(
+      find.text('Guitar Foundations'),
+      400,
+      scrollable: find.byType(Scrollable).first,
+    );
     expect(find.text('Guitar Foundations'), findsOneWidget);
+    await tester.scrollUntilVisible(
+      find.text('Basic Guitar Chords'),
+      400,
+      scrollable: find.byType(Scrollable).first,
+    );
     expect(find.text('Basic Guitar Chords'), findsOneWidget);
     router.go('/course/course_guitar_foundations');
     await settle(tester);
@@ -122,10 +133,19 @@ void main() {
     tester,
   ) async {
     final (router, _) = await pumpTestApp(tester);
-    router.go('/search?q=Bm');
+    router.go('/search?q=kabira bm');
     await settle(tester);
     expect(find.text('Kabira'), findsOneWidget);
+    // Other songs with Bm follow; the request option closes the list.
+    await tester.scrollUntilVisible(
+      find.text('Request this song'),
+      600,
+      scrollable: find.byType(Scrollable).first,
+    );
+    await settle(tester);
     expect(find.text('Request this song'), findsOneWidget);
+    // Let the entrance animations of the cards scrolled into view finish.
+    await tester.pump(const Duration(seconds: 1));
   });
 
   testWidgets('search offers online chords and pasting when nothing matches', (

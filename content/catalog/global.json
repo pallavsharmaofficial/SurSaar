@@ -1,0 +1,2475 @@
+[
+  {
+    "id": "knockin-on-heavens-door",
+    "title": "Knockin' on Heaven's Door",
+    "artist": "Bob Dylan",
+    "album": "Pat Garrett & Billy the Kid",
+    "year": 1973,
+    "collection": "global",
+    "difficulty": "beginner",
+    "key": "G",
+    "capo": 0,
+    "bpm": 69,
+    "duration": 150,
+    "strummingPattern": "D - D U - U D U",
+    "originalChords": [
+      "G",
+      "D",
+      "Am",
+      "C"
+    ],
+    "sections": [
+      {
+        "name": "Intro",
+        "repeat": 1,
+        "chords": [
+          "G",
+          "D",
+          "Am",
+          "Am",
+          "G",
+          "D",
+          "C",
+          "C"
+        ]
+      },
+      {
+        "name": "Verse",
+        "repeat": 2,
+        "chords": [
+          "G",
+          "D",
+          "Am",
+          "Am",
+          "G",
+          "D",
+          "C",
+          "C"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "repeat": 2,
+        "chords": [
+          "G",
+          "D",
+          "Am",
+          "Am",
+          "G",
+          "D",
+          "C",
+          "C"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "G to D to Am changes",
+      "steady slow strum"
+    ],
+    "tags": [
+      "folk-rock",
+      "70s",
+      "3-chord"
+    ],
+    "language": "en",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Knockin%27+on+Heaven%27s+Door+Bob+Dylan+guitar+lesson",
+    "sourceUrl": "https://tabs.ultimate-guitar.com/tab/bob-dylan/knockin-on-heavens-door-chords-66559",
+    "notes": "Whole song is one 8-bar loop (G D Am / G D C). Every chart agrees. Many players use Am7 or C as Cadd9 for smoother changes.",
+    "confidence": "high"
+  },
+  {
+    "id": "bad-moon-rising",
+    "title": "Bad Moon Rising",
+    "artist": "Creedence Clearwater Revival",
+    "album": "Green River",
+    "year": 1969,
+    "collection": "global",
+    "difficulty": "beginner",
+    "key": "D",
+    "capo": 0,
+    "bpm": 180,
+    "duration": 141,
+    "strummingPattern": "D DU UDU",
+    "originalChords": [
+      "D",
+      "A",
+      "G"
+    ],
+    "sections": [
+      {
+        "name": "Intro",
+        "repeat": 1,
+        "chords": [
+          "D",
+          "A",
+          "G",
+          "D",
+          "D"
+        ]
+      },
+      {
+        "name": "Verse",
+        "repeat": 4,
+        "chords": [
+          "D",
+          "A",
+          "G",
+          "D",
+          "D"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "repeat": 2,
+        "chords": [
+          "G",
+          "G",
+          "D",
+          "D",
+          "A",
+          "G",
+          "D",
+          "D"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "quick A-to-G change inside one bar",
+      "upbeat country-rock strum"
+    ],
+    "tags": [
+      "rock",
+      "60s",
+      "3-chord"
+    ],
+    "language": "en",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Bad+Moon+Rising+Creedence+Clearwater+Revival+guitar+lesson",
+    "sourceUrl": "https://www.laurenbateman.com/bad-moon-rising-chord-chart/",
+    "notes": "Verse bar 2 splits A and G (two beats each). Chorus: 2 bars G, 2 bars D, 1 A, 1 G, 2 D. Hooktheory and Lauren Bateman agree; tempo about 180 bpm.",
+    "confidence": "high"
+  },
+  {
+    "id": "brown-eyed-girl",
+    "title": "Brown Eyed Girl",
+    "artist": "Van Morrison",
+    "album": "Blowin' Your Mind!",
+    "year": 1967,
+    "collection": "global",
+    "difficulty": "beginner",
+    "key": "G",
+    "capo": 0,
+    "bpm": 150,
+    "duration": 183,
+    "strummingPattern": "D DU UDU",
+    "originalChords": [
+      "G",
+      "C",
+      "D",
+      "Em"
+    ],
+    "sections": [
+      {
+        "name": "Intro",
+        "repeat": 2,
+        "chords": [
+          "G",
+          "C",
+          "G",
+          "D"
+        ]
+      },
+      {
+        "name": "Verse",
+        "repeat": 4,
+        "chords": [
+          "G",
+          "C",
+          "G",
+          "D"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "repeat": 1,
+        "chords": [
+          "C",
+          "D",
+          "G",
+          "Em",
+          "C",
+          "D",
+          "G",
+          "D"
+        ]
+      },
+      {
+        "name": "Refrain",
+        "repeat": 2,
+        "chords": [
+          "G",
+          "C",
+          "G",
+          "D"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "G-C-G-D changes at speed",
+      "Old Faithful strum"
+    ],
+    "tags": [
+      "pop",
+      "60s",
+      "4-chord"
+    ],
+    "language": "en",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Brown+Eyed+Girl+Van+Morrison+guitar+lesson",
+    "sourceUrl": "https://www.justinguitar.com/songs/van-morrison-brown-eyed-girl-chords-tabs-guitar-lesson-bs-304",
+    "notes": "Recording opens with a lead-guitar riff over G C G D; strumming those chords works. JustinGuitar and Heartwood agree on the C D G Em C D G D chorus. The refrain is often shown with D7.",
+    "confidence": "high"
+  },
+  {
+    "id": "stand-by-me",
+    "title": "Stand By Me",
+    "artist": "Ben E. King",
+    "album": "Don't Play That Song!",
+    "year": 1961,
+    "collection": "global",
+    "difficulty": "beginner",
+    "key": "A",
+    "capo": 2,
+    "bpm": 118,
+    "duration": 178,
+    "strummingPattern": "D - D U - U D U",
+    "originalChords": [
+      "G",
+      "Em",
+      "C",
+      "D"
+    ],
+    "sections": [
+      {
+        "name": "Intro",
+        "repeat": 2,
+        "chords": [
+          "G",
+          "G",
+          "Em",
+          "Em",
+          "C",
+          "D",
+          "G",
+          "G"
+        ]
+      },
+      {
+        "name": "Verse",
+        "repeat": 2,
+        "chords": [
+          "G",
+          "G",
+          "Em",
+          "Em",
+          "C",
+          "D",
+          "G",
+          "G"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "repeat": 2,
+        "chords": [
+          "G",
+          "G",
+          "Em",
+          "Em",
+          "C",
+          "D",
+          "G",
+          "G"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "changes on the bass-line rhythm",
+      "G-Em-C-D (I-vi-IV-V)"
+    ],
+    "tags": [
+      "soul",
+      "60s",
+      "4-chord"
+    ],
+    "language": "en",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Stand+By+Me+Ben+E.+King+guitar+lesson",
+    "sourceUrl": "https://www.laurenbateman.com/stand-by-me-guitar-chord-chart-key-of-g/",
+    "notes": "Recording is in A (A F#m D E). The usual guitar version uses capo 2 with G Em C D shapes. Without a capo, play A F#m D E.",
+    "confidence": "high"
+  },
+  {
+    "id": "let-it-be",
+    "title": "Let It Be",
+    "artist": "The Beatles",
+    "album": "Let It Be",
+    "year": 1970,
+    "collection": "global",
+    "difficulty": "beginner",
+    "key": "C",
+    "capo": 0,
+    "bpm": 72,
+    "duration": 243,
+    "strummingPattern": "D - D U - U D U",
+    "originalChords": [
+      "C",
+      "G",
+      "Am",
+      "F"
+    ],
+    "sections": [
+      {
+        "name": "Intro",
+        "repeat": 1,
+        "chords": [
+          "C",
+          "G",
+          "Am",
+          "F",
+          "C",
+          "G",
+          "F",
+          "C"
+        ]
+      },
+      {
+        "name": "Verse",
+        "repeat": 2,
+        "chords": [
+          "C",
+          "G",
+          "Am",
+          "F",
+          "C",
+          "G",
+          "F",
+          "C"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "repeat": 1,
+        "chords": [
+          "Am",
+          "G",
+          "F",
+          "C",
+          "C",
+          "G",
+          "F",
+          "C"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "C-G-Am-F (I-V-vi-IV)",
+      "small F or Fmaj7 as a stepping stone"
+    ],
+    "tags": [
+      "classic-rock",
+      "70s",
+      "4-chord"
+    ],
+    "language": "en",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Let+It+Be+The+Beatles+guitar+lesson",
+    "sourceUrl": "https://www.justinguitar.com/songs/the-beatles-let-it-be-chords-tabs-guitar-lesson-bs-802",
+    "notes": "Piano-led recording in C with no capo. Some charts write passing F/A or C/G bass walks; the core shapes are always C G Am F.",
+    "confidence": "high"
+  },
+  {
+    "id": "country-roads",
+    "title": "Take Me Home, Country Roads",
+    "artist": "John Denver",
+    "album": "Poems, Prayers & Promises",
+    "year": 1971,
+    "collection": "global",
+    "difficulty": "beginner",
+    "key": "A",
+    "capo": 2,
+    "bpm": 82,
+    "duration": 190,
+    "strummingPattern": "D DU UDU",
+    "originalChords": [
+      "G",
+      "Em",
+      "D",
+      "C"
+    ],
+    "sections": [
+      {
+        "name": "Verse",
+        "repeat": 2,
+        "chords": [
+          "G",
+          "Em",
+          "D",
+          "C",
+          "G",
+          "G",
+          "Em",
+          "D",
+          "C",
+          "G"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "repeat": 2,
+        "chords": [
+          "G",
+          "D",
+          "Em",
+          "C",
+          "G",
+          "D",
+          "C",
+          "G"
+        ]
+      },
+      {
+        "name": "Bridge",
+        "repeat": 1,
+        "chords": [
+          "Em",
+          "D",
+          "G",
+          "G",
+          "C",
+          "G",
+          "D",
+          "D"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "G-Em-D-C changes",
+      "singalong country strum"
+    ],
+    "tags": [
+      "country",
+      "folk",
+      "70s"
+    ],
+    "language": "en",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Take+Me+Home%2C+Country+Roads+John+Denver+guitar+lesson",
+    "sourceUrl": "https://spytunes.com/take-me-home-country-roads-chords/",
+    "notes": "Recording is in A. Capo 2 with G-shapes is the standard learner version; the e-chords and UG charts agree. The bridge D is often played as D7.",
+    "confidence": "high"
+  },
+  {
+    "id": "im-yours",
+    "title": "I'm Yours",
+    "artist": "Jason Mraz",
+    "album": "We Sing. We Dance. We Steal Things.",
+    "year": 2008,
+    "collection": "global",
+    "difficulty": "beginner",
+    "key": "B",
+    "capo": 4,
+    "bpm": 151,
+    "duration": 242,
+    "strummingPattern": "D - D U - U D U",
+    "originalChords": [
+      "C",
+      "G",
+      "Am",
+      "F"
+    ],
+    "sections": [
+      {
+        "name": "Intro",
+        "repeat": 2,
+        "chords": [
+          "C",
+          "G",
+          "Am",
+          "F"
+        ]
+      },
+      {
+        "name": "Verse",
+        "repeat": 4,
+        "chords": [
+          "C",
+          "G",
+          "Am",
+          "F"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "repeat": 2,
+        "chords": [
+          "C",
+          "G",
+          "Am",
+          "F"
+        ]
+      },
+      {
+        "name": "Bridge",
+        "repeat": 2,
+        "chords": [
+          "C",
+          "G",
+          "Am",
+          "F"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "reggae-style off-beat chop",
+      "C-G-Am-F loop"
+    ],
+    "tags": [
+      "pop",
+      "acoustic",
+      "00s"
+    ],
+    "language": "en",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=I%27m+Yours+Jason+Mraz+guitar+lesson",
+    "sourceUrl": "https://tabs.ultimate-guitar.com/tab/jason-mraz/im-yours-chords-468625",
+    "notes": "Recording sounds in B. Popular charts use either capo 4 with C G Am F or half-step-down tuning with the same shapes; both sound the same. Some charts write the chorus F as F with a D7 turnaround. Strum with a skank/chop feel; the tempo can be counted as 76 half-time.",
+    "confidence": "medium"
+  },
+  {
+    "id": "let-her-go",
+    "title": "Let Her Go",
+    "artist": "Passenger",
+    "album": "All the Little Lights",
+    "year": 2012,
+    "collection": "global",
+    "difficulty": "beginner",
+    "key": "D",
+    "capo": 7,
+    "bpm": 75,
+    "duration": 253,
+    "strummingPattern": "D D D U D U",
+    "originalChords": [
+      "C",
+      "D",
+      "Em",
+      "G",
+      "Bm"
+    ],
+    "sections": [
+      {
+        "name": "Intro",
+        "repeat": 1,
+        "chords": [
+          "C",
+          "C",
+          "D",
+          "Em",
+          "D",
+          "C",
+          "C",
+          "D",
+          "Em",
+          "Em",
+          "D"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "repeat": 1,
+        "chords": [
+          "C",
+          "G",
+          "D",
+          "Em",
+          "C",
+          "G",
+          "D",
+          "C",
+          "G",
+          "D",
+          "Em",
+          "C",
+          "G",
+          "D"
+        ]
+      },
+      {
+        "name": "Verse",
+        "repeat": 2,
+        "chords": [
+          "Em",
+          "C",
+          "D",
+          "Bm",
+          "Em",
+          "C",
+          "D",
+          "D"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "capo high up the neck",
+      "quick two-chord bars"
+    ],
+    "tags": [
+      "folk-pop",
+      "acoustic",
+      "10s"
+    ],
+    "language": "en",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Let+Her+Go+Passenger+guitar+lesson",
+    "sourceUrl": "https://www.heartwoodguitar.com/chords/passenger-let-her-go/",
+    "notes": "Passenger plays capo 7 with G-major shapes, so it sounds in D. Heartwood and National Guitar Academy agree on the sections. Bm is the only barre chord; a Bm7 or a mini Bm works.",
+    "confidence": "high"
+  },
+  {
+    "id": "perfect",
+    "title": "Perfect",
+    "artist": "Ed Sheeran",
+    "album": "÷ (Divide)",
+    "year": 2017,
+    "collection": "global",
+    "difficulty": "beginner",
+    "key": "G#",
+    "capo": 1,
+    "bpm": 63,
+    "duration": 263,
+    "strummingPattern": "D - D U D U",
+    "originalChords": [
+      "G",
+      "Em",
+      "C",
+      "D",
+      "D/F#"
+    ],
+    "sections": [
+      {
+        "name": "Verse",
+        "repeat": 4,
+        "chords": [
+          "G",
+          "Em",
+          "C",
+          "D"
+        ]
+      },
+      {
+        "name": "Pre-Chorus",
+        "repeat": 1,
+        "chords": [
+          "G",
+          "Em",
+          "C",
+          "G",
+          "D"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "repeat": 1,
+        "chords": [
+          "Em",
+          "C",
+          "G",
+          "D",
+          "Em",
+          "C",
+          "G",
+          "D",
+          "Em",
+          "C",
+          "G",
+          "D"
+        ]
+      },
+      {
+        "name": "Outro",
+        "repeat": 1,
+        "chords": [
+          "G",
+          "D/F#",
+          "Em",
+          "D",
+          "C",
+          "D",
+          "G"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "12/8 swaying feel",
+      "Em7 to Csus2 voicings with anchor fingers"
+    ],
+    "tags": [
+      "pop",
+      "ballad",
+      "wedding",
+      "10s"
+    ],
+    "language": "en",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Perfect+Ed+Sheeran+guitar+lesson",
+    "sourceUrl": "https://www.bellandcomusic.com/perfect-chords.html",
+    "notes": "Capo 1 with G shapes, sounding in G#/Ab. Bell & Co and Fender agree. The recording uses Em7/Csus2 voicings; plain Em/C is fine for beginners. 12/8 at about 63 bpm (dotted quarter), often felt as 95.",
+    "confidence": "high"
+  },
+  {
+    "id": "riptide",
+    "title": "Riptide",
+    "artist": "Vance Joy",
+    "album": "Dream Your Life Away",
+    "year": 2013,
+    "collection": "global",
+    "difficulty": "beginner",
+    "key": "C#",
+    "capo": 1,
+    "bpm": 102,
+    "duration": 204,
+    "strummingPattern": "D D U U D U",
+    "originalChords": [
+      "Am",
+      "G",
+      "C",
+      "F"
+    ],
+    "sections": [
+      {
+        "name": "Intro",
+        "repeat": 2,
+        "chords": [
+          "Am",
+          "G",
+          "C",
+          "C"
+        ]
+      },
+      {
+        "name": "Verse",
+        "repeat": 4,
+        "chords": [
+          "Am",
+          "G",
+          "C",
+          "C"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "repeat": 3,
+        "chords": [
+          "Am",
+          "G",
+          "C",
+          "C"
+        ]
+      },
+      {
+        "name": "Bridge",
+        "repeat": 2,
+        "chords": [
+          "Am",
+          "G",
+          "C",
+          "F"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "fast Am-G-C changes",
+      "ukulele-style bouncy strum"
+    ],
+    "tags": [
+      "indie-folk",
+      "10s",
+      "ukulele-friendly"
+    ],
+    "language": "en",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Riptide+Vance+Joy+guitar+lesson",
+    "sourceUrl": "https://www.guitaring.net/learn/riptide-chords",
+    "notes": "Capo 1 with Am G C shapes (sounds C#/Db). Guitaring.net, ozbcoz and Glanworth agree. F (or Fmaj7) appears only in the build/bridge. Chord changes come on beat 4 in some bars, so practise slowly.",
+    "confidence": "high"
+  },
+  {
+    "id": "blowin-in-the-wind",
+    "title": "Blowin' in the Wind",
+    "artist": "Bob Dylan",
+    "album": "The Freewheelin' Bob Dylan",
+    "year": 1963,
+    "collection": "global",
+    "difficulty": "beginner",
+    "key": "D",
+    "capo": 0,
+    "bpm": 86,
+    "duration": 168,
+    "strummingPattern": "D - D U - U D U",
+    "originalChords": [
+      "D",
+      "G",
+      "Em",
+      "A7"
+    ],
+    "sections": [
+      {
+        "name": "Intro",
+        "repeat": 1,
+        "chords": [
+          "D"
+        ]
+      },
+      {
+        "name": "Verse",
+        "repeat": 3,
+        "chords": [
+          "D",
+          "G",
+          "D",
+          "D",
+          "G",
+          "D",
+          "D",
+          "G",
+          "D",
+          "D",
+          "Em",
+          "A7"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "repeat": 1,
+        "chords": [
+          "G",
+          "A7",
+          "D",
+          "G",
+          "Em",
+          "A7",
+          "D"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "D-G-A7 three-chord folk",
+      "harmonica-break timing"
+    ],
+    "tags": [
+      "folk",
+      "60s",
+      "protest"
+    ],
+    "language": "en",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Blowin%27+in+the+Wind+Bob+Dylan+guitar+lesson",
+    "sourceUrl": "https://www.bellandcomusic.com/blowin-in-the-wind.html",
+    "notes": "Sounds in D. Dylan actually played G-shapes with capo 7 (dylanchords.com); this chart uses the no-capo D shapes from Bell & Co, which sound the same. Em is often skipped in simplified charts.",
+    "confidence": "high"
+  },
+  {
+    "id": "stick-season",
+    "title": "Stick Season",
+    "artist": "Noah Kahan",
+    "album": "Stick Season",
+    "year": 2022,
+    "collection": "global",
+    "difficulty": "beginner",
+    "key": "A",
+    "capo": 2,
+    "bpm": 117,
+    "duration": 182,
+    "strummingPattern": "D D D U D U",
+    "originalChords": [
+      "G",
+      "D",
+      "Em",
+      "C"
+    ],
+    "sections": [
+      {
+        "name": "Intro",
+        "repeat": 1,
+        "chords": [
+          "G",
+          "G"
+        ]
+      },
+      {
+        "name": "Verse",
+        "repeat": 4,
+        "chords": [
+          "G",
+          "D",
+          "Em",
+          "C"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "repeat": 2,
+        "chords": [
+          "G",
+          "D",
+          "Em",
+          "C"
+        ]
+      },
+      {
+        "name": "Bridge",
+        "repeat": 1,
+        "chords": [
+          "G",
+          "D",
+          "Em",
+          "C",
+          "D"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "driving 16th-note folk strum",
+      "I-V-vi-IV loop"
+    ],
+    "tags": [
+      "folk",
+      "indie",
+      "20s"
+    ],
+    "language": "en",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Stick+Season+Noah+Kahan+guitar+lesson",
+    "sourceUrl": "https://www.laurenbateman.com/stick-season-chords/",
+    "notes": "Sounds in A. Lauren Bateman uses capo 2 with G D Em C; ChordsWorld and e-chords show A E F#m D with no capo, which is the same. Lauren's chorus adds a passing E shape near the end; the loop above is the common version.",
+    "confidence": "high"
+  },
+  {
+    "id": "wonderwall",
+    "title": "Wonderwall",
+    "artist": "Oasis",
+    "album": "(What's the Story) Morning Glory?",
+    "year": 1995,
+    "collection": "global",
+    "difficulty": "intermediate",
+    "key": "F#m",
+    "capo": 2,
+    "bpm": 87,
+    "duration": 258,
+    "strummingPattern": "D DU UDU",
+    "originalChords": [
+      "Em7",
+      "G",
+      "Dsus4",
+      "A7sus4",
+      "Cadd9"
+    ],
+    "sections": [
+      {
+        "name": "Intro",
+        "repeat": 4,
+        "chords": [
+          "Em7",
+          "G",
+          "Dsus4",
+          "A7sus4"
+        ]
+      },
+      {
+        "name": "Verse",
+        "repeat": 4,
+        "chords": [
+          "Em7",
+          "G",
+          "Dsus4",
+          "A7sus4"
+        ]
+      },
+      {
+        "name": "Pre-Chorus",
+        "repeat": 1,
+        "chords": [
+          "Cadd9",
+          "Dsus4",
+          "Em7",
+          "Em7",
+          "Cadd9",
+          "Dsus4",
+          "A7sus4",
+          "A7sus4"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "repeat": 4,
+        "chords": [
+          "Cadd9",
+          "Em7",
+          "G",
+          "Em7"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "anchor fingers on B and e strings",
+      "16th-note strum feel"
+    ],
+    "tags": [
+      "britpop",
+      "90s"
+    ],
+    "language": "en",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Wonderwall+Oasis+guitar+lesson",
+    "sourceUrl": "https://tabs.ultimate-guitar.com/tab/oasis/wonderwall-chords-165916",
+    "notes": "Capo 2 standard. UG and GuitarPlayerBox agree. Ring fingers 3 and 4 stay on frets 3 of B and e for every shape. Dsus4 is often written Dsus4/F#.",
+    "confidence": "high"
+  },
+  {
+    "id": "photograph",
+    "title": "Photograph",
+    "artist": "Ed Sheeran",
+    "album": "x (Multiply)",
+    "year": 2014,
+    "collection": "global",
+    "difficulty": "intermediate",
+    "key": "E",
+    "capo": 2,
+    "bpm": 108,
+    "duration": 258,
+    "strummingPattern": "D - D U - U D U",
+    "originalChords": [
+      "D",
+      "Bm",
+      "A",
+      "G"
+    ],
+    "sections": [
+      {
+        "name": "Intro",
+        "repeat": 2,
+        "chords": [
+          "D",
+          "Bm",
+          "A",
+          "G"
+        ]
+      },
+      {
+        "name": "Verse",
+        "repeat": 4,
+        "chords": [
+          "D",
+          "Bm",
+          "A",
+          "G"
+        ]
+      },
+      {
+        "name": "Pre-Chorus",
+        "repeat": 1,
+        "chords": [
+          "Bm",
+          "G",
+          "D",
+          "A",
+          "Bm",
+          "G",
+          "D",
+          "A"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "repeat": 4,
+        "chords": [
+          "D",
+          "A",
+          "Bm",
+          "G"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "Bm barre in a pop loop",
+      "dynamic build from picked verse to strummed chorus"
+    ],
+    "tags": [
+      "pop",
+      "acoustic",
+      "10s"
+    ],
+    "language": "en",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Photograph+Ed+Sheeran+guitar+lesson",
+    "sourceUrl": "https://www.guitartabsexplorer.com/ed-sheeran/photograph-chords",
+    "notes": "Sounds in E. Sources split between capo 2 (D Bm A G) and capo 4 (C Am G F); both sound in E. We use the capo 2 version.",
+    "confidence": "medium"
+  },
+  {
+    "id": "someone-like-you",
+    "title": "Someone Like You",
+    "artist": "Adele",
+    "album": "21",
+    "year": 2011,
+    "collection": "global",
+    "difficulty": "intermediate",
+    "key": "A",
+    "capo": 2,
+    "bpm": 67,
+    "duration": 285,
+    "strummingPattern": "D D D D",
+    "originalChords": [
+      "G",
+      "Bm/F#",
+      "Em",
+      "C",
+      "D"
+    ],
+    "sections": [
+      {
+        "name": "Intro",
+        "repeat": 2,
+        "chords": [
+          "G",
+          "Bm/F#",
+          "Em",
+          "C"
+        ]
+      },
+      {
+        "name": "Verse",
+        "repeat": 4,
+        "chords": [
+          "G",
+          "Bm/F#",
+          "Em",
+          "C"
+        ]
+      },
+      {
+        "name": "Pre-Chorus",
+        "repeat": 2,
+        "chords": [
+          "D",
+          "Em",
+          "C",
+          "D"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "repeat": 4,
+        "chords": [
+          "G",
+          "D",
+          "Em",
+          "C"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "broken-chord piano-style picking",
+      "Bm/F# slash voicing"
+    ],
+    "tags": [
+      "pop",
+      "ballad",
+      "10s"
+    ],
+    "language": "en",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Someone+Like+You+Adele+guitar+lesson",
+    "sourceUrl": "https://www.guitarplayerbox.com/tabs/Adele/Someone-Like-You/845/capo/2",
+    "notes": "Piano original in A. Capo 2 with G-shapes is standard (UG, GuitarPlayerBox, guitardownunder). Arpeggiate eighth notes to copy the piano; Bm/F# can be simplified to Bm.",
+    "confidence": "high"
+  },
+  {
+    "id": "yellow",
+    "title": "Yellow",
+    "artist": "Coldplay",
+    "album": "Parachutes",
+    "year": 2000,
+    "collection": "global",
+    "difficulty": "intermediate",
+    "key": "B",
+    "capo": 4,
+    "bpm": 87,
+    "duration": 266,
+    "strummingPattern": "D - D U - U D U",
+    "originalChords": [
+      "G",
+      "D",
+      "C",
+      "Cmaj7",
+      "Em7"
+    ],
+    "sections": [
+      {
+        "name": "Intro",
+        "repeat": 1,
+        "chords": [
+          "G",
+          "G",
+          "D",
+          "D",
+          "C",
+          "C",
+          "G",
+          "G"
+        ]
+      },
+      {
+        "name": "Verse",
+        "repeat": 2,
+        "chords": [
+          "G",
+          "G",
+          "D",
+          "D",
+          "C",
+          "C",
+          "G",
+          "G"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "repeat": 2,
+        "chords": [
+          "Cmaj7",
+          "Em7",
+          "D",
+          "D"
+        ]
+      },
+      {
+        "name": "Bridge",
+        "repeat": 2,
+        "chords": [
+          "G",
+          "D",
+          "C",
+          "G"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "ringing open strings over moving bass",
+      "Cmaj7 and Em7 colour chords"
+    ],
+    "tags": [
+      "alt-rock",
+      "britpop",
+      "00s"
+    ],
+    "language": "en",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Yellow+Coldplay+guitar+lesson",
+    "sourceUrl": "https://www.songsterr.com/a/wsa/coldplay-yellow-chords-s434",
+    "notes": "Recording in B (B, F#6, Emaj7). Most learner charts use capo 4 with G D C(maj7) shapes. Chris Martin's own voicings keep the top strings ringing (sus/add shapes). Bar lengths in the verse vary a little between charts.",
+    "confidence": "medium"
+  },
+  {
+    "id": "viva-la-vida",
+    "title": "Viva La Vida",
+    "artist": "Coldplay",
+    "album": "Viva la Vida or Death and All His Friends",
+    "year": 2008,
+    "collection": "global",
+    "difficulty": "intermediate",
+    "key": "G#",
+    "capo": 1,
+    "bpm": 138,
+    "duration": 242,
+    "strummingPattern": "D D U D U",
+    "originalChords": [
+      "C",
+      "D",
+      "G",
+      "Em",
+      "Bm"
+    ],
+    "sections": [
+      {
+        "name": "Intro",
+        "repeat": 2,
+        "chords": [
+          "C",
+          "D",
+          "G",
+          "Em"
+        ]
+      },
+      {
+        "name": "Verse",
+        "repeat": 4,
+        "chords": [
+          "C",
+          "D",
+          "G",
+          "Em"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "repeat": 1,
+        "chords": [
+          "C",
+          "D",
+          "G",
+          "Em",
+          "C",
+          "D",
+          "G",
+          "Em",
+          "C",
+          "D",
+          "G",
+          "Em",
+          "C",
+          "D",
+          "Bm",
+          "Em"
+        ]
+      },
+      {
+        "name": "Bridge",
+        "repeat": 1,
+        "chords": [
+          "C",
+          "Em",
+          "C",
+          "Em",
+          "C",
+          "Em",
+          "D",
+          "D"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "steady 8th-note string-section pulse",
+      "Bm barre in chorus"
+    ],
+    "tags": [
+      "alt-rock",
+      "pop",
+      "00s"
+    ],
+    "language": "en",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Viva+La+Vida+Coldplay+guitar+lesson",
+    "sourceUrl": "https://www.guitartabsexplorer.com/coldplay-Tabs/viva-la-vida-(Ver3)-crd.php",
+    "notes": "Capo 1 with C D G Em shapes, sounding in G#/Ab (Db Eb Ab Fm). UG and GuitarTabsExplorer agree. Bm (the last chorus line) is the only barre chord.",
+    "confidence": "high"
+  },
+  {
+    "id": "shape-of-you",
+    "title": "Shape of You",
+    "artist": "Ed Sheeran",
+    "album": "÷ (Divide)",
+    "year": 2017,
+    "collection": "global",
+    "difficulty": "intermediate",
+    "key": "C#m",
+    "capo": 4,
+    "bpm": 96,
+    "duration": 233,
+    "strummingPattern": "D - D U - U D U",
+    "originalChords": [
+      "Am",
+      "Dm",
+      "F",
+      "G"
+    ],
+    "sections": [
+      {
+        "name": "Intro",
+        "repeat": 2,
+        "chords": [
+          "Am",
+          "Dm",
+          "F",
+          "G"
+        ]
+      },
+      {
+        "name": "Verse",
+        "repeat": 4,
+        "chords": [
+          "Am",
+          "Dm",
+          "F",
+          "G"
+        ]
+      },
+      {
+        "name": "Pre-Chorus",
+        "repeat": 2,
+        "chords": [
+          "Am",
+          "Dm",
+          "F",
+          "G"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "repeat": 4,
+        "chords": [
+          "Am",
+          "Dm",
+          "F",
+          "G"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "percussive palm-mute groove",
+      "F barre or mini-F"
+    ],
+    "tags": [
+      "pop",
+      "10s",
+      "4-chord"
+    ],
+    "language": "en",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Shape+of+You+Ed+Sheeran+guitar+lesson",
+    "sourceUrl": "https://www.justinguitar.com/songs/ed-sheeran-shape-of-you-chords-tabs-guitar-lesson-st-393",
+    "notes": "One loop the whole way: C#m F#m A B in C#m. JustinGuitar and GuitarPlayerBox both use capo 4 with Am Dm F G. Rhythm matters more than chords; mute on beats 2 and 4.",
+    "confidence": "high"
+  },
+  {
+    "id": "counting-stars",
+    "title": "Counting Stars",
+    "artist": "OneRepublic",
+    "album": "Native",
+    "year": 2013,
+    "collection": "global",
+    "difficulty": "intermediate",
+    "key": "C#m",
+    "capo": 4,
+    "bpm": 122,
+    "duration": 257,
+    "strummingPattern": "D DU UDU",
+    "originalChords": [
+      "Am",
+      "C",
+      "G",
+      "F"
+    ],
+    "sections": [
+      {
+        "name": "Intro",
+        "repeat": 2,
+        "chords": [
+          "Am",
+          "C",
+          "G",
+          "F"
+        ]
+      },
+      {
+        "name": "Verse",
+        "repeat": 4,
+        "chords": [
+          "Am",
+          "C",
+          "G",
+          "F"
+        ]
+      },
+      {
+        "name": "Pre-Chorus",
+        "repeat": 2,
+        "chords": [
+          "Am",
+          "C",
+          "G",
+          "F"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "repeat": 4,
+        "chords": [
+          "Am",
+          "C",
+          "G",
+          "F"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "fast 16th-note strum",
+      "F barre at 122 bpm"
+    ],
+    "tags": [
+      "pop",
+      "10s",
+      "4-chord"
+    ],
+    "language": "en",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Counting+Stars+OneRepublic+guitar+lesson",
+    "sourceUrl": "https://www.bellandcomusic.com/counting-stars.html",
+    "notes": "Sounds C#m E B A. Capo 4 with Am C G F (Bell & Co, guitaretab). Same loop all song; the challenge is keeping the 16th strum going at full speed.",
+    "confidence": "high"
+  },
+  {
+    "id": "wake-me-up",
+    "title": "Wake Me Up",
+    "artist": "Avicii",
+    "album": "True",
+    "year": 2013,
+    "collection": "global",
+    "difficulty": "intermediate",
+    "key": "Bm",
+    "capo": 0,
+    "bpm": 124,
+    "duration": 247,
+    "strummingPattern": "D DU UDU",
+    "originalChords": [
+      "Bm",
+      "G",
+      "D",
+      "A"
+    ],
+    "sections": [
+      {
+        "name": "Intro",
+        "repeat": 2,
+        "chords": [
+          "Bm",
+          "G",
+          "D",
+          "A"
+        ]
+      },
+      {
+        "name": "Verse",
+        "repeat": 4,
+        "chords": [
+          "Bm",
+          "G",
+          "D",
+          "A"
+        ]
+      },
+      {
+        "name": "Pre-Chorus",
+        "repeat": 2,
+        "chords": [
+          "Bm",
+          "G",
+          "D",
+          "A"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "repeat": 4,
+        "chords": [
+          "Bm",
+          "G",
+          "D",
+          "A"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "Bm barre to open chords",
+      "folk strum at dance tempo"
+    ],
+    "tags": [
+      "edm",
+      "folk",
+      "10s"
+    ],
+    "language": "en",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Wake+Me+Up+Avicii+guitar+lesson",
+    "sourceUrl": "https://www.hooktheory.com/theorytab/view/avicii/wake-me-up",
+    "notes": "Bm (i-VI-III-VII) at 124 bpm, per Hooktheory and UG. Some charts use capo 2 Am F C G (same sound). Hooktheory notes the verse leaves out the A on some passes; holding D is fine.",
+    "confidence": "high"
+  },
+  {
+    "id": "stay-with-me",
+    "title": "Stay With Me",
+    "artist": "Sam Smith",
+    "album": "In the Lonely Hour",
+    "year": 2014,
+    "collection": "global",
+    "difficulty": "intermediate",
+    "key": "C",
+    "capo": 0,
+    "bpm": 85,
+    "duration": 172,
+    "strummingPattern": "D - D - D - D U",
+    "originalChords": [
+      "Am7",
+      "F",
+      "C",
+      "Fmaj7",
+      "Am",
+      "G"
+    ],
+    "sections": [
+      {
+        "name": "Intro",
+        "repeat": 1,
+        "chords": [
+          "Am7",
+          "F",
+          "C",
+          "C"
+        ]
+      },
+      {
+        "name": "Verse",
+        "repeat": 4,
+        "chords": [
+          "Am7",
+          "Fmaj7",
+          "C",
+          "C"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "repeat": 2,
+        "chords": [
+          "Am",
+          "F",
+          "C",
+          "C",
+          "G",
+          "Am",
+          "F",
+          "C"
+        ]
+      },
+      {
+        "name": "Bridge",
+        "repeat": 2,
+        "chords": [
+          "Am",
+          "F",
+          "C",
+          "C"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "gospel-style slow quarter-note strum",
+      "F barre or Fmaj7"
+    ],
+    "tags": [
+      "soul",
+      "pop",
+      "10s"
+    ],
+    "language": "en",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Stay+With+Me+Sam+Smith+guitar+lesson",
+    "sourceUrl": "https://www.bellandcomusic.com/stay-with-me.html",
+    "notes": "Sounds in C (Am F C loop). e-chords uses no capo with Am F C; Bell & Co uses capo 5 with Em C G, which is the same. Chorus bar 5 is sometimes G7 or G/B.",
+    "confidence": "high"
+  },
+  {
+    "id": "hallelujah",
+    "title": "Hallelujah",
+    "artist": "Leonard Cohen",
+    "album": "Various Positions",
+    "year": 1984,
+    "collection": "global",
+    "difficulty": "intermediate",
+    "key": "C",
+    "capo": 0,
+    "bpm": 56,
+    "duration": 279,
+    "strummingPattern": "D - - D U D",
+    "originalChords": [
+      "C",
+      "Am",
+      "F",
+      "G",
+      "E7"
+    ],
+    "sections": [
+      {
+        "name": "Intro",
+        "repeat": 1,
+        "chords": [
+          "C",
+          "Am",
+          "C",
+          "Am"
+        ]
+      },
+      {
+        "name": "Verse",
+        "repeat": 4,
+        "chords": [
+          "C",
+          "Am",
+          "C",
+          "Am",
+          "F",
+          "G",
+          "C",
+          "G",
+          "C",
+          "F",
+          "G",
+          "Am",
+          "F",
+          "G",
+          "E7",
+          "Am",
+          "Am"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "repeat": 4,
+        "chords": [
+          "F",
+          "Am",
+          "F",
+          "C",
+          "G",
+          "C",
+          "G"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "6/8 (or 12/8) waltz-like strum",
+      "E7 as the 'major lift'"
+    ],
+    "tags": [
+      "folk",
+      "ballad",
+      "80s"
+    ],
+    "language": "en",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Hallelujah+Leonard+Cohen+guitar+lesson",
+    "sourceUrl": "https://www.justinguitar.com/songs/leonard-cohen-hallelujah-chords-tabs-guitar-lesson-bs-801",
+    "notes": "Cohen's recording is in C (JustinGuitar, National Guitar Academy). Jeff Buckley's cover is also often played in C. Count in 6/8 or 12/8; some charts write E instead of E7.",
+    "confidence": "high"
+  },
+  {
+    "id": "wish-you-were-here",
+    "title": "Wish You Were Here",
+    "artist": "Pink Floyd",
+    "album": "Wish You Were Here",
+    "year": 1975,
+    "collection": "global",
+    "difficulty": "intermediate",
+    "key": "G",
+    "capo": 0,
+    "bpm": 60,
+    "duration": 334,
+    "strummingPattern": "D - D U - U D U",
+    "originalChords": [
+      "Em7",
+      "G",
+      "A7sus4",
+      "C",
+      "D/F#",
+      "Am"
+    ],
+    "sections": [
+      {
+        "name": "Intro",
+        "repeat": 1,
+        "chords": [
+          "Em7",
+          "G",
+          "Em7",
+          "G",
+          "Em7",
+          "A7sus4",
+          "Em7",
+          "A7sus4",
+          "G"
+        ]
+      },
+      {
+        "name": "Verse",
+        "repeat": 2,
+        "chords": [
+          "C",
+          "D/F#",
+          "Am",
+          "G",
+          "D/F#",
+          "C",
+          "Am",
+          "G"
+        ]
+      },
+      {
+        "name": "Interlude",
+        "repeat": 1,
+        "chords": [
+          "Em7",
+          "G",
+          "Em7",
+          "G",
+          "Em7",
+          "A7sus4",
+          "Em7",
+          "A7sus4",
+          "G"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "D/F# with thumb or bass note",
+      "riff-and-strum hybrid"
+    ],
+    "tags": [
+      "classic-rock",
+      "70s"
+    ],
+    "language": "en",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Wish+You+Were+Here+Pink+Floyd+guitar+lesson",
+    "sourceUrl": "https://www.justinguitar.com/songs/pink-floyd-wish-you-were-here-chords-tabs-guitar-lesson-st-301",
+    "notes": "Standard tuning, no capo. JustinGuitar, Lauren Bateman and UG agree. The intro has a single-note lead riff; strumming the chord loop is enough to play along.",
+    "confidence": "high"
+  },
+  {
+    "id": "hey-there-delilah",
+    "title": "Hey There Delilah",
+    "artist": "Plain White T's",
+    "album": "All That We Needed",
+    "year": 2005,
+    "collection": "global",
+    "difficulty": "intermediate",
+    "key": "D",
+    "capo": 0,
+    "bpm": 104,
+    "duration": 233,
+    "strummingPattern": "D - D U - U D U",
+    "originalChords": [
+      "D",
+      "F#m",
+      "Bm",
+      "G",
+      "A"
+    ],
+    "sections": [
+      {
+        "name": "Intro",
+        "repeat": 1,
+        "chords": [
+          "D",
+          "F#m",
+          "D",
+          "F#m"
+        ]
+      },
+      {
+        "name": "Verse",
+        "repeat": 2,
+        "chords": [
+          "D",
+          "F#m",
+          "D",
+          "F#m",
+          "Bm",
+          "G",
+          "A",
+          "Bm"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "repeat": 1,
+        "chords": [
+          "D",
+          "Bm",
+          "D",
+          "Bm",
+          "D",
+          "Bm",
+          "G",
+          "A"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "D to F#m barre change",
+      "fingerpicked arpeggios"
+    ],
+    "tags": [
+      "pop-punk",
+      "acoustic",
+      "00s"
+    ],
+    "language": "en",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Hey+There+Delilah+Plain+White+T%27s+guitar+lesson",
+    "sourceUrl": "https://tunebat.com/Info/Hey-There-Delilah-Plain-White-T-s/0xM88xobymkMgg46MStfnV",
+    "notes": "Key D at 104 bpm (Tunebat, Musicnotes). UG and Chordify charts use D F#m Bm G A with no capo. The recording is fingerpicked; strumming works for beginners. The pre-chorus A-G-A turnaround is left out here.",
+    "confidence": "high"
+  },
+  {
+    "id": "hotel-california",
+    "title": "Hotel California",
+    "artist": "Eagles",
+    "album": "Hotel California",
+    "year": 1976,
+    "collection": "global",
+    "difficulty": "advanced",
+    "key": "Bm",
+    "capo": 0,
+    "bpm": 74,
+    "duration": 391,
+    "strummingPattern": "D - D U - U D U",
+    "originalChords": [
+      "Bm",
+      "F#",
+      "A",
+      "E",
+      "G",
+      "D",
+      "Em"
+    ],
+    "sections": [
+      {
+        "name": "Intro",
+        "repeat": 2,
+        "chords": [
+          "Bm",
+          "F#",
+          "A",
+          "E",
+          "G",
+          "D",
+          "Em",
+          "F#"
+        ]
+      },
+      {
+        "name": "Verse",
+        "repeat": 2,
+        "chords": [
+          "Bm",
+          "F#",
+          "A",
+          "E",
+          "G",
+          "D",
+          "Em",
+          "F#"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "repeat": 1,
+        "chords": [
+          "G",
+          "G",
+          "D",
+          "D",
+          "F#",
+          "F#",
+          "Bm",
+          "Bm",
+          "G",
+          "G",
+          "D",
+          "D",
+          "Em",
+          "Em",
+          "F#",
+          "F#"
+        ]
+      },
+      {
+        "name": "Solo",
+        "repeat": 4,
+        "chords": [
+          "Bm",
+          "F#",
+          "A",
+          "E",
+          "G",
+          "D",
+          "Em",
+          "F#"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "barre chords (Bm, F#)",
+      "arpeggiated picking"
+    ],
+    "tags": [
+      "classic-rock",
+      "70s"
+    ],
+    "language": "en",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Hotel+California+Eagles+guitar+lesson",
+    "sourceUrl": "https://www.laurenbateman.com/hotel-california-chord-chart/",
+    "notes": "Played in Bm with barre chords (National Guitar Academy, Lauren Bateman). Don Felder's 12-string uses capo 7 with Am E G D F C Dm E shapes, which sound the same. The single was released in 1977; the album came out in December 1976.",
+    "confidence": "high"
+  },
+  {
+    "id": "sweet-child-o-mine",
+    "title": "Sweet Child O' Mine",
+    "artist": "Guns N' Roses",
+    "album": "Appetite for Destruction",
+    "year": 1987,
+    "collection": "global",
+    "difficulty": "advanced",
+    "key": "C#",
+    "capo": 0,
+    "bpm": 125,
+    "duration": 356,
+    "strummingPattern": "D - D U - U D U",
+    "originalChords": [
+      "D",
+      "C",
+      "G",
+      "Cadd9",
+      "A",
+      "Em"
+    ],
+    "sections": [
+      {
+        "name": "Intro",
+        "repeat": 2,
+        "chords": [
+          "D",
+          "D",
+          "C",
+          "C",
+          "G",
+          "G",
+          "D",
+          "D"
+        ]
+      },
+      {
+        "name": "Verse",
+        "repeat": 2,
+        "chords": [
+          "D",
+          "D",
+          "D",
+          "D",
+          "Cadd9",
+          "Cadd9",
+          "G",
+          "D"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "repeat": 1,
+        "chords": [
+          "A",
+          "C",
+          "D",
+          "A",
+          "C",
+          "D"
+        ]
+      },
+      {
+        "name": "Outro",
+        "repeat": 4,
+        "chords": [
+          "Em",
+          "G",
+          "A",
+          "C",
+          "D"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "half-step-down tuning",
+      "rock rhythm with riff fills"
+    ],
+    "tags": [
+      "hard-rock",
+      "80s"
+    ],
+    "language": "en",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Sweet+Child+O%27+Mine+Guns+N%27+Roses+guitar+lesson",
+    "sourceUrl": "https://www.guitartabsexplorer.com/guns-n-roses/sweet-child-o-mine-chords",
+    "notes": "Guitars are tuned down a half step (Eb standard), so D shapes sound C#/Db; capo stays 0. Played in standard tuning, the shapes sound a half step higher than the record. GuitarTabsExplorer and Songsterr agree on the chords. The famous intro is a single-note riff over these chords.",
+    "confidence": "high"
+  },
+  {
+    "id": "creep",
+    "title": "Creep",
+    "artist": "Radiohead",
+    "album": "Pablo Honey",
+    "year": 1992,
+    "collection": "global",
+    "difficulty": "advanced",
+    "key": "G",
+    "capo": 0,
+    "bpm": 92,
+    "duration": 238,
+    "strummingPattern": "D - D U - U D U",
+    "originalChords": [
+      "G",
+      "B",
+      "C",
+      "Cm"
+    ],
+    "sections": [
+      {
+        "name": "Intro",
+        "repeat": 1,
+        "chords": [
+          "G",
+          "B",
+          "C",
+          "Cm"
+        ]
+      },
+      {
+        "name": "Verse",
+        "repeat": 4,
+        "chords": [
+          "G",
+          "B",
+          "C",
+          "Cm"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "repeat": 4,
+        "chords": [
+          "G",
+          "B",
+          "C",
+          "Cm"
+        ]
+      },
+      {
+        "name": "Bridge",
+        "repeat": 2,
+        "chords": [
+          "G",
+          "B",
+          "C",
+          "Cm"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "B and Cm barre chords",
+      "dynamic muted verse to loud chorus"
+    ],
+    "tags": [
+      "alt-rock",
+      "90s"
+    ],
+    "language": "en",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Creep+Radiohead+guitar+lesson",
+    "sourceUrl": "https://songbpm.com/@radiohead/creep",
+    "notes": "G B C Cm loop the whole song, G major at 92 bpm (songbpm, Chordify). The B and Cm barres are the challenge. Single 1992, album 1993.",
+    "confidence": "high"
+  },
+  {
+    "id": "more-than-words",
+    "title": "More Than Words",
+    "artist": "Extreme",
+    "album": "Extreme II: Pornograffitti",
+    "year": 1990,
+    "collection": "global",
+    "difficulty": "advanced",
+    "key": "F#",
+    "capo": 0,
+    "bpm": 92,
+    "duration": 334,
+    "strummingPattern": "D - X - D U X U",
+    "originalChords": [
+      "G",
+      "Cadd9",
+      "Am7",
+      "C",
+      "D",
+      "Em",
+      "Bm7",
+      "D/F#",
+      "D7",
+      "G7",
+      "Cm",
+      "Em7",
+      "Bm",
+      "G/B"
+    ],
+    "sections": [
+      {
+        "name": "Intro",
+        "repeat": 1,
+        "chords": [
+          "G",
+          "Cadd9",
+          "Am7",
+          "C",
+          "D",
+          "G"
+        ]
+      },
+      {
+        "name": "Verse",
+        "repeat": 2,
+        "chords": [
+          "G",
+          "Cadd9",
+          "Am7",
+          "C",
+          "D",
+          "G",
+          "G",
+          "Cadd9",
+          "Am7",
+          "C",
+          "D",
+          "Em"
+        ]
+      },
+      {
+        "name": "Pre-Chorus",
+        "repeat": 1,
+        "chords": [
+          "Bm7",
+          "Am7",
+          "D",
+          "G",
+          "D/F#",
+          "Em",
+          "Bm7",
+          "Am7",
+          "D7",
+          "G7",
+          "G7",
+          "C"
+        ]
+      },
+      {
+        "name": "Chorus",
+        "repeat": 1,
+        "chords": [
+          "C",
+          "Cm",
+          "G",
+          "Em7",
+          "Am7",
+          "D7",
+          "G"
+        ]
+      },
+      {
+        "name": "Bridge",
+        "repeat": 2,
+        "chords": [
+          "G",
+          "D/F#",
+          "Em",
+          "Bm",
+          "C",
+          "C",
+          "G/B",
+          "Am7",
+          "D7",
+          "G"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "percussive thumb-slap strum",
+      "half-step-down tuning, many voicings"
+    ],
+    "tags": [
+      "rock-ballad",
+      "acoustic",
+      "90s"
+    ],
+    "language": "en",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=More+Than+Words+Extreme+guitar+lesson",
+    "sourceUrl": "https://www.guitardownunder.com/songs/more_than_words.php",
+    "notes": "Nuno Bettencourt tunes down a half step, so G shapes sound F#; capo 0. Some charts use standard tuning (sounds in G) or capo shapes. Tempo is about 90-95 bpm; sources vary. Many voicings and fast changes.",
+    "confidence": "medium"
+  },
+  {
+    "id": "tears-in-heaven",
+    "title": "Tears in Heaven",
+    "artist": "Eric Clapton",
+    "album": "Rush (soundtrack)",
+    "year": 1992,
+    "collection": "global",
+    "difficulty": "advanced",
+    "key": "A",
+    "capo": 0,
+    "bpm": 80,
+    "duration": 274,
+    "strummingPattern": "D - D U - U D U",
+    "originalChords": [
+      "A",
+      "E/G#",
+      "F#m",
+      "A/E",
+      "D/F#",
+      "E7sus4",
+      "E7",
+      "C",
+      "G/B",
+      "Am",
+      "G",
+      "Em"
+    ],
+    "sections": [
+      {
+        "name": "Intro",
+        "repeat": 1,
+        "chords": [
+          "A",
+          "E/G#",
+          "F#m",
+          "A/E",
+          "D/F#",
+          "E7sus4",
+          "E7",
+          "A"
+        ]
+      },
+      {
+        "name": "Verse",
+        "repeat": 2,
+        "chords": [
+          "A",
+          "E/G#",
+          "F#m",
+          "A/E",
+          "D/F#",
+          "E7sus4",
+          "E7",
+          "A"
+        ]
+      },
+      {
+        "name": "Bridge",
+        "repeat": 1,
+        "chords": [
+          "C",
+          "G/B",
+          "Am",
+          "D/F#",
+          "G",
+          "D/F#",
+          "Em",
+          "D/F#",
+          "G",
+          "E7sus4",
+          "E7"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "descending bass with slash chords",
+      "fingerpicking"
+    ],
+    "tags": [
+      "soft-rock",
+      "ballad",
+      "90s"
+    ],
+    "language": "en",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=Tears+in+Heaven+Eric+Clapton+guitar+lesson",
+    "sourceUrl": "https://www.jonmaclennan.com/blog/tears-in-heaven-guitar-lesson",
+    "notes": "Main sections in A; the bridge moves to G before returning (Jon MacLennan, UG). F#m is often F#m7. Slash chords define the bass line; detection may hear A/E as A.",
+    "confidence": "high"
+  },
+  {
+    "id": "house-of-the-rising-sun",
+    "title": "The House of the Rising Sun",
+    "artist": "The Animals",
+    "album": "The Animals (US)",
+    "year": 1964,
+    "collection": "global",
+    "difficulty": "advanced",
+    "key": "Am",
+    "capo": 0,
+    "bpm": 117,
+    "duration": 269,
+    "strummingPattern": "D DU DU",
+    "originalChords": [
+      "Am",
+      "C",
+      "D",
+      "F",
+      "E",
+      "Dm"
+    ],
+    "sections": [
+      {
+        "name": "Intro",
+        "repeat": 1,
+        "chords": [
+          "Am",
+          "C",
+          "D",
+          "F",
+          "Am",
+          "E",
+          "Am",
+          "E"
+        ]
+      },
+      {
+        "name": "Verse",
+        "repeat": 5,
+        "chords": [
+          "Am",
+          "C",
+          "D",
+          "F",
+          "Am",
+          "C",
+          "E",
+          "E",
+          "Am",
+          "C",
+          "D",
+          "F",
+          "Am",
+          "E",
+          "Am",
+          "E"
+        ]
+      },
+      {
+        "name": "Outro",
+        "repeat": 1,
+        "chords": [
+          "Am",
+          "C",
+          "D",
+          "F",
+          "Am",
+          "E",
+          "Am",
+          "Dm",
+          "Am"
+        ]
+      }
+    ],
+    "techniqueFocus": [
+      "6/8 arpeggio picking",
+      "F barre at speed"
+    ],
+    "tags": [
+      "blues-rock",
+      "60s"
+    ],
+    "language": "en",
+    "tutorialUrl": "https://www.youtube.com/results?search_query=The+House+of+the+Rising+Sun+The+Animals+guitar+lesson",
+    "sourceUrl": "https://appliedguitartheory.com/lessons/riff-breakdown-the-house-of-the-rising-sun/",
+    "notes": "Am C D F / Am C E E / Am C D F / Am E Am E (Applied Guitar Theory, UG). 6/8; tempo is quoted as 117-125. Rated advanced for the full-barre F and a steady 6/8 arpeggio; the chords alone are intermediate. The outro chord before the end is sometimes Dm.",
+    "confidence": "medium"
+  }
+]

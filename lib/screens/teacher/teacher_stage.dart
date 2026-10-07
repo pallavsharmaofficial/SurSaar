@@ -22,6 +22,7 @@ import '../../widgets/teacher/effects.dart';
 import '../../widgets/teacher/glass_card.dart';
 import '../../widgets/teacher/hand_overlay_painter.dart';
 import '../../widgets/teacher/sound_field.dart';
+import '../../teacher/melody/melody_tab.dart';
 
 const Color _green = Color(0xFF22C55E);
 
@@ -494,7 +495,7 @@ class _ChordCard extends StatelessWidget {
                                   ),
                                 ),
                             child: Text(
-                              d.chord!,
+                              TabNote.display(d.chord!),
                               key: ValueKey<String>(d.chord!),
                               style: theme.textTheme.displaySmall?.copyWith(
                                 fontWeight: FontWeight.bold,
@@ -507,7 +508,7 @@ class _ChordCard extends StatelessWidget {
                             Padding(
                               padding: const EdgeInsets.only(top: 6),
                               child: Text(
-                                '${l10n.nextChord}: ${d.next}',
+                                '${l10n.nextChord}: ${TabNote.display(d.next!)}',
                                 style: theme.textTheme.bodySmall?.copyWith(
                                   color: AppColors.successGold,
                                   fontWeight: FontWeight.w600,
@@ -612,7 +613,11 @@ class _StatusColumn extends StatelessWidget {
           camera: s.cameraRunning,
           mic: s.micRunning,
           level: ((snap?.inputLevel ?? 0) * 10).round() / 10,
-          hearing: detection == null || detection.isSilent
+          hearing: snap != null && snap.isMelody
+              ? (snap.noteDetection == null || snap.noteDetection!.isSilent
+                    ? null
+                    : snap.noteDetection!.noteName)
+              : detection == null || detection.isSilent
               ? null
               : detection.chord,
           handSeen: snap?.handSeen ?? false,

@@ -116,6 +116,9 @@
   "defaultTempo": "Default tempo",
   "website": "Website",
   "sourceCode": "Source code on GitHub",
+  "supportTheWork": "Support the work",
+  "privacyPolicy": "Privacy policy",
+  "termsOfUse": "Terms of use",
   "privacyNote": "Camera and microphone are processed on your device only. Nothing is uploaded.",
   "recentSessions": "Recent sessions",
   "noSessions": "No sessions yet. Start a quick practice to see your history here.",
@@ -247,5 +250,156 @@
   "showBeatDots": "Beat dots",
   "showStatusChips": "Status chips",
   "cameraView": "Camera view",
-  "mirrorPreview": "Mirror the preview"
+  "mirrorPreview": "Mirror the preview",
+  "learnWithTutor": "Learn with Tutor",
+  "songLibrary": "Song library",
+  "shelfAll": "All",
+  "shelfBollywood": "Bollywood",
+  "shelfGlobal": "Global hits",
+  "shelfBand": "Band music",
+  "shelfInstrumental": "Instrumental",
+  "singleNoteTab": "Single-note tab",
+  "tutorDebrief": "Your tutor's notes",
+  "whatWentWell": "What went well",
+  "whatToImprove": "What to work on",
+  "yourPlayingStyle": "Your playing style",
+  "continueLabel": "Continue",
+  "songJourney": "Song path",
+  "chordSheet": "Chord chart",
+  "tabSheet": "Tab",
+  "continueLearning": "Continue learning",
+  "tutorSuggests": "Your tutor suggests",
+  "goodMorning": "Good morning",
+  "goodAfternoon": "Good afternoon",
+  "goodEvening": "Good evening",
+  "tutorIntroNew": "I'm your guitar tutor. I'll watch, listen and tell you exactly what to play next.",
+  "tutorIntroBack": "Here's what I picked for you today.",
+  "chordsKnown": "{count} chords known",
+  "@chordsKnown": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "minutesPlayed": "{count} min played",
+  "@minutesPlayed": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "sessionsCount": "{count} sessions",
+  "@sessionsCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "todaysLesson": "TODAY'S LESSON",
+  "pickUpWhereYouLeft": "PICK UP WHERE YOU LEFT OFF",
+  "styleEmpty": "Play a lesson and I will start noticing your habits.",
+  "searchLibraryHint": "Song, artist or chord…",
+  "readyForMe": "Ready for me",
+  "libraryCount": "{count} songs",
+  "@libraryCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "difficultyBeginner": "Beginner",
+  "difficultyIntermediate": "Intermediate",
+  "difficultyAdvanced": "Advanced",
+  "restartJourneyTitle": "Restart this song",
+  "restartJourneyBody": "I will rebuild the steps from what you can play now. Your skill history stays.",
+  "restart": "Restart",
+  "pasteTab": "Paste a single-note tab",
+  "pasteTabHelp": "Paste ASCII tab (e|---0---|, B|--1--3--|…). It stays on this device and I will teach it note by note.",
+  "songDetails": "Song details",
+  "chartVerified": "Verified chart",
+  "chartCommunity": "Community chart – trust your ears",
+  "journeyComplete": "You finished this song. Replay any step to polish it.",
+  "journeyIntro": "I've planned {count} steps for you – one at a time, I'll tell you when to move on.",
+  "@journeyIntro": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "startStep": "Step {number}: {title}",
+  "@startStep": {
+    "placeholders": {
+      "number": {
+        "type": "int"
+      },
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "yourPath": "Your path",
+  "tempoPercent": "{percent}% speed",
+  "@tempoPercent": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "passMark": "pass at {score}%",
+  "@passMark": {
+    "placeholders": {
+      "score": {
+        "type": "int"
+      }
+    }
+  },
+  "noTabYet": "No tab yet – paste one to learn it note by note.",
+  "whatYouWillLearn": "What you'll learn",
+  "tutorNotes": "Tutor's notes",
+  "chartSource": "Chart source",
+  "tabNotRecognised": "No tab lines found yet.",
+  "tabRecognised": "{notes} notes in {sections} sections",
+  "@tabRecognised": {
+    "placeholders": {
+      "notes": {
+        "type": "int"
+      },
+      "sections": {
+        "type": "int"
+      }
+    }
+  },
+  "useThisTab": "Learn this tab",
+  "resetTutorTitle": "Reset the tutor's memory",
+  "resetTutorBody": "Forget your chord skills, habits and song paths? Your practice history stays.",
+  "tutorObservations": "What I have noticed",
+  "chordMastery": "Chord mastery",
+  "chordChanges": "Chord changes",
+  "timingEmpty": "Play along once with the click and I will map your timing.",
+  "tutorDiary": "Tutor's diary",
+  "drill": "Drill",
+  "rushing": "Rushing",
+  "onTheBeat": "On the beat",
+  "dragging": "Dragging",
+  "timingSummary": "Average {offset} ms from the beat, spread ±{spread} ms, {accuracy}% on time.",
+  "@timingSummary": {
+    "placeholders": {
+      "offset": {
+        "type": "int"
+      },
+      "spread": {
+        "type": "int"
+      },
+      "accuracy": {
+        "type": "int"
+      }
+    }
+  },
+  "notesHeading": "Notes"
 }

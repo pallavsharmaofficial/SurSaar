@@ -66,7 +66,9 @@ class _ProgressView extends StatelessWidget {
                             : 2,
                         mainAxisSpacing: 12,
                         crossAxisSpacing: 12,
-                        childAspectRatio: 1.5,
+                        // Tall enough for the icon, value, unit and label.
+                        childAspectRatio:
+                            MediaQuery.of(context).size.width > 700 ? 1.5 : 1.0,
                         children:
                             <Widget>[
                                   ProgressStatCard(
